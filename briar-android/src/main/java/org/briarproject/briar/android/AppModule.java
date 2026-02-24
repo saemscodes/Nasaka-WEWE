@@ -26,6 +26,7 @@ import org.briarproject.bramble.api.plugin.TransportId;
 import org.briarproject.bramble.api.plugin.duplex.DuplexPluginFactory;
 import org.briarproject.bramble.api.plugin.simplex.SimplexPluginFactory;
 import org.briarproject.bramble.api.reporting.DevConfig;
+import org.briarproject.bramble.plugin.bluetooth.AndroidBluetoothLePluginFactory;
 import org.briarproject.bramble.plugin.bluetooth.AndroidBluetoothPluginFactory;
 import org.briarproject.bramble.plugin.file.AndroidRemovableDrivePluginFactory;
 import org.briarproject.bramble.plugin.file.MailboxPluginFactory;
@@ -197,6 +198,7 @@ public class AppModule {
 	@Provides
 	@Singleton
 	PluginConfig providePluginConfig(AndroidBluetoothPluginFactory bluetooth,
+			AndroidBluetoothLePluginFactory bluetoothLe,
 			AndroidTorPluginFactory tor, AndroidLanTcpPluginFactory lan,
 			AndroidRemovableDrivePluginFactory drive,
 			MailboxPluginFactory mailbox, FeatureFlags featureFlags) {
@@ -205,7 +207,7 @@ public class AppModule {
 
 			@Override
 			public Collection<DuplexPluginFactory> getDuplexFactories() {
-				return asList(bluetooth, tor, lan);
+				return asList(bluetooth, bluetoothLe, tor, lan);
 			}
 
 			@Override

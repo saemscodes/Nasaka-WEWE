@@ -11,12 +11,15 @@ import org.briarproject.nullsafety.NotNullByDefault;
 @NotNullByDefault
 public interface IdentityManager {
 
-	/**
-	 * Creates an identity with the given name. The identity includes a
-	 * handshake key pair.
-	 */
 	@CryptoExecutor
 	Identity createIdentity(String name);
+
+	/**
+	 * Creates an identity with the given name and role. The identity
+	 * includes a handshake key pair.
+	 */
+	@CryptoExecutor
+	Identity createIdentity(String name, int role);
 
 	/**
 	 * Registers the given identity with the manager. This method should be

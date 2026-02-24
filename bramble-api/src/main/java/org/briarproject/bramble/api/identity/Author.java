@@ -26,9 +26,15 @@ public class Author implements Nameable {
 	private final int formatVersion;
 	private final String name;
 	private final PublicKey publicKey;
+	private final int role;
 
 	public Author(AuthorId id, int formatVersion, String name,
 			PublicKey publicKey) {
+		this(id, formatVersion, name, publicKey, 0);
+	}
+
+	public Author(AuthorId id, int formatVersion, String name,
+			PublicKey publicKey, int role) {
 		int nameLength = toUtf8(name).length;
 		if (nameLength == 0 || nameLength > MAX_AUTHOR_NAME_LENGTH)
 			throw new IllegalArgumentException();
@@ -38,6 +44,7 @@ public class Author implements Nameable {
 		this.formatVersion = formatVersion;
 		this.name = name;
 		this.publicKey = publicKey;
+		this.role = role;
 	}
 
 	/**
@@ -67,6 +74,13 @@ public class Author implements Nameable {
 	 */
 	public PublicKey getPublicKey() {
 		return publicKey;
+	}
+
+	/**
+	 * Returns the author's role.
+	 */
+	public int getRole() {
+		return role;
 	}
 
 	@Override

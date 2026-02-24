@@ -16,18 +16,13 @@ import javax.inject.Inject;
 
 import androidx.lifecycle.ViewModelProvider;
 
-import static android.content.Intent.FLAG_ACTIVITY_CLEAR_TASK;
-import static android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP;
-import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
-import static android.content.Intent.FLAG_ACTIVITY_TASK_ON_HOME;
 import static org.briarproject.briar.android.BriarApplication.ENTRY_ACTIVITY;
-import static org.briarproject.briar.android.account.SetupViewModel.State.AUTHOR_NAME;
-import static org.briarproject.briar.android.account.SetupViewModel.State.CREATED;
-import static org.briarproject.briar.android.account.SetupViewModel.State.DOZE;
-import static org.briarproject.briar.android.account.SetupViewModel.State.FAILED;
-import static org.briarproject.briar.android.account.SetupViewModel.State.SET_PASSWORD;
-import static org.briarproject.briar.android.util.UiUtils.setInputStateAlwaysVisible;
 import static org.briarproject.briar.android.util.UiUtils.setInputStateHidden;
+
+import androidx.activity.compose.ComponentActivityKt;
+import androidx.compose.runtime.Composable;
+import org.briarproject.briar.android.ui.screens.OnboardingScreensKt;
+import org.briarproject.briar.android.ui.theme.ThemeKt;
 
 @MethodsNotNullByDefault
 @ParametersNotNullByDefault
@@ -52,20 +47,18 @@ public class SetupActivity extends BaseActivity
 		super.onCreate(state);
 		// fade-in after splash screen instead of default animation
 		overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-		setContentView(R.layout.activity_fragment_container);
+
+		ComponentActivityKt.setContent(this, null, (composer, i) -> {
+			OnboardingScreensKt.OnboardingFlow((name, password) -> {
+				viewModel.createAccount(name, password != null ? password : "");
+				return null;
+			}, composer, 0);
+			return null;
+		});
 	}
 
 	private void onStateChanged(SetupViewModel.State state) {
-		if (state == AUTHOR_NAME) {
-			setInputStateAlwaysVisible(this);
-			showInitialFragment(AuthorNameFragment.newInstance());
-		} else if (state == SET_PASSWORD) {
-			setInputStateAlwaysVisible(this);
-			showPasswordFragment();
-		} else if (state == DOZE) {
-			setInputStateHidden(this);
-			showDozeFragment();
-		} else if (state == CREATED || state == FAILED) {
+		if (state == SetupViewModel.State.CREATED || state == SetupViewModel.State.FAILED) {
 			// TODO: Show an error if failed
 			showApp();
 		}

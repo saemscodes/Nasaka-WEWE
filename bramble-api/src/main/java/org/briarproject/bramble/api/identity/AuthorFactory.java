@@ -22,4 +22,6 @@ public interface AuthorFactory {
 	 * name.
 	 */
 	LocalAuthor createLocalAuthor(String name);
+
+	LocalAuthor createLocalAuthor(String name, int role);
 }

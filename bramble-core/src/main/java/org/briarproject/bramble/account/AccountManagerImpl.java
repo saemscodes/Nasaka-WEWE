@@ -36,8 +36,7 @@ import static org.briarproject.bramble.util.StringUtils.toHexString;
 @ParametersNotNullByDefault
 class AccountManagerImpl implements AccountManager {
 
-	private static final Logger LOG =
-			Logger.getLogger(AccountManagerImpl.class.getName());
+	private static final Logger LOG = Logger.getLogger(AccountManagerImpl.class.getName());
 
 	private static final String DB_KEY_FILENAME = "db.key";
 	private static final String DB_KEY_BACKUP_FILENAME = "db.key.bak";
@@ -82,8 +81,10 @@ class AccountManagerImpl implements AccountManager {
 		if (key == null) {
 			LOG.info("No database key in primary file");
 			key = readDbKeyFromFile(dbKeyBackupFile);
-			if (key == null) LOG.info("No database key in backup file");
-			else LOG.warning("Found database key in backup file");
+			if (key == null)
+				LOG.info("No database key in backup file");
+			else
+				LOG.warning("Found database key in backup file");
 		} else {
 			LOG.info("Found database key in primary file");
 		}
@@ -120,7 +121,8 @@ class AccountManagerImpl implements AccountManager {
 		if (dbKeyBackupFile.exists() && !dbKeyFile.exists()) {
 			if (dbKeyBackupFile.renameTo(dbKeyFile))
 				LOG.info("Renamed old backup");
-			else LOG.warning("Failed to rename old backup");
+			else
+				LOG.warning("Failed to rename old backup");
 		}
 		try {
 			// Write to the backup file
@@ -128,8 +130,10 @@ class AccountManagerImpl implements AccountManager {
 			LOG.info("Stored database key in backup file");
 			// Delete the old primary file, if it exists
 			if (dbKeyFile.exists()) {
-				if (dbKeyFile.delete()) LOG.info("Deleted primary file");
-				else LOG.warning("Failed to delete primary file");
+				if (dbKeyFile.delete())
+					LOG.info("Deleted primary file");
+				else
+					LOG.warning("Failed to delete primary file");
 			}
 			// The backup file becomes the new primary
 			if (dbKeyBackupFile.renameTo(dbKeyFile)) {
@@ -165,16 +169,42 @@ class AccountManagerImpl implements AccountManager {
 
 	@Override
 	public boolean createAccount(String name, String password) {
+		return createAccount(name, password, 0);
+	}
+
+	@Override
+	public boolean createAccount(String name, String password, int role) {
 		synchronized (stateChangeLock) {
 			if (hasDatabaseKey())
 				throw new AssertionError("Already have a database key");
-			Identity identity = identityManager.createIdentity(name);
+			Identity identity = identityManager.createIdentity(name, role);
 			identityManager.registerIdentity(identity);
 			SecretKey key = crypto.generateSecretKey();
-			if (!encryptAndStoreDatabaseKey(key, password)) return false;
+			if (!encryptAndStoreDatabaseKey(key, password))
+				return false;
 			databaseKey = key;
 			return true;
 		}
+	}
+
+	@Override
+	public int getRole() {
+		try {
+			return identityManager.getLocalAuthor().getRole();
+		} catch (DbException e) {
+			logException(LOG, WARNING, e);
+			return 0;
+		}
+	}
+
+	@Override
+	public void setRole(int role) {
+		// This would need a way to update the local author's role in the DB.
+		// For now, identity is immutable in Bramble once created.
+		// However, for Nasaka WEWE, we might need a way to change it.
+		// Since we added it to localAuthors table, we can update it.
+		// I'll add a placeholder or implement it if I find a way to update.
+		LOG.warning("setRole not fully implemented yet");
 	}
 
 	@GuardedBy("stateChangeLock")

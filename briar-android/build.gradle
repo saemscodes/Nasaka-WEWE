@@ -93,18 +93,29 @@ android {
 		warning 'MissingTranslation', 'MissingDefaultResource', 'ImpliedQuantity', 'ExtraTranslation', 'InvalidPackage'
 	}
 
+	buildFeatures {
+		compose true
+	}
+
+	composeOptions {
+		kotlinCompilerExtensionVersion compose_compiler_version
+	}
 }
 
 dependencies {
-	// In theory this dependency shouldn't be needed, but without it Android Studio's linter will
-	// complain about unresolved symbols for bramble-api test classes in briar-android tests,
-	// even though the bramble-api test classes are provided by the testImplementation dependency
-	// below and the compiler can find them
 	implementation project(':bramble-api')
 
 	implementation project(':bramble-core')
 	implementation project(':bramble-android')
 	implementation project(':briar-core')
+
+	// Compose dependencies
+	implementation "androidx.compose.ui:ui:$compose_version"
+	implementation "androidx.compose.material3:material3:1.2.1"
+	implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
+	implementation "androidx.activity:activity-compose:1.9.0"
+	implementation "androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2"
+	debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
 
 	// newer versions of the libraries below require compileSdk 34
 	implementation 'androidx.fragment:fragment:1.6.2'

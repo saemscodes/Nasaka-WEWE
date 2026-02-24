@@ -36,19 +36,36 @@ class AuthorFactoryImpl implements AuthorFactory {
 	}
 
 	@Override
+	public Author createAuthor(String name, PublicKey publicKey, int role) {
+		return createAuthor(FORMAT_VERSION, name, publicKey, role);
+	}
+
+	@Override
 	public Author createAuthor(int formatVersion, String name,
 			PublicKey publicKey) {
+		return createAuthor(formatVersion, name, publicKey, 0);
+	}
+
+	@Override
+	public Author createAuthor(int formatVersion, String name,
+			PublicKey publicKey, int role) {
 		AuthorId id = getId(formatVersion, name, publicKey);
-		return new Author(id, formatVersion, name, publicKey);
+		return new Author(id, formatVersion, name, publicKey, role);
 	}
 
 	@Override
 	public LocalAuthor createLocalAuthor(String name) {
+		return createLocalAuthor(name, 0);
+	}
+
+	@Override
+	public LocalAuthor createLocalAuthor(String name, int role) {
 		KeyPair signatureKeyPair = crypto.generateSignatureKeyPair();
 		PublicKey publicKey = signatureKeyPair.getPublic();
 		PrivateKey privateKey = signatureKeyPair.getPrivate();
 		AuthorId id = getId(FORMAT_VERSION, name, publicKey);
-		return new LocalAuthor(id, FORMAT_VERSION, name, publicKey, privateKey);
+		return new LocalAuthor(id, FORMAT_VERSION, name, publicKey, privateKey,
+				role);
 	}
 
 	private AuthorId getId(int formatVersion, String name,

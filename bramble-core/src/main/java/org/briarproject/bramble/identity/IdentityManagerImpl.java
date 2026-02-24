@@ -31,8 +31,7 @@ import static org.briarproject.nullsafety.NullSafety.requireNonNull;
 @NotNullByDefault
 class IdentityManagerImpl implements IdentityManager, OpenDatabaseHook {
 
-	private static final Logger LOG =
-			getLogger(IdentityManagerImpl.class.getName());
+	private static final Logger LOG = getLogger(IdentityManagerImpl.class.getName());
 
 	private final DatabaseComponent db;
 	private final CryptoComponent crypto;
@@ -72,8 +71,13 @@ class IdentityManagerImpl implements IdentityManager, OpenDatabaseHook {
 
 	@Override
 	public Identity createIdentity(String name) {
+		return createIdentity(name, 0);
+	}
+
+	@Override
+	public Identity createIdentity(String name, int role) {
 		long start = now();
-		LocalAuthor localAuthor = authorFactory.createLocalAuthor(name);
+		LocalAuthor localAuthor = authorFactory.createLocalAuthor(name, role);
 		KeyPair handshakeKeyPair = crypto.generateAgreementKeyPair();
 		PublicKey handshakePub = handshakeKeyPair.getPublic();
 		PrivateKey handshakePriv = handshakeKeyPair.getPrivate();
@@ -84,7 +88,8 @@ class IdentityManagerImpl implements IdentityManager, OpenDatabaseHook {
 
 	@Override
 	public void registerIdentity(Identity i) {
-		if (!i.hasHandshakeKeyPair()) throw new IllegalArgumentException();
+		if (!i.hasHandshakeKeyPair())
+			throw new IllegalArgumentException();
 		cachedIdentity = i;
 		shouldStoreIdentity = true;
 		LOG.info("Identity registered");
@@ -100,10 +105,8 @@ class IdentityManagerImpl implements IdentityManager, OpenDatabaseHook {
 		} else if (shouldStoreKeys) {
 			// Handshake keys were generated when loading the identity -
 			// store them
-			PublicKey handshakePub =
-					requireNonNull(cached.getHandshakePublicKey());
-			PrivateKey handshakePriv =
-					requireNonNull(cached.getHandshakePrivateKey());
+			PublicKey handshakePub = requireNonNull(cached.getHandshakePublicKey());
+			PrivateKey handshakePriv = requireNonNull(cached.getHandshakePrivateKey());
 			db.setHandshakeKeyPair(txn, cached.getId(), handshakePub,
 					handshakePriv);
 			LOG.info("Handshake key pair stored");
@@ -127,8 +130,7 @@ class IdentityManagerImpl implements IdentityManager, OpenDatabaseHook {
 	public KeyPair getHandshakeKeys(Transaction txn) throws DbException {
 		Identity cached = getCachedIdentity(txn);
 		PublicKey handshakePub = requireNonNull(cached.getHandshakePublicKey());
-		PrivateKey handshakePriv =
-				requireNonNull(cached.getHandshakePrivateKey());
+		PrivateKey handshakePriv = requireNonNull(cached.getHandshakePrivateKey());
 		return new KeyPair(handshakePub, handshakePriv);
 	}
 
@@ -156,10 +158,12 @@ class IdentityManagerImpl implements IdentityManager, OpenDatabaseHook {
 	private Identity loadIdentityWithKeyPair(Transaction txn)
 			throws DbException {
 		Collection<Identity> identities = db.getIdentities(txn);
-		if (identities.size() != 1) throw new DbException();
+		if (identities.size() != 1)
+			throw new DbException();
 		Identity i = identities.iterator().next();
 		LOG.info("Identity loaded");
-		if (i.hasHandshakeKeyPair()) return i;
+		if (i.hasHandshakeKeyPair())
+			return i;
 		KeyPair handshakeKeyPair = crypto.generateAgreementKeyPair();
 		PublicKey handshakePub = handshakeKeyPair.getPublic();
 		PrivateKey handshakePriv = handshakeKeyPair.getPrivate();

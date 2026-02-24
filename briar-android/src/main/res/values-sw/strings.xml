@@ -561,4 +561,32 @@ Umepoteza nenosiri.</string>
   <string name="screenshot_message_2">Habari Alice! Asante kwa kuniambia kuhusu Briar!</string>
   <!--This is a message to be used in screenshots.-->
   <string name="screenshot_message_3">Hakuna tatizo, natumaini umeipenda 😀</string>
+
+  <!-- Nasaka WEWE Specific -->
+  <string name="app_name">Nasaka WEWE</string>
+  <string name="setup_subtitle">Tafutana. Ungana. Linda.</string>
+  <string name="onboarding_begin">Anza Sasa</string>
+  <string name="onboarding_continue">Endelea</string>
+  <string name="onboarding_name_label">Jina la kuonyesha</string>
+  <string name="onboarding_name_prompt">Jina lako</string>
+  <string name="onboarding_name_hint">Ingiza jina lako hapa</string>
+  <string name="onboarding_role_label">Chagua Jukumu Lako</string>
+  <string name="onboarding_pin_label">PIN ya Usalama (hiari)</string>
+  <string name="onboarding_pin_prompt">PIN yako ya siri</string>
+  <string name="onboarding_pin_subtitle">(Hii ni hiari lakini inapendekezwa)</string>
+  <string name="onboarding_finish">Kamilisha</string>
+
+  <string name="find_someone">Mtafute mtu karibu nawe</string>
+  <string name="searching">Tunatafuta…</string>
+  <string name="peers_connected">Watu %1$d wameunganishwa karibu nawe</string>
+  
+  <string name="role_citizen">Mwananchi</string>
+  <string name="role_observer">Mwangalizi</string>
+  <string name="role_journalist">Mwanahabari</string>
+  <string name="role_coordinator">Mratibu</string>
+
+  <string name="nav_home">Nyumbani</string>
+  <string name="nav_contacts">Wasiliano</string>
+  <string name="nav_map">Ramani</string>
+  <string name="nav_settings">Mipangilio</string>
 </resources>

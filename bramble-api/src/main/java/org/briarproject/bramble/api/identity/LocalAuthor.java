@@ -19,7 +19,12 @@ public class LocalAuthor extends Author {
 
 	public LocalAuthor(AuthorId id, int formatVersion, String name,
 			PublicKey publicKey, PrivateKey privateKey) {
-		super(id, formatVersion, name, publicKey);
+		this(id, formatVersion, name, publicKey, privateKey, 0);
+	}
+
+	public LocalAuthor(AuthorId id, int formatVersion, String name,
+			PublicKey publicKey, PrivateKey privateKey, int role) {
+		super(id, formatVersion, name, publicKey, role);
 		if (!privateKey.getKeyType().equals(KEY_TYPE_SIGNATURE))
 			throw new IllegalArgumentException();
 		this.privateKey = privateKey;

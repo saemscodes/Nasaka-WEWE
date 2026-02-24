@@ -44,6 +44,21 @@ public interface AccountManager {
 	boolean createAccount(String name, String password);
 
 	/**
+	 * Same as above but also sets the role of the account.
+	 */
+	boolean createAccount(String name, String password, int role);
+
+	/**
+	 * Returns the role of the current account.
+	 */
+	int getRole();
+
+	/**
+	 * Sets the role of the current account.
+	 */
+	void setRole(int role);
+
+	/**
 	 * Deletes all account state from disk. {@link #accountExists()} will
 	 * return false after this method returns.
 	 */
@@ -54,7 +69,7 @@ public interface AccountManager {
 	 * given password.
 	 *
 	 * @throws DecryptionException If the database key could not be loaded and
-	 * decrypted.
+	 *                             decrypted.
 	 */
 	void signIn(String password) throws DecryptionException;
 
@@ -64,7 +79,7 @@ public interface AccountManager {
 	 * replacing the old key.
 	 *
 	 * @throws DecryptionException If the database key could not be loaded and
-	 * decrypted.
+	 *                             decrypted.
 	 */
 	void changePassword(String oldPassword, String newPassword)
 			throws DecryptionException;

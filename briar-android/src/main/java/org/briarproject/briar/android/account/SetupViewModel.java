@@ -31,16 +31,16 @@ import static org.briarproject.briar.android.account.SetupViewModel.State.SET_PA
 @MethodsNotNullByDefault
 @ParametersNotNullByDefault
 class SetupViewModel extends AndroidViewModel {
-	enum State {AUTHOR_NAME, SET_PASSWORD, DOZE, CREATED, FAILED}
+	enum State {
+		AUTHOR_NAME, SET_PASSWORD, DOZE, CREATED, FAILED
+	}
 
-	private static final Logger LOG =
-			getLogger(SetupActivity.class.getName());
+	private static final Logger LOG = getLogger(SetupActivity.class.getName());
 
 	@Nullable
 	private String authorName, password;
 	private final MutableLiveEvent<State> state = new MutableLiveEvent<>();
-	private final MutableLiveData<Boolean> isCreatingAccount =
-			new MutableLiveData<>(false);
+	private final MutableLiveData<Boolean> isCreatingAccount = new MutableLiveData<>(false);
 
 	private final AccountManager accountManager;
 	private final Executor ioExecutor;
@@ -82,7 +82,8 @@ class SetupViewModel extends AndroidViewModel {
 	}
 
 	void setPassword(String password) {
-		if (authorName == null) throw new IllegalStateException();
+		if (authorName == null)
+			throw new IllegalStateException();
 		this.password = password;
 		if (needToShowDozeFragment()) {
 			state.setEvent(DOZE);
@@ -103,9 +104,9 @@ class SetupViewModel extends AndroidViewModel {
 		createAccount();
 	}
 
-	private void createAccount() {
-		if (authorName == null) throw new IllegalStateException();
-		if (password == null) throw new IllegalStateException();
+	public void createAccount(String authorName, String password) {
+		this.authorName = authorName;
+		this.password = password;
 		isCreatingAccount.setValue(true);
 		ioExecutor.execute(() -> {
 			if (accountManager.createAccount(authorName, password)) {
