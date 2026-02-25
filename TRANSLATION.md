@@ -1,9 +1,5 @@
-Translations for this project are managed through Transifex:
+Translations for this project are managed through CEKA:
 
-https://transifex.com/otf/briar
+https://www.civiceducationkenya.com/volunteer
 
-If you'd like to volunteer as a translator, please create a Transifex account and request to be
-added to the project's translation team. The Localization Lab has some instructions and advice for
-translators here:
-
-https://wiki.localizationlab.org/index.php/Briar
+If you'd like to volunteer as a translator, please visit the link above and follow the instructions or write to us on contact@civiceducationkenya.com

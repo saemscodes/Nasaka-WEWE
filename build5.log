@@ -1,0 +1,620 @@
+Starting a Gradle Daemon, 1 incompatible and 2 stopped Daemons could not be reused, use --status for details
+
+> Configure project :bramble-android
+WARNING: The option setting 'android.defaults.buildfeatures.buildconfig=true' is deprecated.
+The current default is 'false'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+To keep using this feature, add the following to your module-level build.gradle files:
+    android.buildFeatures.buildConfig = true
+or from Android Studio, click: `Refactor` > `Migrate BuildConfig to Gradle Build Files`.
+
+> Configure project :bramble-api
+Verifying cglib:cglib:3.2.8:cglib-3.2.8.jar
+Verifying com.fasterxml.jackson.core:jackson-annotations:2.13.4:jackson-annotations-2.13.4.jar
+Verifying com.google.code.findbugs:annotations:3.0.1:annotations-3.0.1.jar
+Verifying com.google.code.findbugs:jsr305:3.0.2:jsr305-3.0.2.jar
+Verifying com.google.dagger:dagger:2.51.1:dagger-2.51.1.jar
+Verifying javax.inject:javax.inject:1:javax.inject-1.jar
+Verifying junit:junit:4.13.2:junit-4.13.2.jar
+Verifying net.bytebuddy:byte-buddy:1.9.12:byte-buddy-1.9.12.jar
+Verifying net.jcip:jcip-annotations:1.0:jcip-annotations-1.0.jar
+Verifying org.apache-extras.beanshell:bsh:2.0b6:bsh-2.0b6.jar
+Verifying org.briarproject:null-safety:0.1:null-safety-0.1.jar
+Verifying org.codehaus.mojo.signature:java16:1.1:java16-1.1.signature
+Verifying org.codehaus.mojo:animal-sniffer-annotations:1.24:animal-sniffer-annotations-1.24.jar
+Verifying org.codehaus.mojo:animal-sniffer:1.24:animal-sniffer-1.24.jar
+Verifying org.hamcrest:hamcrest-core:2.1:hamcrest-core-2.1.jar
+Verifying org.hamcrest:hamcrest-library:2.1:hamcrest-library-2.1.jar
+Verifying org.hamcrest:hamcrest:2.1:hamcrest-2.1.jar
+Verifying org.jmock:jmock-imposters:2.12.0:jmock-imposters-2.12.0.jar
+Verifying org.jmock:jmock-junit4:2.12.0:jmock-junit4-2.12.0.jar
+Verifying org.jmock:jmock-legacy:2.12.0:jmock-legacy-2.12.0.jar
+Verifying org.jmock:jmock-testjar:2.12.0:jmock-testjar-2.12.0.jar
+Verifying org.jmock:jmock:2.12.0:jmock-2.12.0.jar
+Verifying org.objenesis:objenesis:3.0.1:objenesis-3.0.1.jar
+Verifying org.ow2.asm:asm:7.1:asm-7.1.jar
+Verifying org.ow2.asm:asm:9.7:asm-9.7.jar
+
+> Configure project :bramble-core
+Verifying cglib:cglib:3.2.8:cglib-3.2.8.jar
+Verifying com.fasterxml.jackson.core:jackson-annotations:2.13.4:jackson-annotations-2.13.4.jar
+Verifying com.fasterxml.jackson.core:jackson-core:2.13.4:jackson-core-2.13.4.jar
+Verifying com.fasterxml.jackson.core:jackson-databind:2.13.4:jackson-databind-2.13.4.jar
+Verifying com.google.code.findbugs:annotations:3.0.1:annotations-3.0.1.jar
+Verifying com.google.code.findbugs:jsr305:3.0.2:jsr305-3.0.2.jar
+Verifying com.google.dagger:dagger-compiler:2.51.1:dagger-compiler-2.51.1.jar
+Verifying com.google.dagger:dagger-spi:2.51.1:dagger-spi-2.51.1.jar
+Verifying com.google.dagger:dagger:2.51.1:dagger-2.51.1.jar
+Verifying com.google.devtools.ksp:symbol-processing-api:1.9.20-1.0.14:symbol-processing-api-1.9.20-1.0.14.jar
+Verifying com.google.errorprone:error_prone_annotations:2.23.0:error_prone_annotations-2.23.0.jar
+Verifying com.google.errorprone:javac-shaded:9-dev-r4023-3:javac-shaded-9-dev-r4023-3.jar
+Verifying com.google.googlejavaformat:google-java-format:1.5:google-java-format-1.5.jar
+Verifying com.google.guava:failureaccess:1.0.2:failureaccess-1.0.2.jar
+Verifying com.google.guava:guava:33.0.0-jre:guava-33.0.0-jre.jar
+Verifying com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava:listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar
+Verifying com.h2database:h2:1.4.192:h2-1.4.192.jar
+Verifying com.squareup.okhttp3:mockwebserver:4.10.0:mockwebserver-4.10.0.jar
+Verifying com.squareup.okhttp3:okhttp:4.12.0:okhttp-4.12.0.jar
+Verifying com.squareup.okio:okio-jvm:3.6.0:okio-jvm-3.6.0.jar
+Verifying com.squareup:javapoet:1.13.0:javapoet-1.13.0.jar
+Verifying com.squareup:kotlinpoet:1.11.0:kotlinpoet-1.11.0.jar
+Verifying javax.inject:javax.inject:1:javax.inject-1.jar
+Verifying junit:junit:4.13.2:junit-4.13.2.jar
+Verifying net.bytebuddy:byte-buddy:1.9.12:byte-buddy-1.9.12.jar
+Verifying net.i2p.crypto:eddsa:0.2.0:eddsa-0.2.0.jar
+Verifying net.jcip:jcip-annotations:1.0:jcip-annotations-1.0.jar
+Verifying net.jodah:concurrentunit:0.4.6:concurrentunit-0.4.6.jar
+Verifying net.ltgt.gradle.incap:incap:0.2:incap-0.2.jar
+Verifying org.apache-extras.beanshell:bsh:2.0b6:bsh-2.0b6.jar
+Verifying org.bitlet:weupnp:0.1.4:weupnp-0.1.4.jar
+Verifying org.bouncycastle:bcprov-jdk15to18:1.82:bcprov-jdk15to18-1.82.jar
+Verifying org.briarproject:jtorctl:0.5:jtorctl-0.5.jar
+Verifying org.briarproject:null-safety:0.1:null-safety-0.1.jar
+Verifying org.briarproject:onionwrapper-core:0.1.4:onionwrapper-core-0.1.4.jar
+Verifying org.briarproject:socks-socket:0.1:socks-socket-0.1.jar
+Verifying org.checkerframework:checker-compat-qual:2.5.5:checker-compat-qual-2.5.5.jar
+Verifying org.checkerframework:checker-qual:3.41.0:checker-qual-3.41.0.jar
+Verifying org.codehaus.mojo.signature:java16:1.1:java16-1.1.signature
+Verifying org.codehaus.mojo:animal-sniffer-annotations:1.24:animal-sniffer-annotations-1.24.jar
+Verifying org.codehaus.mojo:animal-sniffer:1.24:animal-sniffer-1.24.jar
+Verifying org.hamcrest:hamcrest-core:2.1:hamcrest-core-2.1.jar
+Verifying org.hamcrest:hamcrest-library:2.1:hamcrest-library-2.1.jar
+Verifying org.hamcrest:hamcrest:2.1:hamcrest-2.1.jar
+Verifying org.hsqldb:hsqldb:2.3.5:hsqldb-2.3.5.jar
+Verifying org.jetbrains.kotlin:kotlin-reflect:1.6.10:kotlin-reflect-1.6.10.jar
+Verifying org.jetbrains.kotlin:kotlin-stdlib-common:1.9.10:kotlin-stdlib-common-1.9.10.jar
+Verifying org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.0:kotlin-stdlib-jdk7-1.9.0.jar
+Verifying org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.10:kotlin-stdlib-jdk7-1.9.10.jar
+Verifying org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.0:kotlin-stdlib-jdk8-1.9.0.jar
+Verifying org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.10:kotlin-stdlib-jdk8-1.9.10.jar
+Verifying org.jetbrains.kotlin:kotlin-stdlib:1.9.10:kotlin-stdlib-1.9.10.jar
+Verifying org.jetbrains.kotlin:kotlin-stdlib:1.9.20:kotlin-stdlib-1.9.20.jar
+Verifying org.jetbrains:annotations:13.0:annotations-13.0.jar
+Verifying org.jmock:jmock-imposters:2.12.0:jmock-imposters-2.12.0.jar
+Verifying org.jmock:jmock-junit4:2.12.0:jmock-junit4-2.12.0.jar
+Verifying org.jmock:jmock-legacy:2.12.0:jmock-legacy-2.12.0.jar
+Verifying org.jmock:jmock-testjar:2.12.0:jmock-testjar-2.12.0.jar
+Verifying org.jmock:jmock:2.12.0:jmock-2.12.0.jar
+Verifying org.objenesis:objenesis:3.0.1:objenesis-3.0.1.jar
+Verifying org.ow2.asm:asm:7.1:asm-7.1.jar
+Verifying org.ow2.asm:asm:9.7:asm-9.7.jar
+Verifying org.whispersystems:curve25519-java:0.5.0:curve25519-java-0.5.0.jar
+
+> Configure project :bramble-java
+Verifying cglib:cglib:3.2.8:cglib-3.2.8.jar
+Verifying com.google.code.findbugs:annotations:3.0.1:annotations-3.0.1.jar
+Verifying com.google.code.findbugs:jsr305:3.0.2:jsr305-3.0.2.jar
+Verifying com.google.dagger:dagger-compiler:2.51.1:dagger-compiler-2.51.1.jar
+Verifying com.google.dagger:dagger-spi:2.51.1:dagger-spi-2.51.1.jar
+Verifying com.google.dagger:dagger:2.51.1:dagger-2.51.1.jar
+Verifying com.google.devtools.ksp:symbol-processing-api:1.9.20-1.0.14:symbol-processing-api-1.9.20-1.0.14.jar
+Verifying com.google.errorprone:error_prone_annotations:2.23.0:error_prone_annotations-2.23.0.jar
+Verifying com.google.errorprone:javac-shaded:9-dev-r4023-3:javac-shaded-9-dev-r4023-3.jar
+Verifying com.google.googlejavaformat:google-java-format:1.5:google-java-format-1.5.jar
+Verifying com.google.guava:failureaccess:1.0.2:failureaccess-1.0.2.jar
+Verifying com.google.guava:guava:33.0.0-jre:guava-33.0.0-jre.jar
+Verifying com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava:listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar
+Verifying com.squareup:javapoet:1.13.0:javapoet-1.13.0.jar
+Verifying com.squareup:kotlinpoet:1.11.0:kotlinpoet-1.11.0.jar
+Verifying javax.inject:javax.inject:1:javax.inject-1.jar
+Verifying junit:junit:4.13.2:junit-4.13.2.jar
+Verifying net.bytebuddy:byte-buddy:1.9.12:byte-buddy-1.9.12.jar
+Verifying net.java.dev.jna:jna-platform:5.13.0:jna-platform-5.13.0.jar
+Verifying net.java.dev.jna:jna:5.13.0:jna-5.13.0.jar
+Verifying net.jcip:jcip-annotations:1.0:jcip-annotations-1.0.jar
+Verifying net.ltgt.gradle.incap:incap:0.2:incap-0.2.jar
+Verifying org.apache-extras.beanshell:bsh:2.0b6:bsh-2.0b6.jar
+Verifying org.briarproject:jtorctl:0.5:jtorctl-0.5.jar
+Verifying org.briarproject:null-safety:0.1:null-safety-0.1.jar
+Verifying org.briarproject:onionwrapper-core:0.1.4:onionwrapper-core-0.1.4.jar
+Verifying org.briarproject:onionwrapper-java:0.1.4:onionwrapper-java-0.1.4.jar
+Verifying org.checkerframework:checker-compat-qual:2.5.5:checker-compat-qual-2.5.5.jar
+Verifying org.checkerframework:checker-qual:3.41.0:checker-qual-3.41.0.jar
+Verifying org.hamcrest:hamcrest-core:2.1:hamcrest-core-2.1.jar
+Verifying org.hamcrest:hamcrest-library:2.1:hamcrest-library-2.1.jar
+Verifying org.hamcrest:hamcrest:2.1:hamcrest-2.1.jar
+Verifying org.jetbrains.kotlin:kotlin-reflect:1.6.10:kotlin-reflect-1.6.10.jar
+Verifying org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.0:kotlin-stdlib-jdk7-1.9.0.jar
+Verifying org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.0:kotlin-stdlib-jdk8-1.9.0.jar
+Verifying org.jetbrains.kotlin:kotlin-stdlib:1.9.20:kotlin-stdlib-1.9.20.jar
+Verifying org.jetbrains:annotations:13.0:annotations-13.0.jar
+Verifying org.jmock:jmock-imposters:2.12.0:jmock-imposters-2.12.0.jar
+Verifying org.jmock:jmock-junit4:2.12.0:jmock-junit4-2.12.0.jar
+Verifying org.jmock:jmock-legacy:2.12.0:jmock-legacy-2.12.0.jar
+Verifying org.jmock:jmock-testjar:2.12.0:jmock-testjar-2.12.0.jar
+Verifying org.jmock:jmock:2.12.0:jmock-2.12.0.jar
+Verifying org.objenesis:objenesis:3.0.1:objenesis-3.0.1.jar
+Verifying org.ow2.asm:asm:7.1:asm-7.1.jar
+
+> Configure project :briar-android
+WARNING: BuildType 'debug' is both debuggable and has 'isMinifyEnabled' set to true.
+All code optimizations and obfuscation are disabled for debuggable builds.
+WARNING: BuildType 'debug' is both debuggable and has 'isMinifyEnabled' set to true.
+All code optimizations and obfuscation are disabled for debuggable builds.
+
+> Configure project :briar-api
+Verifying junit:junit:4.13.2:junit-4.13.2.jar
+Verifying org.codehaus.mojo.signature:java16:1.1:java16-1.1.signature
+Verifying org.codehaus.mojo:animal-sniffer-annotations:1.24:animal-sniffer-annotations-1.24.jar
+Verifying org.codehaus.mojo:animal-sniffer:1.24:animal-sniffer-1.24.jar
+Verifying org.hamcrest:hamcrest-core:1.3:hamcrest-core-1.3.jar
+Verifying org.ow2.asm:asm:9.7:asm-9.7.jar
+
+> Configure project :briar-core
+Verifying cglib:cglib:3.2.8:cglib-3.2.8.jar
+Verifying com.google.code.findbugs:annotations:3.0.1:annotations-3.0.1.jar
+Verifying com.google.code.findbugs:jsr305:3.0.2:jsr305-3.0.2.jar
+Verifying com.google.dagger:dagger-compiler:2.51.1:dagger-compiler-2.51.1.jar
+Verifying com.google.dagger:dagger-spi:2.51.1:dagger-spi-2.51.1.jar
+Verifying com.google.dagger:dagger:2.51.1:dagger-2.51.1.jar
+Verifying com.google.devtools.ksp:symbol-processing-api:1.9.20-1.0.14:symbol-processing-api-1.9.20-1.0.14.jar
+Verifying com.google.errorprone:error_prone_annotations:2.23.0:error_prone_annotations-2.23.0.jar
+Verifying com.google.errorprone:javac-shaded:9-dev-r4023-3:javac-shaded-9-dev-r4023-3.jar
+Verifying com.google.googlejavaformat:google-java-format:1.5:google-java-format-1.5.jar
+Verifying com.google.guava:failureaccess:1.0.2:failureaccess-1.0.2.jar
+Verifying com.google.guava:guava:33.0.0-jre:guava-33.0.0-jre.jar
+Verifying com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava:listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar
+Verifying com.rometools:rome-utils:1.18.0:rome-utils-1.18.0.jar
+Verifying com.rometools:rome:1.18.0:rome-1.18.0.jar
+Verifying com.squareup.okhttp3:mockwebserver:4.10.0:mockwebserver-4.10.0.jar
+Verifying com.squareup.okhttp3:okhttp:4.12.0:okhttp-4.12.0.jar
+Verifying com.squareup.okio:okio-jvm:3.6.0:okio-jvm-3.6.0.jar
+Verifying com.squareup:javapoet:1.13.0:javapoet-1.13.0.jar
+Verifying com.squareup:kotlinpoet:1.11.0:kotlinpoet-1.11.0.jar
+Verifying javax.inject:javax.inject:1:javax.inject-1.jar
+Verifying junit:junit:4.13.2:junit-4.13.2.jar
+Verifying net.bytebuddy:byte-buddy:1.9.12:byte-buddy-1.9.12.jar
+Verifying net.jcip:jcip-annotations:1.0:jcip-annotations-1.0.jar
+Verifying net.jodah:concurrentunit:0.4.6:concurrentunit-0.4.6.jar
+Verifying net.ltgt.gradle.incap:incap:0.2:incap-0.2.jar
+Verifying org.apache-extras.beanshell:bsh:2.0b6:bsh-2.0b6.jar
+Verifying org.checkerframework:checker-compat-qual:2.5.5:checker-compat-qual-2.5.5.jar
+Verifying org.checkerframework:checker-qual:3.41.0:checker-qual-3.41.0.jar
+Verifying org.codehaus.mojo.signature:java16:1.1:java16-1.1.signature
+Verifying org.codehaus.mojo:animal-sniffer-annotations:1.24:animal-sniffer-annotations-1.24.jar
+Verifying org.codehaus.mojo:animal-sniffer:1.24:animal-sniffer-1.24.jar
+Verifying org.hamcrest:hamcrest-core:2.1:hamcrest-core-2.1.jar
+Verifying org.hamcrest:hamcrest-library:2.1:hamcrest-library-2.1.jar
+Verifying org.hamcrest:hamcrest:2.1:hamcrest-2.1.jar
+Verifying org.jdom:jdom2:2.0.6.1:jdom2-2.0.6.1.jar
+Verifying org.jetbrains.kotlin:kotlin-reflect:1.6.10:kotlin-reflect-1.6.10.jar
+Verifying org.jetbrains.kotlin:kotlin-stdlib-common:1.9.10:kotlin-stdlib-common-1.9.10.jar
+Verifying org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.0:kotlin-stdlib-jdk7-1.9.0.jar
+Verifying org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.10:kotlin-stdlib-jdk7-1.9.10.jar
+Verifying org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.0:kotlin-stdlib-jdk8-1.9.0.jar
+Verifying org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.10:kotlin-stdlib-jdk8-1.9.10.jar
+Verifying org.jetbrains.kotlin:kotlin-stdlib:1.9.10:kotlin-stdlib-1.9.10.jar
+Verifying org.jetbrains.kotlin:kotlin-stdlib:1.9.20:kotlin-stdlib-1.9.20.jar
+Verifying org.jetbrains:annotations:13.0:annotations-13.0.jar
+Verifying org.jmock:jmock-imposters:2.12.0:jmock-imposters-2.12.0.jar
+Verifying org.jmock:jmock-junit4:2.12.0:jmock-junit4-2.12.0.jar
+Verifying org.jmock:jmock-legacy:2.12.0:jmock-legacy-2.12.0.jar
+Verifying org.jmock:jmock-testjar:2.12.0:jmock-testjar-2.12.0.jar
+Verifying org.jmock:jmock:2.12.0:jmock-2.12.0.jar
+Verifying org.jsoup:jsoup:1.15.3:jsoup-1.15.3.jar
+Verifying org.objenesis:objenesis:3.0.1:objenesis-3.0.1.jar
+Verifying org.ow2.asm:asm:7.1:asm-7.1.jar
+Verifying org.ow2.asm:asm:9.7:asm-9.7.jar
+Verifying org.slf4j:slf4j-api:1.7.32:slf4j-api-1.7.32.jar
+
+> Configure project :briar-headless
+Verifying com.fasterxml.jackson.core:jackson-annotations:2.13.4:jackson-annotations-2.13.4.jar
+Verifying com.fasterxml.jackson.core:jackson-core:2.13.4:jackson-core-2.13.4.jar
+Verifying com.fasterxml.jackson.core:jackson-databind:2.13.4:jackson-databind-2.13.4.jar
+Verifying com.github.ajalt:clikt:2.2.0:clikt-2.2.0.jar
+Verifying com.google.code.findbugs:jsr305:3.0.2:jsr305-3.0.2.jar
+Verifying com.google.dagger:dagger-compiler:2.51.1:dagger-compiler-2.51.1.jar
+Verifying com.google.dagger:dagger-spi:2.51.1:dagger-spi-2.51.1.jar
+Verifying com.google.dagger:dagger:2.51.1:dagger-2.51.1.jar
+Verifying com.google.devtools.ksp:symbol-processing-api:1.9.20-1.0.14:symbol-processing-api-1.9.20-1.0.14.jar
+Verifying com.google.errorprone:error_prone_annotations:2.23.0:error_prone_annotations-2.23.0.jar
+Verifying com.google.errorprone:javac-shaded:9-dev-r4023-3:javac-shaded-9-dev-r4023-3.jar
+Verifying com.google.googlejavaformat:google-java-format:1.5:google-java-format-1.5.jar
+Verifying com.google.guava:failureaccess:1.0.2:failureaccess-1.0.2.jar
+Verifying com.google.guava:guava:33.0.0-jre:guava-33.0.0-jre.jar
+Verifying com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava:listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar
+Verifying com.squareup.okhttp3:okhttp:4.12.0:okhttp-4.12.0.jar
+Verifying com.squareup.okio:okio-jvm:3.6.0:okio-jvm-3.6.0.jar
+Verifying com.squareup.okio:okio:3.6.0:okio-metadata-3.6.0-all.jar
+Verifying com.squareup:javapoet:1.13.0:javapoet-1.13.0.jar
+Verifying com.squareup:kotlinpoet:1.11.0:kotlinpoet-1.11.0.jar
+Verifying com.vaadin.external.google:android-json:0.0.20131108.vaadin1:android-json-0.0.20131108.vaadin1.jar
+Verifying io.javalin:javalin:3.5.0:javalin-3.5.0.jar
+Verifying io.mockk:mockk-agent-api:1.12.4:mockk-agent-api-1.12.4.jar
+Verifying io.mockk:mockk-agent-common:1.12.4:mockk-agent-common-1.12.4.jar
+Verifying io.mockk:mockk-agent-jvm:1.12.4:mockk-agent-jvm-1.12.4.jar
+Verifying io.mockk:mockk-common:1.12.4:mockk-common-1.12.4.jar
+Verifying io.mockk:mockk-dsl-jvm:1.12.4:mockk-dsl-jvm-1.12.4.jar
+Verifying io.mockk:mockk-dsl:1.12.4:mockk-dsl-1.12.4.jar
+Verifying io.mockk:mockk:1.12.4:mockk-1.12.4.jar
+Verifying javax.inject:javax.inject:1:javax.inject-1.jar
+Verifying javax.servlet:javax.servlet-api:3.1.0:javax.servlet-api-3.1.0.jar
+Verifying net.bytebuddy:byte-buddy-agent:1.12.6:byte-buddy-agent-1.12.6.jar
+Verifying net.bytebuddy:byte-buddy:1.12.6:byte-buddy-1.12.6.jar
+Verifying net.java.dev.jna:jna-platform:5.13.0:jna-platform-5.13.0.jar
+Verifying net.java.dev.jna:jna:5.13.0:jna-5.13.0.jar
+Verifying net.ltgt.gradle.incap:incap:0.2:incap-0.2.jar
+Verifying org.apiguardian:apiguardian-api:1.1.0:apiguardian-api-1.1.0.jar
+Verifying org.bouncycastle:bcprov-jdk15to18:1.82:bcprov-jdk15to18-1.82.jar
+Verifying org.briarproject:jtorctl:0.5:jtorctl-0.5.jar
+Verifying org.briarproject:lyrebird-linux:0.6.2:lyrebird-linux-0.6.2.jar
+Verifying org.briarproject:lyrebird-macos:0.6.2:lyrebird-macos-0.6.2.jar
+Verifying org.briarproject:lyrebird-windows:0.6.2:lyrebird-windows-0.6.2.jar
+Verifying org.briarproject:null-safety:0.1:null-safety-0.1.jar
+Verifying org.briarproject:onionwrapper-core:0.1.4:onionwrapper-core-0.1.4.jar
+Verifying org.briarproject:onionwrapper-java:0.1.4:onionwrapper-java-0.1.4.jar
+Verifying org.briarproject:tor-linux:0.4.8.22:tor-linux-0.4.8.22.jar
+Verifying org.briarproject:tor-macos:0.4.8.22:tor-macos-0.4.8.22.jar
+Verifying org.briarproject:tor-windows:0.4.8.22:tor-windows-0.4.8.22.jar
+Verifying org.checkerframework:checker-compat-qual:2.5.5:checker-compat-qual-2.5.5.jar
+Verifying org.checkerframework:checker-qual:3.41.0:checker-qual-3.41.0.jar
+Verifying org.eclipse.jetty.websocket:websocket-api:9.4.20.v20190813:websocket-api-9.4.20.v20190813.jar
+Verifying org.eclipse.jetty.websocket:websocket-client:9.4.20.v20190813:websocket-client-9.4.20.v20190813.jar
+Verifying org.eclipse.jetty.websocket:websocket-common:9.4.20.v20190813:websocket-common-9.4.20.v20190813.jar
+Verifying org.eclipse.jetty.websocket:websocket-server:9.4.20.v20190813:websocket-server-9.4.20.v20190813.jar
+Verifying org.eclipse.jetty.websocket:websocket-servlet:9.4.20.v20190813:websocket-servlet-9.4.20.v20190813.jar
+Verifying org.eclipse.jetty:jetty-client:9.4.20.v20190813:jetty-client-9.4.20.v20190813.jar
+Verifying org.eclipse.jetty:jetty-http:9.4.20.v20190813:jetty-http-9.4.20.v20190813.jar
+Verifying org.eclipse.jetty:jetty-io:9.4.20.v20190813:jetty-io-9.4.20.v20190813.jar
+Verifying org.eclipse.jetty:jetty-security:9.4.20.v20190813:jetty-security-9.4.20.v20190813.jar
+Verifying org.eclipse.jetty:jetty-server:9.4.20.v20190813:jetty-server-9.4.20.v20190813.jar
+Verifying org.eclipse.jetty:jetty-servlet:9.4.20.v20190813:jetty-servlet-9.4.20.v20190813.jar
+Verifying org.eclipse.jetty:jetty-util:9.4.20.v20190813:jetty-util-9.4.20.v20190813.jar
+Verifying org.eclipse.jetty:jetty-webapp:9.4.20.v20190813:jetty-webapp-9.4.20.v20190813.jar
+Verifying org.eclipse.jetty:jetty-xml:9.4.20.v20190813:jetty-xml-9.4.20.v20190813.jar
+Verifying org.jetbrains.intellij.deps:trove4j:1.0.20200330:trove4j-1.0.20200330.jar
+Verifying org.jetbrains.kotlin:kotlin-annotation-processing-gradle:1.9.25:kotlin-annotation-processing-gradle-1.9.25.jar
+Verifying org.jetbrains.kotlin:kotlin-build-common:1.9.25:kotlin-build-common-1.9.25.jar
+Verifying org.jetbrains.kotlin:kotlin-build-tools-api:1.9.25:kotlin-build-tools-api-1.9.25.jar
+Verifying org.jetbrains.kotlin:kotlin-build-tools-impl:1.9.25:kotlin-build-tools-impl-1.9.25.jar
+Verifying org.jetbrains.kotlin:kotlin-compiler-embeddable:1.9.25:kotlin-compiler-embeddable-1.9.25.jar
+Verifying org.jetbrains.kotlin:kotlin-compiler-runner:1.9.25:kotlin-compiler-runner-1.9.25.jar
+Verifying org.jetbrains.kotlin:kotlin-daemon-client:1.9.25:kotlin-daemon-client-1.9.25.jar
+Verifying org.jetbrains.kotlin:kotlin-daemon-embeddable:1.9.25:kotlin-daemon-embeddable-1.9.25.jar
+Verifying org.jetbrains.kotlin:kotlin-klib-commonizer-embeddable:1.9.25:kotlin-klib-commonizer-embeddable-1.9.25.jar
+Verifying org.jetbrains.kotlin:kotlin-reflect:1.6.0:kotlin-reflect-1.6.0.jar
+Verifying org.jetbrains.kotlin:kotlin-reflect:1.6.10:kotlin-reflect-1.6.10.jar
+Verifying org.jetbrains.kotlin:kotlin-script-runtime:1.9.25:kotlin-script-runtime-1.9.25.jar
+Verifying org.jetbrains.kotlin:kotlin-scripting-common:1.9.25:kotlin-scripting-common-1.9.25.jar
+Verifying org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable:1.9.25:kotlin-scripting-compiler-embeddable-1.9.25.jar
+Verifying org.jetbrains.kotlin:kotlin-scripting-compiler-impl-embeddable:1.9.25:kotlin-scripting-compiler-impl-embeddable-1.9.25.jar
+Verifying org.jetbrains.kotlin:kotlin-scripting-jvm:1.9.25:kotlin-scripting-jvm-1.9.25.jar
+Verifying org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.0:kotlin-stdlib-jdk7-1.9.0.jar
+Verifying org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.25:kotlin-stdlib-jdk7-1.9.25.jar
+Verifying org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.0:kotlin-stdlib-jdk8-1.9.0.jar
+Verifying org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.25:kotlin-stdlib-jdk8-1.9.25.jar
+Verifying org.jetbrains.kotlin:kotlin-stdlib:1.9.20:kotlin-stdlib-1.9.20.jar
+Verifying org.jetbrains.kotlin:kotlin-stdlib:1.9.25:kotlin-stdlib-1.9.25-all.jar
+Verifying org.jetbrains.kotlin:kotlin-stdlib:1.9.25:kotlin-stdlib-1.9.25.jar
+Verifying org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.5.0:kotlinx-coroutines-core-jvm-1.5.0.jar
+Verifying org.jetbrains:annotations:13.0:annotations-13.0.jar
+Verifying org.junit.jupiter:junit-jupiter-api:5.5.2:junit-jupiter-api-5.5.2.jar
+Verifying org.junit.jupiter:junit-jupiter-engine:5.5.2:junit-jupiter-engine-5.5.2.jar
+Verifying org.junit.jupiter:junit-jupiter-params:5.5.2:junit-jupiter-params-5.5.2.jar
+Verifying org.junit.platform:junit-platform-commons:1.5.2:junit-platform-commons-1.5.2.jar
+Verifying org.junit.platform:junit-platform-engine:1.5.2:junit-platform-engine-1.5.2.jar
+Verifying org.objenesis:objenesis:3.2:objenesis-3.2.jar
+Verifying org.opentest4j:opentest4j:1.2.0:opentest4j-1.2.0.jar
+Verifying org.skyscreamer:jsonassert:1.5.0:jsonassert-1.5.0.jar
+Verifying org.slf4j:slf4j-api:1.7.30:slf4j-api-1.7.30.jar
+Verifying org.slf4j:slf4j-api:1.7.32:slf4j-api-1.7.32.jar
+Verifying org.slf4j:slf4j-simple:1.7.30:slf4j-simple-1.7.30.jar
+Configuration 'androidJdkImage' was resolved during configuration time.
+This is a build performance and scalability issue.
+See https://github.com/gradle/gradle/issues/2298
+Run with --info for a stacktrace.
+Configuration 'officialDebugAnnotationProcessorClasspath' was resolved during configuration time.
+This is a build performance and scalability issue.
+See https://github.com/gradle/gradle/issues/2298
+Run with --info for a stacktrace.
+Configuration 'officialDebugCompileClasspath' was resolved during configuration time.
+This is a build performance and scalability issue.
+See https://github.com/gradle/gradle/issues/2298
+Run with --info for a stacktrace.
+Configuration 'officialDebugRuntimeClasspath' was resolved during configuration time.
+This is a build performance and scalability issue.
+See https://github.com/gradle/gradle/issues/2298
+Run with --info for a stacktrace.
+Configuration 'kotlin-extension' was resolved during configuration time.
+This is a build performance and scalability issue.
+See https://github.com/gradle/gradle/issues/2298
+Run with --info for a stacktrace.
+Configuration 'kotlinCompilerPluginClasspathOfficialDebug' was resolved during configuration time.
+This is a build performance and scalability issue.
+See https://github.com/gradle/gradle/issues/2298
+Run with --info for a stacktrace.
+Configuration 'kotlinCompilerClasspath' was resolved during configuration time.
+This is a build performance and scalability issue.
+See https://github.com/gradle/gradle/issues/2298
+Run with --info for a stacktrace.
+Configuration 'kotlinKaptWorkerDependencies' was resolved during configuration time.
+This is a build performance and scalability issue.
+See https://github.com/gradle/gradle/issues/2298
+Run with --info for a stacktrace.
+Configuration 'kaptClasspath_kaptOfficialDebugKotlin' was resolved during configuration time.
+This is a build performance and scalability issue.
+See https://github.com/gradle/gradle/issues/2298
+Run with --info for a stacktrace.
+Configuration 'kaptOfficial' was resolved during configuration time.
+This is a build performance and scalability issue.
+See https://github.com/gradle/gradle/issues/2298
+Run with --info for a stacktrace.
+Configuration 'kaptOfficialDebug' was resolved during configuration time.
+This is a build performance and scalability issue.
+See https://github.com/gradle/gradle/issues/2298
+Run with --info for a stacktrace.
+Configuration 'kaptDebug' was resolved during configuration time.
+This is a build performance and scalability issue.
+See https://github.com/gradle/gradle/issues/2298
+Run with --info for a stacktrace.
+Configuration 'kapt' was resolved during configuration time.
+This is a build performance and scalability issue.
+See https://github.com/gradle/gradle/issues/2298
+Run with --info for a stacktrace.
+Configuration 'officialDebugReverseMetadataValues' was resolved during configuration time.
+This is a build performance and scalability issue.
+See https://github.com/gradle/gradle/issues/2298
+Run with --info for a stacktrace.
+Configuration '_agp_internal_javaPreCompileOfficialDebug_kaptClasspath' was resolved during configuration time.
+This is a build performance and scalability issue.
+See https://github.com/gradle/gradle/issues/2298
+Run with --info for a stacktrace.
+
+> Task :briar-android:verifyTranslations
+> Task :briar-android:preBuild
+> Task :briar-android:preOfficialDebugBuild
+> Task :briar-android:mergeOfficialDebugNativeDebugMetadata NO-SOURCE
+
+> Task :bramble-api:compileJava
+Note: D:\CEKA\NASAKA\Nasaka-WEWE\bramble-api\src\main\java\org\briarproject\bramble\api\client\BdfMessageValidator.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: D:\CEKA\NASAKA\Nasaka-WEWE\bramble-api\src\main\java\org\briarproject\bramble\api\data\BdfDictionary.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+> Task :bramble-core:compileJava
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+> Task :bramble-core:processResources NO-SOURCE
+> Task :bramble-core:classes
+> Task :bramble-core:jar
+> Task :bramble-api:processResources NO-SOURCE
+> Task :bramble-api:classes
+> Task :bramble-api:jar
+> Task :briar-api:compileJava
+
+> Task :briar-core:compileJava
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+> Task :briar-core:processResources NO-SOURCE
+> Task :briar-core:classes
+> Task :briar-core:jar
+> Task :briar-api:processResources NO-SOURCE
+> Task :briar-api:classes
+> Task :briar-api:jar
+> Task :bramble-android:cleanTorBinaries UP-TO-DATE
+> Task :bramble-android:unpackTorBinaries UP-TO-DATE
+> Task :bramble-android:preBuild UP-TO-DATE
+> Task :bramble-android:preDebugBuild UP-TO-DATE
+> Task :bramble-android:generateDebugBuildConfig UP-TO-DATE
+> Task :bramble-android:generateDebugResValues UP-TO-DATE
+> Task :bramble-android:generateDebugResources UP-TO-DATE
+> Task :bramble-android:packageDebugResources UP-TO-DATE
+> Task :bramble-android:parseDebugLocalResources UP-TO-DATE
+> Task :bramble-android:generateDebugRFile UP-TO-DATE
+> Task :bramble-android:javaPreCompileDebug UP-TO-DATE
+
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+> Task :bramble-android:compileDebugJavaWithJavac
+
+> Task :briar-android:checkKotlinGradlePluginConfigurationErrors
+> Task :briar-android:generateOfficialDebugBuildConfig
+> Task :bramble-android:compileDebugLibraryResources UP-TO-DATE
+> Task :bramble-android:writeDebugAarMetadata UP-TO-DATE
+> Task :bramble-android:bundleLibCompileToJarDebug
+> Task :briar-android:checkOfficialDebugAarMetadata UP-TO-DATE
+> Task :briar-android:generateOfficialDebugResValues UP-TO-DATE
+> Task :briar-android:mapOfficialDebugSourceSetPaths
+> Task :briar-android:generateOfficialDebugResources
+> Task :briar-android:createOfficialDebugCompatibleScreenManifests
+> Task :bramble-android:extractDeepLinksDebug UP-TO-DATE
+> Task :bramble-android:processDebugManifest UP-TO-DATE
+> Task :briar-android:extractDeepLinksOfficialDebug UP-TO-DATE
+> Task :briar-android:processOfficialDebugMainManifest
+> Task :briar-android:processOfficialDebugManifest
+> Task :briar-android:javaPreCompileOfficialDebug UP-TO-DATE
+> Task :bramble-android:mergeDebugShaders UP-TO-DATE
+> Task :bramble-android:compileDebugShaders NO-SOURCE
+> Task :bramble-android:generateDebugAssets UP-TO-DATE
+> Task :bramble-android:mergeDebugAssets UP-TO-DATE
+> Task :briar-android:mergeOfficialDebugShaders UP-TO-DATE
+> Task :briar-android:compileOfficialDebugShaders NO-SOURCE
+> Task :briar-android:generateOfficialDebugAssets UP-TO-DATE
+> Task :briar-android:mergeOfficialDebugAssets UP-TO-DATE
+> Task :briar-android:compressOfficialDebugAssets UP-TO-DATE
+> Task :bramble-android:mergeDebugGeneratedProguardFiles UP-TO-DATE
+> Task :bramble-android:exportDebugConsumerProguardFiles UP-TO-DATE
+> Task :briar-android:processOfficialDebugManifestForPackage
+> Task :briar-android:mergeOfficialDebugResources
+> Task :bramble-android:bundleLibRuntimeToJarDebug
+> Task :briar-android:checkOfficialDebugDuplicateClasses UP-TO-DATE
+> Task :briar-android:extractProguardFiles UP-TO-DATE
+> Task :bramble-android:processDebugJavaRes UP-TO-DATE
+> Task :bramble-android:mergeDebugJniLibFolders UP-TO-DATE
+> Task :bramble-android:mergeDebugNativeLibs UP-TO-DATE
+> Task :bramble-android:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :briar-android:mergeOfficialDebugJniLibFolders UP-TO-DATE
+> Task :briar-android:mergeOfficialDebugNativeLibs UP-TO-DATE
+> Task :briar-android:stripOfficialDebugDebugSymbols UP-TO-DATE
+> Task :briar-android:validateSigningOfficialDebug UP-TO-DATE
+> Task :briar-android:writeOfficialDebugAppMetadata UP-TO-DATE
+> Task :briar-android:writeOfficialDebugSigningConfigVersions
+warn: removing resource org.briarproject.briar.android.debug:string/add_contact_remote_connecting without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/bluetooth_setting_disabled without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/bluetooth_setting_enabled without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/calculating_confirmation_code without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/choose_forum_name without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/codes_do_not_match without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/connected_to_contact without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/connection_error_explanation without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/connection_failed without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/could_not_find_contact without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/could_not_load_report_data without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/dnkm_warning_dozed without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/enter_confirmation_code without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/enter_invitation_code without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/feedback_settings_title without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/groups_message_sent without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/interfering without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/introduction_response_error without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/notify_private_messages_setting without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/options without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/pref_theme_auto without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/qr_code_too_new without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/qr_code_too_old without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/startup_failed_notification_text without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/startup_failed_notification_title without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/uninstall_setting_summary without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/uninstall_setting_title without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/waiting_for_contact without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/your_confirmation_code without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/your_invitation_code without required default value.
+
+warn: removing resource org.briarproject.briar.android.debug:string/add_contact_remote_connecting without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/bluetooth_setting_disabled without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/bluetooth_setting_enabled without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/calculating_confirmation_code without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/choose_forum_name without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/codes_do_not_match without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/connected_to_contact without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/connection_error_explanation without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/connection_failed without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/could_not_find_contact without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/could_not_load_report_data without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/dnkm_warning_dozed without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/enter_confirmation_code without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/enter_invitation_code without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/feedback_settings_title without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/groups_message_sent without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/interfering without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/introduction_response_error without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/notify_private_messages_setting without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/options without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/pref_theme_auto without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/qr_code_too_new without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/qr_code_too_old without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/startup_failed_notification_text without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/startup_failed_notification_title without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/uninstall_setting_summary without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/uninstall_setting_title without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/waiting_for_contact without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/your_confirmation_code without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/your_invitation_code without required default value.
+
+warn: removing resource org.briarproject.briar.android.debug:string/add_contact_remote_connecting without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/bluetooth_setting_disabled without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/bluetooth_setting_enabled without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/calculating_confirmation_code without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/choose_forum_name without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/codes_do_not_match without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/connected_to_contact without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/connection_error_explanation without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/connection_failed without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/could_not_find_contact without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/could_not_load_report_data without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/dnkm_warning_dozed without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/enter_confirmation_code without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/enter_invitation_code without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/feedback_settings_title without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/groups_message_sent without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/interfering without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/introduction_response_error without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/notify_private_messages_setting without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/options without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/pref_theme_auto without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/qr_code_too_new without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/qr_code_too_old without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/startup_failed_notification_text without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/startup_failed_notification_title without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/uninstall_setting_summary without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/uninstall_setting_title without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/waiting_for_contact without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/your_confirmation_code without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/your_invitation_code without required default value.
+
+warn: removing resource org.briarproject.briar.android.debug:string/add_contact_remote_connecting without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/bluetooth_setting_disabled without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/bluetooth_setting_enabled without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/calculating_confirmation_code without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/choose_forum_name without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/codes_do_not_match without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/connected_to_contact without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/connection_error_explanation without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/connection_failed without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/could_not_find_contact without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/could_not_load_report_data without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/dnkm_warning_dozed without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/enter_confirmation_code without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/enter_invitation_code without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/feedback_settings_title without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/groups_message_sent without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/interfering without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/introduction_response_error without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/notify_private_messages_setting without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/options without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/pref_theme_auto without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/qr_code_too_new without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/qr_code_too_old without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/startup_failed_notification_text without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/startup_failed_notification_title without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/uninstall_setting_summary without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/uninstall_setting_title without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/waiting_for_contact without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/your_confirmation_code without required default value.
+warn: removing resource org.briarproject.briar.android.debug:string/your_invitation_code without required default value.
+
+> Task :briar-android:processOfficialDebugResources
+> Task :briar-android:kaptGenerateStubsOfficialDebugKotlin
+> Task :briar-android:kaptOfficialDebugKotlin
+Note: [1] Wrote GeneratedAppGlideModule with: []
+
+> Task :briar-android:compileOfficialDebugKotlin
+w: file:///D:/CEKA/NASAKA/Nasaka-WEWE/briar-android/src/main/java/org/briarproject/briar/android/account/CekaAuthActivity.kt:43:9 'overridePendingTransition(Int, Int): Unit' is deprecated. Deprecated in Java
+w: file:///D:/CEKA/NASAKA/Nasaka-WEWE/briar-android/src/main/java/org/briarproject/briar/android/account/CekaAuthActivity.kt:122:9 'overridePendingTransition(Int, Int): Unit' is deprecated. Deprecated in Java
+w: file:///D:/CEKA/NASAKA/Nasaka-WEWE/briar-android/src/main/java/org/briarproject/briar/android/navdrawer/NavDrawerActivity.kt:81:34 Parameter 'query' is never used, could be renamed to _
+w: file:///D:/CEKA/NASAKA/Nasaka-WEWE/briar-android/src/main/java/org/briarproject/briar/android/ui/screens/DashboardScreen.kt:258:95 'Article: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Outlined.Article
+
+> Task :briar-android:compileOfficialDebugJavaWithJavac
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+> Task :briar-android:mergeOfficialDebugGeneratedProguardFiles UP-TO-DATE
+> Task :briar-android:processOfficialDebugJavaRes UP-TO-DATE
+> Task :briar-android:mergeOfficialDebugJavaResource
+> Task :briar-android:minifyOfficialDebugWithR8

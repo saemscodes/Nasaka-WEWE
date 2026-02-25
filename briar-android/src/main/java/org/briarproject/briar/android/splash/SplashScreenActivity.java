@@ -32,8 +32,7 @@ import static org.briarproject.briar.android.TestingConstants.IS_DEBUG_BUILD;
 @ParametersNotNullByDefault
 public class SplashScreenActivity extends BaseActivity {
 
-	private static final Logger LOG =
-			getLogger(SplashScreenActivity.class.getName());
+	private static final Logger LOG = getLogger(SplashScreenActivity.class.getName());
 
 	@Inject
 	protected AccountManager accountManager;
@@ -56,9 +55,12 @@ public class SplashScreenActivity extends BaseActivity {
 		if (accountManager.hasDatabaseKey()) {
 			startNextActivity(ENTRY_ACTIVITY);
 			finish();
+		} else if (accountManager.accountExists()) {
+			// Account exists but not unlocked — go to entry which handles unlock
+			startNextActivity(ENTRY_ACTIVITY);
+			finish();
 		} else {
-			int duration =
-					getResources().getInteger(R.integer.splashScreenDuration);
+			int duration = getResources().getInteger(R.integer.splashScreenDuration);
 			new Handler().postDelayed(() -> {
 				if (IS_DEBUG_BUILD && currentTimeMillis() >= EXPIRY_DATE) {
 					LOG.info("Expired");
@@ -89,4 +91,3 @@ public class SplashScreenActivity extends BaseActivity {
 		return true;
 	}
 }
-
