@@ -7,9 +7,9 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.lifecycle.ViewModelProvider
-import io.github.jan_tennert.supabase.SupabaseClient
-import io.github.jan_tennert.supabase.auth.auth
-import io.github.jan_tennert.supabase.auth.status.SessionStatus
+import io.github.jan.supabase.SupabaseClient
+import io.github.jan.supabase.auth.auth
+import io.github.jan.supabase.auth.status.SessionStatus
 import org.briarproject.briar.R
 import org.briarproject.briar.android.BriarApplication.ENTRY_ACTIVITY
 import org.briarproject.briar.android.activity.ActivityComponent

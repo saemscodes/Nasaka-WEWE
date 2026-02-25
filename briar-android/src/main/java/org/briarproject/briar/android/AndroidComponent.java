@@ -206,7 +206,7 @@ public interface AndroidComponent
 
 	ViewModelProvider.Factory viewModelFactory();
 
-	io.github.jan_tennert.supabase.SupabaseClient supabaseClient();
+	io.github.jan.supabase.SupabaseClient supabaseClient();
 
 	FeatureFlags featureFlags();
 

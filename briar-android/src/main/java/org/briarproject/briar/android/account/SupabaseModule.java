@@ -2,11 +2,11 @@ package org.briarproject.briar.android.account;
 
 import dagger.Module;
 import dagger.Provides;
-import io.github.jan_tennert.supabase.SupabaseClient;
-import io.github.jan_tennert.supabase.SupabaseClientKt;
-import io.github.jan_tennert.supabase.auth.Auth;
-import io.github.jan_tennert.supabase.auth.ComposeAuth;
-import io.github.jan_tennert.supabase.postgrest.Postgrest;
+import io.github.jan.supabase.SupabaseClient;
+import io.github.jan.supabase.SupabaseClientKt;
+import io.github.jan.supabase.auth.Auth;
+import io.github.jan.supabase.compose.auth.ComposeAuth;
+import io.github.jan.supabase.postgrest.Postgrest;
 import org.briarproject.briar.BuildConfig;
 
 import javax.inject.Singleton;

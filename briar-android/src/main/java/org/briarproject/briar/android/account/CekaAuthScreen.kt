@@ -19,10 +19,10 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import io.github.jan_tennert.supabase.SupabaseClient
-import io.github.jan_tennert.supabase.auth.auth
-import io.github.jan_tennert.supabase.auth.providers.Github
-import io.github.jan_tennert.supabase.auth.providers.Google
+import io.github.jan.supabase.SupabaseClient
+import io.github.jan.supabase.auth.auth
+import io.github.jan.supabase.auth.providers.Github
+import io.github.jan.supabase.auth.providers.Google
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -116,7 +116,7 @@ fun CekaAuthScreen(supabaseClient: SupabaseClient) {
                                 isLoading = true
                                 errorMessage = null
                                 try {
-                                    supabaseClient.auth.signInWith(io.github.jan_tennert.supabase.auth.providers.Email) {
+                                    supabaseClient.auth.signInWith(io.github.jan.supabase.auth.providers.Email) {
                                         this.email = email
                                         this.password = password
                                     }
