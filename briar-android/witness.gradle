@@ -3,7 +3,7 @@ dependencyVerification {
 		'androidx.activity:activity-ktx:1.7.2:activity-ktx-1.7.2.aar:b0b4206ece92919925061fdf5784dd21f0118534609e8f6d9404bdd0f5cb5a3d',
 		'androidx.activity:activity:1.7.2:activity-1.7.2.aar:2a1abf8e0a598d246b1edcb71e2395e39f32332195ebe5ea40a3dd21355ba3ae',
 		'androidx.activity:activity-compose:1.7.2:activity-compose-1.7.2.aar:c73db26b1672a63f144457271b49cc40380b5bafe60ed0710e82d0a774e36a88',
-		'androidx.annotation:annotation-experimental:1.1.0:annotation-experimental-1.1.0.aar:0157de61a2064047896a058080f3fd67ba57ad9a94857b3f7a363660243e3f90',
+		'androidx.annotation:annotation-experimental:1.4.1:annotation-experimental-1.4.1.aar:6bd4c7c7476f8260cd3bdbb81183583e93fc9f790c27dea7dc314181cbf87aa0',
 		'androidx.annotation:annotation:1.5.0:annotation-1.5.0.jar:261fb7c0210858500bab66d34354972a75166ab4182add283780b05513d6ec4a',
 		'androidx.appcompat:appcompat-resources:1.5.0:appcompat-resources-1.5.0.aar:34511f11765eb4dfb61e7b3285019b6488b10f6a9093b028aa108ca0d33fc8c5',
 		'androidx.appcompat:appcompat:1.5.0:appcompat-1.5.0.aar:ee3c914528409787069d9ee903243dac0204a09f9119c4f0aa1a2aa92188acac',
