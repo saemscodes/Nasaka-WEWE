@@ -15,7 +15,7 @@ import org.briarproject.briar.android.BriarApplication;
 import io.github.jan.supabase.SupabaseClient;
 import io.github.jan.supabase.gotrue.AuthKt;
 import kotlinx.coroutines.BuildersKt;
-import kotlinx.coroutines.EmptyCoroutineContext;
+import kotlin.coroutines.EmptyCoroutineContext;
 import org.briarproject.briar.android.BriarService;
 import org.briarproject.briar.android.BriarService.BriarServiceConnection;
 import org.briarproject.briar.android.controller.handler.ResultHandler;

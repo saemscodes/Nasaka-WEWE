@@ -50,8 +50,8 @@ public class AboutFragment extends Fragment {
 	public void onStart() {
 		super.onStart();
 		requireActivity().setTitle(R.string.about_title);
-		briarVersion = requireActivity().findViewById(R.id.nasakaWeweVersion);
-		briarVersion.setText(
+		nasakaWeweVersion = requireActivity().findViewById(R.id.nasakaWeweVersion);
+		nasakaWeweVersion.setText(
 				getString(R.string.nasaka_wewe_version, BuildConfig.VERSION_NAME));
 		torVersion = requireActivity().findViewById(R.id.torVersion);
 		torVersion.setText(
