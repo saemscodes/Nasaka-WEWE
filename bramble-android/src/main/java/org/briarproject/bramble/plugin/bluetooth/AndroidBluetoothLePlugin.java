@@ -314,7 +314,7 @@ class AndroidBluetoothLePlugin implements BluetoothLePlugin {
 						conn = new GattTransportConnection(AndroidBluetoothLePlugin.this,
 								wakeLockManager, device, null, gattServer);
 						connections.put(device, conn);
-						callback.incomingConnectionCreated(conn);
+						callback.handleConnection(conn);
 					} catch (IOException e) {
 						LOG.warning("Failed to create incoming GATT connection: " + e.getMessage());
 						return;
@@ -417,11 +417,6 @@ class AndroidBluetoothLePlugin implements BluetoothLePlugin {
 	@Override
 	public int getPollingInterval() {
 		return 0;
-	}
-
-	@Override
-	public void poll(List<DuplexTransportConnection> properties) {
-		// Not used for BLE discovery
 	}
 
 	@Override

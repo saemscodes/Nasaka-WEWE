@@ -2,7 +2,7 @@ dependencyVerification {
 	verify = [
 		'androidx.annotation:annotation:1.5.0:annotation-1.5.0.jar:261fb7c0210858500bab66d34354972a75166ab4182add283780b05513d6ec4a',
 		'cglib:cglib:3.2.8:cglib-3.2.8.jar:3f64de999ecc5595dc84ca8ff0879d8a34c8623f9ef3c517a53ed59023fcb9db',
-		'com.android.tools.ddms:ddmlib:31.13.0:ddmlib-31.13.0.jar:839957f961100713ea0eed628a8684cc39aa479631c36249793e6df7e0cd63d8',
+//		'com.android.tools.ddms:ddmlib:31.13.0:ddmlib-31.13.0.jar:839957f961100713ea0eed628a8684cc39aa479631c36249793e6df7e0cd63d8',
 		'com.android.tools.emulator:proto:31.13.0:proto-31.13.0.jar:b77f81cc0751d79393ec4b2eb046f910d21abcd7608b5b0f5a1efea1b3243b48',
 		'com.android.tools.utp:android-device-provider-ddmlib-proto:31.13.0:android-device-provider-ddmlib-proto-31.13.0.jar:047aecdd66e106137f77a52c442f1b83db7d6e8496899800251f206c7f39de65',
 		'com.android.tools.utp:android-device-provider-ddmlib:31.13.0:android-device-provider-ddmlib-31.13.0.jar:e6c2d4674077610e165524df6e0617b6af0f91358075854d57c1072f5fb0c245',

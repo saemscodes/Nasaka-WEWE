@@ -49,8 +49,8 @@ public class SetupActivity extends BaseActivity
 		overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 
 		ComponentActivityKt.setContent(this, null, (composer, i) -> {
-			OnboardingScreensKt.OnboardingFlow((name, password) -> {
-				viewModel.createAccount(name, password != null ? password : "");
+			OnboardingScreensKt.OnboardingFlow((name, password, role) -> {
+				viewModel.createAccount(name, password != null ? password : "", (Integer) role);
 				return null;
 			}, composer, 0);
 			return null;
@@ -75,8 +75,8 @@ public class SetupActivity extends BaseActivity
 
 	private void showApp() {
 		Intent i = new Intent(this, ENTRY_ACTIVITY);
-		i.setFlags(FLAG_ACTIVITY_NEW_TASK | FLAG_ACTIVITY_TASK_ON_HOME |
-				FLAG_ACTIVITY_CLEAR_TASK | FLAG_ACTIVITY_CLEAR_TOP);
+		i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_TASK_ON_HOME |
+				Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		startActivity(i);
 		supportFinishAfterTransition();
 		overridePendingTransition(R.anim.screen_new_in, R.anim.screen_old_out);

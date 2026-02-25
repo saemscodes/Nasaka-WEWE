@@ -39,6 +39,7 @@ class SetupViewModel extends AndroidViewModel {
 
 	@Nullable
 	private String authorName, password;
+	private int role = 0;
 	private final MutableLiveEvent<State> state = new MutableLiveEvent<>();
 	private final MutableLiveData<Boolean> isCreatingAccount = new MutableLiveData<>(false);
 
@@ -104,13 +105,20 @@ class SetupViewModel extends AndroidViewModel {
 		createAccount();
 	}
 
-	public void createAccount(String authorName, String password) {
+	private void createAccount() {
+		if (authorName == null || password == null)
+			throw new IllegalStateException();
+		createAccount(authorName, password, role);
+	}
+
+	public void createAccount(String authorName, String password, int role) {
 		this.authorName = authorName;
 		this.password = password;
+		this.role = role;
 		isCreatingAccount.setValue(true);
 		ioExecutor.execute(() -> {
-			if (accountManager.createAccount(authorName, password)) {
-				LOG.info("Created account");
+			if (accountManager.createAccount(authorName, password, role)) {
+				LOG.info("Created account with role: " + role);
 				state.postEvent(CREATED);
 			} else {
 				LOG.warning("Failed to create account");

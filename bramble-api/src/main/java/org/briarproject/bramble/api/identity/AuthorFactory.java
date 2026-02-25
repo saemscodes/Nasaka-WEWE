@@ -12,10 +12,15 @@ public interface AuthorFactory {
 	 */
 	Author createAuthor(String name, PublicKey publicKey);
 
+	Author createAuthor(String name, PublicKey publicKey, int role);
+
 	/**
 	 * Creates an author with the given format version, name and public key.
 	 */
 	Author createAuthor(int formatVersion, String name, PublicKey publicKey);
+
+	Author createAuthor(int formatVersion, String name, PublicKey publicKey,
+			int role);
 
 	/**
 	 * Creates a local author with the current format version and the given
