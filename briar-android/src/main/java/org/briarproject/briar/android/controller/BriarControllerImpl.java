@@ -13,7 +13,7 @@ import org.briarproject.bramble.api.settings.Settings;
 import org.briarproject.bramble.api.settings.SettingsManager;
 import org.briarproject.briar.android.BriarApplication;
 import io.github.jan.supabase.SupabaseClient;
-import io.github.jan.supabase.auth.AuthKt;
+import io.github.jan.supabase.gotrue.AuthKt;
 import kotlinx.coroutines.BuildersKt;
 import kotlinx.coroutines.EmptyCoroutineContext;
 import org.briarproject.briar.android.BriarService;

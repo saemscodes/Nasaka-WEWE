@@ -12,7 +12,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.PasswordVisualTransformation
@@ -20,9 +20,10 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import io.github.jan.supabase.SupabaseClient
-import io.github.jan.supabase.auth.auth
-import io.github.jan.supabase.auth.providers.Github
-import io.github.jan.supabase.auth.providers.Google
+import io.github.jan.supabase.gotrue.auth
+import io.github.jan.supabase.gotrue.providers.Github
+import io.github.jan.supabase.gotrue.providers.Google
+import io.github.jan.supabase.gotrue.providers.builtin.Email as EmailProvider
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -116,7 +117,7 @@ fun CekaAuthScreen(supabaseClient: SupabaseClient) {
                                 isLoading = true
                                 errorMessage = null
                                 try {
-                                    supabaseClient.auth.signInWith(io.github.jan.supabase.auth.providers.Email) {
+                                    supabaseClient.auth.signInWith(EmailProvider) {
                                         this.email = email
                                         this.password = password
                                     }

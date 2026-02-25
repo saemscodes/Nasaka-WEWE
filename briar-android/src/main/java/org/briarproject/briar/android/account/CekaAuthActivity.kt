@@ -8,13 +8,13 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.lifecycle.ViewModelProvider
 import io.github.jan.supabase.SupabaseClient
-import io.github.jan.supabase.auth.auth
-import io.github.jan.supabase.auth.status.SessionStatus
+import io.github.jan.supabase.gotrue.auth
+import io.github.jan.supabase.gotrue.SessionStatus
 import org.briarproject.briar.R
 import org.briarproject.briar.android.BriarApplication.ENTRY_ACTIVITY
 import org.briarproject.briar.android.activity.ActivityComponent
 import org.briarproject.briar.android.activity.BaseActivity
-import org.briarproject.briar.android.ui.theme.BriarTheme
+import org.briarproject.briar.android.ui.theme.NasakaWeweTheme
 import javax.inject.Inject
 
 class CekaAuthActivity : BaseActivity() {
@@ -37,7 +37,7 @@ class CekaAuthActivity : BaseActivity() {
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
 
         setContent {
-            BriarTheme {
+            NasakaWeweTheme {
                 val sessionStatus by supabaseClient.auth.sessionStatus.collectAsState()
 
                 LaunchedEffect(sessionStatus) {

@@ -4,7 +4,7 @@ import dagger.Module;
 import dagger.Provides;
 import io.github.jan.supabase.SupabaseClient;
 import io.github.jan.supabase.SupabaseClientKt;
-import io.github.jan.supabase.auth.Auth;
+import io.github.jan.supabase.gotrue.Auth;
 import io.github.jan.supabase.compose.auth.ComposeAuth;
 import io.github.jan.supabase.postgrest.Postgrest;
 import org.briarproject.briar.BuildConfig;
