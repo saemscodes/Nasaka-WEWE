@@ -30,12 +30,12 @@ public class AboutFragment extends Fragment {
 	final static String TAG = AboutFragment.class.getName();
 	private static final Logger LOG = getLogger(TAG);
 
-	private TextView briarVersion;
+	private TextView nasakaWeweVersion;
 	private TextView torVersion;
-	private TextView briarWebsite;
-	private TextView briarSourceCode;
-	private TextView briarChangelog;
-	private TextView briarPrivacyPolicy;
+	private TextView nasakaWeweWebsite;
+	private TextView nasakaWeweSourceCode;
+	private TextView nasakaWeweChangelog;
+	private TextView nasakaWewePrivacyPolicy;
 
 	@Nullable
 	@Override
@@ -50,33 +50,33 @@ public class AboutFragment extends Fragment {
 	public void onStart() {
 		super.onStart();
 		requireActivity().setTitle(R.string.about_title);
-		briarVersion = requireActivity().findViewById(R.id.BriarVersion);
+		briarVersion = requireActivity().findViewById(R.id.nasakaWeweVersion);
 		briarVersion.setText(
-				getString(R.string.briar_version, BuildConfig.VERSION_NAME));
-		torVersion = requireActivity().findViewById(R.id.TorVersion);
+				getString(R.string.nasaka_wewe_version, BuildConfig.VERSION_NAME));
+		torVersion = requireActivity().findViewById(R.id.torVersion);
 		torVersion.setText(
 				getString(R.string.tor_version, BuildConfig.TorVersion));
-		briarWebsite = requireActivity().findViewById(R.id.BriarWebsite);
-		briarSourceCode = requireActivity().findViewById(R.id.BriarSourceCode);
-		briarChangelog = requireActivity().findViewById(R.id.BriarChangelog);
-		briarPrivacyPolicy =
-				requireActivity().findViewById(R.id.BriarPrivacyPolicy);
-		briarWebsite.setOnClickListener(View -> {
-			String url = "https://briarproject.org/";
+		nasakaWeweWebsite = requireActivity().findViewById(R.id.nasakaWeweWebsite);
+		nasakaWeweSourceCode = requireActivity().findViewById(R.id.nasakaWeweSourceCode);
+		nasakaWeweChangelog = requireActivity().findViewById(R.id.nasakaWeweChangelog);
+		nasakaWewePrivacyPolicy =
+				requireActivity().findViewById(R.id.nasakaWewePrivacyPolicy);
+		nasakaWeweWebsite.setOnClickListener(View -> {
+			String url = "https://www.civiceducationkenya.com/";
 			goToUrl(url);
 		});
-		briarSourceCode.setOnClickListener(View -> {
-			String url = "https://code.briarproject.org/briar/briar";
+		nasakaWeweSourceCode.setOnClickListener(View -> {
+			String url = "https://www.civiceducationkenya.com/source";
 			goToUrl(url);
 		});
-		briarChangelog.setOnClickListener(View -> {
+		nasakaWeweChangelog.setOnClickListener(View -> {
 			String url =
-					"https://code.briarproject.org/briar/briar/-/wikis/changelog";
+					"https://www.civiceducationkenya.com/changelog";
 			goToUrl(url);
 		});
-		briarPrivacyPolicy.setOnClickListener(View -> {
+		nasakaWewePrivacyPolicy.setOnClickListener(View -> {
 			String url =
-					"https://briarproject.org/privacy-policy/";
+					"https://www.civiceducationkenya.com/privacy-policy";
 			goToUrl(url);
 		});
 	}

@@ -588,5 +588,14 @@ Umepoteza nenosiri.</string>
   <string name="nav_home">Nyumbani</string>
   <string name="nav_contacts">Wasiliano</string>
   <string name="nav_map">Ramani</string>
-  <string name="nav_settings">Mipangilio</string>
+  	<string name="nav_settings">Mipangilio</string>
+	<string name="about_title">Kuhusu Nasaka WEWE</string>
+	<string name="nasaka_wewe_version">Toleo la Nasaka WEWE %s</string>
+	<string name="nasaka_wewe_website">Tovuti</string>
+	<string name="nasaka_wewe_source_code">Msimbo wa Chanzo</string>
+	<string name="nasaka_wewe_changelog">Mabadiliko</string>
+	<string name="nasaka_wewe_privacy_policy">Sera ya Faragha</string>
+	<string name="tor_version">Toleo la Tor %s</string>
+	<string name="links">Viungo</string>
+	<string name="translator_thanks">Asante kwa watafsiri wote waliochangia mradi huu.</string>
 </resources>

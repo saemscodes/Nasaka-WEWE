@@ -12,6 +12,10 @@ import org.briarproject.bramble.api.lifecycle.LifecycleManager;
 import org.briarproject.bramble.api.settings.Settings;
 import org.briarproject.bramble.api.settings.SettingsManager;
 import org.briarproject.briar.android.BriarApplication;
+import io.github.jan_tennert.supabase.SupabaseClient;
+import io.github.jan_tennert.supabase.auth.AuthKt;
+import kotlinx.coroutines.BuildersKt;
+import kotlinx.coroutines.EmptyCoroutineContext;
 import org.briarproject.briar.android.BriarService;
 import org.briarproject.briar.android.BriarService.BriarServiceConnection;
 import org.briarproject.briar.android.controller.handler.ResultHandler;
@@ -47,6 +51,7 @@ public class BriarControllerImpl implements BriarController {
 	private final SettingsManager settingsManager;
 	private final DozeWatchdog dozeWatchdog;
 	private final AndroidWakeLockManager wakeLockManager;
+	private final SupabaseClient supabaseClient;
 	private final Activity activity;
 
 	private boolean bound = false;
@@ -59,6 +64,7 @@ public class BriarControllerImpl implements BriarController {
 			SettingsManager settingsManager,
 			DozeWatchdog dozeWatchdog,
 			AndroidWakeLockManager wakeLockManager,
+			SupabaseClient supabaseClient,
 			Activity activity) {
 		this.serviceConnection = serviceConnection;
 		this.accountManager = accountManager;
@@ -67,6 +73,7 @@ public class BriarControllerImpl implements BriarController {
 		this.settingsManager = settingsManager;
 		this.dozeWatchdog = dozeWatchdog;
 		this.wakeLockManager = wakeLockManager;
+		this.supabaseClient = supabaseClient;
 		this.activity = activity;
 	}
 
@@ -152,6 +159,14 @@ public class BriarControllerImpl implements BriarController {
 			} catch (InterruptedException e) {
 				LOG.warning("Interrupted while waiting for service");
 			} finally {
+				// Sign out of Supabase
+				try {
+					BuildersKt.runBlocking(EmptyCoroutineContext.INSTANCE, (scope, continuation) -> 
+						AuthKt.getAuth(supabaseClient).signOut(continuation)
+					);
+				} catch (Exception e) {
+					LOG.warning("Failed to sign out of Supabase: " + e.getMessage());
+				}
 				if (deleteAccount) accountManager.deleteAccount();
 			}
 			handler.onResult(null);
