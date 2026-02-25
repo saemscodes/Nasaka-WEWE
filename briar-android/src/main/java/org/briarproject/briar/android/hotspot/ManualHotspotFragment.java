@@ -117,3 +117,4 @@ public class ManualHotspotFragment extends Fragment {
 		textView.setMovementMethod(LinkMovementMethod.getInstance());
 	}
 }
+

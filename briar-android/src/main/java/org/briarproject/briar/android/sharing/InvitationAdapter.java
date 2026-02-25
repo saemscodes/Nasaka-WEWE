@@ -51,3 +51,4 @@ public abstract class InvitationAdapter<I extends InvitationItem, VH extends Inv
 	}
 
 }
+

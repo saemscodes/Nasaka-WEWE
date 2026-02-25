@@ -30,3 +30,4 @@ public abstract class BaseSelectableContactItem extends ContactItem {
 	public abstract boolean isDisabled();
 
 }
+

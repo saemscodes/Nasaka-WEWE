@@ -48,3 +48,4 @@ public class ShareBlogMessageFragment extends BaseMessageFragment {
 	}
 
 }
+

@@ -85,3 +85,4 @@ public class MailboxConnectingFragment extends Fragment {
 		handler.postDelayed(refresher, REFRESH_INTERVAL_MS);
 	}
 }
+

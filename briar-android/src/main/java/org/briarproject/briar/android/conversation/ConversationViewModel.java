@@ -458,3 +458,4 @@ public class ConversationViewModel extends DbViewModel
 		});
 	}
 }
+

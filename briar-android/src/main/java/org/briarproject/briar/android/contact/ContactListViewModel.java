@@ -82,3 +82,4 @@ class ContactListViewModel extends ContactsViewModel {
 	}
 
 }
+

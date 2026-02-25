@@ -78,3 +78,4 @@ class HuaweiAppLaunchView extends PowerView {
 		setChecked(true);
 	}
 }
+

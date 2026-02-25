@@ -123,3 +123,4 @@ public class CreateGroupFragment extends BaseFragment {
 		listener.onGroupNameChosen(nameEntry.getText().toString());
 	}
 }
+

@@ -215,7 +215,7 @@ public class MailboxActivity extends BriarActivity {
 		} else if (s instanceof Paired) {
 			f = FinalFragment.newInstance(R.string.mailbox_setup_paired_title,
 					R.drawable.ic_check_circle_outline,
-					R.color.briar_brand_green,
+					R.color.nasaka_wewe_brand_green,
 					R.string.mailbox_setup_paired_description);
 			tag = FinalFragment.TAG;
 		} else {
@@ -251,7 +251,7 @@ public class MailboxActivity extends BriarActivity {
 			showFragment(getSupportFragmentManager(), new BlankFragment(),
 					BlankFragment.TAG);
 			MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(
-					this, R.style.BriarDialogTheme);
+					this, R.style.NasakaWeweDialogTheme);
 			builder.setTitle(R.string.mailbox_status_unlink_no_wipe_title);
 			builder.setMessage(R.string.mailbox_status_unlink_no_wipe_message);
 			builder.setNeutralButton(R.string.got_it,
@@ -267,3 +267,4 @@ public class MailboxActivity extends BriarActivity {
 	}
 
 }
+

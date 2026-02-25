@@ -18,3 +18,4 @@ public interface ShareBlogController
 			ExceptionHandler<DbException> handler);
 
 }
+

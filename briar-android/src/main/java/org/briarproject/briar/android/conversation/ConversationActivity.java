@@ -59,7 +59,7 @@ import org.briarproject.briar.android.removabledrive.RemovableDriveActivity;
 import org.briarproject.briar.android.util.ActivityLaunchers.GetMultipleImagesAdvanced;
 import org.briarproject.briar.android.util.ActivityLaunchers.OpenMultipleImageDocumentsAdvanced;
 import org.briarproject.briar.android.util.BriarSnackbarBuilder;
-import org.briarproject.briar.android.view.BriarRecyclerView;
+import org.briarproject.briar.android.view.NasakaWeweRecyclerView;
 import org.briarproject.briar.android.view.ImagePreview;
 import org.briarproject.briar.android.view.TextAttachmentController;
 import org.briarproject.briar.android.view.TextAttachmentController.AttachmentListener;
@@ -213,7 +213,7 @@ public class ConversationActivity extends BriarActivity
 	private CircleImageView toolbarAvatar;
 	private ImageView toolbarStatus;
 	private TextView toolbarTitle;
-	private BriarRecyclerView list;
+	private NasakaWeweRecyclerView list;
 	private LinearLayoutManager layoutManager;
 	private TextInputView textInputView;
 	private TextSendController sendController;
@@ -813,7 +813,7 @@ public class ConversationActivity extends BriarActivity
 
 	private void askToDeleteAllMessages() {
 		MaterialAlertDialogBuilder builder =
-				new MaterialAlertDialogBuilder(this, R.style.BriarDialogTheme);
+				new MaterialAlertDialogBuilder(this, R.style.NasakaWeweDialogTheme);
 		builder.setTitle(getString(R.string.dialog_title_delete_all_messages));
 		builder.setMessage(
 				getString(R.string.dialog_message_delete_all_messages));
@@ -893,7 +893,7 @@ public class ConversationActivity extends BriarActivity
 		String msg = join(fails, "\n\n");
 		// show dialog
 		MaterialAlertDialogBuilder builder =
-				new MaterialAlertDialogBuilder(this, R.style.BriarDialogTheme);
+				new MaterialAlertDialogBuilder(this, R.style.NasakaWeweDialogTheme);
 		builder.setTitle(
 				getString(R.string.dialog_title_not_all_messages_deleted));
 		builder.setMessage(msg);
@@ -906,7 +906,7 @@ public class ConversationActivity extends BriarActivity
 				(dialog, which) -> removeContact();
 		MaterialAlertDialogBuilder builder =
 				new MaterialAlertDialogBuilder(ConversationActivity.this,
-						R.style.BriarDialogTheme);
+						R.style.NasakaWeweDialogTheme);
 		builder.setTitle(getString(R.string.dialog_title_delete_contact));
 		builder.setMessage(
 				getString(R.string.dialog_message_delete_contact));
@@ -980,7 +980,7 @@ public class ConversationActivity extends BriarActivity
 		}
 
 		int color =
-				ContextCompat.getColor(this, R.color.briar_primary);
+				ContextCompat.getColor(this, R.color.nasaka_wewe_primary);
 		Drawable drawable = VectorDrawableCompat
 				.create(getResources(), R.drawable.ic_more_vert_accent, null);
 		new MaterialTapTargetPrompt.Builder(ConversationActivity.this,
@@ -1158,3 +1158,4 @@ public class ConversationActivity extends BriarActivity
 	}
 
 }
+

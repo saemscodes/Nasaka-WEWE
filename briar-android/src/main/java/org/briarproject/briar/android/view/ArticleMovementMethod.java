@@ -65,3 +65,4 @@ public class ArticleMovementMethod extends ArrowKeyMovementMethod {
 	}
 
 }
+

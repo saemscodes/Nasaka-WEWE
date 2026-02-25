@@ -12,7 +12,7 @@
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent" />
 
-	<org.briarproject.briar.android.view.AuthorView
+	<org.NasakaWeweproject.NasakaWewe.android.view.AuthorView
 		android:id="@+id/authorView"
 		android:layout_width="0dp"
 		android:layout_height="wrap_content"
@@ -33,7 +33,7 @@
 		android:paddingBottom="@dimen/listitem_vertical_margin"
 		android:textColor="?android:attr/textColorSecondary"
 		android:textSize="@dimen/text_size_small"
-		android:textColorLink="@color/briar_text_link"
+		android:textColorLink="@color/nasaka_wewe_text_link"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@+id/authorView"

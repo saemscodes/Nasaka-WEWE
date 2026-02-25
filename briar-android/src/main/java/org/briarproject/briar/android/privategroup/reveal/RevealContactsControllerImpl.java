@@ -151,3 +151,4 @@ class RevealContactsControllerImpl extends DbControllerImpl
 	}
 
 }
+

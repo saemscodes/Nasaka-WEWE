@@ -165,3 +165,4 @@ public class SetPasswordFragment extends SetupFragment {
 	}
 
 }
+

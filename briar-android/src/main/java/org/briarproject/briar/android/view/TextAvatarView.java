@@ -71,3 +71,4 @@ public class TextAvatarView extends FrameLayout {
 	}
 
 }
+

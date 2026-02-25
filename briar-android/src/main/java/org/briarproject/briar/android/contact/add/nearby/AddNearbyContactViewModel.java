@@ -546,3 +546,4 @@ class AddNearbyContactViewModel extends AndroidViewModel
 	}
 
 }
+

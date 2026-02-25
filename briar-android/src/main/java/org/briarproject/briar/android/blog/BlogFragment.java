@@ -20,7 +20,7 @@ import org.briarproject.briar.android.fragment.BaseFragment;
 import org.briarproject.briar.android.sharing.BlogSharingStatusActivity;
 import org.briarproject.briar.android.sharing.ShareBlogActivity;
 import org.briarproject.briar.android.util.BriarSnackbarBuilder;
-import org.briarproject.briar.android.view.BriarRecyclerView;
+import org.briarproject.briar.android.view.NasakaWeweRecyclerView;
 import org.briarproject.briar.android.widget.LinkDialogFragment;
 import org.briarproject.nullsafety.MethodsNotNullByDefault;
 import org.briarproject.nullsafety.ParametersNotNullByDefault;
@@ -54,7 +54,7 @@ public class BlogFragment extends BaseFragment
 	private GroupId groupId;
 	private BlogViewModel viewModel;
 	private final BlogPostAdapter adapter = new BlogPostAdapter(false, this);
-	private BriarRecyclerView list;
+	private NasakaWeweRecyclerView list;
 
 	static BlogFragment newInstance(GroupId groupId) {
 		BlogFragment f = new BlogFragment();
@@ -222,7 +222,7 @@ public class BlogFragment extends BaseFragment
 
 	private void showDeleteDialog() {
 		MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(
-				requireContext(), R.style.BriarDialogTheme);
+				requireContext(), R.style.NasakaWeweDialogTheme);
 		builder.setTitle(getString(R.string.blogs_remove_blog));
 		builder.setMessage(
 				getString(R.string.blogs_remove_blog_dialog_message));
@@ -240,3 +240,4 @@ public class BlogFragment extends BaseFragment
 	}
 
 }
+

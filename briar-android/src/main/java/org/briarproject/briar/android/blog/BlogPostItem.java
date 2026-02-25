@@ -77,3 +77,4 @@ public class BlogPostItem implements Comparable<BlogPostItem> {
 		return Long.compare(h2.getTimeReceived(), h1.getTimeReceived());
 	}
 }
+

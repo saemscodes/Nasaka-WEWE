@@ -122,3 +122,4 @@ class GroupViewHolder extends RecyclerView.ViewHolder {
 	}
 
 }
+

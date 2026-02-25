@@ -73,3 +73,4 @@ class ShareForumControllerImpl extends ContactSelectorControllerImpl
 	}
 
 }
+

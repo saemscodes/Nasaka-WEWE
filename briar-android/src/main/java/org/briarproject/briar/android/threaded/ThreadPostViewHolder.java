@@ -58,3 +58,4 @@ public class ThreadPostViewHolder<I extends ThreadItem>
 	}
 
 }
+

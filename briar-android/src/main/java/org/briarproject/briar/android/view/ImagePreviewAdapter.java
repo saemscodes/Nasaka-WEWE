@@ -65,3 +65,4 @@ class ImagePreviewAdapter extends Adapter<ImagePreviewViewHolder> {
 	}
 
 }
+

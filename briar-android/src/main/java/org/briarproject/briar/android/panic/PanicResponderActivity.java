@@ -80,3 +80,4 @@ public class PanicResponderActivity extends BriarActivity {
 		component.inject(this);
 	}
 }
+

@@ -80,3 +80,4 @@ public class RssFeedActivity extends BriarActivity
 		}
 	}
 }
+

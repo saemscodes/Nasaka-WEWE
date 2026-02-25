@@ -89,3 +89,4 @@ public class BlogActivity extends BriarActivity
 	}
 
 }
+

@@ -21,7 +21,7 @@ public class BriarNotificationBuilder extends NotificationCompat.Builder {
 		// https://issuetracker.google.com/issues/36961721
 		setAutoCancel(true);
 
-		setLights(ContextCompat.getColor(context, R.color.briar_lime_400),
+		setLights(ContextCompat.getColor(context, R.color.nasaka_wewe_lime_400),
 				750, 500);
 		setVisibility(VISIBILITY_PRIVATE);
 	}
@@ -37,3 +37,4 @@ public class BriarNotificationBuilder extends NotificationCompat.Builder {
 	}
 
 }
+

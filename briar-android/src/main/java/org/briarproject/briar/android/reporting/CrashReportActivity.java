@@ -125,3 +125,4 @@ public class CrashReportActivity extends BaseActivity
 	}
 
 }
+

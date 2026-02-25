@@ -18,3 +18,4 @@ public class ExitActivity extends Activity {
 		System.exit(0);
 	}
 }
+

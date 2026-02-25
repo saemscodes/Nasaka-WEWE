@@ -18,3 +18,4 @@ public class FeedbackActivity extends CrashReportActivity {
 		}
 	}
 }
+

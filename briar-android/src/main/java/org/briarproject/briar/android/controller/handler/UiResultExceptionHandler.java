@@ -25,3 +25,4 @@ public abstract class UiResultExceptionHandler<R, E extends Exception>
 	public abstract void onResultUi(R result);
 
 }
+

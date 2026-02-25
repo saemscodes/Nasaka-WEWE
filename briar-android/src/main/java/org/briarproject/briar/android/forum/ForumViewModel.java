@@ -230,3 +230,4 @@ class ForumViewModel extends ThreadListViewModel<ForumPostItem> {
 	}
 
 }
+

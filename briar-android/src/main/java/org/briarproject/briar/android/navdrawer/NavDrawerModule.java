@@ -21,3 +21,4 @@ public abstract class NavDrawerModule {
 	@ViewModelKey(PluginViewModel.class)
 	abstract ViewModel bindPluginViewModel(PluginViewModel pluginViewModel);
 }
+

@@ -38,3 +38,4 @@ public class PanicPreferencesActivity extends BriarActivity {
 		return false;
 	}
 }
+

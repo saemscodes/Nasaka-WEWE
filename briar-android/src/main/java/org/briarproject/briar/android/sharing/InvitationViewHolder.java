@@ -58,3 +58,4 @@ public class InvitationViewHolder<I extends InvitationItem>
 	}
 
 }
+

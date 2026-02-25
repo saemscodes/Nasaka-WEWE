@@ -27,3 +27,4 @@ class ConversationItemKeyProvider extends ItemKeyProvider<String> {
 	}
 
 }
+

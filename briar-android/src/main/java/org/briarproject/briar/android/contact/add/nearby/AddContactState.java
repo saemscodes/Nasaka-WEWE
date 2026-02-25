@@ -87,3 +87,4 @@ abstract class AddContactState {
 	} // end ContactExchangeResult
 
 }
+

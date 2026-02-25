@@ -47,3 +47,4 @@ class GroupMessageAdapter extends ThreadItemAdapter<GroupMessageItem> {
 	}
 
 }
+

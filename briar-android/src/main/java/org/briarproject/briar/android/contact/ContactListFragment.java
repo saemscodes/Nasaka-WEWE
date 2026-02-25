@@ -19,7 +19,7 @@ import org.briarproject.briar.android.contact.add.remote.PendingContactListActiv
 import org.briarproject.briar.android.conversation.ConversationActivity;
 import org.briarproject.briar.android.fragment.BaseFragment;
 import org.briarproject.briar.android.util.BriarSnackbarBuilder;
-import org.briarproject.briar.android.view.BriarRecyclerView;
+import org.briarproject.briar.android.view.NasakaWeweRecyclerView;
 import org.briarproject.nullsafety.MethodsNotNullByDefault;
 import org.briarproject.nullsafety.ParametersNotNullByDefault;
 
@@ -48,7 +48,7 @@ public class ContactListFragment extends BaseFragment
 
 	private ContactListViewModel viewModel;
 	private final ContactListAdapter adapter = new ContactListAdapter(this);
-	private BriarRecyclerView list;
+	private NasakaWeweRecyclerView list;
 	private FabSpeedDial speedDial;
 
 	/**
@@ -174,3 +174,4 @@ public class ContactListFragment extends BaseFragment
 		startActivity(i);
 	}
 }
+

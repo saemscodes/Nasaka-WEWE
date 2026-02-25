@@ -136,3 +136,4 @@ public class DozeFragment extends SetupFragment
 		viewModel.dozeExceptionConfirmed();
 	}
 }
+

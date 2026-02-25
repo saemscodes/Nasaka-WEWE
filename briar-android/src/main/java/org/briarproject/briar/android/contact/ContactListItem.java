@@ -85,3 +85,4 @@ public class ContactListItem extends ContactItem
 		return Long.compare(o.getTimestamp(), timestamp);
 	}
 }
+

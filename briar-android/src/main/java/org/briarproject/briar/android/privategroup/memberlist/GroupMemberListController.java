@@ -13,3 +13,4 @@ public interface GroupMemberListController extends DbController {
 			ResultExceptionHandler<Collection<MemberListItem>, DbException> handler);
 
 }
+

@@ -63,3 +63,4 @@ public class CreateGroupActivity extends BriarActivity
 		finish();
 	}
 }
+

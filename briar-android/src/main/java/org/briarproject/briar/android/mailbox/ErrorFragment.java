@@ -30,7 +30,7 @@ public class ErrorFragment extends FinalFragment {
 		Bundle args = new Bundle();
 		args.putInt(ARG_TITLE, title);
 		args.putInt(ARG_ICON, R.drawable.alerts_and_states_error);
-		args.putInt(ARG_ICON_TINT, R.color.briar_red_500);
+		args.putInt(ARG_ICON_TINT, R.color.nasaka_wewe_red_500);
 		args.putInt(ARG_TEXT, text);
 		f.setArguments(args);
 		return f;
@@ -68,3 +68,4 @@ public class ErrorFragment extends FinalFragment {
 		return false;
 	}
 }
+

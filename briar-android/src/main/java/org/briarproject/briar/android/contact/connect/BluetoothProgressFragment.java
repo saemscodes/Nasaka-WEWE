@@ -27,3 +27,4 @@ public class BluetoothProgressFragment extends Fragment {
 	}
 
 }
+

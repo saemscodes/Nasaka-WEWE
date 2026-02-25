@@ -39,8 +39,7 @@ import static org.briarproject.briar.android.settings.SettingsFragment.SETTINGS_
 @NotNullByDefault
 public class BriarControllerImpl implements BriarController {
 
-	private static final Logger LOG =
-			getLogger(BriarControllerImpl.class.getName());
+	private static final Logger LOG = getLogger(BriarControllerImpl.class.getName());
 
 	public static final String DOZE_ASK_AGAIN = "dozeAskAgain";
 
@@ -80,7 +79,8 @@ public class BriarControllerImpl implements BriarController {
 	@Override
 	@CallSuper
 	public void onActivityCreate(Activity activity) {
-		if (accountManager.hasDatabaseKey()) startAndBindService();
+		if (accountManager.hasDatabaseKey())
+			startAndBindService();
 	}
 
 	@Override
@@ -120,8 +120,7 @@ public class BriarControllerImpl implements BriarController {
 		}
 		databaseExecutor.execute(() -> {
 			try {
-				Settings settings =
-						settingsManager.getSettings(SETTINGS_NAMESPACE);
+				Settings settings = settingsManager.getSettings(SETTINGS_NAMESPACE);
 				boolean ask = settings.getBoolean(DOZE_ASK_AGAIN, true);
 				handler.onResult(ask);
 			} catch (DbException e) {
@@ -149,8 +148,7 @@ public class BriarControllerImpl implements BriarController {
 			try {
 				// Wait for the service to finish starting up
 				IBinder binder = serviceConnection.waitForBinder();
-				BriarService service =
-						((BriarService.BriarBinder) binder).getService();
+				BriarService service = ((BriarService.BriarBinder) binder).getService();
 				service.waitForStartup();
 				// Shut down the service and wait for it to shut down
 				LOG.info("Shutting down service");
@@ -161,13 +159,16 @@ public class BriarControllerImpl implements BriarController {
 			} finally {
 				// Sign out of Supabase
 				try {
-					BuildersKt.runBlocking(EmptyCoroutineContext.INSTANCE, (scope, continuation) -> 
-						AuthKt.getAuth(supabaseClient).signOut(io.github.jan.supabase.gotrue.SignOutScope.LOCAL, continuation)
-					);
+					BuildersKt.runBlocking(EmptyCoroutineContext.INSTANCE, (scope, continuation) -> {
+						io.github.jan.supabase.gotrue.Auth auth = io.github.jan.supabase.gotrue.AuthKt
+								.getAuth(supabaseClient);
+						return auth.signOut(io.github.jan.supabase.gotrue.SignOutScope.LOCAL, continuation);
+					});
 				} catch (Exception e) {
 					LOG.warning("Failed to sign out of Supabase: " + e.getMessage());
 				}
-				if (deleteAccount) accountManager.deleteAccount();
+				if (deleteAccount)
+					accountManager.deleteAccount();
 			}
 			handler.onResult(null);
 		}, "SignOut");
@@ -179,7 +180,8 @@ public class BriarControllerImpl implements BriarController {
 	}
 
 	private void unbindService() {
-		if (bound) activity.unbindService(serviceConnection);
+		if (bound)
+			activity.unbindService(serviceConnection);
 	}
 
 }

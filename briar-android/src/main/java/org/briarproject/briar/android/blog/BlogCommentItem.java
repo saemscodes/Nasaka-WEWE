@@ -63,3 +63,4 @@ class BlogCommentItem extends BlogPostItem {
 		}
 	}
 }
+

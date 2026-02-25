@@ -140,3 +140,4 @@ public class AddContactViewModel extends DbViewModel {
 	}
 
 }
+

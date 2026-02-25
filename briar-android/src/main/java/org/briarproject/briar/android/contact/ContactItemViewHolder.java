@@ -90,3 +90,4 @@ public class ContactItemViewHolder<I extends ContactItem>
 	}
 
 }
+

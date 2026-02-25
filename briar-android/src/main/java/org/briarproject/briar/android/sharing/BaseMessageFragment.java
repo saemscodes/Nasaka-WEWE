@@ -107,3 +107,4 @@ public abstract class BaseMessageFragment extends BaseFragment
 	}
 
 }
+

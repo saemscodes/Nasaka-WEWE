@@ -334,3 +334,4 @@ class ConversationVisitor implements
 		List<AttachmentItem> getAttachmentItems(PrivateMessageHeader h);
 	}
 }
+

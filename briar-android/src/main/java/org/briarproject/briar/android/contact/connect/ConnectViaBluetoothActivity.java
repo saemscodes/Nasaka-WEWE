@@ -96,3 +96,4 @@ public class ConnectViaBluetoothActivity extends BriarActivity {
 	}
 
 }
+

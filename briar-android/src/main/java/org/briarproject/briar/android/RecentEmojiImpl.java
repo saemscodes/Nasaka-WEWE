@@ -107,3 +107,4 @@ class RecentEmojiImpl implements RecentEmoji, OpenDatabaseHook {
 		});
 	}
 }
+

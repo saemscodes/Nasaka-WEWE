@@ -525,3 +525,4 @@ public class CameraView extends SurfaceView implements SurfaceHolder.Callback,
 		retryAutoFocus();
 	}
 }
+

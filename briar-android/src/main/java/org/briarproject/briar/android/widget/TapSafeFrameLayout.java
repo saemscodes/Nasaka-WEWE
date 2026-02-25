@@ -51,3 +51,4 @@ public class TapSafeFrameLayout extends FrameLayout {
 		boolean shouldAllowTap();
 	}
 }
+

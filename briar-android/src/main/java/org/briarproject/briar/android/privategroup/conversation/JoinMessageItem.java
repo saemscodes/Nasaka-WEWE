@@ -35,3 +35,4 @@ class JoinMessageItem extends GroupMessageItem {
 	}
 
 }
+

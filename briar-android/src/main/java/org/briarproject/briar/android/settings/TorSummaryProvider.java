@@ -52,3 +52,4 @@ class TorSummaryProvider implements SummaryProvider<ListPreference> {
 	}
 
 }
+

@@ -26,3 +26,4 @@ public interface InvitationController<I extends InvitationItem>
 	}
 
 }
+

@@ -93,3 +93,4 @@ class ImageSizeCalculatorImpl implements ImageSizeCalculator {
 		return new Size(result.width, result.height, result.mimeType);
 	}
 }
+

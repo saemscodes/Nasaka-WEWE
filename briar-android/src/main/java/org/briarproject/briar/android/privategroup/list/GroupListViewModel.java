@@ -224,3 +224,4 @@ class GroupListViewModel extends DbViewModel implements EventListener {
 		return numInvitations;
 	}
 }
+

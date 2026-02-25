@@ -185,3 +185,4 @@ class RssFeedViewModel extends DbViewModel {
 		});
 	}
 }
+

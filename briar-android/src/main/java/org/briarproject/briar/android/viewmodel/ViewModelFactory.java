@@ -60,3 +60,4 @@ class ViewModelFactory implements ViewModelProvider.Factory {
 	}
 
 }
+

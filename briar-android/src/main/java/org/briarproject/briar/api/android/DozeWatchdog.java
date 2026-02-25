@@ -4,3 +4,4 @@ public interface DozeWatchdog {
 
 	boolean getAndResetDozeFlag();
 }
+

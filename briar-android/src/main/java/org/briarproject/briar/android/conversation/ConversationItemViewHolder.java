@@ -114,3 +114,4 @@ abstract class ConversationItemViewHolder extends ViewHolder {
 	}
 
 }
+

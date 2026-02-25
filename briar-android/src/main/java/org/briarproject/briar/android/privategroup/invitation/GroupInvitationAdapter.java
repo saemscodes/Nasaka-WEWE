@@ -26,3 +26,4 @@ class GroupInvitationAdapter extends
 		return item1.isSubscribed() == item2.isSubscribed();
 	}
 }
+

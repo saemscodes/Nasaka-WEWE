@@ -5,3 +5,4 @@ interface PendingContactListener {
 	void onPendingContactItemRemoved(PendingContactItem item);
 
 }
+

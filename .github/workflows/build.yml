@@ -39,7 +39,7 @@ jobs:
     - name: Upload APK artifact
       uses: actions/upload-artifact@v4
       with:
-        name: nasaka-wewe-debug
+        name: Nasaka_WEWE-debug
         path: briar-android/build/outputs/apk/official/debug/*.apk
         retention-days: 30
 

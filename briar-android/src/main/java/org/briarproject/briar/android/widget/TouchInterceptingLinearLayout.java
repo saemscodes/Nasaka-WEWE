@@ -37,3 +37,4 @@ public class TouchInterceptingLinearLayout extends LinearLayout {
 		return false;
 	}
 }
+

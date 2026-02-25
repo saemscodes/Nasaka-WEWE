@@ -131,3 +131,4 @@ class FeedViewModel extends BaseViewModel {
 	}
 
 }
+

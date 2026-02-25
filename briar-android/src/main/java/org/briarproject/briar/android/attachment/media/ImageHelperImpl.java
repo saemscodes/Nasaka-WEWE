@@ -38,3 +38,4 @@ class ImageHelperImpl implements ImageHelper {
 		return mimeTypeMap.getExtensionFromMimeType(mimeType);
 	}
 }
+

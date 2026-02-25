@@ -84,3 +84,4 @@ class BriarDataFetcher implements DataFetcher<InputStream> {
 	}
 
 }
+

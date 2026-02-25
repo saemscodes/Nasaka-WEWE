@@ -15,21 +15,21 @@
 		android:layout_weight="1"
 		android:background="@color/thread_item_background">
 
-		<org.briarproject.briar.android.view.BriarRecyclerView
+		<org.NasakaWeweproject.NasakaWewe.android.view.NasakaWeweRecyclerView
 			android:id="@+id/list"
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
 			app:emptyText="@string/no_forum_posts"
 			app:scrollToEnd="false" />
 
-		<org.briarproject.briar.android.view.UnreadMessageButton
+		<org.NasakaWeweproject.NasakaWewe.android.view.UnreadMessageButton
 			android:id="@+id/upButton"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_gravity="top|right|end"
 			app:direction="up" />
 
-		<org.briarproject.briar.android.view.UnreadMessageButton
+		<org.NasakaWeweproject.NasakaWewe.android.view.UnreadMessageButton
 			android:id="@+id/downButton"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
@@ -38,7 +38,7 @@
 
 	</FrameLayout>
 
-	<org.briarproject.briar.android.view.TextInputView
+	<org.NasakaWeweproject.NasakaWewe.android.view.TextInputView
 		android:id="@+id/text_input_container"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"

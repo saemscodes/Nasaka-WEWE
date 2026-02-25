@@ -8,3 +8,4 @@ interface OnBlogPostClickListener {
 
 	void onLinkClick(String url);
 }
+

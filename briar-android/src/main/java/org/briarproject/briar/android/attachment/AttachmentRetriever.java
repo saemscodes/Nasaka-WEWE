@@ -61,3 +61,4 @@ public interface AttachmentRetriever {
 	void loadAttachmentItem(MessageId attachmentId);
 
 }
+

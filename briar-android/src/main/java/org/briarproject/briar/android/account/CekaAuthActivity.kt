@@ -1,11 +1,17 @@
 package org.briarproject.briar.android.account
-
+ 
 import android.content.Intent
+import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.core.content.getSystemService
 import androidx.lifecycle.ViewModelProvider
 import io.github.jan.supabase.SupabaseClient
 import io.github.jan.supabase.gotrue.auth
@@ -36,26 +42,59 @@ class CekaAuthActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
 
+        val isNetworkAvailable = checkNetworkAvailability()
+
         setContent {
             NasakaWeweTheme {
-                val sessionStatus by supabaseClient.auth.sessionStatus.collectAsState()
+                var hasNetwork by remember { mutableStateOf(isNetworkAvailable) }
 
-                LaunchedEffect(sessionStatus) {
-                    if (sessionStatus is SessionStatus.Authenticated) {
-                        val user = (sessionStatus as SessionStatus.Authenticated).session.user
-                        val name = user?.userMetadata?.get("full_name")?.toString() ?: user?.email ?: "Nasaka User"
-                        val userId = user?.id ?: ""
-                        
-                        // Bridge to Briar account creation
-                        // We use the Supabase User ID to derive a secure local password 
-                        // to ensure the local DB is encrypted but the user experience is seamless.
-                        if (userId.isNotEmpty()) {
-                            viewModel.createAccount(name, userId, 1) // Using ID as password for bridge parity
+                if (hasNetwork) {
+                    // Online mode: show Supabase auth with session observation
+                    val sessionStatus by supabaseClient.auth.sessionStatus.collectAsState()
+
+                    LaunchedEffect(sessionStatus) {
+                        if (sessionStatus is SessionStatus.Authenticated) {
+                            val user = (sessionStatus as SessionStatus.Authenticated).session.user
+                            val name = user?.userMetadata?.get("full_name")?.toString()
+                                ?: user?.email ?: "Nasaka User"
+                            val userId = user?.id ?: ""
+
+                            // Bridge to Briar account creation
+                            // We use the Supabase User ID to derive a secure local password
+                            // to ensure the local DB is encrypted but the user experience is seamless.
+                            if (userId.isNotEmpty()) {
+                                // Cache credentials locally for future offline access
+                                val prefs = getSharedPreferences("ceka_auth", MODE_PRIVATE)
+                                prefs.edit()
+                                    .putString("cached_name", name)
+                                    .putString("cached_user_id", userId)
+                                    .putBoolean("is_ceka_member", true)
+                                    .apply()
+
+                                viewModel.createAccount(name, userId, 1)
+                            }
                         }
                     }
-                }
 
-                CekaAuthScreen(supabaseClient)
+                    CekaAuthScreen(
+                        supabaseClient = supabaseClient,
+                        isOnline = true,
+                        onOfflineFallback = { hasNetwork = false },
+                        onOfflineAccountCreated = { name, password ->
+                            viewModel.createAccount(name, password, 0)
+                        }
+                    )
+                } else {
+                    // Offline mode: local account creation only
+                    CekaAuthScreen(
+                        supabaseClient = supabaseClient,
+                        isOnline = false,
+                        onOfflineFallback = { },
+                        onOfflineAccountCreated = { name, password ->
+                            viewModel.createAccount(name, password, 0)
+                        }
+                    )
+                }
             }
         }
 
@@ -64,6 +103,14 @@ class CekaAuthActivity : BaseActivity() {
                 showApp()
             }
         }
+    }
+
+    private fun checkNetworkAvailability(): Boolean {
+        val connectivityManager = getSystemService<ConnectivityManager>() ?: return false
+        val network = connectivityManager.activeNetwork ?: return false
+        val capabilities = connectivityManager.getNetworkCapabilities(network) ?: return false
+        return capabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
+                && capabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_VALIDATED)
     }
 
     private fun showApp() {

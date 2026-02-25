@@ -120,10 +120,11 @@ public class HotspotIntroFragment extends Fragment {
 		}
 		// test only apps can not be installed
 		if ((applicationInfo.flags & FLAG_TEST_ONLY) == FLAG_TEST_ONLY) {
-			int color = getResources().getColor(R.color.briar_red_500);
+			int color = getResources().getColor(R.color.nasaka_wewe_red_500);
 			Snackbar.make(requireView(), R.string.hotspot_flag_test,
 					LENGTH_LONG).setBackgroundTint(color).show();
 		}
 	}
 
 }
+

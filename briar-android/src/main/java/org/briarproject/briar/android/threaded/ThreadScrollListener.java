@@ -1,6 +1,6 @@
 package org.briarproject.briar.android.threaded;
 
-import org.briarproject.briar.android.view.BriarRecyclerViewScrollListener;
+import org.briarproject.briar.android.view.NasakaWeweRecyclerViewScrollListener;
 import org.briarproject.briar.android.view.UnreadMessageButton;
 import org.briarproject.nullsafety.NotNullByDefault;
 
@@ -15,7 +15,7 @@ import static java.util.logging.Logger.getLogger;
 
 @NotNullByDefault
 class ThreadScrollListener<I extends ThreadItem>
-		extends BriarRecyclerViewScrollListener<ThreadItemAdapter<I>, I> {
+		extends NasakaWeweRecyclerViewScrollListener<ThreadItemAdapter<I>, I> {
 
 	private static final Logger LOG =
 			getLogger(ThreadScrollListener.class.getName());
@@ -84,3 +84,4 @@ class ThreadScrollListener<I extends ThreadItem>
 	}
 
 }
+

@@ -71,3 +71,4 @@ public class ContactListAdapter extends
 		viewHolder.bind(getItem(position), listener);
 	}
 }
+

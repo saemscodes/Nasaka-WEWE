@@ -37,3 +37,4 @@ public interface ImageCompressor {
 	InputStream compressImage(Bitmap bitmap) throws IOException;
 
 }
+

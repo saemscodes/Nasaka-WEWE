@@ -38,3 +38,4 @@ public class InfoView extends CardView {
 		infoText.setText(resId);
 	}
 }
+

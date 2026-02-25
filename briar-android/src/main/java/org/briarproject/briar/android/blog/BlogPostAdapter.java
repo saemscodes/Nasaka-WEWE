@@ -48,3 +48,4 @@ class BlogPostAdapter extends ListAdapter<BlogPostItem, BlogPostViewHolder> {
 	}
 
 }
+

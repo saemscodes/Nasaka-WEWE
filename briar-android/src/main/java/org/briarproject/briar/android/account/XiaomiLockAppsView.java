@@ -71,3 +71,4 @@ class XiaomiLockAppsView extends PowerView {
 		setChecked(true);
 	}
 }
+

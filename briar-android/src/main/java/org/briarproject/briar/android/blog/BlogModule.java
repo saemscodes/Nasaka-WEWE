@@ -25,3 +25,4 @@ public interface BlogModule {
 	@ViewModelKey(RssFeedViewModel.class)
 	ViewModel bindRssFeedViewModel(RssFeedViewModel rssFeedViewModel);
 }
+

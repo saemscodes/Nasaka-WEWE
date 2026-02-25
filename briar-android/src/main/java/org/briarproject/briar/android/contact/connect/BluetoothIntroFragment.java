@@ -111,3 +111,4 @@ public class BluetoothIntroFragment extends Fragment {
 	}
 
 }
+

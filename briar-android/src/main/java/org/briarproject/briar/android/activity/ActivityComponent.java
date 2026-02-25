@@ -254,3 +254,4 @@ public interface ActivityComponent {
 
 	void inject(MailboxActivity mailboxActivity);
 }
+

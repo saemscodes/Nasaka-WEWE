@@ -25,7 +25,7 @@
 			app:layout_constraintTop_toTopOf="parent"
 			app:layout_constraintVertical_chainStyle="packed" />
 
-		<org.briarproject.briar.android.account.DozeView
+		<org.NasakaWeweproject.NasakaWewe.android.account.DozeView
 			android:id="@+id/dozeView"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
@@ -35,7 +35,7 @@
 			app:layout_constraintStart_toStartOf="parent"
 			app:layout_constraintTop_toBottomOf="@+id/logo" />
 
-		<org.briarproject.briar.android.account.HuaweiProtectedAppsView
+		<org.NasakaWeweproject.NasakaWewe.android.account.HuaweiProtectedAppsView
 			android:id="@+id/huaweiProtectedAppsView"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
 			app:layout_constraintStart_toStartOf="parent"
 			app:layout_constraintTop_toBottomOf="@+id/dozeView" />
 
-		<org.briarproject.briar.android.account.HuaweiAppLaunchView
+		<org.NasakaWeweproject.NasakaWewe.android.account.HuaweiAppLaunchView
 			android:id="@+id/huaweiAppLaunchView"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
@@ -55,7 +55,7 @@
 			app:layout_constraintStart_toStartOf="parent"
 			app:layout_constraintTop_toBottomOf="@+id/huaweiProtectedAppsView" />
 
-		<org.briarproject.briar.android.account.XiaomiRecentAppsView
+		<org.NasakaWeweproject.NasakaWewe.android.account.XiaomiRecentAppsView
 			android:id="@+id/xiaomiRecentAppsView"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
@@ -65,7 +65,7 @@
 			app:layout_constraintStart_toStartOf="parent"
 			app:layout_constraintTop_toBottomOf="@+id/huaweiAppLaunchView" />
 
-		<org.briarproject.briar.android.account.XiaomiLockAppsView
+		<org.NasakaWeweproject.NasakaWewe.android.account.XiaomiLockAppsView
 			android:id="@+id/xiaomiLockAppsView"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
@@ -77,7 +77,7 @@
 
 		<Button
 			android:id="@+id/next"
-			style="@style/BriarButton"
+			style="@style/NasakaWeweButton"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:enabled="false"

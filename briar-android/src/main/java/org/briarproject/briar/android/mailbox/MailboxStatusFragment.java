@@ -17,7 +17,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 import org.briarproject.bramble.api.mailbox.MailboxStatus;
 import org.briarproject.briar.R;
-import org.briarproject.briar.android.view.BriarButton;
+import org.briarproject.briar.android.view.NasakaWeweButton;
 import org.briarproject.nullsafety.MethodsNotNullByDefault;
 import org.briarproject.nullsafety.ParametersNotNullByDefault;
 
@@ -90,7 +90,7 @@ public class MailboxStatusFragment extends Fragment {
 	public void onViewCreated(View v, @Nullable Bundle savedInstanceState) {
 		super.onViewCreated(v, savedInstanceState);
 
-		BriarButton checkButton = v.findViewById(R.id.checkButton);
+		NasakaWeweButton checkButton = v.findViewById(R.id.checkButton);
 		checkButton.setOnClickListener(view ->
 				observeOnce(viewModel.checkConnection(), this, result ->
 						checkButton.reset()
@@ -148,7 +148,7 @@ public class MailboxStatusFragment extends Fragment {
 		String title;
 		String message = null;
 		if (status.getMailboxCompatibility() < 0) {
-			tintRes = R.color.briar_red_500;
+			tintRes = R.color.nasaka_wewe_red_500;
 			if (status.getMailboxCompatibility() == API_CLIENT_TOO_OLD) {
 				title = getString(R.string.mailbox_status_app_too_old_title);
 				message =
@@ -163,7 +163,7 @@ public class MailboxStatusFragment extends Fragment {
 			showUnlinkWarning = true;
 			wizardButton.setVisibility(GONE);
 		} else if (status.hasProblem(System.currentTimeMillis())) {
-			tintRes = R.color.briar_red_500;
+			tintRes = R.color.nasaka_wewe_red_500;
 			title = getString(R.string.mailbox_status_failure_title);
 			iconRes = R.drawable.alerts_and_states_error;
 			showUnlinkWarning = false;
@@ -171,13 +171,13 @@ public class MailboxStatusFragment extends Fragment {
 		} else if (status.getAttemptsSinceSuccess() > 0) {
 			iconRes = R.drawable.ic_help_outline_white;
 			title = getString(R.string.mailbox_status_problem_title);
-			tintRes = R.color.briar_orange_500;
+			tintRes = R.color.nasaka_wewe_orange_500;
 			showUnlinkWarning = false;
 			wizardButton.setVisibility(VISIBLE);
 		} else {
 			iconRes = R.drawable.ic_check_circle_outline;
 			title = getString(R.string.mailbox_status_connected_title);
-			tintRes = R.color.briar_brand_green;
+			tintRes = R.color.nasaka_wewe_brand_green;
 			showUnlinkWarning = true;
 			wizardButton.setVisibility(GONE);
 		}
@@ -217,7 +217,7 @@ public class MailboxStatusFragment extends Fragment {
 
 	private void onUnlinkButtonClicked(boolean showWarning) {
 		MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(
-				requireContext(), R.style.BriarDialogTheme);
+				requireContext(), R.style.NasakaWeweDialogTheme);
 		builder.setTitle(R.string.mailbox_status_unlink_dialog_title);
 		String msg = getString(R.string.mailbox_status_unlink_dialog_question);
 		if (showWarning) {
@@ -241,3 +241,4 @@ public class MailboxStatusFragment extends Fragment {
 	}
 
 }
+

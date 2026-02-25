@@ -268,3 +268,4 @@ class SettingsViewModel extends DbViewModel implements EventListener {
 	}
 
 }
+

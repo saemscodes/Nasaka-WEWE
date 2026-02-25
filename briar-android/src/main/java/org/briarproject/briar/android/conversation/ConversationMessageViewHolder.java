@@ -118,3 +118,4 @@ class ConversationMessageViewHolder extends ConversationItemViewHolder {
 	}
 
 }
+

@@ -70,3 +70,4 @@ public abstract class ContactSelectorControllerImpl
 			throws DbException;
 
 }
+

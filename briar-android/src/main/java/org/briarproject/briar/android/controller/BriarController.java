@@ -25,3 +25,4 @@ public interface BriarController extends ActivityLifecycleController {
 	void deleteAccount();
 
 }
+

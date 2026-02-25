@@ -37,3 +37,4 @@ class ConversationNoticeItem extends ConversationItem {
 	}
 
 }
+

@@ -17,7 +17,7 @@ import org.briarproject.bramble.api.sync.event.GroupRemovedEvent;
 import org.briarproject.briar.R;
 import org.briarproject.briar.android.activity.BriarActivity;
 import org.briarproject.briar.android.contact.ContactItem;
-import org.briarproject.briar.android.view.BriarRecyclerView;
+import org.briarproject.briar.android.view.NasakaWeweRecyclerView;
 import org.briarproject.briar.api.identity.AuthorInfo;
 import org.briarproject.briar.api.identity.AuthorManager;
 import org.briarproject.briar.api.sharing.event.ContactLeftShareableEvent;
@@ -57,7 +57,7 @@ abstract class SharingStatusActivity extends BriarActivity
 			Logger.getLogger(SharingStatusActivity.class.getName());
 
 	private GroupId groupId;
-	private BriarRecyclerView list;
+	private NasakaWeweRecyclerView list;
 	private SharingStatusAdapter adapter;
 
 	@Override
@@ -159,3 +159,4 @@ abstract class SharingStatusActivity extends BriarActivity
 	}
 
 }
+

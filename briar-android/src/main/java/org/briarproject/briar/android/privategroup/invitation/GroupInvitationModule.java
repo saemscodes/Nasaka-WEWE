@@ -15,3 +15,4 @@ public class GroupInvitationModule {
 		return groupInvitationController;
 	}
 }
+

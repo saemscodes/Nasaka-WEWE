@@ -84,3 +84,4 @@ class ImageViewHolder extends ViewHolder {
 	}
 
 }
+

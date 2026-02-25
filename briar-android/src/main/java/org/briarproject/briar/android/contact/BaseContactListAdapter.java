@@ -45,3 +45,4 @@ public abstract class BaseContactListAdapter<I extends ContactItem, VH extends C
 	}
 
 }
+

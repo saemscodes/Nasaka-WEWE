@@ -38,3 +38,4 @@ class AndroidDatabaseConfig implements DatabaseConfig {
 		return keyStrengthener;
 	}
 }
+

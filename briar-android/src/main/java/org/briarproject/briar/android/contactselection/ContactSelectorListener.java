@@ -14,3 +14,4 @@ public interface ContactSelectorListener {
 	void contactsSelected(Collection<ContactId> contacts);
 
 }
+

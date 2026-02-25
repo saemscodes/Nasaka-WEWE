@@ -233,3 +233,4 @@ public class NotificationsFragment extends PreferenceFragmentCompat {
 	}
 
 }
+

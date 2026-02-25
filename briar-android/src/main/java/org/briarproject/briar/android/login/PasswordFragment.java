@@ -156,7 +156,7 @@ public class PasswordFragment extends BaseFragment implements TextWatcher {
 
 	private void onForgottenPasswordClick() {
 		MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(
-				requireContext(), R.style.BriarDialogTheme);
+				requireContext(), R.style.NasakaWeweDialogTheme);
 		builder.setTitle(R.string.dialog_title_lost_password);
 		builder.setBackgroundInsetStart(25);
 		builder.setBackgroundInsetEnd(25);
@@ -174,3 +174,4 @@ public class PasswordFragment extends BaseFragment implements TextWatcher {
 	}
 
 }
+

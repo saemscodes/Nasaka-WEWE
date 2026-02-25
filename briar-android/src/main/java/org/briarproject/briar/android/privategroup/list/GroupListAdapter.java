@@ -50,3 +50,4 @@ class GroupListAdapter extends ListAdapter<GroupItem, GroupViewHolder> {
 		}
 	}
 }
+

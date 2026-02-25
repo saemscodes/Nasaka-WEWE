@@ -93,3 +93,4 @@ class ForumViewHolder extends RecyclerView.ViewHolder {
 	}
 
 }
+

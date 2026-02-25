@@ -203,7 +203,7 @@ public class PanicPreferencesFragment extends PreferenceFragmentCompat
 		};
 
 		MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(
-				requireContext(), R.style.BriarDialogTheme);
+				requireContext(), R.style.NasakaWeweDialogTheme);
 		builder.setTitle(getString(R.string.dialog_title_connect_panic_app));
 
 		CharSequence app = getString(R.string.unknown_app);
@@ -236,3 +236,4 @@ public class PanicPreferencesFragment extends PreferenceFragmentCompat
 	}
 
 }
+

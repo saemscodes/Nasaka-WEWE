@@ -54,7 +54,7 @@
 		android:logo="@mipmap/ic_launcher_round"
 		android:networkSecurityConfig="@xml/network_security_config"
 		android:supportsRtl="true"
-		android:theme="@style/BriarTheme"
+		android:theme="@style/NasakaWeweTheme"
 		tools:ignore="GoogleAppIndexingWarning,UnusedAttribute">
 
 		<receiver
@@ -86,8 +86,8 @@
 			android:finishOnTaskLaunch="true"
 			android:label="@string/crash_report_title"
 			android:launchMode="singleInstance"
-			android:process=":briar_error_handler"
-			android:theme="@style/BriarTheme.NoActionBar"
+			android:process=":nasaka_wewe_error_handler"
+			android:theme="@style/NasakaWeweTheme.NoActionBar"
 			android:windowSoftInputMode="adjustResize|stateHidden" />
 
 		<activity
@@ -95,7 +95,7 @@
 			android:exported="false"
 			android:label="@string/feedback_title"
 			android:parentActivityName="org.briarproject.briar.android.settings.SettingsActivity"
-			android:theme="@style/BriarTheme.NoActionBar"
+			android:theme="@style/NasakaWeweTheme.NoActionBar"
 			android:windowSoftInputMode="adjustResize|stateHidden">
 			<meta-data
 				android:name="android.support.PARENT_ACTIVITY"
@@ -110,23 +110,23 @@
 		<activity
 			android:name="org.briarproject.briar.android.login.StartupActivity"
 			android:exported="false"
-			android:theme="@style/BriarTheme.NoActionBar" />
+			android:theme="@style/NasakaWeweTheme.NoActionBar" />
 
 		<activity
 			android:name="org.briarproject.briar.android.account.SetupActivity"
 			android:exported="false"
-			android:theme="@style/BriarTheme.NoActionBar" />
+			android:theme="@style/NasakaWeweTheme.NoActionBar" />
 
 		<activity
 			android:name="org.briarproject.briar.android.account.CekaAuthActivity"
 			android:exported="false"
-			android:theme="@style/BriarTheme.NoActionBar" />
+			android:theme="@style/NasakaWeweTheme.NoActionBar" />
 
 		<activity
 			android:name="org.briarproject.briar.android.splash.SplashScreenActivity"
 			android:exported="true"
 			android:label="@string/app_name"
-			android:theme="@style/BriarTheme.NoActionBar">
+			android:theme="@style/NasakaWeweTheme.NoActionBar">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 
@@ -138,14 +138,14 @@
 			android:name="org.briarproject.briar.android.navdrawer.NavDrawerActivity"
 			android:exported="true"
 			android:launchMode="singleTask"
-			android:theme="@style/BriarTheme.NoActionBar">
+			android:theme="@style/NasakaWeweTheme.NoActionBar">
 			<intent-filter android:label="@string/add_contact_remotely_title_case">
 				<action android:name="android.intent.action.VIEW" />
 
 				<category android:name="android.intent.category.DEFAULT" />
 				<category android:name="android.intent.category.BROWSABLE" />
 
-				<data android:scheme="briar" />
+				<data android:scheme="nasakawewe" />
 			</intent-filter>
 			<intent-filter android:label="@string/add_contact_remotely_title_case">
 				<action android:name="android.intent.action.SEND" />
@@ -159,7 +159,7 @@
 			android:exported="false"
 			android:label="@string/app_name"
 			android:parentActivityName="org.briarproject.briar.android.navdrawer.NavDrawerActivity"
-			android:theme="@style/BriarTheme.NoActionBar"
+			android:theme="@style/NasakaWeweTheme.NoActionBar"
 			android:windowSoftInputMode="adjustResize|stateUnchanged">
 			<meta-data
 				android:name="android.support.PARENT_ACTIVITY"
@@ -170,7 +170,7 @@
 			android:name=".android.conversation.ImageActivity"
 			android:exported="false"
 			android:parentActivityName="org.briarproject.briar.android.conversation.ConversationActivity"
-			android:theme="@style/BriarTheme.ActionBarOverlay">
+			android:theme="@style/NasakaWeweTheme.ActionBarOverlay">
 			<meta-data
 				android:name="android.support.PARENT_ACTIVITY"
 				android:value="org.briarproject.briar.android.conversation.ConversationActivity" />
@@ -192,7 +192,7 @@
 			android:exported="false"
 			android:label="@string/app_name"
 			android:parentActivityName="org.briarproject.briar.android.navdrawer.NavDrawerActivity"
-			android:theme="@style/BriarTheme.NoActionBar"
+			android:theme="@style/NasakaWeweTheme.NoActionBar"
 			android:windowSoftInputMode="adjustResize|stateHidden">
 			<meta-data
 				android:name="android.support.PARENT_ACTIVITY"
@@ -276,7 +276,7 @@
 			android:exported="false"
 			android:label="@string/app_name"
 			android:parentActivityName="org.briarproject.briar.android.navdrawer.NavDrawerActivity"
-			android:theme="@style/BriarTheme.NoActionBar"
+			android:theme="@style/NasakaWeweTheme.NoActionBar"
 			android:windowSoftInputMode="adjustResize|stateHidden">
 			<meta-data
 				android:name="android.support.PARENT_ACTIVITY"
@@ -329,7 +329,7 @@
 			android:name="org.briarproject.briar.android.blog.BlogActivity"
 			android:exported="false"
 			android:parentActivityName="org.briarproject.briar.android.navdrawer.NavDrawerActivity"
-			android:theme="@style/BriarTheme.NoActionBar">
+			android:theme="@style/NasakaWeweTheme.NoActionBar">
 			<meta-data
 				android:name="android.support.PARENT_ACTIVITY"
 				android:value="org.briarproject.briar.android.navdrawer.NavDrawerActivity" />
@@ -362,7 +362,7 @@
 			android:exported="false"
 			android:label="@string/add_contact_title"
 			android:parentActivityName="org.briarproject.briar.android.navdrawer.NavDrawerActivity"
-			android:theme="@style/BriarTheme.NoActionBar">
+			android:theme="@style/NasakaWeweTheme.NoActionBar">
 			<meta-data
 				android:name="android.support.PARENT_ACTIVITY"
 				android:value="org.briarproject.briar.android.navdrawer.NavDrawerActivity" />
@@ -386,7 +386,7 @@
 			android:finishOnTaskLaunch="true"
 			android:label="@string/startup_failed_activity_title"
 			android:launchMode="singleInstance"
-			android:process=":briar_startup_failure"
+			android:process=":nasaka_wewe_startup_failure"
 			android:windowSoftInputMode="adjustResize|stateHidden" />
 
 		<activity
@@ -472,13 +472,13 @@
 			android:exported="false"
 			android:label="@string/lock_unlock"
 			android:launchMode="singleTask"
-			android:theme="@style/BriarTheme.NoActionBar" />
+			android:theme="@style/NasakaWeweTheme.NoActionBar" />
 
 		<activity
 			android:name=".android.contact.add.remote.AddContactActivity"
 			android:exported="false"
 			android:label="@string/add_contact_remotely_title_case"
-			android:theme="@style/BriarTheme"
+			android:theme="@style/NasakaWeweTheme"
 			android:windowSoftInputMode="adjustResize|stateHidden" />
 
 		<activity
@@ -505,20 +505,20 @@
 			android:name=".android.contact.add.remote.PendingContactListActivity"
 			android:exported="false"
 			android:label="@string/pending_contact_requests"
-			android:theme="@style/BriarTheme" />
+			android:theme="@style/NasakaWeweTheme" />
 
 		<activity
 			android:name=".android.hotspot.HotspotActivity"
 			android:exported="false"
 			android:label="@string/hotspot_title"
-			android:theme="@style/BriarTheme" />
+			android:theme="@style/NasakaWeweTheme" />
 
 		<activity
 			android:name=".android.contact.connect.ConnectViaBluetoothActivity"
 			android:exported="false"
 			android:label="@string/connect_via_bluetooth_title"
 			android:parentActivityName="org.briarproject.briar.android.conversation.ConversationActivity"
-			android:theme="@style/BriarTheme">
+			android:theme="@style/NasakaWeweTheme">
 			<meta-data
 				android:name="android.support.PARENT_ACTIVITY"
 				android:value="org.briarproject.briar.android.conversation.ConversationActivity" />
@@ -529,7 +529,7 @@
 			android:exported="false"
 			android:label="@string/mailbox_settings_title"
 			android:parentActivityName="org.briarproject.briar.android.settings.SettingsActivity"
-			android:theme="@style/BriarTheme">
+			android:theme="@style/NasakaWeweTheme">
 			<meta-data
 				android:name="android.support.PARENT_ACTIVITY"
 				android:value="org.briarproject.briar.android.settings.SettingsActivity" />

@@ -121,3 +121,4 @@ class AndroidKeyStrengthener implements KeyStrengthener {
 		throw new GeneralSecurityException("Could not generate key");
 	}
 }
+

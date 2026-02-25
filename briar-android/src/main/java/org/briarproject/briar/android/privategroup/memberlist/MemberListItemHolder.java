@@ -64,3 +64,4 @@ class MemberListItemHolder extends RecyclerView.ViewHolder {
 	}
 
 }
+

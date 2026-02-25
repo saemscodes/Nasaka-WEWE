@@ -19,7 +19,7 @@ import org.briarproject.briar.android.privategroup.creation.CreateGroupActivity;
 import org.briarproject.briar.android.privategroup.invitation.GroupInvitationActivity;
 import org.briarproject.briar.android.privategroup.list.GroupViewHolder.OnGroupRemoveClickListener;
 import org.briarproject.briar.android.util.BriarSnackbarBuilder;
-import org.briarproject.briar.android.view.BriarRecyclerView;
+import org.briarproject.briar.android.view.NasakaWeweRecyclerView;
 import org.briarproject.nullsafety.MethodsNotNullByDefault;
 import org.briarproject.nullsafety.ParametersNotNullByDefault;
 
@@ -48,7 +48,7 @@ public class GroupListFragment extends BaseFragment implements
 	ViewModelProvider.Factory viewModelFactory;
 
 	private GroupListViewModel viewModel;
-	private BriarRecyclerView list;
+	private NasakaWeweRecyclerView list;
 	private GroupListAdapter adapter;
 
 	@Override
@@ -157,3 +157,4 @@ public class GroupListFragment extends BaseFragment implements
 	}
 
 }
+

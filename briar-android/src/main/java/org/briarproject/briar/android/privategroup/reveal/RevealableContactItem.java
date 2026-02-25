@@ -31,3 +31,4 @@ class RevealableContactItem extends BaseSelectableContactItem {
 		return visibility != INVISIBLE;
 	}
 }
+

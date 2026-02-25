@@ -12,7 +12,7 @@ import org.briarproject.briar.R;
 import org.briarproject.briar.android.activity.ActivityComponent;
 import org.briarproject.briar.android.activity.BriarActivity;
 import org.briarproject.briar.android.util.BriarSnackbarBuilder;
-import org.briarproject.briar.android.view.BriarRecyclerView;
+import org.briarproject.briar.android.view.NasakaWeweRecyclerView;
 import org.briarproject.nullsafety.MethodsNotNullByDefault;
 import org.briarproject.nullsafety.ParametersNotNullByDefault;
 
@@ -39,7 +39,7 @@ public class PendingContactListActivity extends BriarActivity
 
 	private PendingContactListViewModel viewModel;
 	private PendingContactListAdapter adapter;
-	private BriarRecyclerView list;
+	private NasakaWeweRecyclerView list;
 	private Snackbar offlineSnackbar;
 
 	@Override
@@ -75,7 +75,7 @@ public class PendingContactListActivity extends BriarActivity
 		list.showProgressBar();
 
 		offlineSnackbar = new BriarSnackbarBuilder()
-				.setBackgroundColor(R.color.briar_red_500)
+				.setBackgroundColor(R.color.nasaka_wewe_red_500)
 				.make(list, R.string.offline_state, LENGTH_INDEFINITE);
 	}
 
@@ -111,7 +111,7 @@ public class PendingContactListActivity extends BriarActivity
 		OnClickListener removeListener = (dialog, which) ->
 				removePendingContact(item.getPendingContact().getId());
 		MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(
-				PendingContactListActivity.this, R.style.BriarDialogTheme);
+				PendingContactListActivity.this, R.style.NasakaWeweDialogTheme);
 		builder.setTitle(
 				getString(R.string.dialog_title_remove_pending_contact));
 		builder.setMessage(
@@ -147,3 +147,4 @@ public class PendingContactListActivity extends BriarActivity
 	}
 
 }
+

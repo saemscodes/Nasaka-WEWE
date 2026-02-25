@@ -14,3 +14,4 @@ public interface LogDecrypter {
 	@Nullable
 	String decryptLogs(@Nullable byte[] logKey);
 }
+

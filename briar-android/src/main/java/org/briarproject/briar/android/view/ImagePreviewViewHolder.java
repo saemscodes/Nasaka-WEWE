@@ -74,3 +74,4 @@ class ImagePreviewViewHolder extends ViewHolder {
 	}
 
 }
+

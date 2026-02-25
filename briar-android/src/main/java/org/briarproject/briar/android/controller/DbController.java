@@ -8,3 +8,4 @@ public interface DbController {
 
 	void runOnDbThread(Runnable task);
 }
+

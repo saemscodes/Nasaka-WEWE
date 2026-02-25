@@ -73,3 +73,4 @@ public class IntroductionActivity extends BriarActivity
 	}
 
 }
+

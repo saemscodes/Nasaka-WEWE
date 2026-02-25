@@ -98,3 +98,4 @@ public abstract class BaseThreadItemViewHolder<I extends ThreadItem>
 	}
 
 }
+

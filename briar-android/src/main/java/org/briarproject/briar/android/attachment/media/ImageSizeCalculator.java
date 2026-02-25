@@ -16,3 +16,4 @@ public interface ImageSizeCalculator {
 	Size getSize(InputStream is, String contentType);
 
 }
+

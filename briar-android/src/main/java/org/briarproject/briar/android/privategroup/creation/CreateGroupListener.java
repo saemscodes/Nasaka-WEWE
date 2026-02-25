@@ -6,3 +6,4 @@ interface CreateGroupListener extends BaseFragmentListener {
 
 	void onGroupNameChosen(String name);
 }
+

@@ -75,3 +75,4 @@ class LogEncrypterImpl implements LogEncrypter {
 	}
 
 }
+

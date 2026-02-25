@@ -203,3 +203,4 @@ class RemovableDriveViewModel extends DbViewModel {
 				lifecycleManager.getLifecycleState().isAfter(STARTING_SERVICES);
 	}
 }
+

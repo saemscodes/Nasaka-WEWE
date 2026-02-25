@@ -33,3 +33,4 @@ class ImagePreviewDecoration extends ItemDecoration {
 	}
 
 }
+

@@ -90,3 +90,4 @@ class ImageCompressorImpl implements ImageCompressor {
 	}
 
 }
+

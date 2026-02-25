@@ -13,7 +13,7 @@ import org.briarproject.briar.android.activity.BriarActivity;
 import org.briarproject.briar.android.sharing.SharingController.SharingInfo;
 import org.briarproject.briar.android.threaded.ThreadItemAdapter.ThreadItemListener;
 import org.briarproject.briar.android.util.BriarSnackbarBuilder;
-import org.briarproject.briar.android.view.BriarRecyclerView;
+import org.briarproject.briar.android.view.NasakaWeweRecyclerView;
 import org.briarproject.briar.android.view.TextInputView;
 import org.briarproject.briar.android.view.TextSendController;
 import org.briarproject.briar.android.view.TextSendController.SendListener;
@@ -47,7 +47,7 @@ public abstract class ThreadListActivity<I extends ThreadItem, A extends ThreadI
 	protected final A adapter = createAdapter();
 	protected abstract ThreadListViewModel<I> getViewModel();
 	protected abstract A createAdapter();
-	protected BriarRecyclerView list;
+	protected NasakaWeweRecyclerView list;
 	protected TextInputView textInput;
 	protected TextSendController sendController;
 	protected GroupId groupId;
@@ -258,3 +258,4 @@ public abstract class ThreadListActivity<I extends ThreadItem, A extends ThreadI
 	protected abstract int getMaxTextLength();
 
 }
+

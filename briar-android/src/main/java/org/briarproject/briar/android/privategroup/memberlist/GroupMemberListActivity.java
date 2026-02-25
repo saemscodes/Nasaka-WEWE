@@ -15,7 +15,7 @@ import org.briarproject.briar.R;
 import org.briarproject.briar.android.activity.ActivityComponent;
 import org.briarproject.briar.android.activity.BriarActivity;
 import org.briarproject.briar.android.controller.handler.UiResultExceptionHandler;
-import org.briarproject.briar.android.view.BriarRecyclerView;
+import org.briarproject.briar.android.view.NasakaWeweRecyclerView;
 import org.briarproject.briar.api.privategroup.JoinMessageHeader;
 import org.briarproject.briar.api.privategroup.event.GroupMessageAddedEvent;
 import org.briarproject.nullsafety.MethodsNotNullByDefault;
@@ -39,7 +39,7 @@ public class GroupMemberListActivity extends BriarActivity
 	EventBus eventBus;
 
 	private MemberListAdapter adapter;
-	private BriarRecyclerView list;
+	private NasakaWeweRecyclerView list;
 	private GroupId groupId;
 
 	@Override
@@ -128,3 +128,4 @@ public class GroupMemberListActivity extends BriarActivity
 	}
 
 }
+

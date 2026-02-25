@@ -53,3 +53,4 @@ public class ActivityModule {
 		return new BriarServiceConnection();
 	}
 }
+

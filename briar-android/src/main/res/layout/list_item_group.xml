@@ -6,7 +6,7 @@
 	android:layout_height="wrap_content"
 	android:background="?attr/selectableItemBackground">
 
-	<org.briarproject.briar.android.view.TextAvatarView
+	<org.NasakaWeweproject.NasakaWewe.android.view.TextAvatarView
 		android:id="@+id/avatarView"
 		android:layout_width="@dimen/listitem_picture_frame_size"
 		android:layout_height="@dimen/listitem_picture_frame_size"
@@ -89,7 +89,7 @@
 
 	<Button
 		android:id="@+id/removeButton"
-		style="@style/BriarButtonFlat.Negative"
+		style="@style/NasakaWeweButtonFlat.Negative"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:text="@string/groups_remove"

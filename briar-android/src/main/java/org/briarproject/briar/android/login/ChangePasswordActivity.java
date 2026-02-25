@@ -190,3 +190,4 @@ public class ChangePasswordActivity extends BriarActivity
 		}
 	}
 }
+

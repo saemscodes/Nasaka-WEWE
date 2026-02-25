@@ -10,7 +10,7 @@ import org.briarproject.briar.android.activity.BriarActivity;
 import org.briarproject.briar.android.controller.handler.UiExceptionHandler;
 import org.briarproject.briar.android.controller.handler.UiResultExceptionHandler;
 import org.briarproject.briar.android.sharing.InvitationController.InvitationListener;
-import org.briarproject.briar.android.view.BriarRecyclerView;
+import org.briarproject.briar.android.view.NasakaWeweRecyclerView;
 import org.briarproject.briar.api.sharing.InvitationItem;
 import org.briarproject.nullsafety.MethodsNotNullByDefault;
 import org.briarproject.nullsafety.ParametersNotNullByDefault;
@@ -36,7 +36,7 @@ public abstract class InvitationActivity<I extends InvitationItem>
 			Logger.getLogger(InvitationActivity.class.getName());
 
 	private InvitationAdapter<I, ?> adapter;
-	private BriarRecyclerView list;
+	private NasakaWeweRecyclerView list;
 
 	@Override
 	public void onCreate(@Nullable Bundle state) {
@@ -139,3 +139,4 @@ public abstract class InvitationActivity<I extends InvitationItem>
 	}
 
 }
+

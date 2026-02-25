@@ -285,3 +285,4 @@ class GroupViewModel extends ThreadListViewModel<GroupMessageItem> {
 	}
 
 }
+

@@ -12,7 +12,7 @@
 
 		<de.hdodenhof.circleimageview.CircleImageView
 			android:id="@+id/avatarContact1"
-			style="@style/BriarAvatar"
+			style="@style/NasakaWeweAvatar"
 			android:layout_width="42dp"
 			android:layout_height="42dp"
 			android:layout_margin="@dimen/margin_large"
@@ -53,7 +53,7 @@
 
 		<de.hdodenhof.circleimageview.CircleImageView
 			android:id="@+id/avatarContact2"
-			style="@style/BriarAvatar"
+			style="@style/NasakaWeweAvatar"
 			android:layout_width="42dp"
 			android:layout_height="42dp"
 			android:layout_margin="@dimen/margin_large"
@@ -111,7 +111,7 @@
 			app:layout_constraintTop_toBottomOf="@+id/progressBar"
 			tools:visibility="visible" />
 
-		<org.briarproject.briar.android.view.LargeTextInputView
+		<org.NasakaWeweproject.NasakaWewe.android.view.LargeTextInputView
 			android:id="@+id/introductionMessageView"
 			android:layout_width="0dp"
 			android:layout_height="wrap_content"

@@ -16,3 +16,4 @@ import dagger.MapKey;
 public @interface ViewModelKey {
 	Class<? extends ViewModel> value();
 }
+

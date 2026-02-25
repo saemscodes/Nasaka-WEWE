@@ -1,20 +1,31 @@
 package org.briarproject.briar.android.account
  
-import android.content.Intent
-import android.net.Uri
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.KeyboardActions
+import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Lock
+import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.filled.WifiOff
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.FocusDirection
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.ImeAction
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -28,15 +39,24 @@ import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun CekaAuthScreen(supabaseClient: SupabaseClient) {
+fun CekaAuthScreen(
+    supabaseClient: SupabaseClient,
+    isOnline: Boolean,
+    onOfflineFallback: () -> Unit,
+    onOfflineAccountCreated: (name: String, password: String) -> Unit
+) {
     val scope = rememberCoroutineScope()
-    val context = LocalContext.current
+    val focusManager = LocalFocusManager.current
+    val scrollState = rememberScrollState()
+
+    // Shared state
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
+    var confirmPassword by remember { mutableStateOf("") }
+    var nickname by remember { mutableStateOf("") }
     var isLoading by remember { mutableStateOf(false) }
     var errorMessage by remember { mutableStateOf<String?>(null) }
-
-    val iOSBlue = MaterialTheme.colorScheme.primary
+    var isSignUpMode by remember { mutableStateOf(false) }
 
     Box(
         modifier = Modifier
@@ -46,12 +66,13 @@ fun CekaAuthScreen(supabaseClient: SupabaseClient) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
+                .verticalScroll(scrollState)
                 .padding(24.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
             Text(
-                text = "Welcome to Nasaka-WEWE",
+                text = "Welcome to Nasaka WEWE",
                 fontSize = 28.sp,
                 fontWeight = FontWeight.Bold,
                 color = MaterialTheme.colorScheme.primary,
@@ -59,141 +80,472 @@ fun CekaAuthScreen(supabaseClient: SupabaseClient) {
             )
 
             Text(
-                text = "Powered by Civic Education Kenya",
+                text = if (isOnline) "Powered by Civic Education Kenya"
+                       else "Offline Mode — Local Account",
                 fontSize = 14.sp,
                 color = Color.Gray,
-                modifier = Modifier.padding(top = 4.dp, bottom = 32.dp)
+                modifier = Modifier.padding(top = 4.dp, bottom = 8.dp)
             )
+
+            // Offline indicator banner
+            if (!isOnline) {
+                Card(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(bottom = 16.dp),
+                    shape = RoundedCornerShape(12.dp),
+                    colors = CardDefaults.cardColors(
+                        containerColor = MaterialTheme.colorScheme.tertiaryContainer
+                    )
+                ) {
+                    Row(
+                        modifier = Modifier.padding(16.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Icon(
+                            Icons.Default.WifiOff,
+                            contentDescription = null,
+                            tint = MaterialTheme.colorScheme.onTertiaryContainer,
+                            modifier = Modifier.size(24.dp)
+                        )
+                        Spacer(modifier = Modifier.width(12.dp))
+                        Column {
+                            Text(
+                                text = "No Internet Connection",
+                                fontWeight = FontWeight.SemiBold,
+                                fontSize = 14.sp,
+                                color = MaterialTheme.colorScheme.onTertiaryContainer
+                            )
+                            Text(
+                                text = "Create a local account to start messaging offline. " +
+                                       "You can link your CEKA account later when online.",
+                                fontSize = 12.sp,
+                                color = MaterialTheme.colorScheme.onTertiaryContainer.copy(alpha = 0.8f)
+                            )
+                        }
+                    }
+                }
+            }
 
             Card(
                 modifier = Modifier.fillMaxWidth(),
                 shape = RoundedCornerShape(16.dp),
-                colors = CardDefaults.cardColors(containerColor = Color.White.copy(alpha = 0.9f)),
+                colors = CardDefaults.cardColors(
+                    containerColor = MaterialTheme.colorScheme.surface.copy(alpha = 0.95f)
+                ),
                 elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
             ) {
                 Column(
                     modifier = Modifier.padding(24.dp),
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                    TextField(
-                        value = email,
-                        onValueChange = { email = it },
-                        label = { Text("Email") },
-                        modifier = Modifier.fillMaxWidth(),
-                        leadingIcon = { Icon(Icons.Default.Email, contentDescription = null) },
-                        colors = TextFieldDefaults.textFieldColors(
-                            containerColor = Color.Transparent
-                        )
-                    )
+                    if (isOnline) {
+                        // ========================================
+                        // ONLINE MODE: Supabase Email/Password Auth
+                        // ========================================
 
-                    Spacer(modifier = Modifier.height(16.dp))
+                        if (isSignUpMode) {
+                            // Full name field for sign-up
+                            TextField(
+                                value = nickname,
+                                onValueChange = { nickname = it },
+                                label = { Text("Full Name") },
+                                modifier = Modifier.fillMaxWidth(),
+                                leadingIcon = { Icon(Icons.Default.Person, contentDescription = null) },
+                                keyboardOptions = KeyboardOptions(
+                                    imeAction = ImeAction.Next,
+                                    keyboardType = KeyboardType.Text
+                                ),
+                                keyboardActions = KeyboardActions(
+                                    onNext = { focusManager.moveFocus(FocusDirection.Down) }
+                                ),
+                                colors = TextFieldDefaults.colors(
+                                    unfocusedContainerColor = Color.Transparent,
+                                    focusedContainerColor = Color.Transparent
+                                ),
+                                singleLine = true
+                            )
 
-                    TextField(
-                        value = password,
-                        onValueChange = { password = it },
-                        label = { Text("Password") },
-                        modifier = Modifier.fillMaxWidth(),
-                        leadingIcon = { Icon(Icons.Default.Lock, contentDescription = null) },
-                        visualTransformation = PasswordVisualTransformation(),
-                        colors = TextFieldDefaults.textFieldColors(
-                            containerColor = Color.Transparent
-                        )
-                    )
-
-                    if (errorMessage != null) {
-                        Text(
-                            text = errorMessage!!,
-                            color = Color.Red,
-                            fontSize = 12.sp,
-                            modifier = Modifier.padding(top = 8.dp)
-                        )
-                    }
-
-                    Spacer(modifier = Modifier.height(24.dp))
-
-                    Button(
-                        onClick = {
-                            scope.launch {
-                                isLoading = true
-                                errorMessage = null
-                                try {
-                                    supabaseClient.auth.signInWith(EmailProvider) {
-                                        this.email = email
-                                        this.password = password
-                                    }
-                                } catch (e: Exception) {
-                                    errorMessage = e.message
-                                } finally {
-                                    isLoading = false
-                                }
-                            }
-                        },
-                        modifier = Modifier.fillMaxWidth(),
-                        colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary),
-                        enabled = !isLoading
-                    ) {
-                        if (isLoading) {
-                            CircularProgressIndicator(color = Color.White, modifier = Modifier.size(24.dp))
-                        } else {
-                            Text("Sign In", fontWeight = FontWeight.Bold)
+                            Spacer(modifier = Modifier.height(12.dp))
                         }
-                    }
 
-                    Spacer(modifier = Modifier.height(16.dp))
+                        TextField(
+                            value = email,
+                            onValueChange = { email = it },
+                            label = { Text("Email") },
+                            modifier = Modifier.fillMaxWidth(),
+                            leadingIcon = { Icon(Icons.Default.Email, contentDescription = null) },
+                            keyboardOptions = KeyboardOptions(
+                                imeAction = ImeAction.Next,
+                                keyboardType = KeyboardType.Email
+                            ),
+                            keyboardActions = KeyboardActions(
+                                onNext = { focusManager.moveFocus(FocusDirection.Down) }
+                            ),
+                            colors = TextFieldDefaults.colors(
+                                unfocusedContainerColor = Color.Transparent,
+                                focusedContainerColor = Color.Transparent
+                            ),
+                            singleLine = true
+                        )
 
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Divider(modifier = Modifier.weight(1f))
+                        Spacer(modifier = Modifier.height(12.dp))
+
+                        TextField(
+                            value = password,
+                            onValueChange = { password = it },
+                            label = { Text("Password") },
+                            modifier = Modifier.fillMaxWidth(),
+                            leadingIcon = { Icon(Icons.Default.Lock, contentDescription = null) },
+                            visualTransformation = PasswordVisualTransformation(),
+                            keyboardOptions = KeyboardOptions(
+                                imeAction = if (isSignUpMode) ImeAction.Next else ImeAction.Done,
+                                keyboardType = KeyboardType.Password
+                            ),
+                            keyboardActions = KeyboardActions(
+                                onNext = { focusManager.moveFocus(FocusDirection.Down) },
+                                onDone = { focusManager.clearFocus() }
+                            ),
+                            colors = TextFieldDefaults.colors(
+                                unfocusedContainerColor = Color.Transparent,
+                                focusedContainerColor = Color.Transparent
+                            ),
+                            singleLine = true
+                        )
+
+                        if (isSignUpMode) {
+                            Spacer(modifier = Modifier.height(12.dp))
+
+                            TextField(
+                                value = confirmPassword,
+                                onValueChange = { confirmPassword = it },
+                                label = { Text("Confirm Password") },
+                                modifier = Modifier.fillMaxWidth(),
+                                leadingIcon = { Icon(Icons.Default.Lock, contentDescription = null) },
+                                visualTransformation = PasswordVisualTransformation(),
+                                keyboardOptions = KeyboardOptions(
+                                    imeAction = ImeAction.Done,
+                                    keyboardType = KeyboardType.Password
+                                ),
+                                keyboardActions = KeyboardActions(
+                                    onDone = { focusManager.clearFocus() }
+                                ),
+                                colors = TextFieldDefaults.colors(
+                                    unfocusedContainerColor = Color.Transparent,
+                                    focusedContainerColor = Color.Transparent
+                                ),
+                                singleLine = true
+                            )
+                        }
+
+                        // Error message
+                        AnimatedVisibility(
+                            visible = errorMessage != null,
+                            enter = fadeIn(),
+                            exit = fadeOut()
+                        ) {
+                            Text(
+                                text = errorMessage ?: "",
+                                color = MaterialTheme.colorScheme.error,
+                                fontSize = 12.sp,
+                                modifier = Modifier.padding(top = 8.dp)
+                            )
+                        }
+
+                        Spacer(modifier = Modifier.height(24.dp))
+
+                        // Primary action button (Sign In or Sign Up)
+                        Button(
+                            onClick = {
+                                scope.launch {
+                                    isLoading = true
+                                    errorMessage = null
+                                    try {
+                                        if (isSignUpMode) {
+                                            // Validate sign-up fields
+                                            if (nickname.isBlank()) {
+                                                errorMessage = "Please enter your full name"
+                                                return@launch
+                                            }
+                                            if (email.isBlank()) {
+                                                errorMessage = "Please enter your email"
+                                                return@launch
+                                            }
+                                            if (password.length < 6) {
+                                                errorMessage = "Password must be at least 6 characters"
+                                                return@launch
+                                            }
+                                            if (password != confirmPassword) {
+                                                errorMessage = "Passwords do not match"
+                                                return@launch
+                                            }
+                                            // In-app sign-up via Supabase
+                                            supabaseClient.auth.signUpWith(EmailProvider) {
+                                                this.email = email
+                                                this.password = password
+                                                this.data = kotlinx.serialization.json.buildJsonObject {
+                                                    put("full_name", kotlinx.serialization.json.JsonPrimitive(nickname))
+                                                }
+                                            }
+                                            errorMessage = "Check your email for a confirmation link!"
+                                        } else {
+                                            // Sign in
+                                            if (email.isBlank() || password.isBlank()) {
+                                                errorMessage = "Please enter email and password"
+                                                return@launch
+                                            }
+                                            supabaseClient.auth.signInWith(EmailProvider) {
+                                                this.email = email
+                                                this.password = password
+                                            }
+                                        }
+                                    } catch (e: Exception) {
+                                        errorMessage = e.message ?: "Authentication failed"
+                                    } finally {
+                                        isLoading = false
+                                    }
+                                }
+                            },
+                            modifier = Modifier.fillMaxWidth(),
+                            colors = ButtonDefaults.buttonColors(
+                                containerColor = MaterialTheme.colorScheme.primary
+                            ),
+                            enabled = !isLoading
+                        ) {
+                            if (isLoading) {
+                                CircularProgressIndicator(
+                                    color = MaterialTheme.colorScheme.onPrimary,
+                                    modifier = Modifier.size(24.dp),
+                                    strokeWidth = 2.dp
+                                )
+                            } else {
+                                Text(
+                                    text = if (isSignUpMode) "Create Account" else "Sign In",
+                                    fontWeight = FontWeight.Bold
+                                )
+                            }
+                        }
+
+                        Spacer(modifier = Modifier.height(16.dp))
+
+                        // OAuth divider + buttons
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            HorizontalDivider(modifier = Modifier.weight(1f))
+                            Text(
+                                text = " OR ",
+                                fontSize = 12.sp,
+                                color = Color.Gray,
+                                modifier = Modifier.padding(horizontal = 8.dp)
+                            )
+                            HorizontalDivider(modifier = Modifier.weight(1f))
+                        }
+
+                        Spacer(modifier = Modifier.height(16.dp))
+
+                        OutlinedButton(
+                            onClick = {
+                                scope.launch {
+                                    try {
+                                        supabaseClient.auth.signInWith(Google)
+                                    } catch (e: Exception) {
+                                        errorMessage = e.message ?: "Google sign-in failed"
+                                    }
+                                }
+                            },
+                            modifier = Modifier.fillMaxWidth(),
+                            shape = RoundedCornerShape(8.dp)
+                        ) {
+                            Text("Continue with Google")
+                        }
+
+                        Spacer(modifier = Modifier.height(8.dp))
+
+                        OutlinedButton(
+                            onClick = {
+                                scope.launch {
+                                    try {
+                                        supabaseClient.auth.signInWith(Github)
+                                    } catch (e: Exception) {
+                                        errorMessage = e.message ?: "GitHub sign-in failed"
+                                    }
+                                }
+                            },
+                            modifier = Modifier.fillMaxWidth(),
+                            shape = RoundedCornerShape(8.dp)
+                        ) {
+                            Text("Continue with GitHub")
+                        }
+
+                    } else {
+                        // ========================================
+                        // OFFLINE MODE: Local account creation
+                        // ========================================
+
                         Text(
-                            text = " OR ",
-                            fontSize = 12.sp,
+                            text = "Create Local Account",
+                            fontSize = 18.sp,
+                            fontWeight = FontWeight.SemiBold,
+                            color = MaterialTheme.colorScheme.onSurface,
+                            modifier = Modifier.padding(bottom = 16.dp)
+                        )
+
+                        TextField(
+                            value = nickname,
+                            onValueChange = { nickname = it },
+                            label = { Text("Your Name") },
+                            modifier = Modifier.fillMaxWidth(),
+                            leadingIcon = { Icon(Icons.Default.Person, contentDescription = null) },
+                            keyboardOptions = KeyboardOptions(
+                                imeAction = ImeAction.Next,
+                                keyboardType = KeyboardType.Text
+                            ),
+                            keyboardActions = KeyboardActions(
+                                onNext = { focusManager.moveFocus(FocusDirection.Down) }
+                            ),
+                            colors = TextFieldDefaults.colors(
+                                unfocusedContainerColor = Color.Transparent,
+                                focusedContainerColor = Color.Transparent
+                            ),
+                            singleLine = true
+                        )
+
+                        Spacer(modifier = Modifier.height(12.dp))
+
+                        TextField(
+                            value = password,
+                            onValueChange = { password = it },
+                            label = { Text("PIN / Password") },
+                            modifier = Modifier.fillMaxWidth(),
+                            leadingIcon = { Icon(Icons.Default.Lock, contentDescription = null) },
+                            visualTransformation = PasswordVisualTransformation(),
+                            keyboardOptions = KeyboardOptions(
+                                imeAction = ImeAction.Next,
+                                keyboardType = KeyboardType.Password
+                            ),
+                            keyboardActions = KeyboardActions(
+                                onNext = { focusManager.moveFocus(FocusDirection.Down) }
+                            ),
+                            colors = TextFieldDefaults.colors(
+                                unfocusedContainerColor = Color.Transparent,
+                                focusedContainerColor = Color.Transparent
+                            ),
+                            singleLine = true
+                        )
+
+                        Spacer(modifier = Modifier.height(12.dp))
+
+                        TextField(
+                            value = confirmPassword,
+                            onValueChange = { confirmPassword = it },
+                            label = { Text("Confirm PIN / Password") },
+                            modifier = Modifier.fillMaxWidth(),
+                            leadingIcon = { Icon(Icons.Default.Lock, contentDescription = null) },
+                            visualTransformation = PasswordVisualTransformation(),
+                            keyboardOptions = KeyboardOptions(
+                                imeAction = ImeAction.Done,
+                                keyboardType = KeyboardType.Password
+                            ),
+                            keyboardActions = KeyboardActions(
+                                onDone = { focusManager.clearFocus() }
+                            ),
+                            colors = TextFieldDefaults.colors(
+                                unfocusedContainerColor = Color.Transparent,
+                                focusedContainerColor = Color.Transparent
+                            ),
+                            singleLine = true
+                        )
+
+                        // Error message
+                        AnimatedVisibility(
+                            visible = errorMessage != null,
+                            enter = fadeIn(),
+                            exit = fadeOut()
+                        ) {
+                            Text(
+                                text = errorMessage ?: "",
+                                color = MaterialTheme.colorScheme.error,
+                                fontSize = 12.sp,
+                                modifier = Modifier.padding(top = 8.dp)
+                            )
+                        }
+
+                        Spacer(modifier = Modifier.height(24.dp))
+
+                        Button(
+                            onClick = {
+                                errorMessage = null
+                                if (nickname.isBlank()) {
+                                    errorMessage = "Please enter your name"
+                                    return@Button
+                                }
+                                if (password.isBlank()) {
+                                    errorMessage = "Please enter a PIN or password"
+                                    return@Button
+                                }
+                                if (password.length < 4) {
+                                    errorMessage = "PIN must be at least 4 characters"
+                                    return@Button
+                                }
+                                if (password != confirmPassword) {
+                                    errorMessage = "Passwords do not match"
+                                    return@Button
+                                }
+                                onOfflineAccountCreated(nickname, password)
+                            },
+                            modifier = Modifier.fillMaxWidth(),
+                            colors = ButtonDefaults.buttonColors(
+                                containerColor = MaterialTheme.colorScheme.primary
+                            )
+                        ) {
+                            Text(
+                                text = "Create Offline Account",
+                                fontWeight = FontWeight.Bold
+                            )
+                        }
+
+                        Spacer(modifier = Modifier.height(12.dp))
+
+                        Text(
+                            text = "Your data stays encrypted on this device. " +
+                                   "Connect to the internet later to link your CEKA membership.",
+                            fontSize = 11.sp,
                             color = Color.Gray,
+                            textAlign = TextAlign.Center,
                             modifier = Modifier.padding(horizontal = 8.dp)
                         )
-                        Divider(modifier = Modifier.weight(1f))
-                    }
-
-                    Spacer(modifier = Modifier.height(16.dp))
-
-                    OutlinedButton(
-                        onClick = {
-                            scope.launch {
-                                supabaseClient.auth.signInWith(Google)
-                            }
-                        },
-                        modifier = Modifier.fillMaxWidth(),
-                        shape = RoundedCornerShape(8.dp)
-                    ) {
-                        Text("Continue with Google")
-                    }
-
-                    Spacer(modifier = Modifier.height(8.dp))
-
-                    OutlinedButton(
-                        onClick = {
-                            scope.launch {
-                                supabaseClient.auth.signInWith(Github)
-                            }
-                        },
-                        modifier = Modifier.fillMaxWidth(),
-                        shape = RoundedCornerShape(8.dp)
-                    ) {
-                        Text("Continue with GitHub")
                     }
                 }
             }
 
             Spacer(modifier = Modifier.height(24.dp))
 
-            TextButton(
-                onClick = {
-                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.civiceducationkenya.com/auth?view=sign_up"))
-                    context.startActivity(intent)
+            // Toggle between Sign In / Sign Up (online only) or switch to offline
+            if (isOnline) {
+                TextButton(
+                    onClick = {
+                        isSignUpMode = !isSignUpMode
+                        errorMessage = null
+                    }
+                ) {
+                    Text(
+                        text = if (isSignUpMode) "Already have an account? Sign In"
+                        else "Don't have an account? Sign Up",
+                        color = MaterialTheme.colorScheme.primary
+                    )
                 }
-            ) {
-                Text("Don't have an account? Sign Up", color = MaterialTheme.colorScheme.primary)
+
+                TextButton(
+                    onClick = { onOfflineFallback() }
+                ) {
+                    Text(
+                        text = "Continue without internet →",
+                        color = Color.Gray,
+                        fontSize = 13.sp
+                    )
+                }
             }
         }
     }

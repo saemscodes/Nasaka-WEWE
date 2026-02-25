@@ -61,3 +61,4 @@ class ConnectionsStore extends SettingsStore {
 	}
 
 }
+

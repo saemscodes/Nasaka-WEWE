@@ -7,3 +7,4 @@ public interface ItemReturningAdapter<I> {
 	int getItemCount();
 
 }
+

@@ -128,3 +128,4 @@ class CustomCornersTransformation extends BitmapTransformation {
 	}
 
 }
+

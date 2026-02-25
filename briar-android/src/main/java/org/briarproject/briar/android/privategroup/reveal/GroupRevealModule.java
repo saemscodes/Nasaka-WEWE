@@ -15,3 +15,4 @@ public class GroupRevealModule {
 		return revealContactsController;
 	}
 }
+

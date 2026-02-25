@@ -124,17 +124,17 @@
 				android:ellipsize="end"
 				android:padding="8dp"
 				android:singleLine="true"
-				android:textColor="@color/briar_primary"
+				android:textColor="@color/nasaka_wewe_primary"
 				android:textIsSelectable="true"
 				android:textSize="18sp"
 				app:layout_constraintEnd_toEndOf="parent"
 				app:layout_constraintStart_toStartOf="parent"
 				app:layout_constraintTop_toBottomOf="@+id/yourLinkIcon"
-				tools:text="briar://scnsdflamslkfjgluoblmksdfbwevlewajfdlkjewwhqliafskfjhskdjhvoieiv" />
+				tools:text="NasakaWewe://scnsdflamslkfjgluoblmksdfbwevlewajfdlkjewwhqliafskfjhskdjhvoieiv" />
 
 			<Button
 				android:id="@+id/copyButton"
-				style="@style/BriarButtonFlat.Positive.Tiny"
+				style="@style/NasakaWeweButtonFlat.Positive.Tiny"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:enabled="false"
@@ -149,7 +149,7 @@
 
 			<Button
 				android:id="@+id/shareButton"
-				style="@style/BriarButtonFlat.Positive.Tiny"
+				style="@style/NasakaWeweButtonFlat.Positive.Tiny"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:enabled="false"
@@ -211,7 +211,7 @@
 
 			<Button
 				android:id="@+id/pasteButton"
-				style="@style/BriarButtonFlat.Positive.Tiny"
+				style="@style/NasakaWeweButtonFlat.Positive.Tiny"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:text="@string/paste_button"
@@ -224,7 +224,7 @@
 				app:layout_constraintTop_toBottomOf="@+id/linkInputLayout"
 				app:layout_constraintVertical_bias="0.0" />
 
-			<org.briarproject.briar.android.view.InfoView
+			<org.NasakaWeweproject.NasakaWewe.android.view.InfoView
 				android:id="@+id/infoView"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
@@ -238,7 +238,7 @@
 
 	<Button
 		android:id="@+id/addButton"
-		style="@style/BriarButton"
+		style="@style/NasakaWeweButton"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:layout_marginHorizontal="16dp"

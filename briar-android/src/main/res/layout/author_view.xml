@@ -10,7 +10,7 @@
 
 	<de.hdodenhof.circleimageview.CircleImageView
 		android:id="@+id/avatar"
-		style="@style/BriarAvatar"
+		style="@style/NasakaWeweAvatar"
 		android:layout_width="@dimen/blogs_avatar_normal_size"
 		android:layout_height="@dimen/blogs_avatar_normal_size"
 		app:layout_constraintBottom_toBottomOf="parent"
@@ -50,7 +50,7 @@
 		app:layout_constraintTop_toTopOf="parent"
 		tools:text="Author View that can have a long name" />
 
-	<org.briarproject.briar.android.view.TrustIndicatorView
+	<org.NasakaWeweproject.NasakaWewe.android.view.TrustIndicatorView
 		android:id="@+id/trustIndicator"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"

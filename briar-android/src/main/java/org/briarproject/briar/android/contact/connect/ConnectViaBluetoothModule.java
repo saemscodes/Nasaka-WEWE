@@ -17,3 +17,4 @@ public abstract class ConnectViaBluetoothModule {
 			ConnectViaBluetoothViewModel connectViaBluetoothViewModel);
 
 }
+

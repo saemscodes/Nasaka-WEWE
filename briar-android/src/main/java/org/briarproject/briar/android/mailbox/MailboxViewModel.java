@@ -275,3 +275,4 @@ class MailboxViewModel extends DbViewModel
 		return status;
 	}
 }
+

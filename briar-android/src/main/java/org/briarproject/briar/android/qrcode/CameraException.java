@@ -12,3 +12,4 @@ public class CameraException extends IOException {
 		super(cause);
 	}
 }
+

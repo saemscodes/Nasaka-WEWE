@@ -16,3 +16,4 @@ public class BriarAccountModule {
 		return accountManager;
 	}
 }
+

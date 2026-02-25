@@ -20,3 +20,4 @@ public abstract class UiResultHandler<R> implements ResultHandler<R> {
 	@UiThread
 	public abstract void onResultUi(R result);
 }
+

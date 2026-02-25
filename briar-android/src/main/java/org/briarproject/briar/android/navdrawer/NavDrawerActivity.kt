@@ -106,3 +106,4 @@ class NavDrawerActivity : BriarActivity() {
             .commit()
     }
 }
+

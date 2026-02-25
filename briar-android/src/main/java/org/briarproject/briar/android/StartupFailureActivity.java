@@ -68,3 +68,4 @@ public class StartupFailureActivity extends BaseActivity implements
 		throw new UnsupportedOperationException();
 	}
 }
+

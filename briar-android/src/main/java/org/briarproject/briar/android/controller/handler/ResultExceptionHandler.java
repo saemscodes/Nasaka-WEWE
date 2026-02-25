@@ -6,3 +6,4 @@ public interface ResultExceptionHandler<R, E extends Exception>
 	void onResult(R result);
 
 }
+

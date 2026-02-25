@@ -18,3 +18,4 @@ public interface ShareForumController
 			ExceptionHandler<DbException> handler);
 
 }
+

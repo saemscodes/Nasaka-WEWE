@@ -8,3 +8,4 @@ import org.briarproject.nullsafety.NotNullByDefault;
 interface GroupInvitationController
 		extends InvitationController<GroupInvitationItem> {
 }
+

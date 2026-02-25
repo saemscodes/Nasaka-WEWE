@@ -268,3 +268,4 @@ class AttachmentRetrieverImpl implements AttachmentRetriever {
 		return new Size(thumbnailWidth, thumbnailHeight, mimeType);
 	}
 }
+

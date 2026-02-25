@@ -194,3 +194,4 @@ class BlogViewModel extends BaseViewModel {
 		return sharingController.getSharingInfo();
 	}
 }
+

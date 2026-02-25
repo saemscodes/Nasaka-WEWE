@@ -301,3 +301,4 @@ public class EmojiTextInputView extends LinearLayout implements
 	}
 
 }
+

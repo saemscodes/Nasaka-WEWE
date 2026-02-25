@@ -27,3 +27,4 @@ public abstract class UiExceptionHandler<E extends Exception>
 	public abstract void onExceptionUi(E exception);
 
 }
+

@@ -76,7 +76,7 @@
 			app:layout_constraintLeft_toLeftOf="parent"
 			app:layout_constraintTop_toTopOf="parent" />
 
-		<org.briarproject.briar.android.view.AuthorView
+		<org.NasakaWeweproject.NasakaWewe.android.view.AuthorView
 			android:id="@+id/author"
 			android:layout_width="0dp"
 			android:layout_height="wrap_content"
@@ -94,7 +94,7 @@
 
 		<TextView
 			android:id="@+id/btn_reply"
-			style="@style/BriarButtonFlat.Positive.Tiny"
+			style="@style/NasakaWeweButtonFlat.Positive.Tiny"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:paddingStart="@dimen/margin_medium"
@@ -114,7 +114,7 @@
 			android:textColor="?android:attr/textColorPrimary"
 			android:textIsSelectable="true"
 			android:textSize="@dimen/text_size_medium"
-			android:textColorLink="@color/briar_text_link"
+			android:textColorLink="@color/nasaka_wewe_text_link"
 			app:layout_constraintBottom_toBottomOf="parent"
 			app:layout_constraintEnd_toEndOf="parent"
 			app:layout_constraintStart_toStartOf="parent"

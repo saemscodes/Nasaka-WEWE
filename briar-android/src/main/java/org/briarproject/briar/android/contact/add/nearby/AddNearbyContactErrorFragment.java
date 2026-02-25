@@ -134,3 +134,4 @@ public class AddNearbyContactErrorFragment extends BaseFragment {
 	}
 
 }
+

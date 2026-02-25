@@ -87,3 +87,4 @@ public class SetupDownloadFragment extends Fragment {
 	}
 
 }
+

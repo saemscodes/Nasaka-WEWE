@@ -59,3 +59,4 @@ public interface AttachmentCreator {
 	@IoExecutor
 	void onAttachmentCreationFinished();
 }
+

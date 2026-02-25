@@ -72,3 +72,4 @@ public class BriefLogFormatter extends Formatter {
 		}
 	}
 }
+

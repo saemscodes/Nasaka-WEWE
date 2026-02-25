@@ -17,7 +17,7 @@ import org.briarproject.briar.android.activity.ActivityComponent;
 import org.briarproject.briar.android.fragment.BaseFragment;
 import org.briarproject.briar.android.sharing.ForumInvitationActivity;
 import org.briarproject.briar.android.util.BriarSnackbarBuilder;
-import org.briarproject.briar.android.view.BriarRecyclerView;
+import org.briarproject.briar.android.view.NasakaWeweRecyclerView;
 import org.briarproject.nullsafety.MethodsNotNullByDefault;
 import org.briarproject.nullsafety.ParametersNotNullByDefault;
 
@@ -38,7 +38,7 @@ public class ForumListFragment extends BaseFragment implements
 	public final static String TAG = ForumListFragment.class.getName();
 
 	private ForumListViewModel viewModel;
-	private BriarRecyclerView list;
+	private NasakaWeweRecyclerView list;
 	private Snackbar snackbar;
 	private ForumListAdapter adapter;
 
@@ -144,3 +144,4 @@ public class ForumListFragment extends BaseFragment implements
 		startActivity(i);
 	}
 }
+

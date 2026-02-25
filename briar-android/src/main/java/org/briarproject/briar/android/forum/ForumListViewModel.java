@@ -197,3 +197,4 @@ class ForumListViewModel extends DbViewModel implements EventListener {
 		});
 	}
 }
+

@@ -59,3 +59,4 @@ public class QrCodeUtils {
 		return qr;
 	}
 }
+

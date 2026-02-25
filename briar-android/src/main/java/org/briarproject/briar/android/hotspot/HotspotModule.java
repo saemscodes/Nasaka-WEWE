@@ -16,3 +16,4 @@ public interface HotspotModule {
 	ViewModel bindHotspotViewModel(HotspotViewModel hotspotViewModel);
 
 }
+

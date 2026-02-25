@@ -40,3 +40,4 @@ public class MemoryStats implements Serializable {
 		this.nativeHeapFree = nativeHeapFree;
 	}
 }
+

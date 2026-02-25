@@ -171,3 +171,4 @@ public class ContactsViewModel extends DbViewModel implements EventListener {
 	}
 
 }
+

@@ -90,3 +90,4 @@ public class AuthorNameFragment extends SetupFragment {
 	}
 
 }
+

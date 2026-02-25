@@ -66,7 +66,7 @@ public class AliasDialogFragment extends AppCompatDialogFragment {
 	public void onCreate(@Nullable Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		setStyle(STYLE_NO_TITLE, R.style.BriarDialogTheme);
+		setStyle(STYLE_NO_TITLE, R.style.NasakaWeweDialogTheme);
 	}
 
 	@Override
@@ -118,3 +118,4 @@ public class AliasDialogFragment extends AppCompatDialogFragment {
 	}
 
 }
+

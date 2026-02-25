@@ -272,3 +272,4 @@ class ConnectViaBluetoothViewModel extends DbViewModel implements
 	}
 
 }
+

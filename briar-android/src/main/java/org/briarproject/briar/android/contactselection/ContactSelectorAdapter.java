@@ -27,3 +27,4 @@ class ContactSelectorAdapter extends
 	}
 
 }
+

@@ -263,3 +263,4 @@ public abstract class DbViewModel extends AndroidViewModel {
 	}
 
 }
+

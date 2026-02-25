@@ -68,3 +68,4 @@ class ConversationRequestItem extends ConversationNoticeItem {
 	}
 
 }
+

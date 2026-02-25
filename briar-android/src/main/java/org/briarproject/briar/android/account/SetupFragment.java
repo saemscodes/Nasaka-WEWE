@@ -90,3 +90,4 @@ public abstract class SetupFragment extends BaseFragment implements TextWatcher,
 		// noop
 	}
 }
+

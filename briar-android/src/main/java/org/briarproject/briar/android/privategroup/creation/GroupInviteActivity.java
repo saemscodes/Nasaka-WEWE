@@ -79,3 +79,4 @@ public class GroupInviteActivity extends ContactSelectorActivity
 		return MAX_GROUP_INVITATION_TEXT_LENGTH;
 	}
 }
+

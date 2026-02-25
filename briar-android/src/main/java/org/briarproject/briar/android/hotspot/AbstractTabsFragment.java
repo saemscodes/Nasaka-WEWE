@@ -141,3 +141,4 @@ public abstract class AbstractTabsFragment extends Fragment {
 	}
 
 }
+

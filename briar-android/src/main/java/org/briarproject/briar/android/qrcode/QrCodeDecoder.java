@@ -119,3 +119,4 @@ public class QrCodeDecoder implements PreviewConsumer, PreviewCallback {
 		void onQrCodeDecoded(Result result);
 	}
 }
+

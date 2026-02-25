@@ -12,3 +12,4 @@ public interface ActivityLifecycleController {
 
 	void onActivityDestroy();
 }
+

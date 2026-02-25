@@ -22,3 +22,4 @@ public interface BriarApplication extends BrambleApplication {
 
 	boolean isInstrumentationTest();
 }
+

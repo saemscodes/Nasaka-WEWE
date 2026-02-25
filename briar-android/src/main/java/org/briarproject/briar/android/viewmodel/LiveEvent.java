@@ -91,3 +91,4 @@ public class LiveEvent<T> extends LiveData<LiveEvent.ConsumableEvent<T>> {
 		void onEvent(T t);
 	}
 }
+

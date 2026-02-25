@@ -24,3 +24,4 @@ public interface VersionedAdapter {
 	void incrementRevision();
 
 }
+

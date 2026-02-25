@@ -16,3 +16,4 @@ public interface GroupConversationModule {
 	ViewModel bindGroupViewModel(GroupViewModel groupViewModel);
 
 }
+

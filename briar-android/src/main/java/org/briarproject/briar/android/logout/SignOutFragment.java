@@ -30,3 +30,4 @@ public class SignOutFragment extends BaseFragment {
 		return TAG;
 	}
 }
+

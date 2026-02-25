@@ -56,3 +56,4 @@ public class ProgressFragment extends BaseFragment {
 	}
 
 }
+

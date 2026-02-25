@@ -175,3 +175,4 @@ class BlogPostViewHolder extends RecyclerView.ViewHolder {
 		}
 	}
 }
+

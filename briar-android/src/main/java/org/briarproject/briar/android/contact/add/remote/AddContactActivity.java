@@ -102,3 +102,4 @@ public class AddContactActivity extends BriarActivity implements
 	}
 
 }
+

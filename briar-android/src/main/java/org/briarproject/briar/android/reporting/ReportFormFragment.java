@@ -181,3 +181,4 @@ public class ReportFormFragment extends BaseFragment {
 	}
 
 }
+

@@ -213,3 +213,4 @@ abstract class BaseViewModel extends DbViewModel implements EventListener {
 		}
 	}
 }
+

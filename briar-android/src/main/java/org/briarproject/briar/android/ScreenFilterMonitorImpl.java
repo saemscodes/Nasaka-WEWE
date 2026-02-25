@@ -229,3 +229,4 @@ class ScreenFilterMonitorImpl implements ScreenFilterMonitor, Service {
 		}
 	}
 }
+

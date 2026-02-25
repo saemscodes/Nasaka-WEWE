@@ -84,3 +84,4 @@ public class QrHotspotFragment extends Fragment {
 	}
 
 }
+

@@ -40,3 +40,4 @@ public class HotspotFragment extends AbstractTabsFragment {
 	}
 
 }
+

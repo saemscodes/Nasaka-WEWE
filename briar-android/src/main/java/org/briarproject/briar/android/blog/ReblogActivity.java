@@ -52,3 +52,4 @@ public class ReblogActivity extends BriarActivity implements
 	}
 
 }
+

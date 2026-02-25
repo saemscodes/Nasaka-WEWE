@@ -77,3 +77,4 @@ public class StrengthMeter extends ProgressBar {
 		setProgress((int) (strength * MAX));
 	}
 }
+

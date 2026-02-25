@@ -39,3 +39,4 @@ class ConversationMessageItem extends ConversationItem {
 	}
 
 }
+

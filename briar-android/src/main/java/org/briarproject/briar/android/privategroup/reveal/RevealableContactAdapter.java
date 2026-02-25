@@ -42,3 +42,4 @@ class RevealableContactAdapter extends
 	}
 
 }
+

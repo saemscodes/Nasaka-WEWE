@@ -34,7 +34,7 @@ public class BriarSnackbarBuilder {
 		}
 		if (onClickListener != null) {
 			s.setActionTextColor(getColor(view.getContext(),
-					R.color.briar_button_text_positive));
+					R.color.nasaka_wewe_button_text_positive));
 			s.setAction(actionResId, onClickListener);
 		}
 		return s;
@@ -58,3 +58,4 @@ public class BriarSnackbarBuilder {
 	}
 
 }
+

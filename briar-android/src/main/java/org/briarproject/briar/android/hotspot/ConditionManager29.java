@@ -146,3 +146,4 @@ class ConditionManager29 extends AbstractConditionManager {
 	}
 
 }
+

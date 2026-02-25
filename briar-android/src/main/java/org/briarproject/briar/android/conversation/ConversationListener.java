@@ -23,3 +23,4 @@ interface ConversationListener {
 	void onLinkClick(String url);
 
 }
+

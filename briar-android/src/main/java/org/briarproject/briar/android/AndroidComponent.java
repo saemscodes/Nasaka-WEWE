@@ -268,3 +268,4 @@ public interface AndroidComponent
 
 	void inject(ErrorWizardFragment errorWizardFragment);
 }
+

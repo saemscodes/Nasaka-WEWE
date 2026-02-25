@@ -50,3 +50,4 @@ public interface LockManager {
 	void setLocked(boolean locked);
 
 }
+

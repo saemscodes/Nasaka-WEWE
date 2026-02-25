@@ -49,3 +49,4 @@ public class ShareForumMessageFragment extends BaseMessageFragment {
 	}
 
 }
+

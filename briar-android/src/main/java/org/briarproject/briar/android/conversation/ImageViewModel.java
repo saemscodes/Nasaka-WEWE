@@ -266,3 +266,4 @@ public class ImageViewModel extends DbViewModel implements EventListener {
 	}
 
 }
+

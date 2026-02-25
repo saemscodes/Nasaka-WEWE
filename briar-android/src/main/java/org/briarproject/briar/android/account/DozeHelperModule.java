@@ -14,3 +14,4 @@ public class DozeHelperModule {
 		return new DozeHelperImpl();
 	}
 }
+

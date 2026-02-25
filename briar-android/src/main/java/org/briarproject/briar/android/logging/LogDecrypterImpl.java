@@ -59,3 +59,4 @@ class LogDecrypterImpl implements LogDecrypter {
 		}
 	}
 }
+

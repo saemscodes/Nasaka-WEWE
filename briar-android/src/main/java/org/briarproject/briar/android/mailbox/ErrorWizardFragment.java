@@ -14,7 +14,7 @@ import com.google.android.material.animation.ArgbEvaluatorCompat;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 import org.briarproject.briar.R;
-import org.briarproject.briar.android.view.BriarButton;
+import org.briarproject.briar.android.view.NasakaWeweButton;
 import org.briarproject.nullsafety.MethodsNotNullByDefault;
 import org.briarproject.nullsafety.ParametersNotNullByDefault;
 
@@ -71,7 +71,7 @@ public class ErrorWizardFragment extends Fragment {
 		scrollView = (ScrollView) v;
 
 		int startColor =
-				getColor(v.getContext(), R.color.briar_accent);
+				getColor(v.getContext(), R.color.nasaka_wewe_accent);
 		int endColor = getColor(v.getContext(), R.color.window_background);
 		colorAnim = ValueAnimator
 				.ofObject(new ArgbEvaluatorCompat(), startColor, endColor);
@@ -109,15 +109,15 @@ public class ErrorWizardFragment extends Fragment {
 		setUpRadioGroup(radioGroup1_1, radioButtons1_1, views1_1);
 
 		// set up unlink buttons
-		BriarButton button3 = info3.findViewById(R.id.button3);
-		BriarButton button1_1_1 = info1.findViewById(R.id.button1_1_1);
-		BriarButton button1_1_2 = info1.findViewById(R.id.button1_1_2);
+		NasakaWeweButton button3 = info3.findViewById(R.id.button3);
+		NasakaWeweButton button1_1_1 = info1.findViewById(R.id.button1_1_1);
+		NasakaWeweButton button1_1_2 = info1.findViewById(R.id.button1_1_2);
 		button3.setOnClickListener(this::onUnlinkButtonClicked);
 		button1_1_1.setOnClickListener(this::onUnlinkButtonClicked);
 		button1_1_2.setOnClickListener(this::onUnlinkButtonClicked);
 
 		// set up check connection button
-		BriarButton button1_1_3 = info1.findViewById(R.id.button1_1_3);
+		NasakaWeweButton button1_1_3 = info1.findViewById(R.id.button1_1_3);
 		button1_1_3.setOnClickListener(this::onCheckConnectionButtonClicked);
 	}
 
@@ -149,14 +149,14 @@ public class ErrorWizardFragment extends Fragment {
 
 	private void onUnlinkButtonClicked(View v) {
 		MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(
-				requireContext(), R.style.BriarDialogTheme);
+				requireContext(), R.style.NasakaWeweDialogTheme);
 		builder.setTitle(R.string.mailbox_status_unlink_dialog_title);
 		builder.setMessage(R.string.mailbox_status_unlink_dialog_question);
 		builder.setPositiveButton(R.string.cancel,
 				(dialog, which) -> dialog.cancel());
 		builder.setNegativeButton(R.string.mailbox_status_unlink_button,
 				(dialog, which) -> viewModel.unlink());
-		builder.setOnCancelListener(dialog -> ((BriarButton) v).reset());
+		builder.setOnCancelListener(dialog -> ((NasakaWeweButton) v).reset());
 		builder.show();
 	}
 
@@ -200,3 +200,4 @@ public class ErrorWizardFragment extends Fragment {
 	}
 
 }
+

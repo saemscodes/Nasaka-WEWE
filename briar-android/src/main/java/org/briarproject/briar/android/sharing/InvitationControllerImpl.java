@@ -115,3 +115,4 @@ public abstract class InvitationControllerImpl<I extends InvitationItem>
 	protected abstract Collection<I> getInvitations() throws DbException;
 
 }
+

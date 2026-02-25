@@ -40,3 +40,4 @@ class LevelRaisingHandler extends Handler {
 	public void close() {
 	}
 }
+

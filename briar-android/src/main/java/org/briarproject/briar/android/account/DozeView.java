@@ -55,3 +55,4 @@ class DozeView extends PowerView {
 	}
 
 }
+

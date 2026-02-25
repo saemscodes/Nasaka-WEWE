@@ -77,13 +77,13 @@
 				android:text="@string/mailbox_error_wizard_info3"
 				android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
 
-			<org.briarproject.briar.android.view.BriarButton
+			<org.NasakaWeweproject.NasakaWewe.android.view.NasakaWeweButton
 				android:id="@+id/button3"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:layout_gravity="center"
 				android:layout_marginHorizontal="16dp"
-				app:buttonStyle="@style/BriarButtonOutline.Negative"
+				app:buttonStyle="@style/NasakaWeweButtonOutline.Negative"
 				app:text="@string/mailbox_status_unlink_button" />
 		</LinearLayout>
 

@@ -180,7 +180,7 @@ public abstract class BriarActivity extends BaseActivity {
 
 	protected void showDozeDialog(@StringRes int message) {
 		MaterialAlertDialogBuilder b =
-				new MaterialAlertDialogBuilder(this, R.style.BriarDialogTheme);
+				new MaterialAlertDialogBuilder(this, R.style.NasakaWeweDialogTheme);
 		b.setMessage(message);
 		b.setView(R.layout.checkbox);
 		b.setPositiveButton(R.string.fix,
@@ -259,3 +259,4 @@ public abstract class BriarActivity extends BaseActivity {
 		runOnUiThreadUnlessDestroyed(this::supportFinishAfterTransition);
 	}
 }
+

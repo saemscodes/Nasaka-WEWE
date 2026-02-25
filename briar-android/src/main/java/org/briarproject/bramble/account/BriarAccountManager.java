@@ -31,3 +31,4 @@ class BriarAccountManager extends AndroidAccountManager {
 		}
 	}
 }
+

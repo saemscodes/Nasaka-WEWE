@@ -58,3 +58,4 @@ public abstract class BaseSelectableContactHolder<I extends BaseSelectableContac
 	}
 
 }
+

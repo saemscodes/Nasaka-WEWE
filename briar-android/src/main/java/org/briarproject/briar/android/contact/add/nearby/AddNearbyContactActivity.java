@@ -208,3 +208,4 @@ public class AddNearbyContactActivity extends BriarActivity
 	}
 
 }
+

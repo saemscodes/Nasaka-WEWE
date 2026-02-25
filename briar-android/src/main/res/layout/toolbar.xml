@@ -3,11 +3,11 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="wrap_content"
-	tools:context="org.briarproject.briar.android.navdrawer.NavDrawerActivity">
+	tools:context="org.NasakaWeweproject.NasakaWewe.android.navdrawer.NavDrawerActivity">
 
 	<com.google.android.material.appbar.MaterialToolbar
 		android:id="@+id/toolbar"
-		style="@style/BriarToolbar"
+		style="@style/NasakaWeweToolbar"
 		tools:subtitle="Subtitle"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"

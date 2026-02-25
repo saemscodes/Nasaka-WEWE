@@ -135,3 +135,4 @@ public class HotspotActivity extends BriarActivity
 	}
 
 }
+

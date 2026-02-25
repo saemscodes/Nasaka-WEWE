@@ -94,3 +94,4 @@ abstract class AbstractConditionManager {
 	}
 
 }
+

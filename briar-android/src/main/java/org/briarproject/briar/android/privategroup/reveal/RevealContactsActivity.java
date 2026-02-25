@@ -144,3 +144,4 @@ public class RevealContactsActivity extends ContactSelectorActivity
 	}
 
 }
+

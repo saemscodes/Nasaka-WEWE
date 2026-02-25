@@ -22,3 +22,4 @@ public class UnsupportedMimeTypeException extends IOException {
 		return uri;
 	}
 }
+

@@ -86,3 +86,4 @@ abstract class HotspotState {
 	}
 
 }
+

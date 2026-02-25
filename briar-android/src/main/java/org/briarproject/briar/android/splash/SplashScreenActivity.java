@@ -64,7 +64,7 @@ public class SplashScreenActivity extends BaseActivity {
 					LOG.info("Expired");
 					startNextActivity(ExpiredActivity.class);
 				} else {
-					startNextActivity(ENTRY_ACTIVITY);
+					startNextActivity(org.briarproject.briar.android.account.CekaAuthActivity.class);
 				}
 				supportFinishAfterTransition();
 			}, duration);
@@ -89,3 +89,4 @@ public class SplashScreenActivity extends BaseActivity {
 		return true;
 	}
 }
+

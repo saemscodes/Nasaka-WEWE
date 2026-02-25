@@ -110,3 +110,4 @@ public abstract class ThreadItem implements MessageNode {
 				messageId.equals(((ThreadItem) o).messageId);
 	}
 }
+

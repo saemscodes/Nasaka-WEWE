@@ -21,3 +21,4 @@ public interface ForumModule {
 	ViewModel bindForumViewModel(ForumViewModel forumViewModel);
 
 }
+

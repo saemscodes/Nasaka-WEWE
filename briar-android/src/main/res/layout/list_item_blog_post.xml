@@ -3,7 +3,7 @@
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
 	android:id="@+id/postLayout"
-	style="@style/BriarCard"
+	style="@style/NasakaWeweCard"
 	android:layout_width="match_parent"
 	android:layout_height="wrap_content"
 	android:foreground="?attr/selectableItemBackground">
@@ -12,7 +12,7 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content">
 
-		<org.briarproject.briar.android.view.AuthorView
+		<org.NasakaWeweproject.NasakaWewe.android.view.AuthorView
 			android:id="@+id/rebloggerView"
 			android:layout_width="0dp"
 			android:layout_height="wrap_content"
@@ -23,7 +23,7 @@
 			app:persona="reblogger"
 			tools:visibility="visible" />
 
-		<org.briarproject.briar.android.view.AuthorView
+		<org.NasakaWeweproject.NasakaWewe.android.view.AuthorView
 			android:id="@+id/authorView"
 			android:layout_width="0dp"
 			android:layout_height="wrap_content"

@@ -51,3 +51,4 @@ public class ChangePasswordViewModel extends ViewModel {
 		return result;
 	}
 }
+

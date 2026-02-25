@@ -65,3 +65,4 @@ public class ShareForumActivity extends ShareActivity {
 	}
 
 }
+

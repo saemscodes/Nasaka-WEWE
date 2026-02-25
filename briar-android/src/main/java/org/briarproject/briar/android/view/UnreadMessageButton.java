@@ -78,3 +78,4 @@ public class UnreadMessageButton extends FrameLayout {
 	}
 
 }
+

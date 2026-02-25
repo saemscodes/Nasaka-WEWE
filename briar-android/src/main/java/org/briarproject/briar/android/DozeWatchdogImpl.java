@@ -93,3 +93,4 @@ class DozeWatchdogImpl implements DozeWatchdog, Service {
 		}
 	}
 }
+

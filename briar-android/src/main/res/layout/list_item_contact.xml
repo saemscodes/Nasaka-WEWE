@@ -20,7 +20,7 @@
 
 		<de.hdodenhof.circleimageview.CircleImageView
 			android:id="@+id/avatarView"
-			style="@style/BriarAvatar"
+			style="@style/NasakaWeweAvatar"
 			android:layout_width="@dimen/listitem_picture_size"
 			android:layout_height="@dimen/listitem_picture_size"
 			android:layout_gravity="bottom|left|start"
@@ -35,7 +35,7 @@
 		android:background="@drawable/bubble"
 		android:gravity="center"
 		android:minWidth="@dimen/unread_bubble_size"
-		android:textColor="@color/briar_text_primary_inverse"
+		android:textColor="@color/nasaka_wewe_text_primary_inverse"
 		android:textSize="@dimen/unread_bubble_text_size"
 		android:textStyle="bold"
 		app:layout_constraintEnd_toEndOf="@+id/avatarFrameView"
@@ -63,7 +63,7 @@
 		app:layout_constraintVertical_chainStyle="packed"
 		tools:text="This is a name of a contact" />
 
-	<org.briarproject.briar.android.view.TrustIndicatorView
+	<org.NasakaWeweproject.NasakaWewe.android.view.TrustIndicatorView
 		android:id="@+id/trustIndicator"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"

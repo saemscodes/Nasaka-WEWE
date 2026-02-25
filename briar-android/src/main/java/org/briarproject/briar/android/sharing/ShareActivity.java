@@ -51,3 +51,4 @@ public abstract class ShareActivity extends ContactSelectorActivity
 	abstract void share(Collection<ContactId> contacts, @Nullable String text);
 
 }
+

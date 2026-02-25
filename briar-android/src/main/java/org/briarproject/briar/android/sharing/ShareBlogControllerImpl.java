@@ -73,3 +73,4 @@ class ShareBlogControllerImpl extends ContactSelectorControllerImpl
 	}
 
 }
+

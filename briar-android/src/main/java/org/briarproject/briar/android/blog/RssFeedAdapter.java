@@ -118,3 +118,4 @@ class RssFeedAdapter extends ListAdapter<Feed, RssFeedAdapter.FeedViewHolder> {
 	}
 
 }
+

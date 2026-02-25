@@ -48,3 +48,4 @@ class ForumListAdapter extends ListAdapter<ForumListItem, ForumViewHolder> {
 	}
 
 }
+

@@ -45,3 +45,4 @@ public class AvatarPreference extends Preference {
 	}
 
 }
+

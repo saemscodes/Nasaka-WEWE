@@ -17,3 +17,4 @@ public interface ContactSelectorController<I extends BaseSelectableContactItem>
 			ResultExceptionHandler<Collection<I>, DbException> handler);
 
 }
+

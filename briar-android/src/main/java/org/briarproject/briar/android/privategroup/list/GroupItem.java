@@ -110,3 +110,4 @@ class GroupItem implements Comparable<GroupItem> {
 		return String.CASE_INSENSITIVE_ORDER.compare(aName, bName);
 	}
 }
+

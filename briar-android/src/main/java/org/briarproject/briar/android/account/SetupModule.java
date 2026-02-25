@@ -16,3 +16,4 @@ public abstract class SetupModule {
 	abstract ViewModel bindSetupViewModel(
 			SetupViewModel setupViewModel);
 }
+

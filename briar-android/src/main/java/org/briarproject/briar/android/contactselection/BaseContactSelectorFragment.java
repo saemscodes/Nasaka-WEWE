@@ -14,7 +14,7 @@ import org.briarproject.briar.android.contact.ContactItemViewHolder;
 import org.briarproject.briar.android.contact.OnContactClickListener;
 import org.briarproject.briar.android.controller.handler.UiResultExceptionHandler;
 import org.briarproject.briar.android.fragment.BaseFragment;
-import org.briarproject.briar.android.view.BriarRecyclerView;
+import org.briarproject.briar.android.view.NasakaWeweRecyclerView;
 import org.briarproject.nullsafety.MethodsNotNullByDefault;
 import org.briarproject.nullsafety.ParametersNotNullByDefault;
 
@@ -37,7 +37,7 @@ public abstract class BaseContactSelectorFragment<I extends BaseSelectableContac
 		extends BaseFragment
 		implements OnContactClickListener<I> {
 
-	protected BriarRecyclerView list;
+	protected NasakaWeweRecyclerView list;
 	protected A adapter;
 	protected Collection<ContactId> selectedContacts = new ArrayList<>();
 	protected ContactSelectorListener listener;
@@ -143,3 +143,4 @@ public abstract class BaseContactSelectorFragment<I extends BaseSelectableContac
 	protected abstract ContactSelectorController<I> getController();
 
 }
+

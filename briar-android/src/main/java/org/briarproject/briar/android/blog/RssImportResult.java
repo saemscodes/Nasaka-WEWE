@@ -22,3 +22,4 @@ abstract class RssImportResult {
 	static class FileImportError extends RssImportResult {
 	}
 }
+

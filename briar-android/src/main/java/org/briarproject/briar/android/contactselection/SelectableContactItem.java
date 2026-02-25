@@ -31,3 +31,4 @@ public class SelectableContactItem extends BaseSelectableContactItem {
 	}
 
 }
+

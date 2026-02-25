@@ -70,3 +70,4 @@ public class LargeTextInputView extends TextInputView {
 	}
 
 }
+

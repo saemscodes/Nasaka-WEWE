@@ -15,3 +15,4 @@ public interface PreviewConsumer {
 	@UiThread
 	void stop();
 }
+

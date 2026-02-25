@@ -32,3 +32,4 @@ public class CreateGroupMessageFragment extends BaseMessageFragment {
 	}
 
 }
+

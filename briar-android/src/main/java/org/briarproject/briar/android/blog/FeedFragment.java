@@ -15,7 +15,7 @@ import org.briarproject.briar.android.activity.ActivityComponent;
 import org.briarproject.briar.android.blog.BaseViewModel.ListUpdate;
 import org.briarproject.briar.android.fragment.BaseFragment;
 import org.briarproject.briar.android.util.BriarSnackbarBuilder;
-import org.briarproject.briar.android.view.BriarRecyclerView;
+import org.briarproject.briar.android.view.NasakaWeweRecyclerView;
 import org.briarproject.briar.android.widget.LinkDialogFragment;
 import org.briarproject.briar.api.blog.Blog;
 import org.briarproject.nullsafety.MethodsNotNullByDefault;
@@ -45,7 +45,7 @@ public class FeedFragment extends BaseFragment
 	private FeedViewModel viewModel;
 	private final BlogPostAdapter adapter = new BlogPostAdapter(true, this);
 	private LinearLayoutManager layoutManager;
-	private BriarRecyclerView list;
+	private NasakaWeweRecyclerView list;
 
 	public static FeedFragment newInstance() {
 		FeedFragment f = new FeedFragment();
@@ -188,3 +188,4 @@ public class FeedFragment extends BaseFragment
 	}
 
 }
+

@@ -47,3 +47,4 @@ class NetworkUsageMetricsImpl implements NetworkUsageMetrics {
 		return new Metrics(sessionDurationMs, rx, tx);
 	}
 }
+

@@ -1,11 +1,11 @@
 package org.briarproject.briar.android.conversation;
 
-import org.briarproject.briar.android.view.BriarRecyclerViewScrollListener;
+import org.briarproject.briar.android.view.NasakaWeweRecyclerViewScrollListener;
 import org.briarproject.nullsafety.NotNullByDefault;
 
 @NotNullByDefault
 class ConversationScrollListener extends
-		BriarRecyclerViewScrollListener<ConversationAdapter, ConversationItem> {
+		NasakaWeweRecyclerViewScrollListener<ConversationAdapter, ConversationItem> {
 
 	private final ConversationViewModel viewModel;
 
@@ -24,3 +24,4 @@ class ConversationScrollListener extends
 	}
 
 }
+

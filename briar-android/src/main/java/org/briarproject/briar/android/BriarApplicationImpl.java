@@ -158,3 +158,4 @@ public class BriarApplicationImpl extends Application
 		return false;
 	}
 }
+

@@ -84,3 +84,4 @@ public abstract class ApkSignaturePin {
 		return Arrays.equals(fingerprints, calcedFingerprints);
 	}
 }
+

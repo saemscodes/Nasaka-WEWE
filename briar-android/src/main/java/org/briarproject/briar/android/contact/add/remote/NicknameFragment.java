@@ -21,7 +21,7 @@ import org.briarproject.bramble.api.identity.Author;
 import org.briarproject.briar.R;
 import org.briarproject.briar.android.activity.ActivityComponent;
 import org.briarproject.briar.android.fragment.BaseFragment;
-import org.briarproject.briar.android.view.BriarButton;
+import org.briarproject.briar.android.view.NasakaWeweButton;
 import org.briarproject.nullsafety.MethodsNotNullByDefault;
 import org.briarproject.nullsafety.ParametersNotNullByDefault;
 
@@ -55,7 +55,7 @@ public class NicknameFragment extends BaseFragment {
 
 	private TextInputLayout contactNameLayout;
 	private TextInputEditText contactNameInput;
-	private BriarButton addButton;
+	private NasakaWeweButton addButton;
 
 	@Override
 	public String getUniqueTag() {
@@ -198,7 +198,7 @@ public class NicknameFragment extends BaseFragment {
 	private void showSameLinkDialog(String name1, String name2,
 			@StringRes int existsRes, OnClickListener samePersonListener) {
 		Context ctx = requireContext();
-		Builder b = new Builder(ctx, R.style.BriarDialogTheme_Neutral);
+		Builder b = new Builder(ctx, R.style.NasakaWeweDialogTheme_Neutral);
 		b.setTitle(getString(R.string.duplicate_link_dialog_title));
 		String msg = getString(existsRes, name1) + "\n\n" +
 				getString(R.string.duplicate_link_dialog_text_2, name2, name1);
@@ -214,7 +214,7 @@ public class NicknameFragment extends BaseFragment {
 
 	private void showWarningDialog(String name1, String name2) {
 		Context ctx = requireContext();
-		Builder b = new Builder(ctx, R.style.BriarDialogTheme);
+		Builder b = new Builder(ctx, R.style.NasakaWeweDialogTheme);
 		b.setIcon(getDialogIcon(ctx, R.drawable.alerts_and_states_error));
 		b.setTitle(getString(R.string.duplicate_link_dialog_title));
 		b.setMessage(
@@ -228,3 +228,4 @@ public class NicknameFragment extends BaseFragment {
 	}
 
 }
+

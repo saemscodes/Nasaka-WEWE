@@ -54,3 +54,4 @@ class HuaweiProtectedAppsView extends PowerView {
 		setChecked(true);
 	}
 }
+

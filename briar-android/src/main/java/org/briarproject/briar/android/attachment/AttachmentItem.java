@@ -174,3 +174,4 @@ public class AttachmentItem implements Parcelable {
 		return header.getMessageId().hashCode();
 	}
 }
+

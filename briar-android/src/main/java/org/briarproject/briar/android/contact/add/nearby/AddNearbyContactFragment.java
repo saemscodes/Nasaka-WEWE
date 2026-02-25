@@ -195,3 +195,4 @@ public class AddNearbyContactFragment extends BaseFragment
 	}
 
 }
+

@@ -78,3 +78,4 @@ class SettingsStore extends PreferenceDataStore {
 	}
 
 }
+

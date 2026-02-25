@@ -10,3 +10,4 @@ import androidx.fragment.app.Fragment;
 public class BlankFragment extends Fragment {
 	public static final String TAG = BlankFragment.class.getName();
 }
+

@@ -1,0 +1,191 @@
+
+> Configure project :bramble-api
+Verifying cglib:cglib:3.2.8:cglib-3.2.8.jar
+Verifying com.fasterxml.jackson.core:jackson-annotations:2.13.4:jackson-annotations-2.13.4.jar
+Verifying com.google.code.findbugs:annotations:3.0.1:annotations-3.0.1.jar
+Verifying com.google.code.findbugs:jsr305:3.0.2:jsr305-3.0.2.jar
+Verifying com.google.dagger:dagger:2.51.1:dagger-2.51.1.jar
+Verifying javax.inject:javax.inject:1:javax.inject-1.jar
+Verifying junit:junit:4.13.2:junit-4.13.2.jar
+Verifying net.bytebuddy:byte-buddy:1.9.12:byte-buddy-1.9.12.jar
+Verifying net.jcip:jcip-annotations:1.0:jcip-annotations-1.0.jar
+Verifying org.apache-extras.beanshell:bsh:2.0b6:bsh-2.0b6.jar
+Verifying org.briarproject:null-safety:0.1:null-safety-0.1.jar
+Verifying org.codehaus.mojo.signature:java16:1.1:java16-1.1.signature
+Verifying org.codehaus.mojo:animal-sniffer-annotations:1.24:animal-sniffer-annotations-1.24.jar
+Verifying org.codehaus.mojo:animal-sniffer:1.24:animal-sniffer-1.24.jar
+Verifying org.hamcrest:hamcrest-core:2.1:hamcrest-core-2.1.jar
+Verifying org.hamcrest:hamcrest-library:2.1:hamcrest-library-2.1.jar
+Verifying org.hamcrest:hamcrest:2.1:hamcrest-2.1.jar
+Verifying org.jmock:jmock-imposters:2.12.0:jmock-imposters-2.12.0.jar
+Verifying org.jmock:jmock-junit4:2.12.0:jmock-junit4-2.12.0.jar
+Verifying org.jmock:jmock-legacy:2.12.0:jmock-legacy-2.12.0.jar
+Verifying org.jmock:jmock-testjar:2.12.0:jmock-testjar-2.12.0.jar
+Verifying org.jmock:jmock:2.12.0:jmock-2.12.0.jar
+Verifying org.objenesis:objenesis:3.0.1:objenesis-3.0.1.jar
+Verifying org.ow2.asm:asm:7.1:asm-7.1.jar
+Verifying org.ow2.asm:asm:9.7:asm-9.7.jar
+
+> Configure project :bramble-core
+Verifying cglib:cglib:3.2.8:cglib-3.2.8.jar
+Verifying com.fasterxml.jackson.core:jackson-annotations:2.13.4:jackson-annotations-2.13.4.jar
+Verifying com.fasterxml.jackson.core:jackson-core:2.13.4:jackson-core-2.13.4.jar
+Verifying com.fasterxml.jackson.core:jackson-databind:2.13.4:jackson-databind-2.13.4.jar
+Verifying com.google.code.findbugs:annotations:3.0.1:annotations-3.0.1.jar
+Verifying com.google.code.findbugs:jsr305:3.0.2:jsr305-3.0.2.jar
+Verifying com.google.dagger:dagger-compiler:2.51.1:dagger-compiler-2.51.1.jar
+Verifying com.google.dagger:dagger-spi:2.51.1:dagger-spi-2.51.1.jar
+Verifying com.google.dagger:dagger:2.51.1:dagger-2.51.1.jar
+Verifying com.google.devtools.ksp:symbol-processing-api:1.9.20-1.0.14:symbol-processing-api-1.9.20-1.0.14.jar
+Verifying com.google.errorprone:error_prone_annotations:2.23.0:error_prone_annotations-2.23.0.jar
+Verifying com.google.errorprone:javac-shaded:9-dev-r4023-3:javac-shaded-9-dev-r4023-3.jar
+Verifying com.google.googlejavaformat:google-java-format:1.5:google-java-format-1.5.jar
+Verifying com.google.guava:failureaccess:1.0.2:failureaccess-1.0.2.jar
+Verifying com.google.guava:guava:33.0.0-jre:guava-33.0.0-jre.jar
+Verifying com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava:listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar
+Verifying com.h2database:h2:1.4.192:h2-1.4.192.jar
+Verifying com.squareup.okhttp3:mockwebserver:4.10.0:mockwebserver-4.10.0.jar
+Verifying com.squareup.okhttp3:okhttp:4.12.0:okhttp-4.12.0.jar
+Verifying com.squareup.okio:okio-jvm:3.6.0:okio-jvm-3.6.0.jar
+Verifying com.squareup:javapoet:1.13.0:javapoet-1.13.0.jar
+Verifying com.squareup:kotlinpoet:1.11.0:kotlinpoet-1.11.0.jar
+Verifying javax.inject:javax.inject:1:javax.inject-1.jar
+Verifying junit:junit:4.13.2:junit-4.13.2.jar
+Verifying net.bytebuddy:byte-buddy:1.9.12:byte-buddy-1.9.12.jar
+Verifying net.i2p.crypto:eddsa:0.2.0:eddsa-0.2.0.jar
+Verifying net.jcip:jcip-annotations:1.0:jcip-annotations-1.0.jar
+Verifying net.jodah:concurrentunit:0.4.6:concurrentunit-0.4.6.jar
+Verifying net.ltgt.gradle.incap:incap:0.2:incap-0.2.jar
+Verifying org.apache-extras.beanshell:bsh:2.0b6:bsh-2.0b6.jar
+Verifying org.bitlet:weupnp:0.1.4:weupnp-0.1.4.jar
+Verifying org.bouncycastle:bcprov-jdk15to18:1.82:bcprov-jdk15to18-1.82.jar
+Verifying org.briarproject:jtorctl:0.5:jtorctl-0.5.jar
+Verifying org.briarproject:null-safety:0.1:null-safety-0.1.jar
+Verifying org.briarproject:onionwrapper-core:0.1.4:onionwrapper-core-0.1.4.jar
+Verifying org.briarproject:socks-socket:0.1:socks-socket-0.1.jar
+Verifying org.checkerframework:checker-compat-qual:2.5.5:checker-compat-qual-2.5.5.jar
+Verifying org.checkerframework:checker-qual:3.41.0:checker-qual-3.41.0.jar
+Verifying org.codehaus.mojo.signature:java16:1.1:java16-1.1.signature
+Verifying org.codehaus.mojo:animal-sniffer-annotations:1.24:animal-sniffer-annotations-1.24.jar
+Verifying org.codehaus.mojo:animal-sniffer:1.24:animal-sniffer-1.24.jar
+Verifying org.hamcrest:hamcrest-core:2.1:hamcrest-core-2.1.jar
+Verifying org.hamcrest:hamcrest-library:2.1:hamcrest-library-2.1.jar
+Verifying org.hamcrest:hamcrest:2.1:hamcrest-2.1.jar
+Verifying org.hsqldb:hsqldb:2.3.5:hsqldb-2.3.5.jar
+Verifying org.jetbrains.kotlin:kotlin-reflect:1.6.10:kotlin-reflect-1.6.10.jar
+Verifying org.jetbrains.kotlin:kotlin-stdlib-common:1.9.10:kotlin-stdlib-common-1.9.10.jar
+Verifying org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.0:kotlin-stdlib-jdk7-1.9.0.jar
+Verifying org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.10:kotlin-stdlib-jdk7-1.9.10.jar
+Verifying org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.0:kotlin-stdlib-jdk8-1.9.0.jar
+Verifying org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.10:kotlin-stdlib-jdk8-1.9.10.jar
+Verifying org.jetbrains.kotlin:kotlin-stdlib:1.9.10:kotlin-stdlib-1.9.10.jar
+Verifying org.jetbrains.kotlin:kotlin-stdlib:1.9.20:kotlin-stdlib-1.9.20.jar
+Verifying org.jetbrains:annotations:13.0:annotations-13.0.jar
+Verifying org.jmock:jmock-imposters:2.12.0:jmock-imposters-2.12.0.jar
+Verifying org.jmock:jmock-junit4:2.12.0:jmock-junit4-2.12.0.jar
+Verifying org.jmock:jmock-legacy:2.12.0:jmock-legacy-2.12.0.jar
+Verifying org.jmock:jmock-testjar:2.12.0:jmock-testjar-2.12.0.jar
+Verifying org.jmock:jmock:2.12.0:jmock-2.12.0.jar
+Verifying org.objenesis:objenesis:3.0.1:objenesis-3.0.1.jar
+Verifying org.ow2.asm:asm:7.1:asm-7.1.jar
+Verifying org.ow2.asm:asm:9.7:asm-9.7.jar
+Verifying org.whispersystems:curve25519-java:0.5.0:curve25519-java-0.5.0.jar
+
+> Configure project :bramble-java
+Verifying cglib:cglib:3.2.8:cglib-3.2.8.jar
+Verifying com.google.code.findbugs:annotations:3.0.1:annotations-3.0.1.jar
+Verifying com.google.code.findbugs:jsr305:3.0.2:jsr305-3.0.2.jar
+Verifying com.google.dagger:dagger-compiler:2.51.1:dagger-compiler-2.51.1.jar
+Verifying com.google.dagger:dagger-spi:2.51.1:dagger-spi-2.51.1.jar
+Verifying com.google.dagger:dagger:2.51.1:dagger-2.51.1.jar
+Verifying com.google.devtools.ksp:symbol-processing-api:1.9.20-1.0.14:symbol-processing-api-1.9.20-1.0.14.jar
+Verifying com.google.errorprone:error_prone_annotations:2.23.0:error_prone_annotations-2.23.0.jar
+Verifying com.google.errorprone:javac-shaded:9-dev-r4023-3:javac-shaded-9-dev-r4023-3.jar
+Verifying com.google.googlejavaformat:google-java-format:1.5:google-java-format-1.5.jar
+Verifying com.google.guava:failureaccess:1.0.2:failureaccess-1.0.2.jar
+Verifying com.google.guava:guava:33.0.0-jre:guava-33.0.0-jre.jar
+Verifying com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava:listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar
+Verifying com.squareup:javapoet:1.13.0:javapoet-1.13.0.jar
+Verifying com.squareup:kotlinpoet:1.11.0:kotlinpoet-1.11.0.jar
+Verifying javax.inject:javax.inject:1:javax.inject-1.jar
+Verifying junit:junit:4.13.2:junit-4.13.2.jar
+Verifying net.bytebuddy:byte-buddy:1.9.12:byte-buddy-1.9.12.jar
+Verifying net.java.dev.jna:jna-platform:5.13.0:jna-platform-5.13.0.jar
+Verifying net.java.dev.jna:jna:5.13.0:jna-5.13.0.jar
+Verifying net.jcip:jcip-annotations:1.0:jcip-annotations-1.0.jar
+Verifying net.ltgt.gradle.incap:incap:0.2:incap-0.2.jar
+Verifying org.apache-extras.beanshell:bsh:2.0b6:bsh-2.0b6.jar
+Verifying org.briarproject:jtorctl:0.5:jtorctl-0.5.jar
+Verifying org.briarproject:null-safety:0.1:null-safety-0.1.jar
+Verifying org.briarproject:onionwrapper-core:0.1.4:onionwrapper-core-0.1.4.jar
+Verifying org.briarproject:onionwrapper-java:0.1.4:onionwrapper-java-0.1.4.jar
+Verifying org.checkerframework:checker-compat-qual:2.5.5:checker-compat-qual-2.5.5.jar
+Verifying org.checkerframework:checker-qual:3.41.0:checker-qual-3.41.0.jar
+Verifying org.hamcrest:hamcrest-core:2.1:hamcrest-core-2.1.jar
+Verifying org.hamcrest:hamcrest-library:2.1:hamcrest-library-2.1.jar
+Verifying org.hamcrest:hamcrest:2.1:hamcrest-2.1.jar
+Verifying org.jetbrains.kotlin:kotlin-reflect:1.6.10:kotlin-reflect-1.6.10.jar
+Verifying org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.0:kotlin-stdlib-jdk7-1.9.0.jar
+Verifying org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.0:kotlin-stdlib-jdk8-1.9.0.jar
+Verifying org.jetbrains.kotlin:kotlin-stdlib:1.9.20:kotlin-stdlib-1.9.20.jar
+Verifying org.jetbrains:annotations:13.0:annotations-13.0.jar
+Verifying org.jmock:jmock-imposters:2.12.0:jmock-imposters-2.12.0.jar
+Verifying org.jmock:jmock-junit4:2.12.0:jmock-junit4-2.12.0.jar
+Verifying org.jmock:jmock-legacy:2.12.0:jmock-legacy-2.12.0.jar
+Verifying org.jmock:jmock-testjar:2.12.0:jmock-testjar-2.12.0.jar
+Verifying org.jmock:jmock:2.12.0:jmock-2.12.0.jar
+Verifying org.objenesis:objenesis:3.0.1:objenesis-3.0.1.jar
+Verifying org.ow2.asm:asm:7.1:asm-7.1.jar
+
+> Configure project :briar-android
+WARNING: BuildType 'debug' is both debuggable and has 'isMinifyEnabled' set to true.
+All code optimizations and obfuscation are disabled for debuggable builds.
+WARNING: BuildType 'debug' is both debuggable and has 'isMinifyEnabled' set to true.
+All code optimizations and obfuscation are disabled for debuggable builds.
+
+> Configure project :briar-api
+Verifying junit:junit:4.13.2:junit-4.13.2.jar
+Verifying org.codehaus.mojo.signature:java16:1.1:java16-1.1.signature
+Verifying org.codehaus.mojo:animal-sniffer-annotations:1.24:animal-sniffer-annotations-1.24.jar
+Verifying org.codehaus.mojo:animal-sniffer:1.24:animal-sniffer-1.24.jar
+Verifying org.hamcrest:hamcrest-core:1.3:hamcrest-core-1.3.jar
+
+[Incubating] Problems report is available at: file:///D:/CEKA/NASAKA/Nasaka-WEWE/build/reports/problems/problems-report.html
+
+FAILURE: Build completed with 2 failures.
+
+1: Task failed with an exception.
+-----------
+* What went wrong:
+A problem occurred configuring project ':briar-api'.
+> No dependency for integrity assertion 'org.hamcrest:hamcrest-core:1.3:hamcrest-core-1.3.jar:66fdef91e9739348df7a096aa384a5685f4e875584cce89386a7a47251c4d8e9'
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+==============================================================================
+
+2: Task failed with an exception.
+-----------
+* What went wrong:
+Failed to query the value of property 'buildFlowServiceProperty'.
+> Could not isolate value org.jetbrains.kotlin.gradle.plugin.statistics.BuildFlowService$Parameters_Decorated@4f5ec76d of type BuildFlowService.Parameters
+   > A problem occurred configuring project ':briar-api'.
+      > No dependency for integrity assertion 'org.hamcrest:hamcrest-core:1.3:hamcrest-core-1.3.jar:66fdef91e9739348df7a096aa384a5685f4e875584cce89386a7a47251c4d8e9'
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+==============================================================================
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 4s

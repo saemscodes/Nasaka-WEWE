@@ -26,3 +26,4 @@ public interface TestingConstants {
 	long EXPIRY_DATE = IS_DEBUG_BUILD ?
 			BuildTimestamp + DAYS.toMillis(90) : Long.MAX_VALUE;
 }
+

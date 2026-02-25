@@ -110,3 +110,4 @@ public class CompositeSendButton extends FrameLayout {
 	}
 
 }
+

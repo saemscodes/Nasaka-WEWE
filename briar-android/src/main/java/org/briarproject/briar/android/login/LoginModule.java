@@ -21,3 +21,4 @@ public abstract class LoginModule {
 	abstract ViewModel bindChangePasswordViewModel(
 			ChangePasswordViewModel viewModel);
 }
+

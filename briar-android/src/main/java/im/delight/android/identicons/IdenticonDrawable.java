@@ -81,3 +81,4 @@ public class IdenticonDrawable extends Drawable {
 		return OPAQUE;
 	}
 }
+

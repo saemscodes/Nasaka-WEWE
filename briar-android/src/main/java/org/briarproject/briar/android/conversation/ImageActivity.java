@@ -255,7 +255,7 @@ public class ImageActivity extends BriarActivity
 				viewModel.onSaveImageError();
 			}
 		};
-		Builder builder = new Builder(this, R.style.BriarDialogTheme);
+		Builder builder = new Builder(this, R.style.NasakaWeweDialogTheme);
 		builder.setTitle(getString(R.string.dialog_title_save_image));
 		builder.setMessage(getString(R.string.dialog_message_save_image));
 		builder.setIcon(getDialogIcon(this, R.drawable.ic_security));
@@ -274,7 +274,7 @@ public class ImageActivity extends BriarActivity
 		int stringRes = error ?
 				R.string.save_image_error : R.string.save_image_success;
 		int colorRes = error ?
-				R.color.briar_red_500 : R.color.briar_primary;
+				R.color.nasaka_wewe_red_500 : R.color.nasaka_wewe_primary;
 		new BriarSnackbarBuilder()
 				.setBackgroundColor(colorRes)
 				.make(layout, stringRes, LENGTH_LONG)
@@ -309,3 +309,4 @@ public class ImageActivity extends BriarActivity
 	}
 
 }
+

@@ -17,3 +17,4 @@ public abstract class AddNearbyContactModule {
 			AddNearbyContactViewModel addNearbyContactViewModel);
 
 }
+

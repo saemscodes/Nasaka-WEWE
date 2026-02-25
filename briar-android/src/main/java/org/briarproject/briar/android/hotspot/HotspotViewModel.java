@@ -203,3 +203,4 @@ class HotspotViewModel extends DbViewModel
 	}
 
 }
+

@@ -16,3 +16,4 @@ public abstract class GroupListModule {
 	abstract ViewModel bindGroupListViewModel(
 			GroupListViewModel groupListViewModel);
 }
+

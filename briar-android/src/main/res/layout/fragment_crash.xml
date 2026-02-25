@@ -40,7 +40,7 @@
 				android:layout_height="wrap_content"
 				android:layout_marginTop="@dimen/margin_xlarge"
 				android:gravity="center"
-				android:text="@string/briar_crashed"
+				android:text="@string/nasaka_wewe_crashed"
 				android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
 				app:layout_constraintBottom_toTopOf="@+id/fault"
 				app:layout_constraintEnd_toEndOf="parent"
@@ -92,7 +92,7 @@
 
 	<Button
 		android:id="@+id/declineButton"
-		style="@style/BriarButtonFlat.Negative"
+		style="@style/NasakaWeweButtonFlat.Negative"
 		android:layout_width="0dp"
 		android:layout_height="wrap_content"
 		android:text="@string/close"
@@ -104,7 +104,7 @@
 
 	<Button
 		android:id="@+id/acceptButton"
-		style="@style/BriarButtonFlat.Positive"
+		style="@style/NasakaWeweButtonFlat.Positive"
 		android:layout_width="0dp"
 		android:layout_height="wrap_content"
 		android:text="@string/send_report"

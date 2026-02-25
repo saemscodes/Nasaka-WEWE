@@ -178,3 +178,4 @@ class IntroductionViewModel extends ContactsViewModel {
 	}
 
 }
+

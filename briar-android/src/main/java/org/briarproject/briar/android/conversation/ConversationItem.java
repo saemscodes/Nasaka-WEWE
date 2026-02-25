@@ -143,3 +143,4 @@ abstract class ConversationItem {
 		return showTimerNotice;
 	}
 }
+

@@ -54,3 +54,4 @@ class XiaomiRecentAppsView extends PowerView {
 		setChecked(true);
 	}
 }
+

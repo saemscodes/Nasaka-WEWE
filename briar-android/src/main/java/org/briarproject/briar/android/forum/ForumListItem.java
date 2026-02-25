@@ -74,3 +74,4 @@ class ForumListItem implements Comparable<ForumListItem> {
 	}
 
 }
+

@@ -21,7 +21,7 @@
 		app:cardCornerRadius="0dp"
 		app:cardUseCompatPadding="false">
 
-		<org.briarproject.briar.android.view.EmojiTextInputView
+		<org.NasakaWeweproject.NasakaWewe.android.view.EmojiTextInputView
 			android:id="@+id/emojiTextInput"
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
@@ -32,7 +32,7 @@
 
 	<Button
 		android:id="@+id/compositeSendButton"
-		style="@style/BriarButton"
+		style="@style/NasakaWeweButton"
 		android:layout_margin="@dimen/margin_medium"
 		tools:text="@string/send" />
 

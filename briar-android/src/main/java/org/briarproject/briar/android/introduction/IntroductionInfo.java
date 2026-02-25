@@ -26,3 +26,4 @@ class IntroductionInfo {
 		return possible;
 	}
 }
+

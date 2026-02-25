@@ -44,3 +44,4 @@ class BriarExceptionHandler implements UncaughtExceptionHandler {
 	}
 
 }
+

@@ -1172,7 +1172,7 @@ officialDebugRuntimeClasspath - Resolved configuration for runtime for variant: 
 
 A web-based, searchable dependency report is available by adding the --scan option.
 
-[Incubating] Problems report is available at: file:///D:/CEKA/NASAKA/Nasaka-WEWE/build/reports/problems/problems-report.html
+[Incubating] Problems report is available at: file:///D:/CEKA/NASAKA/Nasaka_WEWE/build/reports/problems/problems-report.html
 
 Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
 

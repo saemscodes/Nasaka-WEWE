@@ -15,3 +15,4 @@ public class GroupMemberModule {
 		return groupMemberListController;
 	}
 }
+

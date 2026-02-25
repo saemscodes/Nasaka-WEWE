@@ -53,3 +53,4 @@ class ImageItemDecoration extends ItemDecoration {
 	}
 
 }
+

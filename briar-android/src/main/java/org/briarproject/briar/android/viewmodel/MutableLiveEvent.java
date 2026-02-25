@@ -29,3 +29,4 @@ public class MutableLiveEvent<T> extends LiveEvent<T> {
 		super.setValue(new ConsumableEvent<>(value));
 	}
 }
+

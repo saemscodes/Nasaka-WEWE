@@ -26,7 +26,7 @@
 			android:id="@+id/expiryWarning"
 			android:layout_width="0dp"
 			android:layout_height="wrap_content"
-			android:background="@color/briar_warning_background"
+			android:background="@color/nasaka_wewe_warning_background"
 			android:orientation="horizontal"
 			android:padding="@dimen/margin_medium"
 			android:visibility="gone"
@@ -40,7 +40,7 @@
 				android:layout_width="0dp"
 				android:layout_height="wrap_content"
 				android:text="@plurals/expiry_warning"
-				android:textColor="@color/briar_text_primary_inverse"
+				android:textColor="@color/nasaka_wewe_text_primary_inverse"
 				android:textSize="@dimen/text_size_small"
 				app:layout_constraintEnd_toStartOf="@+id/expiryWarningClose"
 				app:layout_constraintStart_toStartOf="parent"
@@ -56,13 +56,13 @@
 				app:layout_constraintEnd_toEndOf="parent"
 				app:layout_constraintTop_toTopOf="parent"
 				app:srcCompat="@drawable/ic_close"
-				app:tint="@color/briar_text_tertiary_inverse" />
+				app:tint="@color/nasaka_wewe_text_tertiary_inverse" />
 
 		</androidx.constraintlayout.widget.ConstraintLayout>
 
 		<androidx.fragment.app.FragmentContainerView
 			android:id="@+id/fragmentContainer"
-			android:name="org.briarproject.briar.android.contact.ContactListFragment"
+			android:name="org.NasakaWeweproject.NasakaWewe.android.contact.ContactListFragment"
 			android:layout_width="0dp"
 			android:layout_height="0dp"
 			app:layout_constraintBottom_toBottomOf="parent"

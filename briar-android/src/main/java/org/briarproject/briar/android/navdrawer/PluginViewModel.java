@@ -242,3 +242,4 @@ public class PluginViewModel extends DbViewModel implements EventListener {
 		}
 	}
 }
+

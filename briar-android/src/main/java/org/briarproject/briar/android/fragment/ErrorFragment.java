@@ -57,3 +57,4 @@ public class ErrorFragment extends BaseFragment {
 	}
 
 }
+

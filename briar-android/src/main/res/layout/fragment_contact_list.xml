@@ -4,11 +4,11 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent">
 
-	<org.briarproject.briar.android.view.BriarRecyclerView
+	<org.NasakaWeweproject.NasakaWewe.android.view.NasakaWeweRecyclerView
 		android:id="@+id/list"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
-		app:layout_behavior="org.briarproject.briar.android.view.SnackbarAwareBehavior"
+		app:layout_behavior="org.NasakaWeweproject.NasakaWewe.android.view.SnackbarAwareBehavior"
 		app:scrollToEnd="false" />
 
 	<io.github.kobakei.materialfabspeeddial.FabSpeedDial
@@ -20,6 +20,6 @@
 		app:fab_menu="@menu/contact_list_actions"
 		app:fab_miniFabTextBackground="?attr/colorPrimary"
 		app:layout_anchorGravity="bottom|right|end"
-		app:layout_behavior="org.briarproject.briar.android.view.SnackbarAwareBehavior" />
+		app:layout_behavior="org.NasakaWeweproject.NasakaWewe.android.view.SnackbarAwareBehavior" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

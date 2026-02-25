@@ -88,3 +88,4 @@ public class ImagePreview extends ConstraintLayout {
 	}
 
 }
+

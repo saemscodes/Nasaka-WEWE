@@ -6,7 +6,7 @@
 	android:layout_width="match_parent"
 	android:layout_height="wrap_content">
 
-	<org.briarproject.briar.android.view.TextAvatarView
+	<org.NasakaWeweproject.NasakaWewe.android.view.TextAvatarView
 		android:id="@+id/avatar"
 		android:layout_width="@dimen/listitem_picture_frame_size"
 		android:layout_height="@dimen/listitem_picture_frame_size"
@@ -60,7 +60,7 @@
 		app:layout_constraintEnd_toStartOf="@+id/time"
 		app:layout_constraintStart_toStartOf="@+id/name"
 		app:layout_constraintTop_toBottomOf="@+id/name"
-		tools:textColor="@color/briar_red_500" />
+		tools:textColor="@color/nasaka_wewe_red_500" />
 
 	<TextView
 		android:id="@+id/time"

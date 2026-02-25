@@ -23,3 +23,4 @@ public abstract class BaseEventFragment extends BaseFragment implements
 		eventBus.removeListener(this);
 	}
 }
+

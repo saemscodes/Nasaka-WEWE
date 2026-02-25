@@ -48,3 +48,4 @@ public class TrustIndicatorView extends AppCompatImageView {
 	}
 
 }
+

@@ -51,3 +51,4 @@ class ConversationItemDetailsLookup extends ItemDetailsLookup<String > {
 	}
 
 }
+

@@ -235,3 +235,4 @@ class CreateGroupControllerImpl extends ContactSelectorControllerImpl
 		}
 	}
 }
+

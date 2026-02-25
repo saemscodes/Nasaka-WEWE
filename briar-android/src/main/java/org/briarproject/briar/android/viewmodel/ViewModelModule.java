@@ -46,3 +46,4 @@ public abstract class ViewModelModule {
 			ViewModelFactory viewModelFactory);
 
 }
+

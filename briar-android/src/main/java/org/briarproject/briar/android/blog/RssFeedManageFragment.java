@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import org.briarproject.briar.R;
 import org.briarproject.briar.android.activity.ActivityComponent;
 import org.briarproject.briar.android.fragment.BaseFragment;
-import org.briarproject.briar.android.view.BriarRecyclerView;
+import org.briarproject.briar.android.view.NasakaWeweRecyclerView;
 import org.briarproject.briar.api.feed.Feed;
 import org.briarproject.nullsafety.MethodsNotNullByDefault;
 import org.briarproject.nullsafety.ParametersNotNullByDefault;
@@ -38,7 +38,7 @@ public class RssFeedManageFragment extends BaseFragment
 	ViewModelProvider.Factory viewModelFactory;
 	private RssFeedViewModel viewModel;
 
-	private BriarRecyclerView list;
+	private NasakaWeweRecyclerView list;
 	private final RssFeedAdapter adapter = new RssFeedAdapter(this);
 
 	public static RssFeedManageFragment newInstance() {
@@ -120,3 +120,4 @@ public class RssFeedManageFragment extends BaseFragment
 				RssFeedDeleteFeedDialogFragment.TAG);
 	}
 }
+

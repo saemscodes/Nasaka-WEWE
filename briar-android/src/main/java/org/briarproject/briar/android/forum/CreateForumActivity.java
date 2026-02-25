@@ -149,3 +149,4 @@ public class CreateForumActivity extends BriarActivity {
 		});
 	}
 }
+

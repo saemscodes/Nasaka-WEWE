@@ -130,3 +130,4 @@ public abstract class BriarAdapter<T, V extends ViewHolder>
 		revision++;
 	}
 }
+

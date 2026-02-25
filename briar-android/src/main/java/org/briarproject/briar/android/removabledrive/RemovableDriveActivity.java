@@ -123,7 +123,7 @@ public class RemovableDriveActivity extends BriarActivity {
 			text = R.string.removable_drive_success_receive_text;
 		} else throw new AssertionError();
 		return FinalFragment.newInstance(title,
-				R.drawable.ic_check_circle_outline, R.color.briar_brand_green,
+				R.drawable.ic_check_circle_outline, R.color.nasaka_wewe_brand_green,
 				text);
 	}
 
@@ -140,3 +140,4 @@ public class RemovableDriveActivity extends BriarActivity {
 	}
 
 }
+

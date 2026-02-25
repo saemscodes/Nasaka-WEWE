@@ -11,3 +11,4 @@ public class HideUiActivity extends Activity {
 		finish();
 	}
 }
+

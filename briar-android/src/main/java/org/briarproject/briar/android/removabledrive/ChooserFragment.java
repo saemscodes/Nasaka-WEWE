@@ -82,3 +82,4 @@ public class ChooserFragment extends Fragment {
 		).show(getChildFragmentManager(), OnboardingFullDialogFragment.TAG);
 	}
 }
+

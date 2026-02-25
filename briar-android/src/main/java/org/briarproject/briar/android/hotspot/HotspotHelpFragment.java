@@ -27,3 +27,4 @@ public class HotspotHelpFragment extends Fragment {
 	}
 
 }
+

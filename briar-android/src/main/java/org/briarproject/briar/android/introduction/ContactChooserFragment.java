@@ -11,7 +11,7 @@ import org.briarproject.briar.android.contact.ContactListAdapter;
 import org.briarproject.briar.android.contact.ContactListItem;
 import org.briarproject.briar.android.contact.OnContactClickListener;
 import org.briarproject.briar.android.fragment.BaseFragment;
-import org.briarproject.briar.android.view.BriarRecyclerView;
+import org.briarproject.briar.android.view.NasakaWeweRecyclerView;
 import org.briarproject.nullsafety.MethodsNotNullByDefault;
 import org.briarproject.nullsafety.ParametersNotNullByDefault;
 
@@ -33,7 +33,7 @@ public class ContactChooserFragment extends BaseFragment
 
 	private IntroductionViewModel viewModel;
 	private final ContactListAdapter adapter = new ContactListAdapter(this);
-	private BriarRecyclerView list;
+	private NasakaWeweRecyclerView list;
 
 	@Override
 	public void injectFragment(ActivityComponent component) {
@@ -88,3 +88,4 @@ public class ContactChooserFragment extends BaseFragment
 		viewModel.triggerContactSelected();
 	}
 }
+

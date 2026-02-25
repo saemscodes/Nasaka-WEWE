@@ -63,3 +63,4 @@ public class CrashFragment extends BaseFragment {
 		hideViewOnSmallScreen(requireView().findViewById(R.id.errorIcon));
 	}
 }
+
