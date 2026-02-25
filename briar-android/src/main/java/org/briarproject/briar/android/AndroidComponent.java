@@ -1,5 +1,7 @@
 package org.briarproject.briar.android;
 
+import org.briarproject.briar.android.account.SupabaseModule;
+
 import org.briarproject.android.dontkillmelib.wakelock.AndroidWakeLockManager;
 import org.briarproject.bramble.BrambleAndroidEagerSingletons;
 import org.briarproject.bramble.BrambleAndroidModule;
@@ -103,7 +105,8 @@ import dagger.Component;
 		ClockModule.class,
 		MediaModule.class,
 		ModularMailboxModule.class,
-		RemovableDriveModule.class
+		RemovableDriveModule.class,
+		SupabaseModule.class
 })
 public interface AndroidComponent
 		extends BrambleCoreEagerSingletons, BrambleAndroidEagerSingletons,
@@ -202,6 +205,8 @@ public interface AndroidComponent
 	CircumventionProvider circumventionProvider();
 
 	ViewModelProvider.Factory viewModelFactory();
+
+	io.github.jan_tennert.supabase.SupabaseClient supabaseClient();
 
 	FeatureFlags featureFlags();
 

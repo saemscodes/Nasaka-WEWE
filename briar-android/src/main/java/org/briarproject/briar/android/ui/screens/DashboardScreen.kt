@@ -188,12 +188,12 @@ fun DashboardScreen(
                     ) {
                         Column(modifier = Modifier.padding(NasakaSpacing.medium)) {
                             Row(verticalAlignment = Alignment.CenterVertically) {
-                                Icon(Icons.Default.SignalCellularAlt, null, tint = CEKAGreen, modifier = Modifier.size(20.dp))
+                                Icon(Icons.Default.SignalCellularAlt, null, tint = MaterialTheme.colorScheme.primary, modifier = Modifier.size(20.dp))
                                 Spacer(Modifier.width(NasakaSpacing.small))
                                 Text(
-                                    text = "HALI YA MTANDAO",
+                                    text = "NETWORK STATUS",
                                     style = MaterialTheme.typography.labelSmall.copy(
-                                        color = CEKAGreen,
+                                        color = MaterialTheme.colorScheme.primary,
                                         fontWeight = FontWeight.Bold,
                                         letterSpacing = 1.sp
                                     )

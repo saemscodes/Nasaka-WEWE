@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'org.jetbrains.kotlin.plugin.serialization'
 //apply plugin: 'witness'
 //apply from: 'witness.gradle'
 
@@ -41,6 +42,10 @@ android {
 		def now = (long) (System.currentTimeMillis() / 1000)
 		buildConfigField "Long", "BuildTimestamp",
 			"${getStdout(['git', 'log', '-n', '1', '--format=%ct'], now)}000L"
+
+		buildConfigField "String", "SUPABASE_URL", "\"https://cajrvemigxghnfmyopiy.supabase.co\""
+		buildConfigField "String", "SUPABASE_ANON_KEY", "\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNhanJ2ZW1pZ3hnaG5mbXlvcGl5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQyOTU1OTAsImV4cCI6MjA1OTg3MTU5MH0.sgItW4OBC9i-eKnnUDxdMB6qgGdXyiKAD9c6C2u40As\""
+
 		testInstrumentationRunner 'org.briarproject.briar.android.BriarTestRunner'
 		testInstrumentationRunnerArguments disableAnalytics: 'true'
 	}
@@ -208,6 +213,13 @@ dependencies {
 	kaptAndroidTest "com.google.dagger:dagger-compiler:$dagger_version"
 
 	androidTestCompileOnly 'javax.annotation:jsr250-api:1.0'
+
+	// Supabase
+	implementation "io.github.jan-tennert.supabase:postgrest-kt:2.5.0"
+	implementation "io.github.jan-tennert.supabase:gotrue-kt:2.5.0"
+	implementation "io.github.jan-tennert.supabase:compose-auth:2.5.0"
+	implementation "io.github.jan-tennert.supabase:compose-auth-ui:2.5.0"
+	implementation "io.ktor:ktor-client-okhttp:2.3.12"
 
 	androidTestScreenshotImplementation 'tools.fastlane:screengrab:2.1.1'
 	androidTestScreenshotImplementation 'com.jraska:falcon:2.2.0'

@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import org.briarproject.briar.R;
 import org.briarproject.briar.android.BriarService;
-import org.briarproject.briar.android.account.SetupActivity;
+import org.briarproject.briar.android.account.CekaAuthActivity;
 import org.briarproject.briar.android.activity.ActivityComponent;
 import org.briarproject.briar.android.activity.BaseActivity;
 import org.briarproject.briar.android.fragment.BaseFragment.BaseFragmentListener;
@@ -102,7 +102,7 @@ public class StartupActivity extends BaseActivity implements
 	private void onAccountDeleted() {
 		setResult(RESULT_CANCELED);
 		finish();
-		Intent i = new Intent(this, SetupActivity.class);
+		Intent i = new Intent(this, CekaAuthActivity.class);
 		i.addFlags(FLAG_ACTIVITY_NEW_TASK | FLAG_ACTIVITY_CLEAR_TOP |
 				FLAG_ACTIVITY_CLEAR_TASK | FLAG_ACTIVITY_TASK_ON_HOME);
 		startActivity(i);

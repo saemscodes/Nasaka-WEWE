@@ -4,6 +4,7 @@ import android.app.Activity;
 
 import org.briarproject.briar.android.AndroidComponent;
 import org.briarproject.briar.android.StartupFailureActivity;
+import org.briarproject.briar.android.account.CekaAuthActivity;
 import org.briarproject.briar.android.account.SetupActivity;
 import org.briarproject.briar.android.account.SetupFragment;
 import org.briarproject.briar.android.account.UnlockActivity;
@@ -104,6 +105,8 @@ public interface ActivityComponent {
 	void inject(StartupActivity activity);
 
 	void inject(SetupActivity activity);
+
+	void inject(CekaAuthActivity activity);
 
 	void inject(NavDrawerActivity activity);
 

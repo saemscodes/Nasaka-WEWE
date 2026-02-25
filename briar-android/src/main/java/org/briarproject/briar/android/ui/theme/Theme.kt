@@ -27,19 +27,15 @@ val iOSGrayDark = Color(0xFF8E8E93)
 val iOSGroupedBGLight = Color(0xFFF2F2F7)
 val iOSGroupedBGDark = Color(0xFF000000)
 
-// CEKA / Nasaka WEWE Signature Accents
-val CEKAGreen = Color(0xFF006633)
-val CEKAGold = Color(0xFFD4A017)
-
 private val DarkColorScheme = darkColorScheme(
     primary = iOSBlueDark,
-    secondary = CEKAGold,
-    tertiary = CEKAGreen,
+    secondary = iOSGrayDark,
+    tertiary = iOSBlueDark,
     background = Color.Black,
     surface = Color(0xFF1C1C1E),
     error = iOSRedDark,
     onPrimary = Color.White,
-    onSecondary = Color.Black,
+    onSecondary = Color.White,
     onTertiary = Color.White,
     onBackground = Color.White,
     onSurface = Color.White
@@ -47,8 +43,8 @@ private val DarkColorScheme = darkColorScheme(
 
 private val LightColorScheme = lightColorScheme(
     primary = iOSBlueLight,
-    secondary = CEKAGold,
-    tertiary = CEKAGreen,
+    secondary = iOSGrayLight,
+    tertiary = iOSBlueLight,
     background = iOSGroupedBGLight,
     surface = Color.White,
     error = iOSRedLight,
