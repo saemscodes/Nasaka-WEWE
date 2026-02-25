@@ -162,7 +162,7 @@ public class BriarControllerImpl implements BriarController {
 				// Sign out of Supabase
 				try {
 					BuildersKt.runBlocking(EmptyCoroutineContext.INSTANCE, (scope, continuation) -> 
-						AuthKt.getAuth(supabaseClient).signOut(continuation)
+						AuthKt.getAuth(supabaseClient).signOut(io.github.jan.supabase.gotrue.SignOutScope.LOCAL, continuation)
 					);
 				} catch (Exception e) {
 					LOG.warning("Failed to sign out of Supabase: " + e.getMessage());
