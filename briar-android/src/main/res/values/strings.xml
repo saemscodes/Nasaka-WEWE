@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
 
-	<string name="app_name" translatable="false">Briar</string>
+	<string name="app_name" translatable="false">Nasaka WEWE</string>
 	<string name="app_package" translatable="false">org.briarproject.briar.android</string>
 
 	<!-- Setup -->
@@ -936,5 +936,32 @@
 	<string name="screenshot_message_2">Hi Alice! Thanks for telling me about Briar!</string>
 	<!-- This is a message to be used in screenshots. -->
 	<string name="screenshot_message_3">No problem, hope you like it 😀</string>
+
+	<!-- Nasaka WEWE Specific -->
+	<string name="setup_subtitle">Discover. Connect. Protect.</string>
+	<string name="onboarding_begin">Get Started</string>
+	<string name="onboarding_continue">Continue</string>
+	<string name="onboarding_name_label">Display Name</string>
+	<string name="onboarding_name_prompt">Your name</string>
+	<string name="onboarding_name_hint">Enter your name here</string>
+	<string name="onboarding_role_label">Choose Your Role</string>
+	<string name="onboarding_pin_label">Security PIN (optional)</string>
+	<string name="onboarding_pin_prompt">Your secret PIN</string>
+	<string name="onboarding_pin_subtitle">(This is optional but recommended)</string>
+	<string name="onboarding_finish">Finish</string>
+
+	<string name="find_someone">Find someone nearby</string>
+	<string name="searching">Searching…</string>
+	<string name="peers_connected">%1$d peers connected nearby</string>
+
+	<string name="role_citizen">Citizen</string>
+	<string name="role_observer">Observer</string>
+	<string name="role_journalist">Journalist</string>
+	<string name="role_coordinator">Coordinator</string>
+
+	<string name="nav_home">Home</string>
+	<string name="nav_contacts">Contacts</string>
+	<string name="nav_map">Map</string>
+	<string name="nav_settings">Settings</string>
 
 </resources>

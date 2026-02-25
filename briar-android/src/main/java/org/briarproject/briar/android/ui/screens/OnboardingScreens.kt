@@ -1,18 +1,21 @@
 package org.briarproject.briar.android.ui.screens
 
 import androidx.compose.animation.*
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import org.briarproject.briar.R
-import org.briarproject.briar.android.ui.theme.NasakaWeweTheme
+import org.briarproject.briar.android.ui.theme.*
 
 @Composable
 fun OnboardingFlow(
@@ -64,28 +67,43 @@ fun OnboardingFlow(
 @Composable
 fun WelcomeStep(onNext: () -> Unit) {
     Column(
-        modifier = Modifier.padding(24.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
+        modifier = Modifier
+            .padding(NasakaSpacing.large)
+            .fillMaxWidth(),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
     ) {
+        // High-impact iOS Logo/Title
         Text(
             text = stringResource(R.string.app_name),
-            style = MaterialTheme.typography.headlineLarge,
-            color = MaterialTheme.colorScheme.primary,
-            fontWeight = FontWeight.Bold
+            style = MaterialTheme.typography.displayLarge.copy(
+                fontWeight = FontWeight.Black,
+                color = MaterialTheme.colorScheme.primary,
+                letterSpacing = (-1).sp
+            ),
+            textAlign = TextAlign.Center
         )
-        Spacer(modifier = Modifier.height(8.dp))
+        Spacer(modifier = Modifier.height(NasakaSpacing.small))
         Text(
             text = stringResource(R.string.setup_subtitle),
-            style = MaterialTheme.typography.titleMedium,
-            color = MaterialTheme.colorScheme.secondary
+            style = MaterialTheme.typography.bodyLarge,
+            color = MaterialTheme.colorScheme.secondary,
+            textAlign = TextAlign.Center
         )
-        Spacer(modifier = Modifier.height(48.dp))
+        Spacer(modifier = Modifier.height(NasakaSpacing.xLarge))
+        
         Button(
             onClick = onNext,
-            modifier = Modifier.fillMaxWidth(),
-            shape = MaterialTheme.shapes.medium
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(56.dp),
+            shape = RoundedCornerShape(NasakaSpacing.medium),
+            colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary)
         ) {
-            Text(stringResource(R.string.onboarding_begin))
+            Text(
+                text = stringResource(R.string.onboarding_begin),
+                style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold)
+            )
         }
     }
 }
@@ -93,66 +111,125 @@ fun WelcomeStep(onNext: () -> Unit) {
 @Composable
 fun NameStep(name: String, onNameChange: (String) -> Unit, onNext: () -> Unit) {
     Column(
-        modifier = Modifier.padding(24.dp),
+        modifier = Modifier.padding(NasakaSpacing.large),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
             text = stringResource(R.string.onboarding_name_label),
-            style = MaterialTheme.typography.headlineSmall
+            style = MaterialTheme.typography.headlineLarge.copy(fontWeight = FontWeight.ExtraBold),
+            textAlign = TextAlign.Center
         )
-        Spacer(modifier = Modifier.height(24.dp))
-        OutlinedTextField(
-            value = name,
-            onValueChange = onNameChange,
+        Spacer(modifier = Modifier.height(NasakaSpacing.large))
+        
+        // iOS Glass-tinted input
+        Surface(
             modifier = Modifier.fillMaxWidth(),
-            label = { Text(stringResource(R.string.onboarding_name_prompt)) },
-            singleLine = true
-        )
-        Spacer(modifier = Modifier.height(24.dp))
+            shape = RoundedCornerShape(NasakaSpacing.medium),
+            color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.3f),
+            border = BorderStroke(0.5.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.1f))
+        ) {
+            TextField(
+                value = name,
+                onValueChange = onNameChange,
+                modifier = Modifier.fillMaxWidth(),
+                placeholder = { Text(stringResource(R.string.onboarding_name_prompt)) },
+                colors = TextFieldDefaults.colors(
+                    focusedContainerColor = Color.Transparent,
+                    unfocusedContainerColor = Color.Transparent,
+                    focusedIndicatorColor = Color.Transparent,
+                    unfocusedIndicatorColor = Color.Transparent
+                ),
+                singleLine = true
+            )
+        }
+        
+        Spacer(modifier = Modifier.height(NasakaSpacing.large))
+        
         Button(
             onClick = onNext,
             enabled = name.isNotBlank(),
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(56.dp),
+            shape = RoundedCornerShape(NasakaSpacing.medium)
         ) {
-            Text(stringResource(R.string.onboarding_continue))
+            Text(
+                text = stringResource(R.string.onboarding_continue),
+                style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold)
+            )
         }
     }
 }
 
 @Composable
 fun RoleStep(selectedRole: Int, onRoleSelected: (Int) -> Unit, onNext: () -> Unit) {
-    val roles = listOf(
-        stringResource(R.string.role_citizen),
-        stringResource(R.string.role_observer),
-        stringResource(R.string.role_journalist),
-        stringResource(R.string.role_coordinator)
-    )
-    
     Column(
-        modifier = Modifier.padding(24.dp),
+        modifier = Modifier.padding(NasakaSpacing.large),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
             text = stringResource(R.string.onboarding_role_label),
-            style = MaterialTheme.typography.headlineSmall
+            style = MaterialTheme.typography.headlineLarge.copy(fontWeight = FontWeight.ExtraBold),
+            textAlign = TextAlign.Center
         )
-        Spacer(modifier = Modifier.height(24.dp))
+        Spacer(modifier = Modifier.height(NasakaSpacing.large))
         
-        roles.forEachIndexed { index, roleName ->
-            FilterChip(
-                selected = selectedRole == index,
-                onClick = { onRoleSelected(index) },
-                label = { Text(roleName) },
-                modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp)
-            )
+        val roles = listOf(
+            stringResource(R.string.role_citizen),
+            stringResource(R.string.role_observer),
+            stringResource(R.string.role_journalist),
+            stringResource(R.string.role_coordinator)
+        )
+
+        Column(verticalArrangement = Arrangement.spacedBy(NasakaSpacing.small)) {
+            roles.forEachIndexed { index, roleName ->
+                val isSelected = selectedRole == index
+                Surface(
+                    onClick = { onRoleSelected(index) },
+                    modifier = Modifier.fillMaxWidth(),
+                    shape = RoundedCornerShape(100.dp), // Premium Pill
+                    color = if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.surface,
+                    border = if (isSelected) null else BorderStroke(0.5.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.2f)),
+                    shadowElevation = if (isSelected) 4.dp else 0.dp
+                ) {
+                    Row(
+                        modifier = Modifier.padding(horizontal = 20.dp, vertical = 14.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        RadioButton(
+                            selected = isSelected,
+                            onClick = null, // Surface handles click
+                            colors = RadioButtonDefaults.colors(
+                                selectedColor = Color.White,
+                                unselectedColor = MaterialTheme.colorScheme.primary
+                            )
+                        )
+                        Spacer(Modifier.width(NasakaSpacing.small))
+                        Text(
+                            text = roleName,
+                            style = MaterialTheme.typography.titleMedium.copy(
+                                color = if (isSelected) Color.White else MaterialTheme.colorScheme.onSurface,
+                                fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium
+                            )
+                        )
+                    }
+                }
+            }
         }
         
-        Spacer(modifier = Modifier.height(24.dp))
+        Spacer(modifier = Modifier.height(NasakaSpacing.large))
+        
         Button(
             onClick = onNext,
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(56.dp),
+            shape = RoundedCornerShape(NasakaSpacing.medium)
         ) {
-            Text(stringResource(R.string.onboarding_continue))
+            Text(
+                text = stringResource(R.string.onboarding_continue),
+                style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold)
+            )
         }
     }
 }
@@ -160,32 +237,56 @@ fun RoleStep(selectedRole: Int, onRoleSelected: (Int) -> Unit, onNext: () -> Uni
 @Composable
 fun PinStep(pin: String, onPinChange: (String) -> Unit, onFinish: () -> Unit) {
     Column(
-        modifier = Modifier.padding(24.dp),
+        modifier = Modifier.padding(NasakaSpacing.large),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
             text = stringResource(R.string.onboarding_pin_label),
-            style = MaterialTheme.typography.headlineSmall
+            style = MaterialTheme.typography.headlineLarge.copy(fontWeight = FontWeight.ExtraBold),
+            textAlign = TextAlign.Center
         )
         Text(
             text = stringResource(R.string.onboarding_pin_subtitle),
-            style = MaterialTheme.typography.bodySmall,
-            color = MaterialTheme.colorScheme.secondary
+            style = MaterialTheme.typography.bodyLarge,
+            color = iOSGrayLight,
+            textAlign = TextAlign.Center
         )
-        Spacer(modifier = Modifier.height(24.dp))
-        OutlinedTextField(
-            value = pin,
-            onValueChange = onPinChange,
+        Spacer(modifier = Modifier.height(NasakaSpacing.large))
+        
+        Surface(
             modifier = Modifier.fillMaxWidth(),
-            label = { Text(stringResource(R.string.onboarding_pin_prompt)) },
-            singleLine = true
-        )
-        Spacer(modifier = Modifier.height(24.dp))
+            shape = RoundedCornerShape(NasakaSpacing.medium),
+            color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.3f),
+            border = BorderStroke(0.5.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.1f))
+        ) {
+            TextField(
+                value = pin,
+                onValueChange = onPinChange,
+                modifier = Modifier.fillMaxWidth(),
+                placeholder = { Text(stringResource(R.string.onboarding_pin_prompt)) },
+                colors = TextFieldDefaults.colors(
+                    focusedContainerColor = Color.Transparent,
+                    unfocusedContainerColor = Color.Transparent,
+                    focusedIndicatorColor = Color.Transparent,
+                    unfocusedIndicatorColor = Color.Transparent
+                ),
+                singleLine = true
+            )
+        }
+        
+        Spacer(modifier = Modifier.height(NasakaSpacing.large))
+        
         Button(
             onClick = onFinish,
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(56.dp),
+            shape = RoundedCornerShape(NasakaSpacing.medium)
         ) {
-            Text(stringResource(R.string.onboarding_finish))
+            Text(
+                text = stringResource(R.string.onboarding_finish),
+                style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold)
+            )
         }
     }
 }
