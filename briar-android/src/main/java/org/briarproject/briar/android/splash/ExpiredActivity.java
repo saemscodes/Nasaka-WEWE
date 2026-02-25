@@ -29,7 +29,7 @@ public class ExpiredActivity extends AppCompatActivity
 		if (SDK_INT >= 31) getWindow().setHideOverlayWindows(true);
 
 		setContentView(R.layout.activity_expired);
-		findViewById(R.id.download_briar_button).setOnClickListener(this);
+		findViewById(R.id.download_Nasaka_WEWE_button).setOnClickListener(this);
 	}
 
 	@Override

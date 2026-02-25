@@ -23,7 +23,7 @@
 			android:layout_height="wrap_content"
 			android:layout_margin="@dimen/margin_medium"
 			android:gravity="center"
-			android:text="@string/download_briar"
+			android:text="@string/download_Nasaka_WEWE"
 			android:textSize="@dimen/text_size_large" />
 
 		<TextView
@@ -35,11 +35,11 @@
 			android:textSize="@dimen/text_size_large" />
 
 		<Button
-			android:id="@+id/download_briar_button"
+			android:id="@+id/download_Nasaka_WEWE_button"
 			style="@style/BriarButton"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:layout_margin="@dimen/margin_medium"
-			android:text="@string/download_briar_button" />
+			android:text="@string/download_Nasaka_WEWE_button" />
 	</LinearLayout>
 </ScrollView>
