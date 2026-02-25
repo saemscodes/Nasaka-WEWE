@@ -1,13 +1,13 @@
-﻿<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
   <!--Setup-->
-  <string name="setup_title">Witaj w Nasaka-WEWE</string>
+  <string name="setup_title">Witaj w Briar</string>
   <string name="setup_name_explanation">Twoja nazwa użytkownika będzie wyświetlana przy każdej zamieszczonej przez Ciebie treści. Nie można jej zmienić po tworzeniu konta.</string>
   <string name="setup_next">Dalej</string>
   <string name="setup_password_intro">Wybierz Hasło</string>
-  <string name="setup_password_explanation">Twoje konto Nasaka-WEWE jest przechowywane w postaci zaszyfrowanej na Twoim urządzeniu, a nie w chmurze. Jeżeli zapomnisz hasło lub odinstalujesz Nasaka-WEWE, nie da się odzyskać Twojego konta.\n\nWybierz długie hasło, które jest trudne do odgadnięcia, jak np. cztery losowe słowa, lub dziesięć losowych liter, liczb i symboli </string>
-  <string name="dnkm_doze_intro">Aby otrzymywać wiadomości, Nasaka-WEWE musi utrzymywać połączenie w tle.</string>
-  <string name="dnkm_doze_explanation">Aby otrzymywać wiadomości, Nasaka-WEWE musi utrzymywać połączenie w tle. Wyłącz optymalizacje baterii aby Nasaka-WEWE mógł utrzymywać połączenie w tle.</string>
+  <string name="setup_password_explanation">Twoje konto Briar jest przechowywane w postaci zaszyfrowanej na Twoim urządzeniu, a nie w chmurze. Jeżeli zapomnisz hasło lub odinstalujesz Briar, nie da się odzyskać Twojego konta.\n\nWybierz długie hasło, które jest trudne do odgadnięcia, jak np. cztery losowe słowa, lub dziesięć losowych liter, liczb i symboli </string>
+  <string name="dnkm_doze_intro">Aby otrzymywać wiadomości, Briar musi utrzymywać połączenie w tle.</string>
+  <string name="dnkm_doze_explanation">Aby otrzymywać wiadomości, Briar musi utrzymywać połączenie w tle. Wyłącz optymalizacje baterii aby Briar mógł utrzymywać połączenie w tle.</string>
   <string name="choose_nickname">Wybierz nazwę użytkownika</string>
   <string name="choose_password">Wybierz hasło</string>
   <string name="confirm_password">Potwierdź hasło</string>
@@ -17,44 +17,44 @@
   <string name="create_account_button">Utwórz Konto</string>
   <string name="more_info">Więcej Informacji</string>
   <string name="don_t_ask_again">Nie pytaj ponownie</string>
-  <string name="dnkm_huawei_protected_text">Proszę dotknąć przycisku poniżej i upewnić się, że Nasaka-WEWE jest na liście chronionych aplikacji.</string>
-  <string name="dnkm_huawei_protected_button">Chroń Nasaka-WEWE</string>
-  <string name="dnkm_huawei_protected_help">Jeśli Nasaka-WEWE nie będzie na liście chronionych aplikacji, nie będzie miał możliwości aby działać w tle.</string>
-  <string name="dnkm_huawei_app_launch_text">Dotknij przycisku poniżej, otwórz ekran „Uruchamianie aplikacji” i upewnij się, że Nasaka-WEWE jest ustawiony na „Zarządzaj ręcznie”.</string>
-  <string name="dnkm_huawei_app_launch_help">Jeśli Nasaka-WEWE nie jest ustawiony na „Zarządzaj ręcznie” na ekranie „Uruchamianie aplikacji”, nie będzie mógł działać w tle.</string>
-  <string name="dnkm_xiaomi_text">Aby działać w tle, Nasaka-WEWE musi być zablokowany na liście ostatnich aplikacji.</string>
-  <string name="dnkm_xiaomi_button">Chroń Nasaka-WEWE</string>
-  <string name="dnkm_xiaomi_help">Jeżeli Nasaka-WEWE nie jest zablokowany na liście ostatnich aplikacji, nie będzie mógł działać w tle.</string>
-  <string name="dnkm_xiaomi_dialog_body_old">1. Otwórz listę ostatnich aplikacji (często nazywaną też przełącznikiem aplikacji)\n\n2. Przewiń w dół na obrazku Nasaka-WEWEa aby ukazała się ikonka kłódki\n\n3. Jeśli kłódka nie jest zablokowana, dotknij, aby ją zablokować</string>
-  <string name="dnkm_xiaomi_dialog_body_new">1. Otwórz listę ostatnich aplikacji (zwaną również przełącznikiem aplikacji)\n\n2. Jeśli Nasaka-WEWE ma mały symbol kłódki obok swojej nazwy, to nie musisz nic robić\n\n3. Jeśli nie ma kłódki, naciśnij i przytrzymaj obrazek Nasaka-WEWE, aż pojawi się przycisk kłódki, a następnie dotknij go</string>
-  <string name="dnkm_xiaomi_lock_apps_text">Naciśnij poniższy przycisk, aby otworzyć ustawienia bezpieczeństwa. Naciśnij \"Zwiększ prędkość\", następnie \"Zablokuj aplikacje\" i upewnij się, że Nasaka-WEWE jest ustawiony na \"Zablokowany\".</string>
-  <string name="dnkm_xiaomi_lock_apps_help">Jeśli Nasaka-WEWE nie jest ustawiony na \"Zablokowany\" na ekranie \"Zablokuj aplikacje\", nie będzie mógł działać w tle.</string>
-  <string name="dnkm_warning_dozed_1">Nasaka-WEWE nie był wstanie działać w tle</string>
+  <string name="dnkm_huawei_protected_text">Proszę dotknąć przycisku poniżej i upewnić się, że Briar jest na liście chronionych aplikacji.</string>
+  <string name="dnkm_huawei_protected_button">Chroń Briar</string>
+  <string name="dnkm_huawei_protected_help">Jeśli Briar nie będzie na liście chronionych aplikacji, nie będzie miał możliwości aby działać w tle.</string>
+  <string name="dnkm_huawei_app_launch_text">Dotknij przycisku poniżej, otwórz ekran „Uruchamianie aplikacji” i upewnij się, że Briar jest ustawiony na „Zarządzaj ręcznie”.</string>
+  <string name="dnkm_huawei_app_launch_help">Jeśli Briar nie jest ustawiony na „Zarządzaj ręcznie” na ekranie „Uruchamianie aplikacji”, nie będzie mógł działać w tle.</string>
+  <string name="dnkm_xiaomi_text">Aby działać w tle, Briar musi być zablokowany na liście ostatnich aplikacji.</string>
+  <string name="dnkm_xiaomi_button">Chroń Briar</string>
+  <string name="dnkm_xiaomi_help">Jeżeli Briar nie jest zablokowany na liście ostatnich aplikacji, nie będzie mógł działać w tle.</string>
+  <string name="dnkm_xiaomi_dialog_body_old">1. Otwórz listę ostatnich aplikacji (często nazywaną też przełącznikiem aplikacji)\n\n2. Przewiń w dół na obrazku Briara aby ukazała się ikonka kłódki\n\n3. Jeśli kłódka nie jest zablokowana, dotknij, aby ją zablokować</string>
+  <string name="dnkm_xiaomi_dialog_body_new">1. Otwórz listę ostatnich aplikacji (zwaną również przełącznikiem aplikacji)\n\n2. Jeśli Briar ma mały symbol kłódki obok swojej nazwy, to nie musisz nic robić\n\n3. Jeśli nie ma kłódki, naciśnij i przytrzymaj obrazek Briar, aż pojawi się przycisk kłódki, a następnie dotknij go</string>
+  <string name="dnkm_xiaomi_lock_apps_text">Naciśnij poniższy przycisk, aby otworzyć ustawienia bezpieczeństwa. Naciśnij \"Zwiększ prędkość\", następnie \"Zablokuj aplikacje\" i upewnij się, że Briar jest ustawiony na \"Zablokowany\".</string>
+  <string name="dnkm_xiaomi_lock_apps_help">Jeśli Briar nie jest ustawiony na \"Zablokowany\" na ekranie \"Zablokuj aplikacje\", nie będzie mógł działać w tle.</string>
+  <string name="dnkm_warning_dozed_1">Briar nie był wstanie działać w tle</string>
   <!--Login-->
   <string name="enter_password">Hasło</string>
   <string name="try_again">Złe hasło, spróbuj ponownie</string>
   <string name="dialog_title_cannot_check_password">Nie można zweryfikować hasła</string>
-  <string name="dialog_message_cannot_check_password">Nasaka-WEWE nie może sprawdzić Twojego hasła. Spróbuj ponownie uruchomić urządzenie aby rozwiązać ten problem.</string>
+  <string name="dialog_message_cannot_check_password">Briar nie może sprawdzić Twojego hasła. Spróbuj ponownie uruchomić urządzenie aby rozwiązać ten problem.</string>
   <string name="sign_in_button">Zaloguj Się</string>
   <string name="dialog_title_lost_password">Nie pamiętam hasła</string>
-  <string name="dialog_message_lost_password">Twoje konto Nasaka-WEWE jest zaszyfrowane na Twoim urządzeniu, nie w chmurze, więc nie będzie można zresetować Twojego hasła. Czy chcesz usunąć swoje konto i stworzyć nowe?\n\nUwaga: Twoje hasła, kontakty i wiadomości będą utracone.</string>
-  <string name="startup_failed_activity_title">Nasaka-WEWE nie mógł się uruchomić</string>
-  <string name="startup_failed_clock_error">Nasaka-WEWE nie mógł się uruchomić ponieważ zegar twojego urządzenia jest źle ustawiony.\n\nUstaw prawidłowy czas na twoim urządzeniu i spróbuj ponownie.</string>
-  <string name="startup_failed_db_error">Nasaka-WEWE nie mógł otworzyć bazy danych zawierającej Twoje konto, kontakty i wiadomości.\n\nUaktualnij do najnowszej wersji aplikacji i spróbuj ponownie lub utwórz nowe konto przez wybranie opcji \"Zapomniałem hasła\" przy prośbie o podanie hasła.</string>
+  <string name="dialog_message_lost_password">Twoje konto Briar jest zaszyfrowane na Twoim urządzeniu, nie w chmurze, więc nie będzie można zresetować Twojego hasła. Czy chcesz usunąć swoje konto i stworzyć nowe?\n\nUwaga: Twoje hasła, kontakty i wiadomości będą utracone.</string>
+  <string name="startup_failed_activity_title">Briar nie mógł się uruchomić</string>
+  <string name="startup_failed_clock_error">Briar nie mógł się uruchomić ponieważ zegar twojego urządzenia jest źle ustawiony.\n\nUstaw prawidłowy czas na twoim urządzeniu i spróbuj ponownie.</string>
+  <string name="startup_failed_db_error">Briar nie mógł otworzyć bazy danych zawierającej Twoje konto, kontakty i wiadomości.\n\nUaktualnij do najnowszej wersji aplikacji i spróbuj ponownie lub utwórz nowe konto przez wybranie opcji \"Zapomniałem hasła\" przy prośbie o podanie hasła.</string>
   <string name="startup_failed_data_too_old_error">Twoje konto zostało stworzone przez starszą wersję aplikacji i nie może zostać otwarte w tej wersji.\n\nMusisz zainstalować starszą wersję aplikacji lub utworzyć nowe konto klikając \"Zapomniałem hasła\".</string>
   <string name="startup_failed_data_too_new_error">Twoje konto zostało utworzone przez nowszą wersję aplikacji i nie może być otworzone przez tą wersję.\n\nUaktualnij aplikację do najnowszej wersji i spróbuj ponownie</string>
-  <string name="startup_failed_service_error">Nasaka-WEWE nie mógł uruchomić wymaganego komponentu.\n\nUaktualnij do najnowszej wersji aplikacji i spróbuj ponownie</string>
+  <string name="startup_failed_service_error">Briar nie mógł uruchomić wymaganego komponentu.\n\nUaktualnij do najnowszej wersji aplikacji i spróbuj ponownie</string>
   <plurals name="expiry_warning">
-    <item quantity="one">To jest testowa wersja Nasaka-WEWE. Twoje konto wygaśnie za %d dzień i nie będzie odnowione.</item>
-    <item quantity="few">To jest testowa wersja Nasaka-WEWE. Twoje konto wygaśnie za %d dni i nie będzie odnowione.</item>
-    <item quantity="many">To jest testowa wersja Nasaka-WEWE. Twoje konto wygaśnie za %d dni i nie będzie odnowione.</item>
-    <item quantity="other">To jest testowa wersja Nasaka-WEWE. Twoje konto wygaśnie za %d dni i nie będzie odnowione.</item>
+    <item quantity="one">To jest testowa wersja Briar. Twoje konto wygaśnie za %d dzień i nie będzie odnowione.</item>
+    <item quantity="few">To jest testowa wersja Briar. Twoje konto wygaśnie za %d dni i nie będzie odnowione.</item>
+    <item quantity="many">To jest testowa wersja Briar. Twoje konto wygaśnie za %d dni i nie będzie odnowione.</item>
+    <item quantity="other">To jest testowa wersja Briar. Twoje konto wygaśnie za %d dni i nie będzie odnowione.</item>
   </plurals>
   <string name="expiry_date_reached">Ten program wygasł.\nDziękujemy za testy!</string>
-  <string name="download_Nasaka_WEWE">Aby móc nadal korzystać z Nasaka-WEWE, pobierz najnowszą wersję.</string>
+  <string name="download_briar">Aby móc nadal korzystać z Briar, pobierz najnowszą wersję.</string>
   <string name="create_new_account">Musisz utworzyć nowe konto, ale możesz użyć takiej samej nazwy użytkownika.</string>
-  <string name="download_Nasaka_WEWE_button">Pobierz najnowszą wersję</string>
-  <string name="old_android_expiry_date_reached">Nasaka-WEWE nie działa już na Androidzie 4.\nZainstaluj Nasaka-WEWE na nowszym urządzeniu.</string>
+  <string name="download_briar_button">Pobierz najnowszą wersję</string>
+  <string name="old_android_expiry_date_reached">Briar nie działa już na Androidzie 4.\nZainstaluj Briar na nowszym urządzeniu.</string>
   <string name="old_android_delete_account">Możesz nacisnąć przycisk poniżej w celu usunięcia twojego konta z tego urządzenia.</string>
   <string name="delete_account_button">Skasuj Konto</string>
   <string name="startup_open_database">Deszyfruję Bazę Danych...</string>
@@ -71,43 +71,43 @@
   <string name="lock_button">Zablokuj Aplikację</string>
   <string name="settings_button">Ustawienia</string>
   <string name="sign_out_button">Wyloguj się</string>
-  <string name="transports_onboarding_text">Dotknij tutaj aby zmienić w jaki sposób Nasaka-WEWE łączy się z twoimi kontaktami.</string>
+  <string name="transports_onboarding_text">Dotknij tutaj aby zmienić w jaki sposób Briar łączy się z twoimi kontaktami.</string>
   <!--Transports: Tor-->
   <string name="transport_tor">Internet</string>
   <string name="tor_device_status_online_wifi">Twój telefon jest połączony z Internetem za pomocą Wi-Fi</string>
   <string name="tor_device_status_online_mobile">Twój telefon jest połączony z Internetem przez dane komórkowe</string>
   <string name="tor_device_status_offline">Twój telefon nie jest podłączony do Internetu</string>
-  <string name="tor_plugin_status_enabling">Nasaka-WEWE łączy się z Internetem</string>
-  <string name="tor_plugin_status_active">Nasaka-WEWE jest podłączony do Internetu</string>
-  <string name="tor_plugin_status_inactive">Nasaka-WEWE nie może połączyć się z Internetem</string>
-  <string name="tor_plugin_status_disabled">Nasaka-WEWE został skonfigurowany tak, aby nie łączył się z Internetem</string>
-  <string name="tor_plugin_status_disabled_mobile_data">Nasaka-WEWE został skonfigurowany tak, aby nie używać danych komórkowych</string>
-  <string name="tor_plugin_status_disabled_battery"> Nasaka-WEWE jest skonfigurowany tak, aby nie korzystał z Internetu podczas pracy na baterii</string>
-  <string name="tor_plugin_status_disabled_country_blocked">Nasaka-WEWE został skonfigurowany tak, aby nie łączył się z Internetem w tym kraju</string>
+  <string name="tor_plugin_status_enabling">Briar łączy się z Internetem</string>
+  <string name="tor_plugin_status_active">Briar jest podłączony do Internetu</string>
+  <string name="tor_plugin_status_inactive">Briar nie może połączyć się z Internetem</string>
+  <string name="tor_plugin_status_disabled">Briar został skonfigurowany tak, aby nie łączył się z Internetem</string>
+  <string name="tor_plugin_status_disabled_mobile_data">Briar został skonfigurowany tak, aby nie używać danych komórkowych</string>
+  <string name="tor_plugin_status_disabled_battery"> Briar jest skonfigurowany tak, aby nie korzystał z Internetu podczas pracy na baterii</string>
+  <string name="tor_plugin_status_disabled_country_blocked">Briar został skonfigurowany tak, aby nie łączył się z Internetem w tym kraju</string>
   <!--Transports: Wi-Fi-->
   <string name="transport_lan">Wi-Fi</string>
   <string name="transport_lan_long">Ta sama sieć Wi-Fi</string>
   <string name="lan_device_status_on">Twój telefon jest połączoczy z Wi-Fi</string>
   <string name="lan_device_status_off">Twój telefon nie jest połączoczy z Wi-Fi</string>
-  <string name="lan_plugin_status_enabling">Nasaka-WEWE łączy sie z siecią Wi-Fi</string>
-  <string name="lan_plugin_status_active">Nasaka-WEWE jest podłączony do sieci Wi-Fi</string>
-  <string name="lan_plugin_status_inactive">Nasaka-WEWE nie może połączyć się z siecią Wi-Fi</string>
-  <string name="lan_plugin_status_disabled">Nasaka-WEWE jest skonfigurowany tak, aby nie korzystać z sieci Wi-Fi</string>
+  <string name="lan_plugin_status_enabling">Briar łączy sie z siecią Wi-Fi</string>
+  <string name="lan_plugin_status_active">Briar jest podłączony do sieci Wi-Fi</string>
+  <string name="lan_plugin_status_inactive">Briar nie może połączyć się z siecią Wi-Fi</string>
+  <string name="lan_plugin_status_disabled">Briar jest skonfigurowany tak, aby nie korzystać z sieci Wi-Fi</string>
   <!--Transports: Bluetooth-->
   <string name="transport_bt">Bluetooth</string>
   <string name="bt_device_status_on">Bluetooth jest włączony</string>
   <string name="bt_device_status_off">Bluetooth jest wyłączony</string>
-  <string name="bt_plugin_status_enabling">Nasaka-WEWE łączy się z Bluetooth</string>
-  <string name="bt_plugin_status_active">Nasaka-WEWE połączył się z Bluetooth</string>
-  <string name="bt_plugin_status_inactive">Nasaka-WEWE nie może połączyć się z Bluetoothem</string>
-  <string name="bt_plugin_status_disabled">Nasaka-WEWE został skonfigurowany tak, aby nie używał Bluetooth</string>
+  <string name="bt_plugin_status_enabling">Briar łączy się z Bluetooth</string>
+  <string name="bt_plugin_status_active">Briar połączył się z Bluetooth</string>
+  <string name="bt_plugin_status_inactive">Briar nie może połączyć się z Bluetoothem</string>
+  <string name="bt_plugin_status_disabled">Briar został skonfigurowany tak, aby nie używał Bluetooth</string>
   <!--Notifications-->
-  <string name="reminder_notification_title">Wylogowano z Nasaka-WEWE</string>
+  <string name="reminder_notification_title">Wylogowano z Briar</string>
   <string name="reminder_notification_text">Dotknij, aby zalogować się ponownie</string>
-  <string name="reminder_notification_channel_title">Przypomnienie o zalogowaniu do Nasaka-WEWE</string>
+  <string name="reminder_notification_channel_title">Przypomnienie o zalogowaniu do Briar</string>
   <string name="reminder_notification_dismiss">Odrzuć</string>
-  <string name="ongoing_notification_title">Zalogowany w Nasaka-WEWE</string>
-  <string name="ongoing_notification_text">Dotknij aby otworzyć Nasaka-WEWE</string>
+  <string name="ongoing_notification_title">Zalogowany w Briar</string>
+  <string name="ongoing_notification_text">Dotknij aby otworzyć Briar</string>
   <plurals name="private_message_notification_text">
     <item quantity="one">Nowa prywatna wiadomość</item>
     <item quantity="few">%d prywatnych wiadomości.</item>
@@ -230,7 +230,7 @@
   <string name="save_image_success">Obraz został zapisany</string>
   <string name="save_image_error">Nie udało się zapisać obrazu</string>
   <string name="dialog_title_no_image_support">Obrazy są niedostępne</string>
-  <string name="dialog_message_no_image_support">Nasaka-WEWE twoich kontaktów nie obsługuje jeszcze obrazów jako załączników. Jak wykonają aktualizację, zobaczysz inną ikonę.</string>
+  <string name="dialog_message_no_image_support">Briar twoich kontaktów nie obsługuje jeszcze obrazów jako załączników. Jak wykonają aktualizację, zobaczysz inną ikonę.</string>
   <string name="dialog_title_image_support">Możesz teraz wysyłać obrazy do tego kontaktu</string>
   <string name="dialog_message_image_support">Kliknij tą ikonę aby dołączyć obrazy</string>
   <string name="messaging_too_many_attachments_toast">Tylko pierwsze%dobrazy (ów) zostanie wysłane.</string>
@@ -247,10 +247,10 @@
   <string name="contact_already_exists">Kontakt %s już istnieje</string>
   <string name="contact_already_exists_general">Kontakt już istnieje</string>
   <string name="qr_code_invalid">Kod QR jest nieprawidłowy</string>
-  <string name="qr_code_too_old_1">Zeskanowany kod QR pochodzi ze starszej wersji Nasaka-WEWE.\n\nProszę poprosić Twój kontakt  o aktualizację do najnowszej wersji, a następnie spróbować ponownie.</string>
-  <string name="qr_code_too_new_1">Zeskanowany kod QR pochodzi z nowszej wersji programu Nasaka-WEWE.\n\nProszę zaktualizować go do najnowszej wersji, a następnie spróbować ponownie.</string>
-  <string name="mailbox_qr_code_for_contact">Zeskanowany kod QR pochodzi ze skrzynki odbiorczej Nasaka-WEWE.\n\nJeśli chcesz połączyć skrzynkę odbiorczą, wybierz Ustawienia i Skrzynka odbiorcza z menu Nasaka-WEWE.</string>
-  <string name="qr_code_format_unknown">Zeskanowany kod QR nie jest przeznaczony do dodawania kontaktu z Nasaka-WEWE.\n\nZeskanuj kod QR wyświetlany na ekranie kontaktu.</string>
+  <string name="qr_code_too_old_1">Zeskanowany kod QR pochodzi ze starszej wersji Briar.\n\nProszę poprosić Twój kontakt  o aktualizację do najnowszej wersji, a następnie spróbować ponownie.</string>
+  <string name="qr_code_too_new_1">Zeskanowany kod QR pochodzi z nowszej wersji programu Briar.\n\nProszę zaktualizować go do najnowszej wersji, a następnie spróbować ponownie.</string>
+  <string name="mailbox_qr_code_for_contact">Zeskanowany kod QR pochodzi ze skrzynki odbiorczej Briar.\n\nJeśli chcesz połączyć skrzynkę odbiorczą, wybierz Ustawienia i Skrzynka odbiorcza z menu Briar.</string>
+  <string name="qr_code_format_unknown">Zeskanowany kod QR nie jest przeznaczony do dodawania kontaktu z Briar.\n\nZeskanuj kod QR wyświetlany na ekranie kontaktu.</string>
   <string name="camera_error">Błąd aparatu</string>
   <string name="connecting_to_device">Łączenie z urządzeniem\u2026</string>
   <string name="authenticating_with_device">Autoryzowanie z urządzeniem\u2026</string>
@@ -272,7 +272,7 @@
   <string name="add_contact_choose_a_nickname">Wprowadź pseudonim</string>
   <string name="nickname_intro">Nadaj pseudonim swojemu kontaktowi. Tylko ty możesz go widzieć.</string>
   <string name="your_link">Podaj ten link kontaktowi, którego chcesz dodać</string>
-  <string name="link_clip_label">Link Nasaka-WEWE</string>
+  <string name="link_clip_label">Link Briar</string>
   <string name="link_copied_toast">Link skopiowany</string>
   <string name="adding_contact_error">Wystąpił błąd podczas dodawania kontaktu</string>
   <string name="pending_contact_requests_snackbar">Są prośby o dodanie do kontaktów</string>
@@ -287,7 +287,7 @@
   <string name="own_link_error">Wprowadź link twojego kontaktu, a nie swój</string>
   <string name="nickname_missing">Proszę, wprowadź pseudonim</string>
   <string name="invalid_link">Niepoprawny link</string>
-  <string name="unsupported_link">Ten link pochodzi od nowszej wersji Nasaka-WEWEa. Wykonaj aktualizację do najnowszej wersji i spróbuj ponownie.</string>
+  <string name="unsupported_link">Ten link pochodzi od nowszej wersji Briara. Wykonaj aktualizację do najnowszej wersji i spróbuj ponownie.</string>
   <string name="intent_own_link">Otworzyłeś swój własny link. Użyj linku od kontaktu, którego chcesz dodać!</string>
   <string name="missing_link">Proszę wprowadź link</string>
   <!--This is a numeral indicating the first step in a series of screens-->
@@ -324,7 +324,7 @@
   <string name="peer_trust_level_stranger">Nieznani</string>
   <!--Introductions-->
   <string name="introduction_onboarding_title">Przedstaw swoje kontakty.</string>
-  <string name="introduction_onboarding_text">Przedstaw kontakty sobie nawzajem, aby mogły się połączyć w Nasaka-WEWE.</string>
+  <string name="introduction_onboarding_text">Przedstaw kontakty sobie nawzajem, aby mogły się połączyć w Briar.</string>
   <string name="introduction_menu_item">Wykonaj przedstawienie</string>
   <string name="introduction_activity_title">Wybierz kontakt</string>
   <string name="introduction_not_possible">Masz już jedno przedstawienie w toku. Proszę pozwolić aby proces najpierw się zakończył. Jeśli ty, albo twoje kontakty są rzadko online, może to zabrać trochę czasu.</string>
@@ -528,7 +528,7 @@
   <string name="change_profile_picture_failed_message">Przepraszamy, ale coś nie wypaliło przy aktualizacji twojego zdjęcia profilowego.</string>
   <!--Settings Display-->
   <string name="pref_language_title">Język &amp; region</string>
-  <string name="pref_language_changed">Te ustawienia zostaną zastosowane gdy zrestartujesz Nasaka-WEWE. Proszę się wylogować i zrestartować Nasaka-WEWE.</string>
+  <string name="pref_language_changed">Te ustawienia zostaną zastosowane gdy zrestartujesz Briar. Proszę się wylogować i zrestartować Briar.</string>
   <string name="pref_language_default">Domyślny systemu</string>
   <string name="display_settings_title">Wyświetlacz</string>
   <string name="pref_theme_title">Motyw</string>
@@ -546,7 +546,7 @@
   <string name="tor_network_setting_without_bridges">Używaj sieci Tor bez mostów</string>
   <string name="tor_network_setting_with_bridges">Używaj sieci Tor z mostami</string>
   <string name="tor_network_setting_never">Nie łącz się z internetem</string>
-  <!--How and when Nasaka-WEWE will connect to Tor: E.g. "Don't connect to the Internet (in China)" or "Use Tor network with bridges (in Belarus)"-->
+  <!--How and when Briar will connect to Tor: E.g. "Don't connect to the Internet (in China)" or "Use Tor network with bridges (in Belarus)"-->
   <string name="tor_network_setting_summary">Automatycznie: %1$s (za %2$s)</string>
   <string name="tor_mobile_data_title">Używaj danych komórkowych</string>
   <string name="tor_only_when_charging_title">Podłącz się do internetu tylko w czasie ładowania urządzenia</string>
@@ -554,11 +554,11 @@
   <!--Settings Security and Panic-->
   <string name="security_settings_title">Bezpieczeństwo</string>
   <string name="pref_lock_title">Blokada aplikacji</string>
-  <string name="pref_lock_summary">Użyj blokady ekranu urządzenia by chronić Nasaka-WEWE gdy zalogowany</string>
+  <string name="pref_lock_summary">Użyj blokady ekranu urządzenia by chronić Briar gdy zalogowany</string>
   <string name="pref_lock_disabled_summary">Aby użyć tej funkcji skonfiguruj blokadę ekranu na swoim urządzeniu</string>
   <string name="pref_lock_timeout_title">Blokada aplikacji po czasie bezczynności</string>
   <!--The %s placeholder is replaced with the following time spans, e.g. 5 Minutes, 1 Hour-->
-  <string name="pref_lock_timeout_summary">Gdy nie używam Nasaka-WEWE, automatycznie zablokuj po %s</string>
+  <string name="pref_lock_timeout_summary">Gdy nie używam Briar, automatycznie zablokuj po %s</string>
   <!--Will be shown in a list of lock times. Should fit into the %s of "automatically lock it after %s"-->
   <string name="pref_lock_timeout_1">1 minucie</string>
   <!--Will be shown in a list of lock times. Should fit into the %s of "automatically lock it after %s"-->
@@ -570,7 +570,7 @@
   <!--Will be shown in a list of lock times. Should fit into the %s of "automatically lock it after %s"-->
   <string name="pref_lock_timeout_60">1 godzina</string>
   <string name="pref_lock_timeout_never">Nigdy</string>
-  <string name="pref_lock_timeout_never_summary">Nigdy nie blokuj Nasaka-WEWE automatycznie</string>
+  <string name="pref_lock_timeout_never_summary">Nigdy nie blokuj Briar automatycznie</string>
   <string name="change_password">Zmień hasło</string>
   <string name="current_password">Obecne hasło</string>
   <string name="choose_new_password">Nowe hasło</string>
@@ -578,7 +578,7 @@
   <string name="password_changed">Hasło zostało zmienione.</string>
   <string name="panic_setting">Konfiguracja przycisku wyjścia awaryjnego</string>
   <string name="panic_setting_title">Przycisk wyjścia awaryjnego</string>
-  <string name="panic_setting_hint">Skonfiguruj jak Nasaka-WEWE ma zareagować gdy wciśniesz przycisk wyjścia awaryjnego</string>
+  <string name="panic_setting_hint">Skonfiguruj jak Briar ma zareagować gdy wciśniesz przycisk wyjścia awaryjnego</string>
   <string name="panic_app_setting_title">Aplikacja Przycisku Wyjścia Awaryjnego</string>
   <string name="unknown_app">nieznana aplikacja</string>
   <string name="panic_app_setting_summary">Żadna aplikacja nie została ustawiona</string>
@@ -587,9 +587,9 @@
   <string name="dialog_message_connect_panic_app">Czy na pewno chcesz pozwolić %1$s aby działała jako przycisk wyjścia awaryjnego?</string>
   <string name="panic_setting_destructive_action">Działania Destrukcyjne</string>
   <string name="panic_setting_signout_title">Wyloguj się</string>
-  <string name="panic_setting_signout_summary">Wyloguj się z Nasaka-WEWE jeśli przycisk awaryjny zostanie wciśnięty</string>
+  <string name="panic_setting_signout_summary">Wyloguj się z Briar jeśli przycisk awaryjny zostanie wciśnięty</string>
   <string name="purge_setting_title">Skasuj Konto</string>
-  <string name="purge_setting_summary">Skasuj Twoje konto Nasaka-WEWE jeśli przycisk wyjścia awaryjnego zostanie wciśnięty. Ostrzeżenie: Ta akcja usunie permanentnie Twoje konto, kontakty i wiadomości</string>
+  <string name="purge_setting_summary">Skasuj Twoje konto Briar jeśli przycisk wyjścia awaryjnego zostanie wciśnięty. Ostrzeżenie: Ta akcja usunie permanentnie Twoje konto, kontakty i wiadomości</string>
   <!--Settings Notifications-->
   <string name="notification_settings_title">Powiadomienia</string>
   <string name="notify_sign_in_title">Przypomnij mi by się zalogować</string>
@@ -616,29 +616,29 @@
   <string name="mailbox_settings_title">Mailbox</string>
   <string name="mailbox_setup_title">Konfiguracja Mailbox</string>
   <string name="mailbox_setup_intro">Mailbox umożliwia Twoim kontaktom wysyłanie Ci wiadomości, gdy jesteś offline. Mailbox odbierze Twoje wiadomości i przechowa je, dopóki nie będziesz online.\n
-		\nAplikację Nasaka-WEWE Mailbox można zainstalować na zapasowym urządzeniu. Podłącz je do zasilania i Wi-Fi, aby zawsze było online.</string>
-  <string name="mailbox_setup_download">Najpierw zainstaluj aplikację Mailbox na innym urządzeniu, wyszukując „Nasaka-WEWE Mailbox” w Google Play lub gdziekolwiek pobrałeś Nasaka-WEWE.\n
-		\nNastępnie połącz Mailbox z Nasaka-WEWE, skanując kod QR wyświetlony w aplikacji Mailbox.</string>
+		\nAplikację Briar Mailbox można zainstalować na zapasowym urządzeniu. Podłącz je do zasilania i Wi-Fi, aby zawsze było online.</string>
+  <string name="mailbox_setup_download">Najpierw zainstaluj aplikację Mailbox na innym urządzeniu, wyszukując „Briar Mailbox” w Google Play lub gdziekolwiek pobrałeś Briar.\n
+		\nNastępnie połącz Mailbox z Briar, skanując kod QR wyświetlony w aplikacji Mailbox.</string>
   <string name="mailbox_setup_download_link">Udostępnij łącze pobierania</string>
   <string name="mailbox_setup_button_scan">Zeskanuj kod QR aplikacji Mailbox</string>
   <string name="permission_camera_qr_denied_body">Odmówiłeś dostępu do aparatu, ale zeskanowanie kodu QR wymaga użycia aparatu.\n\nRozważ przyznanie dostępu.</string>
   <string name="mailbox_setup_connecting">Łączenie się ze Skrzynką odbiorczą…</string>
   <!--This string is shown when connecting to a Mailbox for the first time. The placeholder will be replaced with a duration, e.g. "2 minutes".-->
   <string name="mailbox_setup_connecting_info">Może to potrwać do %1s</string>
-  <string name="mailbox_qr_code_too_old">Zeskanowany kod QR pochodzi ze starszej wersji skrzynki odbiorczej Nasaka-WEWE.\n\nProszę zaktualizować ją do najnowszej wersji, a następnie spróbować ponownie.</string>
-  <string name="mailbox_qr_code_too_new">Zeskanowany kod QR pochodzi z nowszej wersji skrzynki odbiorczej Nasaka-WEWE.\n\nProszę zaktualizować ją do najnowszej wersji, a następnie spróbować ponownie.</string>
-  <string name="contact_qr_code_for_mailbox">Zeskanowany kod QR służy do dodawania kontaktu Nasaka-WEWE.\n\nJeśli chcesz dodać kontakt, przejdź do listy kontaktów i naciśnij ikonę +.</string>
-  <string name="mailbox_setup_qr_code_wrong_description">Zeskanowany kod QR nie pochodzi ze skrzynki odbiorczej Nasaka-WEWE. Otwórz skrzynkę odbiorczą Nasaka-WEWE na urządzeniu z Twoją skrzynką i zeskanuj wyświetlany kod QR. </string>
+  <string name="mailbox_qr_code_too_old">Zeskanowany kod QR pochodzi ze starszej wersji skrzynki odbiorczej Briar.\n\nProszę zaktualizować ją do najnowszej wersji, a następnie spróbować ponownie.</string>
+  <string name="mailbox_qr_code_too_new">Zeskanowany kod QR pochodzi z nowszej wersji skrzynki odbiorczej Briar.\n\nProszę zaktualizować ją do najnowszej wersji, a następnie spróbować ponownie.</string>
+  <string name="contact_qr_code_for_mailbox">Zeskanowany kod QR służy do dodawania kontaktu Briar.\n\nJeśli chcesz dodać kontakt, przejdź do listy kontaktów i naciśnij ikonę +.</string>
+  <string name="mailbox_setup_qr_code_wrong_description">Zeskanowany kod QR nie pochodzi ze skrzynki odbiorczej Briar. Otwórz skrzynkę odbiorczą Briar na urządzeniu z Twoją skrzynką i zeskanuj wyświetlany kod QR. </string>
   <string name="mailbox_setup_already_paired_title">Mailbox już podłączony</string>
   <string name="mailbox_setup_already_paired_description">Odłącz Mailbox na drugim urządzeniu i spróbuj ponownie.</string>
   <string name="mailbox_setup_io_error_title">Nie udało się połączyć</string>
   <string name="mailbox_setup_io_error_description">Upewnij się, że oba urządzenia są połączone z internetem i spróbuj ponownie.</string>
   <string name="mailbox_setup_assertion_error_title">Błąd Mailbox</string>
-  <string name="mailbox_setup_assertion_error_description">Jeśli problem będzie się powtarzał, prześlij zgłoszenie (z anonimowymi danymi) za pośrednictwem aplikacji Nasaka-WEWE.</string>
+  <string name="mailbox_setup_assertion_error_description">Jeśli problem będzie się powtarzał, prześlij zgłoszenie (z anonimowymi danymi) za pośrednictwem aplikacji Briar.</string>
   <string name="mailbox_setup_camera_error_description"> 
 Brak dostępu do aparatu. Spróbuj ponownie, może po ponownym uruchomieniu urządzenia.</string>
   <string name="mailbox_setup_paired_title">Połączony</string>
-  <string name="mailbox_setup_paired_description">Twój Mailbox został pomyślnie połączony z Nasaka-WEWE.\n
+  <string name="mailbox_setup_paired_description">Twój Mailbox został pomyślnie połączony z Briar.\n
 \nUtrzymuj swój Mailbox podłączony do zasilania i Wi-Fi, aby zawsze był online.</string>
   <string name="tor_offline_title">Offline</string>
   <string name="tor_offline_description">Upewnij się, że to urządzenie jest w trybie online, a połączenia z Internetem są dozwolone.\n
@@ -646,10 +646,10 @@ Brak dostępu do aparatu. Spróbuj ponownie, może po ponownym uruchomieniu urz�
   <string name="tor_offline_button_check">Sprawdź ustawienia połączenia </string>
   <string name="mailbox_status_title">Status Mailbox</string>
   <string name="mailbox_status_connected_title">Mailbox jest uruchomiony</string>
-  <string name="mailbox_status_problem_title">Nasaka-WEWE ma problemy z połączeniem się z Mailbox</string>
+  <string name="mailbox_status_problem_title">Briar ma problemy z połączeniem się z Mailbox</string>
   <string name="mailbox_status_failure_title">Skrzynka pocztowa jest niedostępna</string>
-  <string name="mailbox_status_app_too_old_title">Wersja Nasaka-WEWE jest zbyt stara</string>
-  <string name="mailbox_status_app_too_old_message">Zaktualizuj Nasaka-WEWE do najnowszej wersji i spróbuj ponownie.</string>
+  <string name="mailbox_status_app_too_old_title">Wersja Briar jest zbyt stara</string>
+  <string name="mailbox_status_app_too_old_message">Zaktualizuj Briar do najnowszej wersji i spróbuj ponownie.</string>
   <string name="mailbox_status_mailbox_too_old_title">Mailbox jest za stary</string>
   <string name="mailbox_status_mailbox_too_old_message">Zaktualizuj Mailbox do najnowszej wersji aplikacji i spróbuj ponownie.</string>
   <string name="mailbox_status_check_button">Sprawdź połączenie</string>
@@ -660,12 +660,12 @@ Brak dostępu do aparatu. Spróbuj ponownie, może po ponownym uruchomieniu urz�
   <string name="mailbox_status_unlink_button">Odłącz</string>
   <string name="mailbox_status_unlink_dialog_title">Odłączyć skrzynkę odbiorczą?</string>
   <string name="mailbox_status_unlink_dialog_question">Czy na pewno chcesz odłączyć swoją skrzynkę odbiorczą?</string>
-  <string name="mailbox_status_unlink_dialog_warning">Jeżeli odłączysz swoją skrzynkę odbiorczą nie będziesz już otrzymywał(a) wiadomości kiedy Nasaka-WEWE będzie offline.</string>
+  <string name="mailbox_status_unlink_dialog_warning">Jeżeli odłączysz swoją skrzynkę odbiorczą nie będziesz już otrzymywał(a) wiadomości kiedy Briar będzie offline.</string>
   <string name="mailbox_status_unlink_no_wipe_title">Twoja skrzynka odbiorcza została odłączona</string>
   <string name="mailbox_status_unlink_no_wipe_message">Gdy następnym razem będziesz mieć dostęp do swojego urządzenia Mailbox, otwórz aplikację Mailbox i dotknij przycisku \"Odłącz\" , aby dokończyć proces.\n\nJeśli nie masz już dostępu do swojego urządzenia Mailbox, nie martw się. Twoje dane są zaszyfrowane, więc pozostaną bezpieczne, nawet jeśli nie ukończysz tego procesu.</string>
   <string name="mailbox_status_unlink_success">Twoja skrzynka odbiorcza została odłączona</string>
-  <string name="mailbox_error_notification_channel_title">Problem z Mailboxem Nasaka-WEWEa</string>
-  <string name="mailbox_error_notification_title">Skrzynka pocztowa Nasaka-WEWE jest niedostępna</string>
+  <string name="mailbox_error_notification_channel_title">Problem z Mailboxem Briara</string>
+  <string name="mailbox_error_notification_title">Skrzynka pocztowa Briar jest niedostępna</string>
   <string name="mailbox_error_notification_text">Naciśnij, aby rozwiązać problem.</string>
   <string name="mailbox_error_wizard_button">Napraw problem</string>
   <string name="mailbox_error_wizard_title">Kreator rozwiązywania problemów z Mailbox</string>
@@ -681,22 +681,22 @@ Brak dostępu do aparatu. Spróbuj ponownie, może po ponownym uruchomieniu urz�
   <string name="mailbox_error_wizard_answer1_4">Widzę \"Urządzenie offline\"</string>
   <string name="mailbox_error_wizard_info1_1_1">Proszę odłączyć Twój Mailbox za pomocą poniższego przycisku, a następnie postępować zgodnie z instrukcjami na urządzeniu Mailbox, aby ponownie go połączyć.</string>
   <string name="mailbox_error_wizard_info_1_1_2">Proszę odłączyć swój Mailbox za pomocą poniższego przycisku, a następnie zeskanować kod QR, aby połączyć go ponownie.</string>
-  <string name="mailbox_error_wizard_info1_1_3">Proszę użyć poniższego przycisku, aby sprawdzić połączenie pomiędzy Nasaka-WEWE a Mailbox.\n\n
+  <string name="mailbox_error_wizard_info1_1_3">Proszę użyć poniższego przycisku, aby sprawdzić połączenie pomiędzy Briar a Mailbox.\n\n
 		Jeśli połączenie ponownie się nie powiedzie:\n
-		\u2022 Sprawdź, czy aplikacje Mailbox i Nasaka-WEWE są zaktualizowane do najnowszej wersji.\n
-		\u2022 Uruchom ponownie urządzenia Mailbox i Nasaka-WEWE i spróbuj ponownie.</string>
-  <string name="mailbox_error_wizard_info1_1_4">Sprawdź, czy urządzenie Mailbox jest prawidłowo podłączone do Internetu.\n\nSprawdź, czy zegar na urządzeniu Mailbox pokazuje właściwą godzinę, datę i strefę czasową.\n\nSprawdź, czy aplikacje Mailbox i Nasaka-WEWE są zaktualizowane do najnowszej wersji.\n\nUruchom ponownie urządzenia Mailbox i Nasaka-WEWE i spróbuj ponownie.</string>
+		\u2022 Sprawdź, czy aplikacje Mailbox i Briar są zaktualizowane do najnowszej wersji.\n
+		\u2022 Uruchom ponownie urządzenia Mailbox i Briar i spróbuj ponownie.</string>
+  <string name="mailbox_error_wizard_info1_1_4">Sprawdź, czy urządzenie Mailbox jest prawidłowo podłączone do Internetu.\n\nSprawdź, czy zegar na urządzeniu Mailbox pokazuje właściwą godzinę, datę i strefę czasową.\n\nSprawdź, czy aplikacje Mailbox i Briar są zaktualizowane do najnowszej wersji.\n\nUruchom ponownie urządzenia Mailbox i Briar i spróbuj ponownie.</string>
   <string name="mailbox_error_wizard_info2">Wróć do tego ekranu, gdy będziesz miał dostęp do urządzenia.</string>
   <string name="mailbox_error_wizard_info3">Proszę odłączyć swój Mailbox za pomocą poniższego przycisku. Po odłączeniu starego Mailbox możesz w każdej chwili uruchomić nowy Mailbox</string>
   <!--About-->
   <string name="about_title">O programie...</string>
-  <string name="Nasaka_WEWE_version">Wersja Nasaka-WEWE: %s</string>
+  <string name="briar_version">Wersja Briar: %s</string>
   <string name="tor_version">Wersja Tor: %s</string>
   <string name="links">Odnośniki</string>
-  <string name="Nasaka_WEWE_website">\u2022 <a href="">Strona internetowa</a></string>
-  <string name="Nasaka_WEWE_source_code">\u2022 <a href="">Kod źródłowy</a></string>
-  <string name="Nasaka_WEWE_changelog">\u2022 <a href="">Dziennik zmian</a></string>
-  <string name="Nasaka_WEWE_privacy_policy">\u2022 <a href="">Polityka prywatności</a></string>
+  <string name="briar_website">\u2022 <a href="">Strona internetowa</a></string>
+  <string name="briar_source_code">\u2022 <a href="">Kod źródłowy</a></string>
+  <string name="briar_changelog">\u2022 <a href="">Dziennik zmian</a></string>
+  <string name="briar_privacy_policy">\u2022 <a href="">Polityka prywatności</a></string>
   <!--Here translators can add their names or Transifex usernames(eg "Thanks to all the contributors at the Localization Lab, especially Tom, Matthew and Jerry")-->
   <string name="translator_thanks">Dziękujemy wszystkim wspierającym z Localization Lab</string>
   <!--Conversation Settings-->
@@ -721,10 +721,10 @@ Brak dostępu do aparatu. Spróbuj ponownie, może po ponownym uruchomieniu urz�
   <string name="link_warning_text">Może to posłużyć do twojej identyfikacji. Zastanów się czy ufasz osobie która wysłała Ci ten link i rozważ otwarcie go za pomocą Przeglądarki Tor.</string>
   <string name="link_warning_open_link">Otwórz Link</string>
   <!--Crash Reporter-->
-  <string name="crash_report_title">Zgłoś awarię w Nasaka-WEWE</string>
-  <string name="Nasaka_WEWE_crashed">Przepraszam, Nasaka-WEWE uległ awarii</string>
+  <string name="crash_report_title">Zgłoś awarię w Briar</string>
+  <string name="briar_crashed">Przepraszam, Briar uległ awarii</string>
   <string name="not_your_fault">To nie Twoja wina.</string>
-  <string name="please_send_report">Proszę pomóż nam ulepszać Nasaka-WEWE wysyłając raport z awarii.</string>
+  <string name="please_send_report">Proszę pomóż nam ulepszać Briar wysyłając raport z awarii.</string>
   <string name="report_is_encrypted">Obiecujemy, że raport z awarii jest zaszyfrowany i wysyłany bezpiecznie.</string>
   <string name="feedback_title">Twoja opinia</string>
   <string name="describe_crash">Opisz co się stało (opcjonalne)</string>
@@ -749,70 +749,70 @@ Brak dostępu do aparatu. Spróbuj ponownie, może po ponownym uruchomieniu urz�
   <string name="close">Zamknij</string>
   <string name="dev_report_sending">Wysyłanie opinii...</string>
   <string name="dev_report_sent">Wysłano opinię</string>
-  <string name="dev_report_saved">Raport zapisany. Zostanie wysłany następnym razem kiedy zalogujesz się do Nasaka-WEWE.</string>
+  <string name="dev_report_saved">Raport zapisany. Zostanie wysłany następnym razem kiedy zalogujesz się do Briar.</string>
   <string name="dev_report_error">Błąd: Nie powiodło się wysłanie raportu</string>
   <!--Sign Out-->
-  <string name="progress_title_logout">Wylogowywanie z Nasaka-WEWE...</string>
+  <string name="progress_title_logout">Wylogowywanie z Briar...</string>
   <!--Screen Filters & Tapjacking-->
   <string name="screen_filter_title">Wykryto nakładkę na ekran</string>
-  <string name="screen_filter_body">Inna aplikacja jest rysowana nad Nasaka-WEWE. Aby bronić Twoje bezpieczeństwo, Nasaka-WEWE nie będzie odpowiadał na dotyk gdy inna aplikacja jest rysowana nad nim.\n\nNastępujące aplikacje mogą wyświetlać nad nim:\n\n%1$s</string>
-  <string name="screen_filter_body_api_30">Inna aplikacja rysuje na Nasaka-WEWE. Aby chronić Twoje bezpieczeństwo, Nasaka-WEWE nie reaguje na dotknięcia, gdy inna aplikacja rysuje na wierzchu.\n\nPrzejrzyj aplikacje poniżej, aby znaleźć odpowiedzialną aplikację.</string>
+  <string name="screen_filter_body">Inna aplikacja jest rysowana nad Briar. Aby bronić Twoje bezpieczeństwo, Briar nie będzie odpowiadał na dotyk gdy inna aplikacja jest rysowana nad nim.\n\nNastępujące aplikacje mogą wyświetlać nad nim:\n\n%1$s</string>
+  <string name="screen_filter_body_api_30">Inna aplikacja rysuje na Briar. Aby chronić Twoje bezpieczeństwo, Briar nie reaguje na dotknięcia, gdy inna aplikacja rysuje na wierzchu.\n\nPrzejrzyj aplikacje poniżej, aby znaleźć odpowiedzialną aplikację.</string>
   <string name="screen_filter_allow">Pozwól tym aplikacjom na pozostanie na pierwszym planie</string>
   <string name="screen_filter_review_apps">Przejrzyj aplikacje</string>
   <!--Permission Requests-->
   <string name="permission_camera_title">Dostęp do aparatu</string>
-  <string name="permission_camera_request_body">Aby zeskanować kod QR, Nasaka-WEWE potrzebuje dostępu do aparatu.</string>
+  <string name="permission_camera_request_body">Aby zeskanować kod QR, Briar potrzebuje dostępu do aparatu.</string>
   <string name="permission_location_title">Zezwolenie na lokalizację </string>
   <string name="permission_nearby_devices_title">Pozwolenie do urządzeń w pobliżu</string>
-  <string name="permission_location_request_body">Aby odkryć urządzenia Bluetooth, Nasaka-WEWE potrzebuje zezwolenia na dostęp do twojej lokalizacji.\n\nNasaka-WEWE nie przechowuje twojej lokalizacji ani nie udostępnia jej nikomu.</string>
+  <string name="permission_location_request_body">Aby odkryć urządzenia Bluetooth, Briar potrzebuje zezwolenia na dostęp do twojej lokalizacji.\n\nBriar nie przechowuje twojej lokalizacji ani nie udostępnia jej nikomu.</string>
   <string name="permission_camera_location_title">Kamera i lokalizacja</string>
-  <string name="permission_camera_location_request_body">Aby zeskanować kod QR, Nasaka-WEWE potrzebuje dostępu do kamery.\n\nAby odkryć urządzenia Bluetooth, Nasaka-WEWE potrzebuje zezwolenia na dostęp do Twojej lokalizacji.\n\nNasaka-WEWE nie przechowuje Twojej lokalizacji ani nie udostępnia jej nikomu.</string>
+  <string name="permission_camera_location_request_body">Aby zeskanować kod QR, Briar potrzebuje dostępu do kamery.\n\nAby odkryć urządzenia Bluetooth, Briar potrzebuje zezwolenia na dostęp do Twojej lokalizacji.\n\nBriar nie przechowuje Twojej lokalizacji ani nie udostępnia jej nikomu.</string>
   <string name="permission_camera_bluetooth_title">Aparat i urządzenia w pobliżu</string>
-  <string name="permission_camera_bluetooth_request_body">Aby zeskanować kod QR, Nasaka-WEWE potrzebuje dostępu do aparatu.\n\nAby wykryć urządzenia Bluetooth, Nasaka-WEWE potrzebuje uprawnień do znajdowania i łączenia się z urządzeniami w pobliżu.</string>
+  <string name="permission_camera_bluetooth_request_body">Aby zeskanować kod QR, Briar potrzebuje dostępu do aparatu.\n\nAby wykryć urządzenia Bluetooth, Briar potrzebuje uprawnień do znajdowania i łączenia się z urządzeniami w pobliżu.</string>
   <string name="permission_camera_denied_body">Odmówiłeś dostępu do aparatu, lecz dodawanie kontaktów wymaga jego użycia.\n\nProszę rozważyć udzielenie dostępu do aparatu</string>
-  <string name="permission_location_denied_body">Zabroniłeś dostępu do Twojej lokalizacji, ale Nasaka-WEWE potrzebuje tego uprawnienia do wykrywania urządzeń Bluetooth.\n\nRozważ przyznanie  tego dostępu.</string>
+  <string name="permission_location_denied_body">Zabroniłeś dostępu do Twojej lokalizacji, ale Briar potrzebuje tego uprawnienia do wykrywania urządzeń Bluetooth.\n\nRozważ przyznanie  tego dostępu.</string>
   <string name="permission_location_setting_title">Ustawienia lokalizacji</string>
   <string name="permission_location_setting_body">Ustawienie lokalizacji urządzenia musi być włączone, aby można było znaleźć inne urządzenia przez Bluetooth. Włącz lokalizację, aby kontynuować. Później możesz ją ponownie wyłączyć.</string>
   <string name="permission_location_setting_hotspot_body">Aby utworzyć hotspot Wi-Fi, musisz włączyć ustawienie lokalizacji urządzenia. Włącz lokalizację, aby kontynuować. Możesz ją później wyłączyć ponownie.</string>
   <string name="permission_location_setting_button">Włącz lokalizację</string>
   <string name="permission_bluetooth_title">Pozwolenie do urządzeń w pobliżu</string>
-  <string name="permission_bluetooth_body">Aby korzystać z komunikacji Bluetooth, Nasaka-WEWE potrzebuje uprawnień do znajdowania i łączenia się z pobliskimi urządzeniami.</string>
-  <string name="permission_bluetooth_denied_body">Odmówiono dostępu do pobliskich urządzeń, ale Nasaka-WEWE potrzebuje tego uprawnienia, aby korzystać z Bluetooth.\n\nRozważ udzielenie dostępu.</string>
+  <string name="permission_bluetooth_body">Aby korzystać z komunikacji Bluetooth, Briar potrzebuje uprawnień do znajdowania i łączenia się z pobliskimi urządzeniami.</string>
+  <string name="permission_bluetooth_denied_body">Odmówiono dostępu do pobliskich urządzeń, ale Briar potrzebuje tego uprawnienia, aby korzystać z Bluetooth.\n\nRozważ udzielenie dostępu.</string>
   <string name="qr_code">Kod QR</string>
   <string name="show_qr_code_fullscreen">Pokaż QR na pełnym ekranie</string>
   <!--App Locking-->
-  <string name="lock_unlock">Odblokuj Nasaka-WEWE</string>
-  <string name="lock_unlock_verbose">Wprowadź PIN swojego urządzenia, wzór lub hasło aby odblokować Nasaka-WEWE</string>
+  <string name="lock_unlock">Odblokuj Briar</string>
+  <string name="lock_unlock_verbose">Wprowadź PIN swojego urządzenia, wzór lub hasło aby odblokować Briar</string>
   <string name="lock_unlock_fingerprint_description">Dotknij czytnika linii papilarnych zarejestrowanym odciskiem palca aby kontynuować. </string>
   <string name="lock_unlock_password">Użyj hasła</string>
-  <string name="lock_is_locked">Nasaka-WEWE jest zablokowany</string>
+  <string name="lock_is_locked">Briar jest zablokowany</string>
   <string name="lock_tap_to_unlock">Dotknij by odblokować</string>
   <!--Connections Screen-->
-  <string name="transports_help_text">Nasaka-WEWE może łączyć się z Twoimi kontaktami przez Internet, Wi-Fi lub Bluetooth.\n\nWszystkie połączenia internetowe przechodzą przez sieć Tor w celu zachowania prywatności.\n\nJeśli z kontaktem można się połączyć na wiele sposobów, Nasaka-WEWE używa ich równolegle. </string>
+  <string name="transports_help_text">Briar może łączyć się z Twoimi kontaktami przez Internet, Wi-Fi lub Bluetooth.\n\nWszystkie połączenia internetowe przechodzą przez sieć Tor w celu zachowania prywatności.\n\nJeśli z kontaktem można się połączyć na wiele sposobów, Briar używa ich równolegle. </string>
   <!--Share app offline-->
   <string name="hotspot_title">Udostępnij tą aplikację offline</string>
   <string name="hotspot_intro">Udostępnij tą aplikację komuś w pobliżu bez połączenia internetowego, przez użycie WiFi Twojego  telefonu.
-		\n\n\Twój telefon uruchomi hotspot Wi-Fi. Ludzie w pobliżu będą mogli podłączyć się do hotspotu i pobrać aplikację Nasaka-WEWE z twojego telefonu.</string>
+		\n\n\Twój telefon uruchomi hotspot Wi-Fi. Ludzie w pobliżu będą mogli podłączyć się do hotspotu i pobrać aplikację Briar z twojego telefonu.</string>
   <string name="hotspot_button_start_sharing">Uruchom hotspot</string>
   <string name="hotspot_button_stop_sharing">Zatrzymaj hotspot</string>
   <string name="hotspot_progress_text_start">Ustawianie hotspotu...</string>
   <string name="hotspot_notification_channel_title">Hotspot Wi-Fi</string>
-  <string name="hotspot_notification_title">Udostępnianie Nasaka-WEWE offline</string>
+  <string name="hotspot_notification_title">Udostępnianie Briar offline</string>
   <string name="hotspot_button_connected">Następny</string>
-  <string name="permission_hotspot_location_request_body">Aby utworzyć hotspot Wi-Fi, Nasaka-WEWE potrzebuje uprawnienia do dostępu do Twojej lokalizacji.\n\nNasaka-WEWE nie przechowuje Twojej lokalizacji ani nie udostępnia jej nikomu.</string>
-  <string name="permission_hotspot_location_request_precise_body">Aby utworzyć hotspot Wi-Fi, Nasaka-WEWE potrzebuje uprawnienia do dostępu do Twojej dokładnej lokalizacji.\n\nNasaka-WEWE nie przechowuje Twojej lokalizacji ani nie udostępnia jej nikomu.</string>
-  <string name="permission_hotspot_location_denied_body">Zabroniłeś dostępu do Twojej lokalizacji, ale Nasaka-WEWE potrzebuje tego uprawnienia do tworzenia hotspotu Wi-Fi.\n\nRozważ przyznanie tego dostępu.</string>
-  <string name="permission_hotspot_location_denied_precise_body">Zabroniono dostępu do dokładnej lokalizacji. Nasaka-WEWE potrzebuje tego uprawnienia do tworzenia hotspotu Wi-Fi.\n\nRozważ przyznanie tego dostępu.</string>
+  <string name="permission_hotspot_location_request_body">Aby utworzyć hotspot Wi-Fi, Briar potrzebuje uprawnienia do dostępu do Twojej lokalizacji.\n\nBriar nie przechowuje Twojej lokalizacji ani nie udostępnia jej nikomu.</string>
+  <string name="permission_hotspot_location_request_precise_body">Aby utworzyć hotspot Wi-Fi, Briar potrzebuje uprawnienia do dostępu do Twojej dokładnej lokalizacji.\n\nBriar nie przechowuje Twojej lokalizacji ani nie udostępnia jej nikomu.</string>
+  <string name="permission_hotspot_location_denied_body">Zabroniłeś dostępu do Twojej lokalizacji, ale Briar potrzebuje tego uprawnienia do tworzenia hotspotu Wi-Fi.\n\nRozważ przyznanie tego dostępu.</string>
+  <string name="permission_hotspot_location_denied_precise_body">Zabroniono dostępu do dokładnej lokalizacji. Briar potrzebuje tego uprawnienia do tworzenia hotspotu Wi-Fi.\n\nRozważ przyznanie tego dostępu.</string>
   <string name="wifi_settings_title">Ustawienia Wi-Fi</string>
-  <string name="wifi_settings_request_enable_body">Aby utworzyć hotspot Wi-Fi, Nasaka-WEWE potrzebuje użyć Wi-Fi. Włącz Wi-Fi.</string>
+  <string name="wifi_settings_request_enable_body">Aby utworzyć hotspot Wi-Fi, Briar potrzebuje użyć Wi-Fi. Włącz Wi-Fi.</string>
   <string name="hotspot_tab_manual">Manualne</string>
   <!--The placeholder to be inserted into the string 'hotspot_manual_wifi': People can connect by %s-->
   <string name="hotspot_scanning_a_qr_code">skanowanie kodu QR</string>
   <!--Wi-Fi setup-->
   <!--The %s placeholder will be replaced with the translation of 'hotspot_scanning_a_qr_code'-->
-  <string name="hotspot_manual_wifi">Twój telefon udostępnia hotspot Wi-Fi. Osoby, które chcą pobrać Nasaka-WEWE, mogą połączyć się z hotspotem, dodając go w ustawieniach Wi-Fi urządzenia, korzystając z poniższych informacji lub korzystając z %s. Gdy połączą się z hotspotem, naciśnij „Dalej”.</string>
+  <string name="hotspot_manual_wifi">Twój telefon udostępnia hotspot Wi-Fi. Osoby, które chcą pobrać Briar, mogą połączyć się z hotspotem, dodając go w ustawieniach Wi-Fi urządzenia, korzystając z poniższych informacji lub korzystając z %s. Gdy połączą się z hotspotem, naciśnij „Dalej”.</string>
   <string name="hotspot_manual_wifi_ssid">Nazwa sieci</string>
-  <string name="hotspot_qr_wifi">Twój telefon udostępnia hotspot Wi-Fi. Osoby, które chcą pobrać Nasaka-WEWE, mogą połączyć się z hotspotem, skanując ten kod QR. Gdy połączą się z hotspotem, naciśnij „Dalej”.</string>
+  <string name="hotspot_qr_wifi">Twój telefon udostępnia hotspot Wi-Fi. Osoby, które chcą pobrać Briar, mogą połączyć się z hotspotem, skanując ten kod QR. Gdy połączą się z hotspotem, naciśnij „Dalej”.</string>
   <string name="hotspot_no_peers_connected">Brak połączonych urządzeń</string>
   <plurals name="hotspot_peers_connected">
     <item quantity="one">%s połączone urządzenie</item>
@@ -822,13 +822,13 @@ Brak dostępu do aparatu. Spróbuj ponownie, może po ponownym uruchomieniu urz�
   </plurals>
   <!--Download link-->
   <!--The %s placeholder will be replaced with the translation of 'hotspot_scanning_a_qr_code'-->
-  <string name="hotspot_manual_site">Twój telefon udostępnia hotspot Wi-Fi. Osoby połączone z hotspotem mogą pobrać Nasaka-WEWE, wpisując następujący link w przeglądarce internetowej lub %s.</string>
+  <string name="hotspot_manual_site">Twój telefon udostępnia hotspot Wi-Fi. Osoby połączone z hotspotem mogą pobrać Briar, wpisując następujący link w przeglądarce internetowej lub %s.</string>
   <string name="hotspot_manual_site_address">Adres (URL)</string>
-  <string name="hotspot_qr_site">Twój telefon udostępnia hotspot Wi-Fi. Osoby połączone z hotspotem mogą pobrać Nasaka-WEWE, skanując ten kod QR.</string>
-  <!--e.g. Download Nasaka-WEWE 1.2.20-->
-  <string name="website_download_title_1">Pobierz Nasaka-WEWE %s</string>
-  <string name="website_download_intro_1">Ktoś w pobliżu udostępnił Ci Nasaka-WEWE.</string>
-  <string name="website_download_button">Pobierz Nasaka-WEWE</string>
+  <string name="hotspot_qr_site">Twój telefon udostępnia hotspot Wi-Fi. Osoby połączone z hotspotem mogą pobrać Briar, skanując ten kod QR.</string>
+  <!--e.g. Download Briar 1.2.20-->
+  <string name="website_download_title_1">Pobierz Briar %s</string>
+  <string name="website_download_intro_1">Ktoś w pobliżu udostępnił Ci Briar.</string>
+  <string name="website_download_button">Pobierz Briar</string>
   <string name="website_download_outro">Po zakończeniu pobierania otwórz pobrany plik i zainstaluj go.</string>
   <string name="website_troubleshooting_title">Rozwiązywanie problemów</string>
   <string name="website_troubleshooting_1">Jeśli nie możesz pobrać aplikacji, spróbuj za pomocą innej przeglądarki internetowej.</string>
@@ -837,14 +837,14 @@ Brak dostępu do aparatu. Spróbuj ponownie, może po ponownym uruchomieniu urz�
   <string name="hotspot_help_wifi_title">Problemy z połączeniem z Wi-Fi:</string>
   <string name="hotspot_help_wifi_1">Spróbuj wyłączyć i ponownie włączyć Wi-Fi w obu telefonach i spróbuj ponownie.</string>
   <string name="hotspot_help_wifi_2">Jeśli Twój telefon wyświetla komunikat, że sieć Wi-Fi nie ma dostępu do internetu, wybierz opcję pozostania w tej sieci mimo wszystko.</string>
-  <string name="hotspot_help_wifi_3">Uruchom ponownie telefon, na którym działa hotspot Wi-Fi, a następnie uruchom Nasaka-WEWE i spróbuj ponownie udostępnić.</string>
+  <string name="hotspot_help_wifi_3">Uruchom ponownie telefon, na którym działa hotspot Wi-Fi, a następnie uruchom Briar i spróbuj ponownie udostępnić.</string>
   <string name="hotspot_help_site_title">Problemy z wejściem na lokalną stronę internetową:</string>
   <string name="hotspot_help_site_1">Dokładnie sprawdź, czy wpisałeś adres dokładnie tak, jak pokazano. Mały błąd może sprawić, że się nie uda.</string>
   <string name="hotspot_help_site_2">Upewnij się, że telefon jest nadal podłączony do właściwej sieci Wi-Fi (patrz powyżej), gdy próbujesz uzyskać dostęp do witryny.</string>
   <string name="hotspot_help_site_3">Jeśli masz aplikację zapory sieciowej, sprawdź, czy nie blokuje dostępu.</string>
-  <string name="hotspot_help_site_4">Jeśli możesz wejść na stronę, ale nie możesz pobrać aplikacji Nasaka-WEWE, spróbuj za pomocą innej przeglądarki internetowej.</string>
+  <string name="hotspot_help_site_4">Jeśli możesz wejść na stronę, ale nie możesz pobrać aplikacji Briar, spróbuj za pomocą innej przeglądarki internetowej.</string>
   <string name="hotspot_help_fallback_title">Nic nie działa?</string>
-  <string name="hotspot_help_fallback_intro">Możesz spróbować zapisać aplikację jako plik .apk, aby udostępnić ją w inny sposób. Po przesłaniu pliku na inne urządzenie można go użyć do zainstalowania Nasaka-WEWE.
+  <string name="hotspot_help_fallback_intro">Możesz spróbować zapisać aplikację jako plik .apk, aby udostępnić ją w inny sposób. Po przesłaniu pliku na inne urządzenie można go użyć do zainstalowania Briar.
 		\n\nWskazówka: W przypadku udostępniania przez Bluetooth może być konieczna zmiana nazwy pliku na .zip.</string>
   <string name="hotspot_help_fallback_button">Zapisz aplikację</string>
   <!--error handling-->
@@ -854,18 +854,18 @@ Brak dostępu do aparatu. Spróbuj ponownie, może po ponownym uruchomieniu urz�
   <string name="hotspot_error_start_callback_failed_unknown">Hotspot nie mógł się uruchomić z powodu nieznanego błędu, powód: %d</string>
   <string name="hotspot_error_start_callback_no_group_info">Hotspot nie mógł się uruchomić: Brak informacji o grupie</string>
   <string name="hotspot_error_web_server_start">Błąd podczas uruchamianiu serwera WWW</string>
-  <string name="hotspot_error_web_server_serve">Błąd prezentowania strony internetowej.\n\nJeśli problem będzie się powtarzał, prześlij opinię (z anonimowymi danymi) za pośrednictwem aplikacji Nasaka-WEWE.</string>
+  <string name="hotspot_error_web_server_serve">Błąd prezentowania strony internetowej.\n\nJeśli problem będzie się powtarzał, prześlij opinię (z anonimowymi danymi) za pośrednictwem aplikacji Briar.</string>
   <string name="hotspot_flag_test">Uwaga: ta aplikacja została zainstalowana przez Android Studio i NIE MOŻNA jej zainstalować na innym urządzeniu.</string>
   <string name="hotspot_error_framework_busy">Nie można uruchomić hotspotu.\n\nJeśli masz uruchomiony inny hotspot lub udostępniasz połączenie internetowe przez Wi-Fi, spróbuj go zatrzymać i dopiero wtedy spróbuj ponownie.</string>
   <!--Transfer Data via Removable Drives-->
   <string name="removable_drive_menu_title">Połącz przez Dysk Przenośny</string>
-  <string name="removable_drive_intro">Jeśli nie możesz połączyć się ze swoim kontaktem przez Internet, Wi-Fi lub Bluetooth, Nasaka-WEWE może również przesyłać wiadomości na dysk wymienny, taki jak pamięć USB lub karta SD.</string>
-  <string name="removable_drive_explanation">Jeśli nie możesz połączyć się z kontaktem przez Internet, Wi-Fi lub Bluetooth, Nasaka-WEWE może również przesyłać wiadomości na dysk wymienny, taki jak pamięć USB lub karta SD.\n\nGdy użyjesz przycisku „Wyślij dane” wszelkie dane oczekujące na wysłanie do kontaktu zostaną zapisane na dysku wymiennym. Obejmuje to prywatne wiadomości, załączniki, blogi, fora i prywatne grupy.\n\nWszystko zostanie zaszyfrowane przed zapisaniem na dysku wymiennym.\n\nGdy Twój kontakt otrzyma dysk wymienny, może użyć przycisku „Odbierz dane” aby zaimportować wiadomości do Nasaka-WEWE.</string>
+  <string name="removable_drive_intro">Jeśli nie możesz połączyć się ze swoim kontaktem przez Internet, Wi-Fi lub Bluetooth, Briar może również przesyłać wiadomości na dysk wymienny, taki jak pamięć USB lub karta SD.</string>
+  <string name="removable_drive_explanation">Jeśli nie możesz połączyć się z kontaktem przez Internet, Wi-Fi lub Bluetooth, Briar może również przesyłać wiadomości na dysk wymienny, taki jak pamięć USB lub karta SD.\n\nGdy użyjesz przycisku „Wyślij dane” wszelkie dane oczekujące na wysłanie do kontaktu zostaną zapisane na dysku wymiennym. Obejmuje to prywatne wiadomości, załączniki, blogi, fora i prywatne grupy.\n\nWszystko zostanie zaszyfrowane przed zapisaniem na dysku wymiennym.\n\nGdy Twój kontakt otrzyma dysk wymienny, może użyć przycisku „Odbierz dane” aby zaimportować wiadomości do Briar.</string>
   <string name="removable_drive_title_send">Wyślij dane</string>
   <string name="removable_drive_title_receive">Odbierz dane</string>
   <string name="removable_drive_send_intro">Dotknij przycisku poniżej, aby utworzyć nowy plik zawierający zaszyfrowane wiadomości. Możesz wybrać, gdzie plik zostanie zapisany.\n\nJeśli chcesz zapisać plik na dysku wymiennym, włóż dysk teraz.</string>
   <string name="removable_drive_send_no_data">Obecnie nie ma wiadomości oczekujących na wysłanie do tego kontaktu.</string>
-  <string name="removable_drive_send_not_supported">Ten kontakt używa starej wersji Nasaka-WEWE lub starego urządzenia, które nie obsługuje tej funkcji.</string>
+  <string name="removable_drive_send_not_supported">Ten kontakt używa starej wersji Briar lub starego urządzenia, które nie obsługuje tej funkcji.</string>
   <string name="removable_drive_send_button">Wybierz plik do eksportu</string>
   <string name="removable_drive_ongoing">Poczekaj na zakończenie trwającego zadania</string>
   <string name="removable_drive_receive_intro">Kliknij przycisk poniżej, aby wybrać plik, który wysłał Ci Twój kontakt.\n\nJeśli plik znajduje się na dysku wymiennym, włóż dysk teraz.</string>
@@ -875,9 +875,9 @@ Brak dostępu do aparatu. Spróbuj ponownie, może po ponownym uruchomieniu urz�
   <string name="removable_drive_success_receive_title">Zaimportowano pomyślnie</string>
   <string name="removable_drive_success_receive_text">Wszystkie zaszyfrowane wiadomości zawarte w tym pliku zostały odebrane.</string>
   <string name="removable_drive_error_send_title">Błąd podczas eksportowania danych</string>
-  <string name="removable_drive_error_send_text">Wystąpił błąd podczas zapisywania danych do pliku.\n\nJeżeli używasz dysku wymiennego, upewnij się, że jest on prawidłowo włożony i spróbuj ponownie.\n\nJeśli błąd będzie się powtarzał, prześlij opinię, aby powiadomić zespół Nasaka-WEWE o problemie.</string>
+  <string name="removable_drive_error_send_text">Wystąpił błąd podczas zapisywania danych do pliku.\n\nJeżeli używasz dysku wymiennego, upewnij się, że jest on prawidłowo włożony i spróbuj ponownie.\n\nJeśli błąd będzie się powtarzał, prześlij opinię, aby powiadomić zespół Briar o problemie.</string>
   <string name="removable_drive_error_receive_title">Błąd podczas importowania danych</string>
-  <string name="removable_drive_error_receive_text">Wybrany plik nie zawierał niczego, co Nasaka-WEWE mógłby rozpoznać.\n\nSprawdź, czy wybrałeś właściwy plik.\n\nJeśli Twój kontakt utworzył plik ponad 28 dni temu, Nasaka-WEWE nie będzie mógł go rozpoznać.</string>
+  <string name="removable_drive_error_receive_text">Wybrany plik nie zawierał niczego, co Briar mógłby rozpoznać.\n\nSprawdź, czy wybrałeś właściwy plik.\n\nJeśli Twój kontakt utworzył plik ponad 28 dni temu, Briar nie będzie mógł go rozpoznać.</string>
   <!--Screenshots-->
   <!--This is a name to be used in screenshots. Feel free to change it to a local name.-->
   <string name="screenshot_alice">Alicja</string>
@@ -888,7 +888,7 @@ Brak dostępu do aparatu. Spróbuj ponownie, może po ponownym uruchomieniu urz�
   <!--This is a message to be used in screenshots. Please use the same translation for Bob!-->
   <string name="screenshot_message_1">Hej Janusz!</string>
   <!--This is a message to be used in screenshots. Please use the same translation for Alice!-->
-  <string name="screenshot_message_2">Hej Alicja! Dzięki za opowiedzenie mi o Nasaka-WEWEze!</string>
+  <string name="screenshot_message_2">Hej Alicja! Dzięki za opowiedzenie mi o Briarze!</string>
   <!--This is a message to be used in screenshots.-->
   <string name="screenshot_message_3">Nie ma sprawy, mam nadzieję, że ci się podoba 😀</string>
 </resources>

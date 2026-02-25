@@ -6,22 +6,22 @@
 	android:padding="16dp">
 
 	<TextView
-		android:id="@+id/nasakaWeweVersion"
+		android:id="@+id/BriarVersion"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="@string/nasaka_wewe_version"
+		android:text="@string/briar_version"
 		android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent" />
 
 	<TextView
-		android:id="@+id/torVersion"
+		android:id="@+id/TorVersion"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:text="@string/tor_version"
 		android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/nasakaWeweVersion" />
+		app:layout_constraintTop_toBottomOf="@+id/BriarVersion" />
 
 	<TextView
 		android:id="@+id/LinksTitle"
@@ -34,40 +34,40 @@
 		app:layout_constraintTop_toBottomOf="@+id/TorVersion" />
 
 	<TextView
-		android:id="@+id/nasakaWeweWebsite"
+		android:id="@+id/BriarWebsite"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="@string/nasaka_wewe_website"
+		android:text="@string/briar_website"
 		android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@+id/LinksTitle" />
 
 	<TextView
-		android:id="@+id/nasakaWeweSourceCode"
+		android:id="@+id/BriarSourceCode"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="@string/nasaka_wewe_source_code"
+		android:text="@string/briar_source_code"
 		android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/nasakaWeweWebsite" />
+		app:layout_constraintTop_toBottomOf="@+id/BriarWebsite" />
 
 	<TextView
-		android:id="@+id/nasakaWeweChangelog"
+		android:id="@+id/BriarChangelog"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="@string/nasaka_wewe_changelog"
+		android:text="@string/briar_changelog"
 		android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/nasakaWeweSourceCode" />
+		app:layout_constraintTop_toBottomOf="@+id/BriarSourceCode" />
 
 	<TextView
-		android:id="@+id/nasakaWewePrivacyPolicy"
+		android:id="@+id/BriarPrivacyPolicy"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="@string/nasaka_wewe_privacy_policy"
+		android:text="@string/briar_privacy_policy"
 		android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/nasakaWeweChangelog" />
+		app:layout_constraintTop_toBottomOf="@+id/BriarChangelog" />
 
 	<TextView
 		android:id="@+id/TranslatorThanks"
@@ -77,6 +77,6 @@
 		android:text="@string/translator_thanks"
 		android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/nasakaWewePrivacyPolicy" />
+		app:layout_constraintTop_toBottomOf="@+id/BriarPrivacyPolicy" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

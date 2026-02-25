@@ -40,7 +40,7 @@
 				android:layout_height="wrap_content"
 				android:layout_marginTop="@dimen/margin_xlarge"
 				android:gravity="center"
-				android:text="@string/Nasaka_WEWE_crashed"
+				android:text="@string/briar_crashed"
 				android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
 				app:layout_constraintBottom_toTopOf="@+id/fault"
 				app:layout_constraintEnd_toEndOf="parent"
