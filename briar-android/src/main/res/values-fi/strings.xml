@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version='1.0' encoding='UTF-8'?>
 <resources>
 	<!--Setup-->
 	<string name="setup_title">Tervetuloa Nasaka-WEWEiin</string>
@@ -414,7 +414,7 @@
   <string name="link_warning_open_link">Avaa linkki</string>
   <!--Crash Reporter-->
   <string name="crash_report_title">Nasaka-WEWE kaatumisilmoitus</string>
-  <string name="Nasaka-WEWE_crashed">Pahoittelemme, Nasaka-WEWE on kaatunut.</string>
+  <string name="Nasaka_WEWE_crashed">Pahoittelemme, Nasaka-WEWE on kaatunut.</string>
   <string name="not_your_fault">Tämä ei ole sinun syysi.</string>
   <string name="please_send_report">Auta meitä rakentamaan parempi Nasaka-WEWE lähettämällä meille kaatumisilmoitus.</string>
   <string name="report_is_encrypted">Lupaamme, että ilmoitus on salattu ja lähetetty turvallisesti.</string>

@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version='1.0' encoding='UTF-8'?>
 <resources>
 	<!--Setup-->
 	<string name="setup_title">Dobrodosli u Nasaka-WEWE</string>
@@ -438,7 +438,7 @@ Dotaknite + ikonu da uvezete kanal</string>
   <string name="link_warning_open_link">Otvori link</string>
   <!--Crash Reporter-->
   <string name="crash_report_title">Nasaka-WEWE izvještaj po krahu</string>
-  <string name="Nasaka-WEWE_crashed">Izvinite, Nasaka-WEWE je krahirao.</string>
+  <string name="Nasaka_WEWE_crashed">Izvinite, Nasaka-WEWE je krahirao.</string>
   <string name="not_your_fault">Nijeste vi krivi.</string>
   <string name="please_send_report">Molimo pomozite nam da napravimo bolji Nasaka-WEWE tako što ćete nam poslati izvještaj o krahu.</string>
   <string name="report_is_encrypted">Obećavamo da je izvještaj kriptovan i sigurno poslat.</string>

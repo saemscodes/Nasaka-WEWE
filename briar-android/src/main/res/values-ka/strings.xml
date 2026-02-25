@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version='1.0' encoding='UTF-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
   <!--Setup-->
   <string name="setup_title">მოგესალმებათ Nasaka-WEWE</string>
@@ -49,9 +49,9 @@
     <item quantity="other">ეს არის Nasaka-WEWE-ის საცდელი ვერსია, რომლის ვადა %d დღეში ამოიწურება და მისი განახლება შეუძლებელია.</item>
   </plurals>
   <string name="expiry_date_reached">პროგრამული უზრუნველყოფის ვადა ამოიწურა.\nგმადლობთ ტესტირებისთვის!</string>
-  <string name="download_Nasaka-WEWE">თუ გსურთ, კვლავ გამოიყენოთ Nasaka-WEWE, ჩამოტვირთეთ ბოლო გამოშვება.</string>
+  <string name="download_Nasaka_WEWE">თუ გსურთ, კვლავ გამოიყენოთ Nasaka-WEWE, ჩამოტვირთეთ ბოლო გამოშვება.</string>
   <string name="create_new_account">დაგჭირდებათ ახალი ანგარიშის შექმნა, თუმცა იმავე მეტსახელის გამოყენება შეგეძლებათ.</string>
-  <string name="download_Nasaka-WEWE_button">ბოლო გამოშვების ჩამოტვირთვა</string>
+  <string name="download_Nasaka_WEWE_button">ბოლო გამოშვების ჩამოტვირთვა</string>
   <string name="old_android_expiry_date_reached">Nasaka-WEWE აღარ გაეშვება Android 4 ვერსიაზე.\nგთხოვთ, დააყენოთ Nasaka-WEWE უფრო ახალ მოწყობილობაზე.</string>
   <string name="old_android_delete_account">ამ მოწყობილობიდან თქვენი ანგარიშის წასაშლელად, შეგიძლიათ შეეხოთ ღილაკს ქვემოთ.</string>
   <string name="delete_account_button">ანგარიშის წაშლა</string>
@@ -642,13 +642,13 @@
   <string name="mailbox_error_wizard_info3">გთხოვთ, ჩახსენით თქვენი საფოსტო ყუთი ღილაკით ქვემოთ.\n\nთქვენი ძველი საფოსტო ყუთის ჩახსნის შემდეგ, ნებისმიერ დროს შეგიძლიათ დააყენოთ ახალი საფოსტო ყუთი.</string>
   <!--About-->
   <string name="about_title">შესახებ</string>
-  <string name="Nasaka-WEWE_version">Nasaka-WEWE-ის ვერსია: %s</string>
+  <string name="Nasaka_WEWE_version">Nasaka-WEWE-ის ვერსია: %s</string>
   <string name="tor_version">Tor-ის ვერსია: %s</string>
   <string name="links">ბმულები</string>
-  <string name="Nasaka-WEWE_website">\u2022 <a href="">ვებსაიტი</a></string>
-  <string name="Nasaka-WEWE_source_code">\u2022 <a href="">წყაროს კოდი</a></string>
-  <string name="Nasaka-WEWE_changelog">\u2022 <a href="">ცვლილებების ჟურნალი</a></string>
-  <string name="Nasaka-WEWE_privacy_policy">\u2022 <a href="">კონფიდენციალურობის დებულება</a></string>
+  <string name="Nasaka_WEWE_website">\u2022 <a href="">ვებსაიტი</a></string>
+  <string name="Nasaka_WEWE_source_code">\u2022 <a href="">წყაროს კოდი</a></string>
+  <string name="Nasaka_WEWE_changelog">\u2022 <a href="">ცვლილებების ჟურნალი</a></string>
+  <string name="Nasaka_WEWE_privacy_policy">\u2022 <a href="">კონფიდენციალურობის დებულება</a></string>
   <!--Here translators can add their names or Transifex usernames(eg "Thanks to all the contributors at the Localization Lab, especially Tom, Matthew and Jerry")-->
   <string name="translator_thanks">დიდი მადლობა ყველას, ვინც წვლილი შეიტანა Localization-Lab-ში</string>
   <!--Conversation Settings-->
@@ -674,7 +674,7 @@
   <string name="link_warning_open_link">ბმულის გახსნა</string>
   <!--Crash Reporter-->
   <string name="crash_report_title">Nasaka-WEWE-ის შეფერხების ანგარიში</string>
-  <string name="Nasaka-WEWE_crashed">სამწუხაროდ, Nasaka-WEWE გაფუჭდა</string>
+  <string name="Nasaka_WEWE_crashed">სამწუხაროდ, Nasaka-WEWE გაფუჭდა</string>
   <string name="not_your_fault">ეს თქვენი ბრალი არ არის.</string>
   <string name="please_send_report">გთხოვთ, დაგვეხმაროთ, გავაუმჯობესოთ Nasaka-WEWE და გამოგვიგზავნეთ ანგარიში გათიშვის შესახებ.</string>
   <string name="report_is_encrypted">გპირდებით, რომ ეს ანგარიში დაიშიფრება და გაიგზავნება უსაფრთხოდ.</string>

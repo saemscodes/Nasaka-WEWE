@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version='1.0' encoding='UTF-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
   <!--Setup-->
   <string name="setup_title">Vítejte v aplikaci Nasaka-WEWE</string>
@@ -55,9 +55,9 @@
     <item quantity="other">Toto je testovací verze Nasaka-WEWE. Váš účet a jeho platnost vyprší po %d dnech a není možné ho obnovit.</item>
   </plurals>
   <string name="expiry_date_reached">Platnost tohoto software vypršela.\nDěkujeme za jeho otestování!</string>
-  <string name="download_Nasaka-WEWE">Pro pokračování v používání aplikace Nasaka-WEWE si prosím stáhněte její nejnovější verzi.</string>
+  <string name="download_Nasaka_WEWE">Pro pokračování v používání aplikace Nasaka-WEWE si prosím stáhněte její nejnovější verzi.</string>
   <string name="create_new_account">Budete potřebovat vytvořit nový účet, ale můžete použít stejné uživatelské jméno.</string>
-  <string name="download_Nasaka-WEWE_button">Stáhnout nejnovější vydání</string>
+  <string name="download_Nasaka_WEWE_button">Stáhnout nejnovější vydání</string>
   <string name="old_android_expiry_date_reached">Nasaka-WEWE již neběží na systému Android 4.\nNainstalujte prosím Nasaka-WEWE na novější zařízení.</string>
   <string name="old_android_delete_account">Klepnutím na tlačítko níže odstraníte svůj účet z tohoto zařízení.</string>
   <string name="delete_account_button">Odstranit účet</string>
@@ -693,13 +693,13 @@
   <string name="mailbox_error_wizard_info3">Prosím odpojte váš Mailbox pomocí tlačítka níže.\n\nPo odpojení vašeho starého Mailboxu můžete kdykoliv nastavit nový Mailbox.</string>
   <!--About-->
   <string name="about_title">O</string>
-  <string name="Nasaka-WEWE_version">Nasaka-WEWE verze: %s</string>
+  <string name="Nasaka_WEWE_version">Nasaka-WEWE verze: %s</string>
   <string name="tor_version">Tor verze: %s</string>
   <string name="links">Odkazy</string>
-  <string name="Nasaka-WEWE_website">\u2022 <a href="">Webová stránka</a></string>
-  <string name="Nasaka-WEWE_source_code">\u2022 <a href="">Zdrojový kód</a></string>
-  <string name="Nasaka-WEWE_changelog">\u2022 <a href="">Změny v aplikaci</a></string>
-  <string name="Nasaka-WEWE_privacy_policy">\u2022 <a href="">Zásady ochrany osobních údajů</a></string>
+  <string name="Nasaka_WEWE_website">\u2022 <a href="">Webová stránka</a></string>
+  <string name="Nasaka_WEWE_source_code">\u2022 <a href="">Zdrojový kód</a></string>
+  <string name="Nasaka_WEWE_changelog">\u2022 <a href="">Změny v aplikaci</a></string>
+  <string name="Nasaka_WEWE_privacy_policy">\u2022 <a href="">Zásady ochrany osobních údajů</a></string>
   <!--Here translators can add their names or Transifex usernames(eg "Thanks to all the contributors at the Localization Lab, especially Tom, Matthew and Jerry")-->
   <string name="translator_thanks">Díky všem, kdo přispěli k překladu aplikace na https://www.transifex.com/otf/Nasaka-WEWE</string>
   <!--Conversation Settings-->
@@ -727,7 +727,7 @@
   <string name="link_warning_open_link">Otevřít odkaz</string>
   <!--Crash Reporter-->
   <string name="crash_report_title">Hlášení o pádu Nasaka-WEWE</string>
-  <string name="Nasaka-WEWE_crashed">Omlouváme se, Nasaka-WEWE se zhroutil</string>
+  <string name="Nasaka_WEWE_crashed">Omlouváme se, Nasaka-WEWE se zhroutil</string>
   <string name="not_your_fault">Toto není vaše chyba.</string>
   <string name="please_send_report">Vaše pomoc je důležitá. Díky ní můžeme postavit lepší Nasaka-WEWE tím, že nám pošlete zprávu o pádu aplikace.</string>
   <string name="report_is_encrypted">Slibujeme, že hlášení je zašifrováno a bezpečně odesláno.</string>

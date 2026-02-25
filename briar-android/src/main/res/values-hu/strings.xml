@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version='1.0' encoding='UTF-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
   <!--Setup-->
   <string name="setup_title">Köszöntünk a Nasaka-WEWE-ban</string>
@@ -49,9 +49,9 @@
     <item quantity="other">Ez a teszt verziója a Nasaka-WEWE-nak. A fiókod le fog járni %d napon belül és nem megújítható.</item>
   </plurals>
   <string name="expiry_date_reached">Ez a szoftver lejárt.\nKöszönjük a tesztelését!</string>
-  <string name="download_Nasaka-WEWE">A Nasaka-WEWE használatának folytatásához kérjük töltsd le a legújabb verziót.</string>
+  <string name="download_Nasaka_WEWE">A Nasaka-WEWE használatának folytatásához kérjük töltsd le a legújabb verziót.</string>
   <string name="create_new_account">Új fiókot kell létrehoznod, de használhatod ugyanazt a becenevet.</string>
-  <string name="download_Nasaka-WEWE_button">Legújabb verzió letöltése</string>
+  <string name="download_Nasaka_WEWE_button">Legújabb verzió letöltése</string>
   <string name="old_android_expiry_date_reached">A Nasaka-WEWE már nem fut Android 4 rendszeren. Kérjük, telepítse a Nasaka-WEWEt egy újabb eszközre.</string>
   <string name="old_android_delete_account">Az alábbi gombra koppintva törölheti fiókját erről az eszközről.</string>
   <string name="delete_account_button">Fiók törlése</string>
@@ -658,13 +658,13 @@ Vigyázat: Ez végleg törli az identitásait, kapcsolatait és üzeneteit</stri
   <string name="mailbox_error_wizard_info2">Kérjük gyere vissza erre  képernyőre, ha van hozzáférésed az eszközhöz.</string>
   <!--About-->
   <string name="about_title">Névjegy</string>
-  <string name="Nasaka-WEWE_version">Nasaka-WEWE verzió: %s</string>
+  <string name="Nasaka_WEWE_version">Nasaka-WEWE verzió: %s</string>
   <string name="tor_version">Tor verzió: %s</string>
   <string name="links">Linkek</string>
-  <string name="Nasaka-WEWE_website">\u2022 <a href="">Weboldal</a></string>
-  <string name="Nasaka-WEWE_source_code">\u2022 <a href="">Forráskód</a> </string>
-  <string name="Nasaka-WEWE_changelog">\u2022 <a href="">Változásnapló</a></string>
-  <string name="Nasaka-WEWE_privacy_policy">\u2022 <a href="">Adatvédelmi irányelvek</a></string>
+  <string name="Nasaka_WEWE_website">\u2022 <a href="">Weboldal</a></string>
+  <string name="Nasaka_WEWE_source_code">\u2022 <a href="">Forráskód</a> </string>
+  <string name="Nasaka_WEWE_changelog">\u2022 <a href="">Változásnapló</a></string>
+  <string name="Nasaka_WEWE_privacy_policy">\u2022 <a href="">Adatvédelmi irányelvek</a></string>
   <!--Here translators can add their names or Transifex usernames(eg "Thanks to all the contributors at the Localization Lab, especially Tom, Matthew and Jerry")-->
   <string name="translator_thanks">Köszönet minden közreműködőnek a Lokalizációs Laborban</string>
   <!--Conversation Settings-->
@@ -691,7 +691,7 @@ Vigyázat: Ez végleg törli az identitásait, kapcsolatait és üzeneteit</stri
   <string name="link_warning_open_link">Link megnyitása</string>
   <!--Crash Reporter-->
   <string name="crash_report_title">Nasaka-WEWE összeomlási jelentés</string>
-  <string name="Nasaka-WEWE_crashed">Sajnáljuk, a Nasaka-WEWE összeomlott</string>
+  <string name="Nasaka_WEWE_crashed">Sajnáljuk, a Nasaka-WEWE összeomlott</string>
   <string name="not_your_fault">Ez nem az Ön hibája.</string>
   <string name="please_send_report">Kérjük segítsen nekünk a Nasaka-WEWE-t jobbá tenni, a hibajelentés elküldésével.</string>
   <string name="report_is_encrypted">Biztosítjuk, hogy a hibajelentés titkosított és biztonságos.</string>

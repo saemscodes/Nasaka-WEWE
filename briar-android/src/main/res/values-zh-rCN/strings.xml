@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version='1.0' encoding='UTF-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
   <!--Setup-->
   <string name="setup_title">欢迎来到 Nasaka-WEWE</string>
@@ -52,9 +52,9 @@
     <item quantity="other">这是 Nasaka-WEWE 的一个测试版本。您的帐户将在 %d 天后到期，且无法延期。</item>
   </plurals>
   <string name="expiry_date_reached">本软件已过期。\n感谢您的测试！</string>
-  <string name="download_Nasaka-WEWE">请下载最新版本以继续使用 Nasaka-WEWE</string>
+  <string name="download_Nasaka_WEWE">请下载最新版本以继续使用 Nasaka-WEWE</string>
   <string name="create_new_account">您将需要创建一个新帐户，但可以使用相同的昵称。</string>
-  <string name="download_Nasaka-WEWE_button">下载最新版本</string>
+  <string name="download_Nasaka_WEWE_button">下载最新版本</string>
   <string name="old_android_expiry_date_reached">Nasaka-WEWE 不再运行于 Andriod 4 系统。\n请在更高版本系统上安装 Nasaka-WEWE</string>
   <string name="old_android_delete_account">您可以轻按下面的按钮从这个设备上删除您的帐户。</string>
   <string name="delete_account_button">删除帐户</string>
@@ -654,13 +654,13 @@
   <string name="mailbox_error_wizard_info3">请使用下面的按钮取消你的 Mailbox 链接。\n\n在取消对旧 Mailbox 的链接后，你可以随时设置一个新的 Mailbox。</string>
   <!--About-->
   <string name="about_title">关于</string>
-  <string name="Nasaka-WEWE_version">Nasaka-WEWE 版本：%s</string>
+  <string name="Nasaka_WEWE_version">Nasaka-WEWE 版本：%s</string>
   <string name="tor_version">Tor 版本：%s</string>
   <string name="links">链接</string>
-  <string name="Nasaka-WEWE_website">\u2022 <a href="">网站</a></string>
-  <string name="Nasaka-WEWE_source_code">\u2022 <a href="">源代码</a></string>
-  <string name="Nasaka-WEWE_changelog">\u2022 <a href="">变更记录</a></string>
-  <string name="Nasaka-WEWE_privacy_policy">\u2022 <a href="">隐私政策</a></string>
+  <string name="Nasaka_WEWE_website">\u2022 <a href="">网站</a></string>
+  <string name="Nasaka_WEWE_source_code">\u2022 <a href="">源代码</a></string>
+  <string name="Nasaka_WEWE_changelog">\u2022 <a href="">变更记录</a></string>
+  <string name="Nasaka_WEWE_privacy_policy">\u2022 <a href="">隐私政策</a></string>
   <!--Here translators can add their names or Transifex usernames(eg "Thanks to all the contributors at the Localization Lab, especially Tom, Matthew and Jerry")-->
   <string name="translator_thanks">感谢所有 Localization Lab 的贡献者们</string>
   <!--Conversation Settings-->
@@ -688,7 +688,7 @@
   <string name="link_warning_open_link">打开链接</string>
   <!--Crash Reporter-->
   <string name="crash_report_title">Nasaka-WEWE 崩溃报告</string>
-  <string name="Nasaka-WEWE_crashed">抱歉，Nasaka-WEWE 已崩溃</string>
+  <string name="Nasaka_WEWE_crashed">抱歉，Nasaka-WEWE 已崩溃</string>
   <string name="not_your_fault">这并非您的错误所致。</string>
   <string name="please_send_report">请发送崩溃报告，以帮助我们优化 Nasaka-WEWE 。</string>
   <string name="report_is_encrypted">我们保证报告将会加密并被安全地发送。</string>

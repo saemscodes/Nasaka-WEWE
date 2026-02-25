@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version='1.0' encoding='UTF-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
   <!--Setup-->
   <string name="setup_title">Velkomin í Nasaka-WEWE</string>
@@ -45,9 +45,9 @@
     <item quantity="other">Þetta er prufuútgáfa af Nasaka-WEWE. Notandaaðgangurinn þinn mun renna út eftir %d daga og er ekki hægt að endurnýja hann.</item>
   </plurals>
   <string name="expiry_date_reached">Þessi hugbúnaður er úreltur.\nTakk fyrir að hafa tekið þátt í prófunum!</string>
-  <string name="download_Nasaka-WEWE">Til að halda áfram að nota Nasaka-WEWE, ættirðu að sækja nýjustu útgáfuna.</string>
+  <string name="download_Nasaka_WEWE">Til að halda áfram að nota Nasaka-WEWE, ættirðu að sækja nýjustu útgáfuna.</string>
   <string name="create_new_account">Þú þarft að búa til nýjan notandaaðgang, en þú getur notað áfram sama stuttnefni.</string>
-  <string name="download_Nasaka-WEWE_button">Ná í nýjustu útgáfu</string>
+  <string name="download_Nasaka_WEWE_button">Ná í nýjustu útgáfu</string>
   <string name="old_android_expiry_date_reached">Nasaka-WEWE keyrir ekki lengur á Android 4.\nSettu Nasaka-WEWE upp á nýrra tæki.</string>
   <string name="old_android_delete_account">Þú getur ýtt á hnappinn hér fyrir neðan til að eyða aðgangnum þínum af þessu tæki.</string>
   <string name="delete_account_button">Eyða notandaaðgangi</string>
@@ -622,7 +622,7 @@
   <string name="link_warning_open_link">Opna tengil</string>
   <!--Crash Reporter-->
   <string name="crash_report_title">Hrunskýrsla fyrir Nasaka-WEWE</string>
-  <string name="Nasaka-WEWE_crashed">Því miður, Nasaka-WEWE hefur hrunið</string>
+  <string name="Nasaka_WEWE_crashed">Því miður, Nasaka-WEWE hefur hrunið</string>
   <string name="not_your_fault">Það er ekki þér að kenna.</string>
   <string name="please_send_report">Hjálpaðu okkur við að bæta Nasaka-WEWE með því að senda okkur hrunskýrslu.</string>
   <string name="report_is_encrypted">Við lofum að skýrslan sé dulrituð og send á öruggan máta.</string>

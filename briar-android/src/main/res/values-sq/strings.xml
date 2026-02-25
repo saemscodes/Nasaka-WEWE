@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version='1.0' encoding='UTF-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
   <!--Setup-->
   <string name="setup_title">Mirë se vini në Nasaka-WEWE</string>
@@ -54,9 +54,9 @@ dhe s’mund të hapet me këtë version.\n\nJu lutemi, përmirësojeni me versi
     <item quantity="other">Ky është një version beta i Nasaka-WEWE-it. Llogaria juaj do të skadojë për %d ditë dhe s\’mund të rinovohet.</item>
   </plurals>
   <string name="expiry_date_reached">Ky software ka skaduar.\nFaleminderit që e provuat!</string>
-  <string name="download_Nasaka-WEWE">Që të vazhdoni të përdorni Nasaka-WEWE-in, ju lutemi shkarkoni versionin më të ri.</string>
+  <string name="download_Nasaka_WEWE">Që të vazhdoni të përdorni Nasaka-WEWE-in, ju lutemi shkarkoni versionin më të ri.</string>
   <string name="create_new_account">Do t’ju duhet të krijoni një llogari të re, por mund të përdorni të njëjtën nofkë.</string>
-  <string name="download_Nasaka-WEWE_button">Shkarkoni Hedhjen Më të Re Në Qarkullim</string>
+  <string name="download_Nasaka_WEWE_button">Shkarkoni Hedhjen Më të Re Në Qarkullim</string>
   <string name="old_android_expiry_date_reached">Nasaka-WEWE-i nuk funksionon më në Android 4.\nJu lutemi, instalojeni Nasaka-WEWE-in në një pajisje më të re.</string>
   <string name="old_android_delete_account">Mund të prekni butonin më poshtë që të fshini llogarinë tuaj prej kësaj pajisjeje.</string>
   <string name="delete_account_button">Fshi Llogarinë</string>
@@ -668,13 +668,13 @@ dhe s’mund të hapet me këtë version.\n\nJu lutemi, përmirësojeni me versi
   <string name="mailbox_error_wizard_info3">Ju lutemi, shkëputeni kutinë tuaj postare duke përdorur butonin më poshtë.\n\nPasi të shkëputni Kutinë tuaj të vjetër postare, mund të ujdisni kurdo një Kuti të re postare.</string>
   <!--About-->
   <string name="about_title">Mbi</string>
-  <string name="Nasaka-WEWE_version">Version Nasaka-WEWE-i: %s</string>
+  <string name="Nasaka_WEWE_version">Version Nasaka-WEWE-i: %s</string>
   <string name="tor_version">Version Tor-i: %s</string>
   <string name="links">Lidhje</string>
-  <string name="Nasaka-WEWE_website">\u2022 <a href="">Sajt</a></string>
-  <string name="Nasaka-WEWE_source_code">\u2022 <a href="">Kod burim</a></string>
-  <string name="Nasaka-WEWE_changelog">\u2022 <a href="">Regjistër ndryshimesh</a></string>
-  <string name="Nasaka-WEWE_privacy_policy">\u2022 <a href="">Rregulla Privatësie</a></string>
+  <string name="Nasaka_WEWE_website">\u2022 <a href="">Sajt</a></string>
+  <string name="Nasaka_WEWE_source_code">\u2022 <a href="">Kod burim</a></string>
+  <string name="Nasaka_WEWE_changelog">\u2022 <a href="">Regjistër ndryshimesh</a></string>
+  <string name="Nasaka_WEWE_privacy_policy">\u2022 <a href="">Rregulla Privatësie</a></string>
   <!--Here translators can add their names or Transifex usernames(eg "Thanks to all the contributors at the Localization Lab, especially Tom, Matthew and Jerry")-->
   <string name="translator_thanks">Faleminderit krejt kontribuesve prej Localization Lab</string>
   <!--Conversation Settings-->
@@ -702,7 +702,7 @@ Këtë rregullim mund ta ndryshojë edhe kontakti juaj, për të dy ju.</string>
   <string name="link_warning_open_link">Hape Lidhjen</string>
   <!--Crash Reporter-->
   <string name="crash_report_title">Njoftim Vithisjesh Nasaka-WEWE-i</string>
-  <string name="Nasaka-WEWE_crashed">Na ndjeni, Nasaka-WEWE-i u vithis</string>
+  <string name="Nasaka_WEWE_crashed">Na ndjeni, Nasaka-WEWE-i u vithis</string>
   <string name="not_your_fault">S\’është faji juaj.</string>
   <string name="please_send_report">Ju lutemi, na ndihmoni të ndërtojmë një Nasaka-WEWE më të mirë, duke na dërguar një njoftim vithisjeje.</string>
   <string name="report_is_encrypted">Premtojmë që njoftimi fshehtëzohet dhe dërgohet në mënyrë të sigurt.</string>

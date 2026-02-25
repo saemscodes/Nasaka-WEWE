@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version='1.0' encoding='UTF-8'?>
 <resources>
 	<!--Setup-->
 	<string name="setup_title">Ongi etorri Nasaka-WEWE-era</string>
@@ -45,9 +45,9 @@
     <item quantity="other">Hau Nasaka-WEWE-en probetarako bertsio bat da. Zure kontua %d egun barru iraungituko da eta ezin da berriztu.</item>
   </plurals>
   <string name="expiry_date_reached">Programa hau iraungitu da.\nEskerrik asko probatzeagatik!</string>
-  <string name="download_Nasaka-WEWE">Nasaka-WEWE erabiltzen jarraitzeko, deskargatu azken bertsioa.</string>
+  <string name="download_Nasaka_WEWE">Nasaka-WEWE erabiltzen jarraitzeko, deskargatu azken bertsioa.</string>
   <string name="create_new_account">Kontu berri bat sortu beharko duzu, baina erabiltzaile-izen bera erabili dezakezu.</string>
-  <string name="download_Nasaka-WEWE_button">Deskargatu azken bertsioa</string>
+  <string name="download_Nasaka_WEWE_button">Deskargatu azken bertsioa</string>
   <string name="startup_open_database">Datu-basea deszifratzen...</string>
   <string name="startup_migrate_database">Datu-basea eguneratzen...</string>
   <string name="startup_compact_database">Datu-basea trinkotzen…</string>
@@ -494,7 +494,7 @@
   <string name="link_warning_open_link">Ireki esteka</string>
   <!--Crash Reporter-->
   <string name="crash_report_title">Nasaka-WEWE kraskatze txostena</string>
-  <string name="Nasaka-WEWE_crashed">Nasaka-WEWE kraskatu egin da.</string>
+  <string name="Nasaka_WEWE_crashed">Nasaka-WEWE kraskatu egin da.</string>
   <string name="not_your_fault">Hau ez da zure errua.</string>
   <string name="please_send_report">Lagundu iezaguzu Nasaka-WEWE hobe bat eraikitzen, guri kraskatze txostenak bidaliz.</string>
   <string name="report_is_encrypted">Txostena zifratuta dagoela eta modu seguruan bidaliko dela hitzematen dizugu.</string>

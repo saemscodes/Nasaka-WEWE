@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version='1.0' encoding='UTF-8'?>
 <resources>
 	<!--Setup-->
 	<string name="setup_title">La benvenguda a Nasaka-WEWE</string>
@@ -47,9 +47,9 @@ Volètz suprimir vòstre compte e ne crear un nòu ?\n
     <item quantity="other">Aquò es una version de test de Nasaka-WEWE. Vòstre compte expirarà d’aquí %d jorns e pòt pas èsser renovat.</item>
   </plurals>
   <string name="expiry_date_reached">Vòstre logicial s’acabèt.\nMercés d’aver ensajat !</string>
-  <string name="download_Nasaka-WEWE">Per tenir d’utilizar Nasaka-WEWE, mercés de telecargar la darrièra version.</string>
+  <string name="download_Nasaka_WEWE">Per tenir d’utilizar Nasaka-WEWE, mercés de telecargar la darrièra version.</string>
   <string name="create_new_account">Vos caldrà crear un nòu compte, mas podètz emplegar lo meteis escais-nom.</string>
-  <string name="download_Nasaka-WEWE_button">Telecargar la darrièra version</string>
+  <string name="download_Nasaka_WEWE_button">Telecargar la darrièra version</string>
   <string name="startup_open_database">Deschirament de la basa de donadas…</string>
   <string name="startup_migrate_database">Mesa a nivèl de la basa de donadas…</string>
   <string name="startup_compact_database">Compression de la basa de donadas…</string>
@@ -492,7 +492,7 @@ contactes qu’avètz partejat aqueste flux quitaràn benlèu de recebre las mes
   <string name="link_warning_open_link">Dobrir lo ligam</string>
   <!--Crash Reporter-->
   <string name="crash_report_title">Senhalar lo fracàs de Nasaka-WEWE</string>
-  <string name="Nasaka-WEWE_crashed">Malastre, Nasaka-WEWE a arrestat de foncionar.</string>
+  <string name="Nasaka_WEWE_crashed">Malastre, Nasaka-WEWE a arrestat de foncionar.</string>
   <string name="not_your_fault">Es pas vòstra fauta.</string>
   <string name="please_send_report">Ajudatz-nos a melhorar Nasaka-WEWE en nos enviant un rapòrt de fracàs.</string>
   <string name="report_is_encrypted">Asseguram que lo rapòrt es chifrat e enviat en tota seguretat.</string>

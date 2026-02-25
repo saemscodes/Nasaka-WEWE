@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version='1.0' encoding='UTF-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
   <!--Setup-->
   <string name="setup_title">Nasaka-WEWE မှ ကြိုဆိုပါသည်</string>
@@ -51,9 +51,9 @@
     <item quantity="other">ဤအရာသည် Nasaka-WEWE ၏ စမ်းသပ်ဆဲဗားရှင်းဖြစ်ပါသည်။ သင့်အကောင့်သည် %d ရက်ကြာလျှင် သက်တမ်းကုန်ဆုံးမည်ဖြစ်ပြီး သက်တမ်းတိုး၍မရနိုင်ပါ။</item>
   </plurals>
   <string name="expiry_date_reached">ဤဆော့ဖ်ဝဲသည် သက်တမ်းကုန်သွားပါပြီ။ \nစမ်းသပ်အသုံးပြုခြင်းအတွက် ကျေးဇူးတင်ပါသည်။</string>
-  <string name="download_Nasaka-WEWE">Nasaka-WEWE ကို ဆက်လက်အသုံးပြုရန် နောက်ဆုံးထွက်ထားသည်ကို ဒေါင်းလုဒ်လုပ်ပါ။</string>
+  <string name="download_Nasaka_WEWE">Nasaka-WEWE ကို ဆက်လက်အသုံးပြုရန် နောက်ဆုံးထွက်ထားသည်ကို ဒေါင်းလုဒ်လုပ်ပါ။</string>
   <string name="create_new_account">အကောင့်အသစ်ဖွင့်ရန် လိုအပ်သော်လည်း သုံးလက်စနာမည်ပြောင်ကို ဆက်သုံးနိုင်ပါသည်။</string>
-  <string name="download_Nasaka-WEWE_button">နောက်ဆုံးထွက်ထားသည့်ကို ဒေါင်းလုဒ်လုပ်ပါ</string>
+  <string name="download_Nasaka_WEWE_button">နောက်ဆုံးထွက်ထားသည့်ကို ဒေါင်းလုဒ်လုပ်ပါ</string>
   <string name="old_android_expiry_date_reached">Nasaka-WEWE သည် အန်းဒရိုက် ၄ တွင် အလုပ်လုပ်တော့မည် မဟုတ်ပါ။ \nကျေးဇူးပြု၍ Nasaka-WEWE ကို ပိုသစ်သော စက်ပေါ်တွင် ထည့်သွင်းပါ။</string>
   <string name="old_android_delete_account">သင့်အကောင့်ကို ဤစက်ပစ္စည်းမှ ဖျက်ရန် အောက်ပါ ခလုတ်ကို သင်နှိပ်နိုင်သည်။</string>
   <string name="delete_account_button">အကောင့် ဖျက်သိမ်းမည်</string>
@@ -653,13 +653,13 @@
   <string name="mailbox_error_wizard_info3">အောက်ပါခလုတ်ကို အသုံးပြု၍ သင့်Mailbox ကို လင့်ခ်ဖြုတ်ပါ။\n\nသင့်Mailboxဟောင်းကို လင့်ခ်ဖြုတ်ပြီးနောက်၊ သင်သည် Mailbox အသစ်ကို အချိန်မရွေး သတ်မှတ်နိုင်သည်။</string>
   <!--About-->
   <string name="about_title">အကြောင်း</string>
-  <string name="Nasaka-WEWE_version">Nasaka-WEWE ဗားရှင်း - %s</string>
+  <string name="Nasaka_WEWE_version">Nasaka-WEWE ဗားရှင်း - %s</string>
   <string name="tor_version">Tor ဗားရှင်း - %s</string>
   <string name="links">လင့်ခ်များ</string>
-  <string name="Nasaka-WEWE_website">\u2022 <a href="">၀က်ဘ်ဆိုဒ်</a></string>
-  <string name="Nasaka-WEWE_source_code">\u2022 <a href="">ဆိုစ့်ကုဒ်</a></string>
-  <string name="Nasaka-WEWE_changelog">\u2022 <a href="">ပြောင်းလဲမှုမှတ်တမ်း</a></string>
-  <string name="Nasaka-WEWE_privacy_policy">\u2022 <a href="">ကိုယ်ရေးကိုယ်တာမူဝါဒ</a></string>
+  <string name="Nasaka_WEWE_website">\u2022 <a href="">၀က်ဘ်ဆိုဒ်</a></string>
+  <string name="Nasaka_WEWE_source_code">\u2022 <a href="">ဆိုစ့်ကုဒ်</a></string>
+  <string name="Nasaka_WEWE_changelog">\u2022 <a href="">ပြောင်းလဲမှုမှတ်တမ်း</a></string>
+  <string name="Nasaka_WEWE_privacy_policy">\u2022 <a href="">ကိုယ်ရေးကိုယ်တာမူဝါဒ</a></string>
   <!--Here translators can add their names or Transifex usernames(eg "Thanks to all the contributors at the Localization Lab, especially Tom, Matthew and Jerry")-->
   <string name="translator_thanks">Localization Lab မှ ပံ့ပိုးကူညီသူများအားလုံးကို ကျေးဇူးတင်ပါသည်။</string>
   <!--Conversation Settings-->
@@ -687,7 +687,7 @@
   <string name="link_warning_open_link">လင့်ခ်ဖွင့်မည်</string>
   <!--Crash Reporter-->
   <string name="crash_report_title">Nasaka-WEWE ပျက်ယွင်းမှုတိုင်ကြားခြင်း</string>
-  <string name="Nasaka-WEWE_crashed">ဝမ်းနည်းပါတယ်၊ Nasaka-WEWE ပျက်သွားပါပြီ</string>
+  <string name="Nasaka_WEWE_crashed">ဝမ်းနည်းပါတယ်၊ Nasaka-WEWE ပျက်သွားပါပြီ</string>
   <string name="not_your_fault">သင့်အမှားမဟုတ်ပါ။</string>
   <string name="please_send_report">ပျက်ကွက်မှု တိုင်ကြားစာ ပေးပို့၍ ကျွန်ုပ်တို့်အား Nasaka-WEWE အပ္ပလီကေးရှင်း တိုးတက်ရန် ကူညီပေးပါ။</string>
   <string name="report_is_encrypted">သင်၏တိုင်ကြားမှုကို လျှို့ဝှက်ကုဒ်ပြောင်း၍ လုံခြုံစွာပို့ကြောင်း ကတိပြုပါသည်။</string>

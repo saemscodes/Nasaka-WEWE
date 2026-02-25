@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version='1.0' encoding='UTF-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
   <!--Setup-->
   <string name="setup_title">به Nasaka-WEWE (برایر) خوش آمدید</string>
@@ -56,9 +56,9 @@
   <string name="expiry_date_reached">این نرم افزار منقضی شده است.
 
 بابت تست از شما سپاسگزاریم.</string>
-  <string name="download_Nasaka-WEWE">برای ادامه استفاده از Nasaka-WEWE، لطفا آخرین نسخه را دانلود کنید.</string>
+  <string name="download_Nasaka_WEWE">برای ادامه استفاده از Nasaka-WEWE، لطفا آخرین نسخه را دانلود کنید.</string>
   <string name="create_new_account">لازم است تا یک حساب کاربری جدید ایجاد کنید، ولی می توانید از همان نام مستعار استفاده کنید.</string>
-  <string name="download_Nasaka-WEWE_button">دانلود آخرین نسخه</string>
+  <string name="download_Nasaka_WEWE_button">دانلود آخرین نسخه</string>
   <string name="old_android_expiry_date_reached">Nasaka-WEWE دیگر روی اندروید 4 اجرا نمی‌شود.\nلطفا Nasaka-WEWE را روی دستگاه جدیدتر نصب کنید. </string>
   <string name="old_android_delete_account">برای حذف حساب کاربری خود از این دستگاه می‌توانید روی دکمه زیر ضربه بزنید.</string>
   <string name="delete_account_button">حذف حساب کاربری</string>
@@ -696,13 +696,13 @@
   <string name="mailbox_error_wizard_info3">لطفا با استفاده از دکمه زیر، پیوند Mailbox خود را لغو کنید.\n\nپس از لغو پیوند Mailbox قدیمی، می‌توانید هر زمان که خواستید یک Mailbox جدید راه‌اندازی کنید.</string>
   <!--About-->
   <string name="about_title">درباره‌ی Nasaka-WEWE</string>
-  <string name="Nasaka-WEWE_version">نسخه Nasaka-WEWE: %s</string>
+  <string name="Nasaka_WEWE_version">نسخه Nasaka-WEWE: %s</string>
   <string name="tor_version">نسخه Tor: %s</string>
   <string name="links">لینک ها</string>
-  <string name="Nasaka-WEWE_website">\u2022 <a href="">وبسایت</a></string>
-  <string name="Nasaka-WEWE_source_code">\u2022 <a href="">کد منبع</a></string>
-  <string name="Nasaka-WEWE_changelog">\u2022 <a href="">گزارش تغییرات</a></string>
-  <string name="Nasaka-WEWE_privacy_policy">\u2022 <a href="">سیاست حفظ حریم خصوصی</a></string>
+  <string name="Nasaka_WEWE_website">\u2022 <a href="">وبسایت</a></string>
+  <string name="Nasaka_WEWE_source_code">\u2022 <a href="">کد منبع</a></string>
+  <string name="Nasaka_WEWE_changelog">\u2022 <a href="">گزارش تغییرات</a></string>
+  <string name="Nasaka_WEWE_privacy_policy">\u2022 <a href="">سیاست حفظ حریم خصوصی</a></string>
   <!--Here translators can add their names or Transifex usernames(eg "Thanks to all the contributors at the Localization Lab, especially Tom, Matthew and Jerry")-->
   <string name="translator_thanks">با تشکر از همه مشارکت کنندگان در Localization Lab بخصوص erinm، Reza Ghasemi، Mohsen Eghbal و Vox.</string>
   <!--Conversation Settings-->
@@ -728,7 +728,7 @@
   <string name="link_warning_open_link">باز کردن پیوند</string>
   <!--Crash Reporter-->
   <string name="crash_report_title">گزارش خطای Nasaka-WEWE (برایر)</string>
-  <string name="Nasaka-WEWE_crashed">متاسفانه Nasaka-WEWE از کار افتاد</string>
+  <string name="Nasaka_WEWE_crashed">متاسفانه Nasaka-WEWE از کار افتاد</string>
   <string name="not_your_fault">این تقصیر شما نیست.</string>
   <string name="please_send_report">لطفا با فرستادن گزارش خطا به ما کمک کنید تا Nasaka-WEWE (برایر) را بهتر کنیم.</string>
   <string name="report_is_encrypted">به شما اطمینان می دهیم که گزارش شما رمزنگاری شده و به صورت امن فرستاده می شود.</string>

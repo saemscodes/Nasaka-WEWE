@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version='1.0' encoding='UTF-8'?>
 <resources>
 	<!--Setup-->
 	<string name="setup_title">Afáyate\'n Nasaka-WEWE</string>
@@ -29,9 +29,9 @@
   <string name="startup_failed_notification_text">Toca pa más información</string>
   <string name="startup_failed_activity_title">Fallu nel arranque de Nasaka-WEWE</string>
   <string name="expiry_date_reached">Esti software caducó.\n¡Gracies por probalu!</string>
-  <string name="download_Nasaka-WEWE">Pa siguir usando Nasaka-WEWE, descarga la versión 1.0.</string>
+  <string name="download_Nasaka_WEWE">Pa siguir usando Nasaka-WEWE, descarga la versión 1.0.</string>
   <string name="create_new_account">Tendrás de crear una cuenta nueva, pero puedes usar el mesmu alcuñu.</string>
-  <string name="download_Nasaka-WEWE_button">Descargar Nasaka-WEWE 1.0</string>
+  <string name="download_Nasaka_WEWE_button">Descargar Nasaka-WEWE 1.0</string>
   <!--Navigation Drawer-->
   <string name="nav_drawer_open_description">Abrir el caxón de navegación</string>
   <string name="nav_drawer_close_description">Zarrar el caxón de navegación</string>

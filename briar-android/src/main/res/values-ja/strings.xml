@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version='1.0' encoding='UTF-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
   <!--Setup-->
   <string name="setup_title">Nasaka-WEWEへようこそ</string>
@@ -46,9 +46,9 @@
     <item quantity="other">これは、Nasaka-WEWEの試験バージョンです。 アカウントはあと%d日で期限切れになり、更新できません。</item>
   </plurals>
   <string name="expiry_date_reached">このソフトウェアの有効期限が切れました。試験に参加してくださりありがとうございます！</string>
-  <string name="download_Nasaka-WEWE">Nasaka-WEWEを使用し続けるには、最新のリリースをダウンロードしてください。</string>
+  <string name="download_Nasaka_WEWE">Nasaka-WEWEを使用し続けるには、最新のリリースをダウンロードしてください。</string>
   <string name="create_new_account">新規アカウントを作成する必要があります。同じニックネームも使用できます。</string>
-  <string name="download_Nasaka-WEWE_button">最新リリースをダウンロード</string>
+  <string name="download_Nasaka_WEWE_button">最新リリースをダウンロード</string>
   <string name="old_android_expiry_date_reached">Nasaka-WEWEはAndroid 4では動作しなくなりました。\n新しい端末にNasaka-WEWEをインストールしてください。</string>
   <string name="old_android_delete_account">下のボタンをタップして、この端末からあなたのアカウントを削除できます。</string>
   <string name="delete_account_button">アカウントを削除</string>
@@ -648,13 +648,13 @@
   <string name="mailbox_error_wizard_info3">以下のボタンを使用してメールボックスをリンク解除してください。\n\n古いメールボックスをリンク解除した後、いつでも新しいメールボックスをセットアップできます。</string>
   <!--About-->
   <string name="about_title">バージョン情報</string>
-  <string name="Nasaka-WEWE_version">Nasaka-WEWEバージョン: %s</string>
+  <string name="Nasaka_WEWE_version">Nasaka-WEWEバージョン: %s</string>
   <string name="tor_version">Torバージョン: %s</string>
   <string name="links">リンク</string>
-  <string name="Nasaka-WEWE_website">\u2022 <a href="">ウェブサイト</a></string>
-  <string name="Nasaka-WEWE_source_code">\u2022 <a href="">ソースコード</a></string>
-  <string name="Nasaka-WEWE_changelog">\u2022 <a href="">変更履歴</a></string>
-  <string name="Nasaka-WEWE_privacy_policy">\u2022 <a href="">プライバシーポリシー</a></string>
+  <string name="Nasaka_WEWE_website">\u2022 <a href="">ウェブサイト</a></string>
+  <string name="Nasaka_WEWE_source_code">\u2022 <a href="">ソースコード</a></string>
+  <string name="Nasaka_WEWE_changelog">\u2022 <a href="">変更履歴</a></string>
+  <string name="Nasaka_WEWE_privacy_policy">\u2022 <a href="">プライバシーポリシー</a></string>
   <!--Here translators can add their names or Transifex usernames(eg "Thanks to all the contributors at the Localization Lab, especially Tom, Matthew and Jerry")-->
   <string name="translator_thanks">Localization Labの全貢献者へ感謝</string>
   <!--Conversation Settings-->
@@ -682,7 +682,7 @@
   <string name="link_warning_open_link">リンクを開く</string>
   <!--Crash Reporter-->
   <string name="crash_report_title">Nasaka-WEWEのクラッシュレポート</string>
-  <string name="Nasaka-WEWE_crashed">申し訳ありませんが、Nasaka-WEWEはクラッシュしました</string>
+  <string name="Nasaka_WEWE_crashed">申し訳ありませんが、Nasaka-WEWEはクラッシュしました</string>
   <string name="not_your_fault">これはあなたのせいではありません。</string>
   <string name="please_send_report">クラッシュレポートを送信して、より良いNasaka-WEWEの開発にご協力ください。</string>
   <string name="report_is_encrypted">レポートは暗号化され、安全に送信されることをお約束します。</string>

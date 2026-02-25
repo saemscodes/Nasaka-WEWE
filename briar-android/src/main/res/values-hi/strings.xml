@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version='1.0' encoding='UTF-8'?>
 <resources>
 	<!--Setup-->
 	<string name="setup_title">Nasaka-WEWE में आपका स्वागत है</string>
@@ -475,7 +475,7 @@
   <string name="link_warning_open_link">खुली लिंक</string>
   <!--Crash Reporter-->
   <string name="crash_report_title">Nasaka-WEWE  क्रैश रिपोर्ट</string>
-  <string name="Nasaka-WEWE_crashed">क्षमा करें, Nasaka-WEWE  दुर्घटनाग्रस्त हो गया है।</string>
+  <string name="Nasaka_WEWE_crashed">क्षमा करें, Nasaka-WEWE  दुर्घटनाग्रस्त हो गया है।</string>
   <string name="not_your_fault">यह आपकी गलती नहीं है</string>
   <string name="please_send_report">कृपया हमें क्रैश रिपोर्ट भेजकर बेहतर Nasaka-WEWE  बनाने में हमारी सहायता करें</string>
   <string name="report_is_encrypted">हम वादा करते हैं कि रिपोर्ट एन्क्रिप्ट की गई है और सुरक्षित रूप से भेजा गया है।</string>

@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version='1.0' encoding='UTF-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
   <!--Setup-->
   <string name="setup_title">Witaj w Nasaka-WEWE</string>
@@ -51,9 +51,9 @@
     <item quantity="other">To jest testowa wersja Nasaka-WEWE. Twoje konto wygaśnie za %d dni i nie będzie odnowione.</item>
   </plurals>
   <string name="expiry_date_reached">Ten program wygasł.\nDziękujemy za testy!</string>
-  <string name="download_Nasaka-WEWE">Aby móc nadal korzystać z Nasaka-WEWE, pobierz najnowszą wersję.</string>
+  <string name="download_Nasaka_WEWE">Aby móc nadal korzystać z Nasaka-WEWE, pobierz najnowszą wersję.</string>
   <string name="create_new_account">Musisz utworzyć nowe konto, ale możesz użyć takiej samej nazwy użytkownika.</string>
-  <string name="download_Nasaka-WEWE_button">Pobierz najnowszą wersję</string>
+  <string name="download_Nasaka_WEWE_button">Pobierz najnowszą wersję</string>
   <string name="old_android_expiry_date_reached">Nasaka-WEWE nie działa już na Androidzie 4.\nZainstaluj Nasaka-WEWE na nowszym urządzeniu.</string>
   <string name="old_android_delete_account">Możesz nacisnąć przycisk poniżej w celu usunięcia twojego konta z tego urządzenia.</string>
   <string name="delete_account_button">Skasuj Konto</string>
@@ -690,13 +690,13 @@ Brak dostępu do aparatu. Spróbuj ponownie, może po ponownym uruchomieniu urz�
   <string name="mailbox_error_wizard_info3">Proszę odłączyć swój Mailbox za pomocą poniższego przycisku. Po odłączeniu starego Mailbox możesz w każdej chwili uruchomić nowy Mailbox</string>
   <!--About-->
   <string name="about_title">O programie...</string>
-  <string name="Nasaka-WEWE_version">Wersja Nasaka-WEWE: %s</string>
+  <string name="Nasaka_WEWE_version">Wersja Nasaka-WEWE: %s</string>
   <string name="tor_version">Wersja Tor: %s</string>
   <string name="links">Odnośniki</string>
-  <string name="Nasaka-WEWE_website">\u2022 <a href="">Strona internetowa</a></string>
-  <string name="Nasaka-WEWE_source_code">\u2022 <a href="">Kod źródłowy</a></string>
-  <string name="Nasaka-WEWE_changelog">\u2022 <a href="">Dziennik zmian</a></string>
-  <string name="Nasaka-WEWE_privacy_policy">\u2022 <a href="">Polityka prywatności</a></string>
+  <string name="Nasaka_WEWE_website">\u2022 <a href="">Strona internetowa</a></string>
+  <string name="Nasaka_WEWE_source_code">\u2022 <a href="">Kod źródłowy</a></string>
+  <string name="Nasaka_WEWE_changelog">\u2022 <a href="">Dziennik zmian</a></string>
+  <string name="Nasaka_WEWE_privacy_policy">\u2022 <a href="">Polityka prywatności</a></string>
   <!--Here translators can add their names or Transifex usernames(eg "Thanks to all the contributors at the Localization Lab, especially Tom, Matthew and Jerry")-->
   <string name="translator_thanks">Dziękujemy wszystkim wspierającym z Localization Lab</string>
   <!--Conversation Settings-->
@@ -722,7 +722,7 @@ Brak dostępu do aparatu. Spróbuj ponownie, może po ponownym uruchomieniu urz�
   <string name="link_warning_open_link">Otwórz Link</string>
   <!--Crash Reporter-->
   <string name="crash_report_title">Zgłoś awarię w Nasaka-WEWE</string>
-  <string name="Nasaka-WEWE_crashed">Przepraszam, Nasaka-WEWE uległ awarii</string>
+  <string name="Nasaka_WEWE_crashed">Przepraszam, Nasaka-WEWE uległ awarii</string>
   <string name="not_your_fault">To nie Twoja wina.</string>
   <string name="please_send_report">Proszę pomóż nam ulepszać Nasaka-WEWE wysyłając raport z awarii.</string>
   <string name="report_is_encrypted">Obiecujemy, że raport z awarii jest zaszyfrowany i wysyłany bezpiecznie.</string>

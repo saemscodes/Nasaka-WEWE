@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version='1.0' encoding='UTF-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
   <!--Setup-->
   <string name="setup_title">Bienvenido a Nasaka-WEWE</string>
@@ -73,9 +73,9 @@ Por favor, actualiza a la última versión de la aplicación e inténtalo de nue
   </plurals>
   <string name="expiry_date_reached">Este programa ha caducado.
 ¡Gracias por probarlo!</string>
-  <string name="download_Nasaka-WEWE">Para continuar usando Nasaka-WEWE, por favor descarga la versión mas reciente.</string>
+  <string name="download_Nasaka_WEWE">Para continuar usando Nasaka-WEWE, por favor descarga la versión mas reciente.</string>
   <string name="create_new_account">Necesitarás crear una nueva cuenta, pero puedes usar el mismo nombre de usuario.</string>
-  <string name="download_Nasaka-WEWE_button">Descargar la última versión.</string>
+  <string name="download_Nasaka_WEWE_button">Descargar la última versión.</string>
   <string name="old_android_expiry_date_reached">Nasaka-WEWE ya no funciona sobre Android 4.
 Por favor, instala Nasaka-WEWE en un dispositivo más nuevo.</string>
   <string name="old_android_delete_account">Puedes pulsar el botón de abajo para borrar tu cuenta de este dispositivo.</string>
@@ -773,13 +773,13 @@ Reinicia tus dispositivos del buzón de correo y Nasaka-WEWE e inténtalo de nue
 Después de desvincular tu antiguo buzón de correo, puedes configurar un nuevo buzón de correo en cualquier momento.</string>
   <!--About-->
   <string name="about_title">Acerca de nosotros</string>
-  <string name="Nasaka-WEWE_version">Versión Nasaka-WEWE: %s</string>
+  <string name="Nasaka_WEWE_version">Versión Nasaka-WEWE: %s</string>
   <string name="tor_version">Versión Tor:%s</string>
   <string name="links">Enlaces</string>
-  <string name="Nasaka-WEWE_website">•  <a href="">Sitio Web</a></string>
-  <string name="Nasaka-WEWE_source_code">•  <a href="">Código fuente</a></string>
-  <string name="Nasaka-WEWE_changelog">•  <a href="">Registro de cambios</a></string>
-  <string name="Nasaka-WEWE_privacy_policy">•  <a href="">Política de Privacidad</a></string>
+  <string name="Nasaka_WEWE_website">•  <a href="">Sitio Web</a></string>
+  <string name="Nasaka_WEWE_source_code">•  <a href="">Código fuente</a></string>
+  <string name="Nasaka_WEWE_changelog">•  <a href="">Registro de cambios</a></string>
+  <string name="Nasaka_WEWE_privacy_policy">•  <a href="">Política de Privacidad</a></string>
   <!--Here translators can add their names or Transifex usernames(eg "Thanks to all the contributors at the Localization Lab, especially Tom, Matthew and Jerry")-->
   <string name="translator_thanks">Gracias a todos los colaboradores de Localization Lab.</string>
   <!--Conversation Settings-->
@@ -815,7 +815,7 @@ Si cambias este ajuste, se aplicará a tus nuevos mensajes inmediatamente, y a l
   <string name="link_warning_open_link">Abrir el enlace</string>
   <!--Crash Reporter-->
   <string name="crash_report_title">Informe de accidente de Nasaka-WEWE</string>
-  <string name="Nasaka-WEWE_crashed">Lo sentimos, Nasaka-WEWE se ha bloqueado</string>
+  <string name="Nasaka_WEWE_crashed">Lo sentimos, Nasaka-WEWE se ha bloqueado</string>
   <string name="not_your_fault">Esto no es tu culpa.</string>
   <string name="please_send_report">Ayúdenos a construir un Nasaka-WEWE mejor enviándonos un informe de fallos.</string>
   <string name="report_is_encrypted">Prometemos que el informe se cifrará y se enviará de forma segura.</string>

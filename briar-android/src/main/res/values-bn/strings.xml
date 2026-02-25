@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version='1.0' encoding='UTF-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
   <!--Setup-->
   <string name="setup_title">Nasaka-WEWE এ স্বাগতম</string>
@@ -53,9 +53,9 @@
     <item quantity="other">এটি Nasaka-WEWE একটি পরীক্ষামূলক সংস্করণ। আপনার অ্যাকাউন্টটি %d দিনের মধ্যে মেয়াদ শেষ হয়ে যাবে এবং পুনর্নবীকরণ করা যাবে না।</item>
   </plurals>
   <string name="expiry_date_reached">এই সফটওয়্যারটির মেয়াদ উত্তীর্ণ হয়ে গেছে । \nপরীক্ষার জন্য আপনাকে ধন্যবাদ!</string>
-  <string name="download_Nasaka-WEWE">Nasaka-WEWE ব্যবহার চালিয়ে যেতে, অনুগ্রহ করে সর্বশেষ ভার্সন ডাউনলোড করুন।</string>
+  <string name="download_Nasaka_WEWE">Nasaka-WEWE ব্যবহার চালিয়ে যেতে, অনুগ্রহ করে সর্বশেষ ভার্সন ডাউনলোড করুন।</string>
   <string name="create_new_account">আপনাকে একটি নতুন অ্যাকাউন্ট তৈরি করতে হবে, তবে আপনি একই ডাকনাম ব্যবহার করতে পারেন।</string>
-  <string name="download_Nasaka-WEWE_button">সর্বাধুনিক সংস্করণ ডাউনলোড করো</string>
+  <string name="download_Nasaka_WEWE_button">সর্বাধুনিক সংস্করণ ডাউনলোড করো</string>
   <string name="old_android_expiry_date_reached">Nasaka-WEWE আর Android 4-এ কাজ করে না।\nঅনুগ্রহ করে একটি নতুন ডিভাইসে Nasaka-WEWE ইনস্টল করুন।</string>
   <string name="old_android_delete_account">আপনি এই ডিভাইস থেকে আপনার অ্যাকাউন্ট মুছে ফেলতে নিচের বোতামটি চাপতে পারেন।</string>
   <string name="delete_account_button">অ্যাকাউন্ট মুছে ফেলুন</string>
@@ -668,13 +668,13 @@
   <string name="mailbox_error_wizard_info3">অনুগ্রহ করে নিচের বোতামটি ব্যবহার করে আপনার মেইলবক্স আনলিঙ্ক করুন।\n\nআপনার পুরানো মেইলবক্স আনলিঙ্ক করার পর, আপনি যেকোনো সময় একটি নতুন মেইলবক্স সেটআপ করতে পারবেন।</string>
   <!--About-->
   <string name="about_title">আমাদের কথা</string>
-  <string name="Nasaka-WEWE_version">Nasaka-WEWE ভার্সন: %s</string>
+  <string name="Nasaka_WEWE_version">Nasaka-WEWE ভার্সন: %s</string>
   <string name="tor_version">Tor ভার্সন: %s</string>
   <string name="links">লিঙ্কসমুহ</string>
-  <string name="Nasaka-WEWE_website">\u2022 <a href="">ওয়েবসাইট</a></string>
-  <string name="Nasaka-WEWE_source_code">\u2022 <a href="">সোর্স কোড</a></string>
-  <string name="Nasaka-WEWE_changelog">\u2022 <a href="">পরিবর্তন সমূহ</a></string>
-  <string name="Nasaka-WEWE_privacy_policy">\u2022 <a href="">গোপনিয়তার নীতি</a></string>
+  <string name="Nasaka_WEWE_website">\u2022 <a href="">ওয়েবসাইট</a></string>
+  <string name="Nasaka_WEWE_source_code">\u2022 <a href="">সোর্স কোড</a></string>
+  <string name="Nasaka_WEWE_changelog">\u2022 <a href="">পরিবর্তন সমূহ</a></string>
+  <string name="Nasaka_WEWE_privacy_policy">\u2022 <a href="">গোপনিয়তার নীতি</a></string>
   <!--Here translators can add their names or Transifex usernames(eg "Thanks to all the contributors at the Localization Lab, especially Tom, Matthew and Jerry")-->
   <string name="translator_thanks">Localization Lab-এর সকল অবদানকারীদের ধন্যবাদ। বিশেষ করে আশরাফুল হক কে।</string>
   <!--Conversation Settings-->
@@ -702,7 +702,7 @@
   <string name="link_warning_open_link">যোগসূত্র খুলুন</string>
   <!--Crash Reporter-->
   <string name="crash_report_title">Nasaka-WEWE ক্র্যাশ রিপোর্ট</string>
-  <string name="Nasaka-WEWE_crashed">দুঃখিত Nasaka-WEWE ভেঙ্গে পড়েছে</string>
+  <string name="Nasaka_WEWE_crashed">দুঃখিত Nasaka-WEWE ভেঙ্গে পড়েছে</string>
   <string name="not_your_fault">এটা আপনার ভুল নয়</string>
   <string name="please_send_report">আমাদের একটি ক্র্যাশ রিপোর্ট পাঠিয়ে একটি ভাল Nasaka-WEWE গড়ে তুলতে সাহায্য করুন ।</string>
   <string name="report_is_encrypted">আমরা প্রতিজ্ঞা করছি যে প্রতিবেদনটি এনক্রিপ্ট এবং নিরাপদভাবে পাঠানো হয়েছে ।</string>

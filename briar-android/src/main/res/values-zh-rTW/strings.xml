@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version='1.0' encoding='UTF-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
   <!--Setup-->
   <string name="setup_title">歡迎來到 Nasaka-WEWE</string>
@@ -51,9 +51,9 @@
     <item quantity="other">這是 Nasaka-WEWE 的測試版本。您的帳戶將在 %d 天後到期，且無法延期。</item>
   </plurals>
   <string name="expiry_date_reached">本軟件已過期。\n感謝您的測試！</string>
-  <string name="download_Nasaka-WEWE">爲了繼續使用 Nasaka-WEWE，請下載最新版。</string>
+  <string name="download_Nasaka_WEWE">爲了繼續使用 Nasaka-WEWE，請下載最新版。</string>
   <string name="create_new_account">您要創建一個新帳戶，但可以續用現時的暱稱。</string>
-  <string name="download_Nasaka-WEWE_button">下載最新版</string>
+  <string name="download_Nasaka_WEWE_button">下載最新版</string>
   <string name="old_android_expiry_date_reached">Nasaka-WEWE 不再支援 Android 4 \n 請在較新設備上安裝 Nasaka-WEWE </string>
   <string name="old_android_delete_account">您可以輕觸下方按鍵好從設備上刪除帳號</string>
   <string name="delete_account_button">刪除帳戶</string>
@@ -653,13 +653,13 @@
   <string name="mailbox_error_wizard_info3">請按下方按鈕以移除 Mailbox 鏈接，移除後您隨時可以重新設置新的 Mailbox </string>
   <!--About-->
   <string name="about_title">關於</string>
-  <string name="Nasaka-WEWE_version">Nasaka-WEWE 版本: %s</string>
+  <string name="Nasaka_WEWE_version">Nasaka-WEWE 版本: %s</string>
   <string name="tor_version">Tor 版本: %s</string>
   <string name="links">鏈接</string>
-  <string name="Nasaka-WEWE_website">\u2022 <a href="">網站</a></string>
-  <string name="Nasaka-WEWE_source_code">\u2022 <a href="">源代碼</a></string>
-  <string name="Nasaka-WEWE_changelog">\u2022 <a href="">更新記錄</a></string>
-  <string name="Nasaka-WEWE_privacy_policy">\u2022 <a href="">隱私政策</a></string>
+  <string name="Nasaka_WEWE_website">\u2022 <a href="">網站</a></string>
+  <string name="Nasaka_WEWE_source_code">\u2022 <a href="">源代碼</a></string>
+  <string name="Nasaka_WEWE_changelog">\u2022 <a href="">更新記錄</a></string>
+  <string name="Nasaka_WEWE_privacy_policy">\u2022 <a href="">隱私政策</a></string>
   <!--Here translators can add their names or Transifex usernames(eg "Thanks to all the contributors at the Localization Lab, especially Tom, Matthew and Jerry")-->
   <string name="translator_thanks">感謝所有 Localization Lab 的貢獻者</string>
   <!--Conversation Settings-->
@@ -685,7 +685,7 @@
   <string name="link_warning_open_link">打開鏈接</string>
   <!--Crash Reporter-->
   <string name="crash_report_title">Nasaka-WEWE 崩潰報告</string>
-  <string name="Nasaka-WEWE_crashed">抱歉 Nasaka-WEWE 崩潰了</string>
+  <string name="Nasaka_WEWE_crashed">抱歉 Nasaka-WEWE 崩潰了</string>
   <string name="not_your_fault">這並非您的錯誤所致。</string>
   <string name="please_send_report">請發送崩潰報告，以幫助我們優化 Nasaka-WEWE 。</string>
   <string name="report_is_encrypted">我們保證會加密並安全地發送報告。</string>

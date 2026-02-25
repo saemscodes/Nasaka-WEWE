@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version='1.0' encoding='UTF-8'?>
 <resources>
 	<!--Setup-->
 	<string name="setup_title">Karibu kwenye Nasaka-WEWE</string>
@@ -53,9 +53,9 @@ Umepoteza nenosiri.</string>
     <item quantity="other">Hili ni toleo la jaribio la Nasaka-WEWE. Akaunti yako itaisha %d kwa siku na haiwezi kufanywa upya.</item>
   </plurals>
   <string name="expiry_date_reached">Hii programu imemaliza muda wake.\nAsante kwa kujaribu </string>
-  <string name="download_Nasaka-WEWE">Ili kuendelea kutumia Nasaka-WEWE, tafadhali pakua toleo la hivi karibuni.</string>
+  <string name="download_Nasaka_WEWE">Ili kuendelea kutumia Nasaka-WEWE, tafadhali pakua toleo la hivi karibuni.</string>
   <string name="create_new_account">Unahitajika  kutenege Akaunti Mpaya , ila unaweza endelea kutumia lakabu yako .</string>
-  <string name="download_Nasaka-WEWE_button">Pakua Kupaata toleo la hivi Karibuni</string>
+  <string name="download_Nasaka_WEWE_button">Pakua Kupaata toleo la hivi Karibuni</string>
   <string name="startup_open_database">Kupunguka Hifadhidata</string>
   <string name="startup_migrate_database">Boresha Hifadhidata</string>
   <string name="startup_compact_database">Kuingiliana Hifadhi data rununu</string>
@@ -509,7 +509,7 @@ Umepoteza nenosiri.</string>
   <string name="link_warning_open_link">kiunga wazi</string>
   <!--Crash Reporter-->
   <string name="crash_report_title">Ripoti  fupi ya ajali ya Brair</string>
-  <string name="Nasaka-WEWE_crashed">Samahani, Nasaka-WEWE imeharibika.</string>
+  <string name="Nasaka_WEWE_crashed">Samahani, Nasaka-WEWE imeharibika.</string>
   <string name="not_your_fault"> Hili sio kosa lako</string>
   <string name="please_send_report">Tafadhali tusaidie kujenga Nasaka-WEWE bora kwa kututumia ripoti ya taharifa.</string>
   <string name="report_is_encrypted">Tunaahidi kuwa ripoti hiyo imesimbwa kwa njia fiche na kutumwa salama.</string>

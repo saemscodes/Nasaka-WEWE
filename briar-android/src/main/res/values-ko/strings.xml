@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version='1.0' encoding='UTF-8'?>
 <resources>
 	<!--Setup-->
 	<string name="setup_title">Nasaka-WEWE에 오신 것을 환영합니다</string>
@@ -44,9 +44,9 @@
     <item quantity="other">이 Nasaka-WEWE는 테스트용입니다. %d일 내에 계정이 만료되고 다시 되돌리지 못합니다.</item>
   </plurals>
   <string name="expiry_date_reached">이 소프트웨어는 만료되었습니다. \ n 테스트 해 주셔서 감사합니다!</string>
-  <string name="download_Nasaka-WEWE">Nasaka-WEWE를 계속 이용하기 위해서는 최신 버전을 다운로드 해 주세요.</string>
+  <string name="download_Nasaka_WEWE">Nasaka-WEWE를 계속 이용하기 위해서는 최신 버전을 다운로드 해 주세요.</string>
   <string name="create_new_account">새로운 계정을 만들어야 하지만, 같은 별명을 사용할 수 있습니다.</string>
-  <string name="download_Nasaka-WEWE_button">최신 버전 다운로드 받기</string>
+  <string name="download_Nasaka_WEWE_button">최신 버전 다운로드 받기</string>
   <string name="startup_open_database">데이터베이스를 복호화하고 있습니다....</string>
   <string name="startup_migrate_database">데이터베이스를 업그레이드 하고 있습니다...</string>
   <string name="startup_compact_database">데이터베이스를 작게 만들고 있습니다...</string>
@@ -518,7 +518,7 @@
   <string name="link_warning_open_link">링크 열기</string>
   <!--Crash Reporter-->
   <string name="crash_report_title">Nasaka-WEWE 사고 리포트</string>
-  <string name="Nasaka-WEWE_crashed">죄송해요, Nasaka-WEWE가 꺼졌어요.</string>
+  <string name="Nasaka_WEWE_crashed">죄송해요, Nasaka-WEWE가 꺼졌어요.</string>
   <string name="not_your_fault">당신 탓이 아니에요.</string>
   <string name="please_send_report">부디 사고 리포트를 저희에게 보내서 더 나은 Nasaka-WEWE를 만드는 것을 도와주세요.</string>
   <string name="report_is_encrypted">리포트가 암호화되고 안전하게 보내진다고 약속하겠습니다.</string>

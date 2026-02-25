@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version='1.0' encoding='UTF-8'?>
 <resources>
 	<!--Setup-->
 	<string name="setup_title">ברוך בואך אל Nasaka-WEWE</string>
@@ -41,9 +41,9 @@
     <item quantity="other">זאת גרסת בחינה של Nasaka-WEWE. חשבונך יפוג תוך %d ימים ואינו יכול להתחדש.</item>
   </plurals>
   <string name="expiry_date_reached">תוכנה זו פגה.\nתודה על הבדיקה!</string>
-  <string name="download_Nasaka-WEWE">כדי להמשיך להשתמש ב־Nasaka-WEWE, אנא הורד את השחרור האחרון.</string>
+  <string name="download_Nasaka_WEWE">כדי להמשיך להשתמש ב־Nasaka-WEWE, אנא הורד את השחרור האחרון.</string>
   <string name="create_new_account">יהיה צריך ליצור חשבון חדש, אבל אפשר להשתמש באותו הכינוי.</string>
-  <string name="download_Nasaka-WEWE_button">הורד שחרור אחרון</string>
+  <string name="download_Nasaka_WEWE_button">הורד שחרור אחרון</string>
   <string name="delete_account_button">מחק חשבון</string>
   <string name="startup_open_database">מפענח מסד נתונים…</string>
   <string name="startup_migrate_database">משדרג מסד נתונים…</string>

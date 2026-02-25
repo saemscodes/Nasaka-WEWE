@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version='1.0' encoding='UTF-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
   <!--Setup-->
   <string name="setup_title">Sveiki atvykę į Nasaka-WEWE</string>
@@ -55,9 +55,9 @@
     <item quantity="other">Tai yra bandomoji Nasaka-WEWE versija. Jūsų paskyros galiojimas pasibaigs po %d dienos ir negalės būti pratęstas.</item>
   </plurals>
   <string name="expiry_date_reached">Programinės įrangos galiojimas pasibaigė.\nDėkojame, kad išbandėte!</string>
-  <string name="download_Nasaka-WEWE">Norėdami ir toliau naudotis Nasaka-WEWE, atsisiųskite naujausią programos laidą.</string>
+  <string name="download_Nasaka_WEWE">Norėdami ir toliau naudotis Nasaka-WEWE, atsisiųskite naujausią programos laidą.</string>
   <string name="create_new_account">Jūs turėsite susikurti paskyrą, tačiau galėsite naudoti tą patį slapyvardį.</string>
-  <string name="download_Nasaka-WEWE_button">Atsisiųsti naujausią laidą</string>
+  <string name="download_Nasaka_WEWE_button">Atsisiųsti naujausią laidą</string>
   <string name="old_android_expiry_date_reached">Nasaka-WEWE daugiau nebeveikia įrenginiuose su „Android“ 4.\nĮsidiekite Nasaka-WEWE naujesniame įrenginyje.</string>
   <string name="old_android_delete_account">Galite bakstelėti ant žemiau esančio mygtuko, norėdami ištrinti paskyrą iš šio įrenginio.</string>
   <string name="delete_account_button">Ištrinti paskyrą</string>
@@ -693,13 +693,13 @@
   <string name="mailbox_error_wizard_info3">Atsiekite pašto dėžutę naudodami žemiau esantį mygtuką.\n\nAtsieję seną pašto dėžutę galite bet kuriuo metu nusistatyti naują pašto dėžutę.</string>
   <!--About-->
   <string name="about_title">Apie</string>
-  <string name="Nasaka-WEWE_version">Nasaka-WEWE versija: %s</string>
+  <string name="Nasaka_WEWE_version">Nasaka-WEWE versija: %s</string>
   <string name="tor_version">Tor versija: %s</string>
   <string name="links">Nuorodos</string>
-  <string name="Nasaka-WEWE_website">\u2022 <a href="">Internetinė svetainė</a></string>
-  <string name="Nasaka-WEWE_source_code">\u2022 <a href="">Pradinis kodas</a></string>
-  <string name="Nasaka-WEWE_changelog">\u2022 <a href="">Keitinių žurnalas</a></string>
-  <string name="Nasaka-WEWE_privacy_policy">\u2022 <a href="">Privatumo politika</a></string>
+  <string name="Nasaka_WEWE_website">\u2022 <a href="">Internetinė svetainė</a></string>
+  <string name="Nasaka_WEWE_source_code">\u2022 <a href="">Pradinis kodas</a></string>
+  <string name="Nasaka_WEWE_changelog">\u2022 <a href="">Keitinių žurnalas</a></string>
+  <string name="Nasaka_WEWE_privacy_policy">\u2022 <a href="">Privatumo politika</a></string>
   <!--Here translators can add their names or Transifex usernames(eg "Thanks to all the contributors at the Localization Lab, especially Tom, Matthew and Jerry")-->
   <string name="translator_thanks">Dėkojame talkininkams iš Localization Lab, ypač Moo už vertimą į lietuvių kalbą</string>
   <!--Conversation Settings-->
@@ -727,7 +727,7 @@
   <string name="link_warning_open_link">Atverti nuorodą</string>
   <!--Crash Reporter-->
   <string name="crash_report_title">Nasaka-WEWE strigties ataskaita</string>
-  <string name="Nasaka-WEWE_crashed">Apgailestaujame, Nasaka-WEWE užstrigo</string>
+  <string name="Nasaka_WEWE_crashed">Apgailestaujame, Nasaka-WEWE užstrigo</string>
   <string name="not_your_fault">Tai nėra jūsų kaltė.</string>
   <string name="please_send_report">Padėkite mums sukurti geresnę Nasaka-WEWE, išsiųsdami mums strigties ataskaitą.</string>
   <string name="report_is_encrypted">Mes pažadame, kad ataskaita yra šifruota ir išsiunčiama saugiai.</string>

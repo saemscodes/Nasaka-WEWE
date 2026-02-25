@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version='1.0' encoding='UTF-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
   <!--Setup-->
   <string name="setup_title">Nasaka-WEWE uygulamasına hoş geldiniz</string>
@@ -53,9 +53,9 @@
     <item quantity="other">Nasaka-WEWE deneme sürümünü kullanıyorsunuz. Hesabınız %d gün sonra geçersiz olacak ve yenilenemeyecek.</item>
   </plurals>
   <string name="expiry_date_reached">Bu yazılımın geçerlilik süresi geçmiş.\nDenediğiniz için teşekkürler!</string>
-  <string name="download_Nasaka-WEWE">Nasaka-WEWE kullanmayı sürdürmek için lütfen güncel sürümü indirin.</string>
+  <string name="download_Nasaka_WEWE">Nasaka-WEWE kullanmayı sürdürmek için lütfen güncel sürümü indirin.</string>
   <string name="create_new_account">Yeni bir hesap oluşturmanız gerekecek, fakat aynı takma adı kullanabilirsiniz.</string>
-  <string name="download_Nasaka-WEWE_button">Güncel sürümü indir</string>
+  <string name="download_Nasaka_WEWE_button">Güncel sürümü indir</string>
   <string name="old_android_expiry_date_reached">Nasaka-WEWE artık Android 4 üzerinde çalışmıyor.\nLütfen Nasaka-WEWE uygulamasını daha yeni bir aygıta kurun.</string>
   <string name="old_android_delete_account">Bu aygıttaki hesabınızı silmek için aşağıdaki düğmeye dokunabilirsiniz.</string>
   <string name="delete_account_button">Hesabı sil</string>
@@ -667,13 +667,13 @@
   <string name="mailbox_error_wizard_info3">Lütfen aşağıdaki düğmeyi kullanarak Mailbox bağlantısını kaldırın.\n\nMailbox bağlantısını kaldırdıktan sonra istediğiniz zaman yeni bir Mailbox ayarlayabilirsiniz.</string>
   <!--About-->
   <string name="about_title">Hakkında</string>
-  <string name="Nasaka-WEWE_version">Nasaka-WEWE sürümü: %s</string>
+  <string name="Nasaka_WEWE_version">Nasaka-WEWE sürümü: %s</string>
   <string name="tor_version">Tor sürümü: %s</string>
   <string name="links">Bağlantılar</string>
-  <string name="Nasaka-WEWE_website">\u2022 <a href="">Site</a></string>
-  <string name="Nasaka-WEWE_source_code">\u2022 <a href="">Kaynak kodu</a></string>
-  <string name="Nasaka-WEWE_changelog">\u2022 <a href="">Değişiklik günlüğü</a></string>
-  <string name="Nasaka-WEWE_privacy_policy">\u2022 <a href="">Gizlilik ilkesi</a></string>
+  <string name="Nasaka_WEWE_website">\u2022 <a href="">Site</a></string>
+  <string name="Nasaka_WEWE_source_code">\u2022 <a href="">Kaynak kodu</a></string>
+  <string name="Nasaka_WEWE_changelog">\u2022 <a href="">Değişiklik günlüğü</a></string>
+  <string name="Nasaka_WEWE_privacy_policy">\u2022 <a href="">Gizlilik ilkesi</a></string>
   <!--Here translators can add their names or Transifex usernames(eg "Thanks to all the contributors at the Localization Lab, especially Tom, Matthew and Jerry")-->
   <string name="translator_thanks">Tüm Localization Lab katkıları için teşekkürler</string>
   <!--Conversation Settings-->
@@ -701,7 +701,7 @@
   <string name="link_warning_open_link">Bağlantıyı aç</string>
   <!--Crash Reporter-->
   <string name="crash_report_title">Nasaka-WEWE çökme bildirimi</string>
-  <string name="Nasaka-WEWE_crashed">Ne yazık ki Nasaka-WEWE çöktü</string>
+  <string name="Nasaka_WEWE_crashed">Ne yazık ki Nasaka-WEWE çöktü</string>
   <string name="not_your_fault">Bu sizin hatanız değil.</string>
   <string name="please_send_report">Bize bir çökme bildirimi göndererek Nasaka-WEWE uygulamasını iyileştirmemize yardımcı olun.</string>
   <string name="report_is_encrypted">Bildirim şifreleneceğine ve güvenli bir şekilde gönderileceğine söz veriyoruz.</string>

@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version='1.0' encoding='UTF-8'?>
 <resources>
 	<!--Setup-->
 	<string name="setup_title">Welkom bij Nasaka-WEWE</string>
@@ -39,9 +39,9 @@
     <item quantity="other">Dit is een testversie van Nasaka-WEWE. Je account verloopt binnen %d dagen en kan niet worden vernieuwd.</item>
   </plurals>
   <string name="expiry_date_reached">Deze software is verlopen.\nBedankt vor het testen!</string>
-  <string name="download_Nasaka-WEWE">Download de laatste versie om Nasaka-WEWE te kunnen blijven gebruiken.</string>
+  <string name="download_Nasaka_WEWE">Download de laatste versie om Nasaka-WEWE te kunnen blijven gebruiken.</string>
   <string name="create_new_account">Je moet een nieuw account aanmaken. Je kan dezelfde bijnaam gebruiken.</string>
-  <string name="download_Nasaka-WEWE_button">Download de laatste versie</string>
+  <string name="download_Nasaka_WEWE_button">Download de laatste versie</string>
   <string name="delete_account_button">Verwijder account</string>
   <string name="startup_open_database">Database aan het ontsleutelen…</string>
   <string name="startup_migrate_database">Database aan het upgraden…</string>

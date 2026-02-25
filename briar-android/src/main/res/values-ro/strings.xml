@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version='1.0' encoding='UTF-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
   <!--Setup-->
   <string name="setup_title">Bun venit la Nasaka-WEWE</string>
@@ -54,9 +54,9 @@
     <item quantity="other">Aceasta este o versiune de test Nasaka-WEWE. Contul dvs. va expira în %d zile și nu poate fi reînnoit.</item>
   </plurals>
   <string name="expiry_date_reached">Acest program software a expirat.\nVă mulțumim că l-ați testat!</string>
-  <string name="download_Nasaka-WEWE">Pentru a putea să utilizați Nasaka-WEWE în continuare, descărcați cea mai recentă versiune.</string>
+  <string name="download_Nasaka_WEWE">Pentru a putea să utilizați Nasaka-WEWE în continuare, descărcați cea mai recentă versiune.</string>
   <string name="create_new_account">Va trebui să creați un cont nou, dar puteți să folosiți același pseudonim.</string>
-  <string name="download_Nasaka-WEWE_button">Descărcați cea mai recentă versiune</string>
+  <string name="download_Nasaka_WEWE_button">Descărcați cea mai recentă versiune</string>
   <string name="old_android_expiry_date_reached">Nasaka-WEWE nu mai funcționează pe Android 4.\nInstalați Nasaka-WEWE pe un dispozitiv mai nou.</string>
   <string name="old_android_delete_account">Puteți atinge butonul de mai jos pentru a șterge contul dvs. de pe acest dispozitiv.</string>
   <string name="delete_account_button">Ștergeți contul</string>
@@ -680,13 +680,13 @@
   <string name="mailbox_error_wizard_info3">Deconectați cutia poștală folosind butonul de mai jos\n\nDupă ce ați deconectat vechea cutie poștală, puteți configura una nouă în orice moment.</string>
   <!--About-->
   <string name="about_title">Despre</string>
-  <string name="Nasaka-WEWE_version">Versiune Nasaka-WEWE: %s</string>
+  <string name="Nasaka_WEWE_version">Versiune Nasaka-WEWE: %s</string>
   <string name="tor_version">Versiune Tor: %s</string>
   <string name="links">Linkuri</string>
-  <string name="Nasaka-WEWE_website">\u2022 <a href="">Site</a></string>
-  <string name="Nasaka-WEWE_source_code">\u2022 <a href="">Cod sursă</a></string>
-  <string name="Nasaka-WEWE_changelog">\u2022 <a href="">Jurnal de modificări</a></string>
-  <string name="Nasaka-WEWE_privacy_policy">\u2022 <a href="">Politica de confidențialitate</a></string>
+  <string name="Nasaka_WEWE_website">\u2022 <a href="">Site</a></string>
+  <string name="Nasaka_WEWE_source_code">\u2022 <a href="">Cod sursă</a></string>
+  <string name="Nasaka_WEWE_changelog">\u2022 <a href="">Jurnal de modificări</a></string>
+  <string name="Nasaka_WEWE_privacy_policy">\u2022 <a href="">Politica de confidențialitate</a></string>
   <!--Here translators can add their names or Transifex usernames(eg "Thanks to all the contributors at the Localization Lab, especially Tom, Matthew and Jerry")-->
   <string name="translator_thanks">Mulțumiri tuturor colaboratorilor de la Localization Lab</string>
   <!--Conversation Settings-->
@@ -714,7 +714,7 @@
   <string name="link_warning_open_link">Deschideți link</string>
   <!--Crash Reporter-->
   <string name="crash_report_title">Raport de cădere a aplicației Nasaka-WEWE</string>
-  <string name="Nasaka-WEWE_crashed">Ne pare rău, dar aplicația Nasaka-WEWE a căzut</string>
+  <string name="Nasaka_WEWE_crashed">Ne pare rău, dar aplicația Nasaka-WEWE a căzut</string>
   <string name="not_your_fault">Nu este vina dvs.</string>
   <string name="please_send_report">Vă rugăm să ne ajutați să îmbunătățim Nasaka-WEWE trimițându-ne un raport de cădere a aplicației.</string>
   <string name="report_is_encrypted">Vă asigurăm că raportul este criptat și trimis securizat.</string>

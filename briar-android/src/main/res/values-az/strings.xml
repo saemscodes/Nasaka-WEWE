@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version='1.0' encoding='UTF-8'?>
 <resources>
 	<!--Setup-->
 	<string name="setup_title">Nasaka-WEWE-a xoş gəlmisiniz!</string>
@@ -42,9 +42,9 @@
     <item quantity="other">Bu Nasaka-WEWE\'ın test versiyasıdır. Hesabınız %dgün ərzində sona çatacaq və yeniləmə mümkün deyil.</item>
   </plurals>
   <string name="expiry_date_reached">Bu proqram sona çatdı. Test üçün təşəkkür edirik!</string>
-  <string name="download_Nasaka-WEWE">Nasaka-WEWE-dan istifadə etməyə davam etmək üçün ən son versiyanı yükləyin.</string>
+  <string name="download_Nasaka_WEWE">Nasaka-WEWE-dan istifadə etməyə davam etmək üçün ən son versiyanı yükləyin.</string>
   <string name="create_new_account">Yeni bir hesab yaratmaq lazımdır, lakin eyni ləqəbi istifadə edə bilərsiniz.</string>
-  <string name="download_Nasaka-WEWE_button">Son versiyasını yükləyin </string>
+  <string name="download_Nasaka_WEWE_button">Son versiyasını yükləyin </string>
   <string name="startup_open_database">Məlumatlar şifrədən açılması...</string>
   <string name="startup_migrate_database">Məlumatların təzələnməsi...</string>
   <string name="startup_compact_database">Məlumatın sıxılması...</string>
@@ -440,7 +440,7 @@
   <string name="link_warning_open_link">Link-i aç</string>
   <!--Crash Reporter-->
   <string name="crash_report_title">Nasaka-WEWE qəza göndərişi</string>
-  <string name="Nasaka-WEWE_crashed">Bağışlayın, Nasaka-WEWE qəzaya uğrayıb.</string>
+  <string name="Nasaka_WEWE_crashed">Bağışlayın, Nasaka-WEWE qəzaya uğrayıb.</string>
   <string name="not_your_fault">Bu sizin günahınız deyil.</string>
   <string name="please_send_report">Xahiş edirik bizə bir qəza hesabatı göndərərək daha yaxşı bir Nasaka-WEWE qurmamıza kömək edin.</string>
   <string name="report_is_encrypted">Hesabatın şifrələndiyini və təhlükəsiz olaraq göndərildiyinə əmin edirik.</string>

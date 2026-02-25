@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version='1.0' encoding='UTF-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
   <!--Setup-->
   <string name="setup_title">Добре дошли в Nasaka-WEWE</string>
@@ -51,9 +51,9 @@
     <item quantity="other">Това е изпитателно издание на Nasaka-WEWE. Валидността на профила ще изтече след %d дена и не може да бъде подновена.</item>
   </plurals>
   <string name="expiry_date_reached">Софтуерът е с изтекъл срок.\nБлагодарим за изпитването!</string>
-  <string name="download_Nasaka-WEWE">За да продължите да използвате Nasaka-WEWE изтеглете последното издание.</string>
+  <string name="download_Nasaka_WEWE">За да продължите да използвате Nasaka-WEWE изтеглете последното издание.</string>
   <string name="create_new_account">Ще трябва да създадете нов профил, но ще можете да използвате същия прякор.</string>
-  <string name="download_Nasaka-WEWE_button">Изтегляне</string>
+  <string name="download_Nasaka_WEWE_button">Изтегляне</string>
   <string name="old_android_expiry_date_reached">Nasaka-WEWE не работи на Android 4.\nИнсталирайте Nasaka-WEWE на друго устройство.</string>
   <string name="old_android_delete_account">За да премахнете профила от устройството докоснете бутона отдолу.</string>
   <string name="delete_account_button">Премахване на профил</string>
@@ -663,13 +663,13 @@
   <string name="mailbox_error_wizard_info3">Прекъснете връзката с пощенската кутия, чрез бутона отдолу.\n\nСлед като прекъснете връзката със старата пощенска кутия можете да настроите нова по всяко време.</string>
   <!--About-->
   <string name="about_title">Относно</string>
-  <string name="Nasaka-WEWE_version">Издание на Nasaka-WEWE: %s</string>
+  <string name="Nasaka_WEWE_version">Издание на Nasaka-WEWE: %s</string>
   <string name="tor_version">Издание на Tor: %s</string>
   <string name="links">Препратки</string>
-  <string name="Nasaka-WEWE_website">\u2022 <a href="">Страница</a></string>
-  <string name="Nasaka-WEWE_source_code">\u2022 <a href="">Изходен код</a></string>
-  <string name="Nasaka-WEWE_changelog">\u2022 <a href="">Дневник на промените</a></string>
-  <string name="Nasaka-WEWE_privacy_policy">\u2022 <a href="">Политика за личните данни</a></string>
+  <string name="Nasaka_WEWE_website">\u2022 <a href="">Страница</a></string>
+  <string name="Nasaka_WEWE_source_code">\u2022 <a href="">Изходен код</a></string>
+  <string name="Nasaka_WEWE_changelog">\u2022 <a href="">Дневник на промените</a></string>
+  <string name="Nasaka_WEWE_privacy_policy">\u2022 <a href="">Политика за личните данни</a></string>
   <!--Here translators can add their names or Transifex usernames(eg "Thanks to all the contributors at the Localization Lab, especially Tom, Matthew and Jerry")-->
   <string name="translator_thanks">Благодарим на всички сътрудници на Localization Lab</string>
   <!--Conversation Settings-->
@@ -693,7 +693,7 @@
   <string name="link_warning_open_link">Отваряне</string>
   <!--Crash Reporter-->
   <string name="crash_report_title">Доклад на срив</string>
-  <string name="Nasaka-WEWE_crashed">Съжаляваме, Nasaka-WEWE се срина</string>
+  <string name="Nasaka_WEWE_crashed">Съжаляваме, Nasaka-WEWE се срина</string>
   <string name="not_your_fault">Не е по ваша вина.</string>
   <string name="please_send_report">Помогнете да направим Nasaka-WEWE по-добър като ни изпратите доклад.</string>
   <string name="report_is_encrypted">Обещаваме, че докладът е ще бъде изпратен шифрован и добре защитен.</string>
