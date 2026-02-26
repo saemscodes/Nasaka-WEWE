@@ -71,13 +71,6 @@ class PluginManagerImpl implements PluginManager, Service {
 	private final ConnectionManager connectionManager;
 	private final SettingsManager settingsManager;
 	private final TransportPropertyManager transportPropertyManager;
-	private final Map<TransportId, Plugin> plugins;
-	private final List<SimplexPlugin> simplexPlugins;
-	private final List<DuplexPlugin> duplexPlugins;
-	private final Map<TransportId, CountDownLatch> startLatches;
-	private final AtomicBoolean used = new AtomicBoolean(false);
-
-	private final TransportPropertyManager transportPropertyManager;
 	private final org.briarproject.bramble.api.system.ResourceConstraintManager resourceConstraintManager;
 	private final Map<TransportId, Plugin> plugins;
 	private final List<SimplexPlugin> simplexPlugins;

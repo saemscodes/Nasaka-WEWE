@@ -9,6 +9,7 @@ import com.vanniktech.emoji.RecentEmoji;
 
 import org.briarproject.bramble.api.FeatureFlags;
 import org.briarproject.bramble.api.FormatException;
+import org.briarproject.bramble.api.system.ResourceConstraintManager;
 import org.briarproject.bramble.api.crypto.CryptoComponent;
 import org.briarproject.bramble.api.crypto.KeyStrengthener;
 import org.briarproject.bramble.api.crypto.PublicKey;
@@ -32,6 +33,7 @@ import org.briarproject.bramble.plugin.file.AndroidRemovableDrivePluginFactory;
 import org.briarproject.bramble.plugin.file.MailboxPluginFactory;
 import org.briarproject.bramble.plugin.tcp.AndroidLanTcpPluginFactory;
 import org.briarproject.bramble.plugin.tor.AndroidTorPluginFactory;
+import org.briarproject.briar.android.util.ResourceManager;
 import org.briarproject.bramble.util.AndroidUtils;
 import org.briarproject.bramble.util.StringUtils;
 import org.briarproject.briar.android.account.DozeHelperModule;
@@ -376,5 +378,10 @@ public class AppModule {
 	@Singleton
 	ResourceManager provideResourceManager(Application app) {
 		return new ResourceManager(app);
+	}
+
+	@Provides
+	ResourceConstraintManager provideResourceConstraintManager(ResourceManager resourceManager) {
+		return resourceManager;
 	}
 }

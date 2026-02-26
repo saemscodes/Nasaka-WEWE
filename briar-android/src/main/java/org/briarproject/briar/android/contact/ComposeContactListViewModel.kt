@@ -12,6 +12,8 @@ import org.briarproject.bramble.api.contact.event.ContactAliasChangedEvent
 import org.briarproject.bramble.api.contact.event.ContactRemovedEvent
 import org.briarproject.bramble.api.contact.event.PendingContactAddedEvent
 import org.briarproject.bramble.api.contact.event.PendingContactRemovedEvent
+import org.briarproject.bramble.api.db.DbException
+import org.briarproject.bramble.api.db.Transaction
 import org.briarproject.bramble.api.db.TransactionManager
 import org.briarproject.bramble.api.event.Event
 import org.briarproject.bramble.api.event.EventBus
@@ -58,7 +60,7 @@ class ComposeContactListViewModel @Inject constructor(
 
     fun loadContacts() {
         viewModelScope.launch {
-            db.runInTransaction(true) { txn ->
+            db.transaction<DbException>(true) { txn: Transaction ->
                 val contacts = contactManager.getContacts(txn).map { c ->
                     val authorInfo = authorManager.getAuthorInfo(txn, c)
                     val count = conversationManager.getGroupCount(txn, c.id)
@@ -74,7 +76,7 @@ class ComposeContactListViewModel @Inject constructor(
 
     fun checkForPendingContacts() {
         viewModelScope.launch {
-            db.runInTransaction(true) { txn ->
+            db.transaction<DbException>(true) { txn: Transaction ->
                 val hasPending = contactManager.getPendingContacts(txn).isNotEmpty()
                 _hasPendingContacts.value = hasPending
             }

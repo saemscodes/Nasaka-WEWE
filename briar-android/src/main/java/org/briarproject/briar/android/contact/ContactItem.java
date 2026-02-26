@@ -33,7 +33,7 @@ public class ContactItem {
 		return authorInfo;
 	}
 
-	boolean isConnected() {
+	public boolean isConnected() {
 		return connected;
 	}
 

@@ -18,6 +18,7 @@ import org.briarproject.bramble.api.plugin.LanTcpConstants
 import org.briarproject.bramble.api.plugin.Plugin.State
 import org.briarproject.bramble.api.plugin.TorConstants
 import org.briarproject.bramble.api.account.AccountManager
+import org.briarproject.briar.android.contact.ComposeContactListViewModel
 import org.briarproject.briar.R
 import org.briarproject.briar.android.activity.ActivityComponent
 import org.briarproject.briar.android.activity.BriarActivity
@@ -46,9 +47,9 @@ class NavDrawerActivity : BriarActivity() {
     override fun injectActivity(component: ActivityComponent) {
         component.inject(this)
         val provider = ViewModelProvider(this, viewModelFactory)
-        navDrawerViewModel = provider[NavDrawerViewModel::class.java]
-        pluginViewModel = provider[PluginViewModel::class.java]
-        contactListViewModel = provider[ComposeContactListViewModel::class.java]
+        navDrawerViewModel = provider.get(NavDrawerViewModel::class.java)
+        pluginViewModel = provider.get(PluginViewModel::class.java)
+        contactListViewModel = provider.get(ComposeContactListViewModel::class.java)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -106,6 +107,21 @@ class NavDrawerActivity : BriarActivity() {
         } else {
             super.onBackPressed()
         }
+    }
+
+    companion object {
+        @JvmField
+        val CONTACT_URI: Uri = Uri.parse("briar://contacts")
+        @JvmField
+        val CONTACT_ADDED_URI: Uri = Uri.parse("briar://contacts/added")
+        @JvmField
+        val GROUP_URI: Uri = Uri.parse("briar://groups")
+        @JvmField
+        val FORUM_URI: Uri = Uri.parse("briar://forums")
+        @JvmField
+        val BLOG_URI: Uri = Uri.parse("briar://blogs")
+        @JvmField
+        val SIGN_OUT_URI: Uri = Uri.parse("briar://sign_out")
     }
 }
 

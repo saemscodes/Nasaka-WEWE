@@ -68,15 +68,15 @@ public class ContactListItem extends ContactItem
 				item.isConnected(), item.empty, item.unread, item.timestamp);
 	}
 
-	boolean isEmpty() {
+	public boolean isEmpty() {
 		return empty;
 	}
 
-	long getTimestamp() {
+	public long getTimestamp() {
 		return timestamp;
 	}
 
-	int getUnreadCount() {
+	public int getUnreadCount() {
 		return unread;
 	}
 

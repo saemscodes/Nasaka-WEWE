@@ -58,6 +58,7 @@ import org.briarproject.briar.android.removabledrive.SendFragment;
 import org.briarproject.briar.android.settings.ConnectionsFragment;
 import org.briarproject.briar.android.settings.NotificationsFragment;
 import org.briarproject.briar.android.settings.SecurityFragment;
+import org.briarproject.briar.android.util.ResourceManager;
 import org.briarproject.briar.android.settings.SettingsFragment;
 import org.briarproject.briar.android.view.EmojiTextInputView;
 import org.briarproject.briar.api.android.AndroidNotificationManager;
