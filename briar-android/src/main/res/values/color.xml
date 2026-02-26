@@ -44,11 +44,13 @@
 	<color name="nasaka_wewe_gray_200_new">#E5E7EB</color>
 	<color name="nasaka_wewe_gray_100">#f2f2f2</color>
 
-	<color name="nasaka_wewe_brand_blue">@color/nasaka_wewe_night_700</color>
-	<color name="nasaka_wewe_brand_green">@color/nasaka_wewe_lime_400</color>
+	<color name="nasaka_wewe_ios_blue">#007AFF</color>
+
+	<color name="nasaka_wewe_brand_blue">@color/nasaka_wewe_ios_blue</color>
+	<color name="nasaka_wewe_brand_green">@color/nasaka_wewe_ios_blue</color>
 
 	<color name="nasaka_wewe_primary">@color/nasaka_wewe_brand_blue</color>
-	<color name="nasaka_wewe_primary_dark">@color/nasaka_wewe_night_950</color>
+	<color name="nasaka_wewe_primary_dark">#0056B3</color>
 	<color name="nasaka_wewe_accent">@color/nasaka_wewe_brand_blue</color>
 
 	<color name="window_background">@color/nasaka_wewe_gray_100</color>

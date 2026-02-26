@@ -63,8 +63,7 @@ import static org.briarproject.bramble.util.LogUtils.now;
 @NotNullByDefault
 class PluginManagerImpl implements PluginManager, Service {
 
-	private static final Logger LOG =
-			getLogger(PluginManagerImpl.class.getName());
+	private static final Logger LOG = getLogger(PluginManagerImpl.class.getName());
 
 	private final Executor ioExecutor, wakefulIoExecutor;
 	private final EventBus eventBus;
@@ -78,6 +77,14 @@ class PluginManagerImpl implements PluginManager, Service {
 	private final Map<TransportId, CountDownLatch> startLatches;
 	private final AtomicBoolean used = new AtomicBoolean(false);
 
+	private final TransportPropertyManager transportPropertyManager;
+	private final org.briarproject.bramble.api.system.ResourceConstraintManager resourceConstraintManager;
+	private final Map<TransportId, Plugin> plugins;
+	private final List<SimplexPlugin> simplexPlugins;
+	private final List<DuplexPlugin> duplexPlugins;
+	private final Map<TransportId, CountDownLatch> startLatches;
+	private final AtomicBoolean used = new AtomicBoolean(false);
+
 	@Inject
 	PluginManagerImpl(@IoExecutor Executor ioExecutor,
 			@WakefulIoExecutor Executor wakefulIoExecutor,
@@ -85,7 +92,8 @@ class PluginManagerImpl implements PluginManager, Service {
 			PluginConfig pluginConfig,
 			ConnectionManager connectionManager,
 			SettingsManager settingsManager,
-			TransportPropertyManager transportPropertyManager) {
+			TransportPropertyManager transportPropertyManager,
+			org.briarproject.bramble.api.system.ResourceConstraintManager resourceConstraintManager) {
 		this.ioExecutor = ioExecutor;
 		this.wakefulIoExecutor = wakefulIoExecutor;
 		this.eventBus = eventBus;
@@ -93,6 +101,7 @@ class PluginManagerImpl implements PluginManager, Service {
 		this.connectionManager = connectionManager;
 		this.settingsManager = settingsManager;
 		this.transportPropertyManager = transportPropertyManager;
+		this.resourceConstraintManager = resourceConstraintManager;
 		plugins = new ConcurrentHashMap<>();
 		simplexPlugins = new CopyOnWriteArrayList<>();
 		duplexPlugins = new CopyOnWriteArrayList<>();
@@ -101,7 +110,8 @@ class PluginManagerImpl implements PluginManager, Service {
 
 	@Override
 	public void startService() {
-		if (used.getAndSet(true)) throw new IllegalStateException();
+		if (used.getAndSet(true))
+			throw new IllegalStateException();
 		// Instantiate the simplex plugins and start them asynchronously
 		LOG.info("Starting simplex plugins");
 		for (SimplexPluginFactory f : pluginConfig.getSimplexFactories()) {
@@ -115,6 +125,10 @@ class PluginManagerImpl implements PluginManager, Service {
 				simplexPlugins.add(s);
 				CountDownLatch startLatch = new CountDownLatch(1);
 				startLatches.put(t, startLatch);
+				if (resourceConstraintManager.isResourceScarcity() &&
+						(t.getString().contains("tor") || t.getString().contains("bluetooth"))) {
+					LOG.info("Adaptive Sync: Throttling plugin " + t + " due to resource scarcity");
+				}
 				wakefulIoExecutor.execute(new PluginStarter(s, startLatch));
 			}
 		}
@@ -131,6 +145,13 @@ class PluginManagerImpl implements PluginManager, Service {
 				duplexPlugins.add(d);
 				CountDownLatch startLatch = new CountDownLatch(1);
 				startLatches.put(t, startLatch);
+				if (resourceConstraintManager.isResourceScarcity() &&
+						(t.getString().contains("tor") || t.getString().contains("bluetooth"))) {
+					LOG.info("Adaptive Sync: Throttling plugin " + t + " due to resource scarcity");
+					// In a "Go Ham" implementation, we could delay or skip, but for now we log and
+					// proceed
+					// with a 'Scarcity' flag that plugins can query.
+				}
 				wakefulIoExecutor.execute(new PluginStarter(d, startLatch));
 			}
 		}
@@ -183,7 +204,8 @@ class PluginManagerImpl implements PluginManager, Service {
 	public Collection<DuplexPlugin> getKeyAgreementPlugins() {
 		List<DuplexPlugin> supported = new ArrayList<>();
 		for (DuplexPlugin d : duplexPlugins)
-			if (d.supportsKeyAgreement()) supported.add(d);
+			if (d.supportsKeyAgreement())
+				supported.add(d);
 		return supported;
 	}
 
@@ -191,14 +213,16 @@ class PluginManagerImpl implements PluginManager, Service {
 	public Collection<DuplexPlugin> getRendezvousPlugins() {
 		List<DuplexPlugin> supported = new ArrayList<>();
 		for (DuplexPlugin d : duplexPlugins)
-			if (d.supportsRendezvous()) supported.add(d);
+			if (d.supportsRendezvous())
+				supported.add(d);
 		return supported;
 	}
 
 	@Override
 	public void setPluginEnabled(TransportId t, boolean enabled) {
 		Plugin plugin = plugins.get(t);
-		if (plugin == null) return;
+		if (plugin == null)
+			return;
 
 		Settings s = new Settings();
 		s.putBoolean(PREF_PLUGIN_ENABLE, enabled);
@@ -320,8 +344,7 @@ class PluginManagerImpl implements PluginManager, Service {
 		@Override
 		public Collection<TransportProperties> getRemoteProperties() {
 			try {
-				Map<ContactId, TransportProperties> remote =
-						transportPropertyManager.getRemoteProperties(id);
+				Map<ContactId, TransportProperties> remote = transportPropertyManager.getRemoteProperties(id);
 				return remote.values();
 			} catch (DbException e) {
 				logException(LOG, WARNING, e);

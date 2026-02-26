@@ -1,5 +1,7 @@
 package org.briarproject.briar.android.navdrawer;
 
+import org.briarproject.briar.android.contact.ComposeContactListViewModel;
+import org.briarproject.briar.android.util.ResourceManager;
 import org.briarproject.briar.android.viewmodel.ViewModelKey;
 
 import androidx.lifecycle.ViewModel;
@@ -20,5 +22,9 @@ public abstract class NavDrawerModule {
 	@IntoMap
 	@ViewModelKey(PluginViewModel.class)
 	abstract ViewModel bindPluginViewModel(PluginViewModel pluginViewModel);
-}
 
+	@Binds
+	@IntoMap
+	@ViewModelKey(ComposeContactListViewModel.class)
+	abstract ViewModel bindComposeContactListViewModel(ComposeContactListViewModel viewModel);
+}

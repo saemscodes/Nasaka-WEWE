@@ -212,6 +212,8 @@ public interface AndroidComponent
 
 	AndroidWakeLockManager wakeLockManager();
 
+	ResourceManager resourceManager();
+
 	CachingLogHandler logHandler();
 
 	Thread.UncaughtExceptionHandler exceptionHandler();
@@ -268,4 +270,3 @@ public interface AndroidComponent
 
 	void inject(ErrorWizardFragment errorWizardFragment);
 }
-

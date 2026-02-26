@@ -6,8 +6,13 @@ import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.lifecycle.ViewModelProvider
 import org.briarproject.bramble.api.lifecycle.LifecycleManager
+import androidx.compose.animation.Crossfade
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
+import org.briarproject.briar.android.ui.screens.ContactListScreen
 import org.briarproject.bramble.api.plugin.BluetoothConstants
 import org.briarproject.bramble.api.plugin.LanTcpConstants
 import org.briarproject.bramble.api.plugin.Plugin.State
@@ -34,33 +39,16 @@ class NavDrawerActivity : BriarActivity() {
 
     private lateinit var navDrawerViewModel: NavDrawerViewModel
     private lateinit var pluginViewModel: PluginViewModel
+    private lateinit var contactListViewModel: ComposeContactListViewModel
+
+    private var currentScreen by mutableStateOf("dashboard")
 
     override fun injectActivity(component: ActivityComponent) {
         component.inject(this)
         val provider = ViewModelProvider(this, viewModelFactory)
         navDrawerViewModel = provider[NavDrawerViewModel::class.java]
         pluginViewModel = provider[PluginViewModel::class.java]
-    }
-
-    companion object {
-        @JvmField
-        val CONTACTS_URI: Uri = Uri.parse("briar://contacts")
-        @JvmField
-        val CONTACT_URI: Uri = Uri.parse("briar://contacts") // Legacy alias for service
-        @JvmField
-        val CONTACT_ADDED_URI: Uri = Uri.parse("briar://contact_added")
-        @JvmField
-        val GROUP_URI: Uri = Uri.parse("briar://groups")
-        @JvmField
-        val FORUM_URI: Uri = Uri.parse("briar://forums")
-        @JvmField
-        val BLOG_URI: Uri = Uri.parse("briar://blogs")
-        @JvmField
-        val PRIVATE_MESSAGE_URI: Uri = Uri.parse("briar://private_messages")
-        @JvmField
-        val SIGN_OUT_URI: Uri = Uri.parse("briar://sign_out")
-        @JvmField
-        val SETTINGS_URI: Uri = Uri.parse("briar://settings")
+        contactListViewModel = provider[ComposeContactListViewModel::class.java]
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -71,16 +59,31 @@ class NavDrawerActivity : BriarActivity() {
             val btState by pluginViewModel.getPluginState(BluetoothConstants.ID).observeAsState(State.INACTIVE)
             val wifiState by pluginViewModel.getPluginState(LanTcpConstants.ID).observeAsState(State.INACTIVE)
 
+            val contacts by contactListViewModel.contactListItems.collectAsState()
+            val hasPending by contactListViewModel.hasPendingContacts.collectAsState()
+
             NasakaWeweTheme {
-                DashboardScreen(
-                    userRole = accountManager.getRole(),
-                    peerCount = 0, // We'll hook this up to the contact manager later
-                    torActive = torState == State.ACTIVE,
-                    btActive = btState == State.ACTIVE,
-                    wifiActive = wifiState == State.ACTIVE,
-                    onSearch = { query -> /* Handle search */ },
-                    onNavigate = { destination -> handleNavigation(destination) }
-                )
+                Crossfade(targetState = currentScreen) { screen ->
+                    when (screen) {
+                        "dashboard" -> DashboardScreen(
+                            userRole = accountManager.getRole(),
+                            peerCount = contacts.size,
+                            torActive = torState == State.ACTIVE,
+                            btActive = btState == State.ACTIVE,
+                            wifiActive = wifiState == State.ACTIVE,
+                            onSearch = { /* Handle search */ },
+                            onNavigate = { destination -> handleNavigation(destination) }
+                        )
+                        "contacts" -> ContactListScreen(
+                            items = contacts,
+                            hasPending = hasPending,
+                            onContactClick = { item -> /* Handle contact click */ },
+                            onAddContactNearby = { /* Handle add nearby */ },
+                            onAddContactRemote = { /* Handle add remote */ },
+                            onShowPending = { /* Handle show pending */ }
+                        )
+                    }
+                }
             }
         }
 
@@ -91,19 +94,18 @@ class NavDrawerActivity : BriarActivity() {
 
     private fun handleNavigation(destination: String) {
         when (destination) {
-            "contacts" -> showContacts()
+            "contacts" -> currentScreen = "contacts"
             "settings" -> startActivity(Intent(this, org.briarproject.briar.android.settings.SettingsActivity::class.java))
             // Add more navigation cases
         }
     }
 
-    private fun showContacts() {
-        // For now, we still use the legacy fragment for the contact list to preserve "Everything Full Implementation"
-        // We will eventually convert this to Compose too
-        setContentView(R.layout.activity_fragment_container) // Temporary fallback for fragment host
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.fragmentContainer, ContactListFragment.newInstance())
-            .commit()
+    override fun onBackPressed() {
+        if (currentScreen != "dashboard") {
+            currentScreen = "dashboard"
+        } else {
+            super.onBackPressed()
+        }
     }
 }
 

@@ -148,14 +148,15 @@ public class AppModule {
 	@Provides
 	@Singleton
 	DatabaseConfig provideDatabaseConfig(Application app) {
-		//FIXME: StrictMode
+		// FIXME: StrictMode
 		StrictMode.ThreadPolicy tp = StrictMode.allowThreadDiskReads();
 		StrictMode.allowThreadDiskWrites();
 		File dbDir = app.getApplicationContext().getDir("db", MODE_PRIVATE);
 		File keyDir = app.getApplicationContext().getDir("key", MODE_PRIVATE);
 		StrictMode.setThreadPolicy(tp);
 		KeyStrengthener keyStrengthener = SDK_INT >= 23
-				? new AndroidKeyStrengthener() : null;
+				? new AndroidKeyStrengthener()
+				: null;
 		return new AndroidDatabaseConfig(dbDir, keyDir, keyStrengthener);
 	}
 
@@ -370,5 +371,10 @@ public class AppModule {
 			}
 		};
 	}
-}
 
+	@Provides
+	@Singleton
+	ResourceManager provideResourceManager(Application app) {
+		return new ResourceManager(app);
+	}
+}
