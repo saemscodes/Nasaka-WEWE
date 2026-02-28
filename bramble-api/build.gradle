@@ -23,7 +23,7 @@ dependencies {
 
 // needed to make test output available to bramble-core and briar-core
 configurations {
-	testOutput.extendsFrom(testCompile)
+	testOutput.extendsFrom(testImplementation)
 }
 task jarTest(type: Jar, dependsOn: testClasses) {
 	from sourceSets.test.output, sourceSets.main.output

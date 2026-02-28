@@ -40,12 +40,16 @@ class CekaAuthActivity : BaseActivity() {
     }
 
     override fun injectActivity(component: ActivityComponent) {
+        Log.d(TAG, "injectActivity started")
         component.inject(this)
         viewModel = ViewModelProvider(this, viewModelFactory)[SetupViewModel::class.java]
+        Log.d(TAG, "injectActivity finished")
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        Log.d(TAG, "onCreate started")
         super.onCreate(savedInstanceState)
+        Log.d(TAG, "super.onCreate finished")
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
 
         // Handle deep link if the activity was launched via nasakawewe://auth-callback
@@ -53,14 +57,26 @@ class CekaAuthActivity : BaseActivity() {
 
         val isNetworkAvailable = checkNetworkAvailability()
 
+        Log.d(TAG, "Setting content view, network available: $isNetworkAvailable")
         setContent {
+            Log.d(TAG, "setContent block started")
             NasakaWeweTheme {
-                var hasNetwork by remember { mutableStateOf(isNetworkAvailable) }
-                var isProcessingCallback by remember { mutableStateOf(false) }
+                Log.d(TAG, "NasakaWeweTheme block started")
+                var hasNetwork by remember { 
+                    Log.d(TAG, "remembering hasNetwork: $isNetworkAvailable")
+                    mutableStateOf(isNetworkAvailable) 
+                }
+                var isProcessingCallback by remember { 
+                    Log.d(TAG, "remembering isProcessingCallback: false")
+                    mutableStateOf(false) 
+                }
+
+                Log.d(TAG, "Rendering CekaAuthScreen with hasNetwork: $hasNetwork")
 
                 if (hasNetwork) {
                     // Online mode: show Supabase auth with session observation
                     val sessionStatus by supabaseClient.auth.sessionStatus.collectAsState()
+                    Log.d(TAG, "sessionStatus: $sessionStatus")
 
                     LaunchedEffect(sessionStatus) {
                         when (sessionStatus) {
@@ -138,7 +154,9 @@ class CekaAuthActivity : BaseActivity() {
             }
         }
 
+        Log.d(TAG, "Observing viewModel.state")
         viewModel.state.observeEvent(this) { state ->
+            Log.d(TAG, "viewModel state changed: $state")
             if (state == SetupViewModel.State.CREATED) {
                 // Check if there are pending offline credentials to sync
                 scheduleOfflineCredentialSync()

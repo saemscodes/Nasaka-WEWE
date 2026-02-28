@@ -95,6 +95,7 @@ fun CekaAuthScreen(
         return
     }
 
+    android.util.Log.d("CekaAuthScreen", "CekaAuthScreen started, isOnline: $isOnline, isProcessingCallback: $isProcessingCallback")
     Box(
         modifier = Modifier
             .fillMaxSize()

@@ -7,6 +7,7 @@ import androidx.activity.compose.setContent
 import androidx.lifecycle.ViewModelProvider
 import org.briarproject.bramble.api.lifecycle.LifecycleManager
 import androidx.compose.animation.Crossfade
+import android.util.Log
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
@@ -48,17 +49,22 @@ class NavDrawerActivity : BriarActivity(), BaseFragmentListener {
     private var currentScreen by mutableStateOf("dashboard")
 
     override fun injectActivity(component: ActivityComponent) {
+        Log.d("NavDrawerActivity", "injectActivity started")
         component.inject(this)
         val provider = ViewModelProvider(this, viewModelFactory)
         navDrawerViewModel = provider.get(NavDrawerViewModel::class.java)
         pluginViewModel = provider.get(PluginViewModel::class.java)
         contactListViewModel = provider.get(ComposeContactListViewModel::class.java)
+        Log.d("NavDrawerActivity", "injectActivity finished")
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        Log.d("NavDrawerActivity", "onCreate started")
         super.onCreate(savedInstanceState)
+        Log.d("NavDrawerActivity", "super.onCreate finished, setting content")
         
         setContent {
+            Log.d("NavDrawerActivity", "setContent block executing")
             val torState by pluginViewModel.getPluginState(TorConstants.ID).observeAsState(State.INACTIVE)
             val btState by pluginViewModel.getPluginState(BluetoothConstants.ID).observeAsState(State.INACTIVE)
             val wifiState by pluginViewModel.getPluginState(LanTcpConstants.ID).observeAsState(State.INACTIVE)
