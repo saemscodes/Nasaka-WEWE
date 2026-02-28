@@ -10,7 +10,7 @@ If the Internet's down, Nasaka WEWE can sync via Bluetooth, Wi-Fi or memory card
 
 ## Download Nasaka WEWE
 
-Visit [civiceducationkenya.com](https://www.civiceducationkenya.com) to download the latest APK.
+Visit [civiceducationkenya.com](https://www.civiceducationkenya.com/tools) to download the latest APK.
 
 ## Features
 
