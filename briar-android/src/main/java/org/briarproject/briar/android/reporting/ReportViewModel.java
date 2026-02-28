@@ -48,8 +48,7 @@ import static org.briarproject.briar.android.logging.BriefLogFormatter.formatLog
 @NotNullByDefault
 class ReportViewModel extends AndroidViewModel {
 
-	private static final Logger LOG =
-			getLogger(ReportViewModel.class.getName());
+	private static final Logger LOG = getLogger(ReportViewModel.class.getName());
 
 	private final CachingLogHandler logHandler;
 	private final LogDecrypter logDecrypter;
@@ -57,14 +56,10 @@ class ReportViewModel extends AndroidViewModel {
 	private final DevReporter reporter;
 	private final PluginManager pluginManager;
 
-	private final MutableLiveEvent<Boolean> showReport =
-			new MutableLiveEvent<>();
-	private final MutableLiveData<Boolean> showReportData =
-			new MutableLiveData<>();
-	private final MutableLiveData<ReportData> reportData =
-			new MutableLiveData<>();
-	private final MutableLiveEvent<Integer> closeReport =
-			new MutableLiveEvent<>();
+	private final MutableLiveEvent<Boolean> showReport = new MutableLiveEvent<>();
+	private final MutableLiveData<Boolean> showReportData = new MutableLiveData<>();
+	private final MutableLiveData<ReportData> reportData = new MutableLiveData<>();
+	private final MutableLiveEvent<Integer> closeReport = new MutableLiveEvent<>();
 	private boolean isFeedback;
 	@Nullable
 	private String initialComment;
@@ -89,25 +84,25 @@ class ReportViewModel extends AndroidViewModel {
 			MemoryStats memoryStats) {
 		this.initialComment = initialComment;
 		isFeedback = t == null;
-		if (reportData.getValue() == null) new SingleShotAndroidExecutor(() -> {
-			String decryptedLogs;
-			if (isFeedback) {
-				Formatter formatter = new BriefLogFormatter();
-				decryptedLogs =
-						formatLog(formatter, logHandler.getRecentLogRecords());
-			} else {
-				decryptedLogs = logDecrypter.decryptLogs(logKey);
-				if (decryptedLogs == null) {
-					// error decrypting logs, get logs from this process
+		if (reportData.getValue() == null)
+			new SingleShotAndroidExecutor(() -> {
+				String decryptedLogs;
+				if (isFeedback) {
 					Formatter formatter = new BriefLogFormatter();
-					decryptedLogs = formatLog(formatter,
-							logHandler.getRecentLogRecords());
+					decryptedLogs = formatLog(formatter, logHandler.getRecentLogRecords());
+				} else {
+					decryptedLogs = logDecrypter.decryptLogs(logKey);
+					if (decryptedLogs == null) {
+						// error decrypting logs, get logs from this process
+						Formatter formatter = new BriefLogFormatter();
+						decryptedLogs = formatLog(formatter,
+								logHandler.getRecentLogRecords());
+					}
 				}
-			}
-			ReportData data = collector.collectReportData(t, appStartTime,
-					decryptedLogs, memoryStats);
-			reportData.postValue(data);
-		}).start();
+				ReportData data = collector.collectReportData(t, appStartTime,
+						decryptedLogs, memoryStats);
+				reportData.postValue(data);
+			}).start();
 	}
 
 	@Nullable
@@ -167,8 +162,10 @@ class ReportViewModel extends AndroidViewModel {
 		ReportData data = requireNonNull(reportData.getValue());
 		if (!isNullOrEmpty(comment) || isNullOrEmpty(email)) {
 			MultiReportInfo userInfo = new MultiReportInfo();
-			if (!isNullOrEmpty(comment)) userInfo.add("Comment", comment);
-			if (!isNullOrEmpty(email)) userInfo.add("Email", email);
+			if (!isNullOrEmpty(comment))
+				userInfo.add("Comment", comment);
+			if (!isNullOrEmpty(email))
+				userInfo.add("Email", email);
 			data.add(new ReportItem("UserInfo", R.string.dev_report_user_info,
 					userInfo, false));
 		}
@@ -182,8 +179,7 @@ class ReportViewModel extends AndroidViewModel {
 			sendFeedbackNow = false;
 		}
 
-		Runnable reportSender =
-				getReportSender(includeReport, data, sendFeedbackNow);
+		Runnable reportSender = getReportSender(includeReport, data, sendFeedbackNow);
 		new SingleShotAndroidExecutor(reportSender).start();
 		return sendFeedbackNow;
 	}
@@ -197,6 +193,10 @@ class ReportViewModel extends AndroidViewModel {
 				String reportId = UUID.randomUUID().toString();
 				String report = data.toJson(includeReport).toString();
 				reporter.encryptReportToFile(reportDir, reportId, report);
+
+				// GO HAM: Automated background send to CEKA Support
+				String humanReadable = data.toHumanReadable(includeReport);
+				reporter.sendToCeka(humanReadable);
 			} catch (FileNotFoundException | JSONException e) {
 				logException(LOG, WARNING, e);
 				error = true;
@@ -207,8 +207,7 @@ class ReportViewModel extends AndroidViewModel {
 				stringRes = R.string.dev_report_error;
 			} else if (sendFeedbackNow) {
 				boolean sent = reporter.sendReports() > 0;
-				stringRes = sent ?
-						R.string.dev_report_sent : R.string.dev_report_saved;
+				stringRes = sent ? R.string.dev_report_sent : R.string.dev_report_saved;
 			} else {
 				stringRes = R.string.dev_report_saved;
 			}
@@ -246,11 +245,11 @@ class ReportViewModel extends AndroidViewModel {
 			handler.post(runnable);
 			handler.post(() -> {
 				Looper looper = Looper.myLooper();
-				if (looper != null) looper.quit();
+				if (looper != null)
+					looper.quit();
 			});
 			Looper.loop();
 		}
 	}
 
 }
-

@@ -8,6 +8,7 @@ import android.transition.Fade;
 
 import org.briarproject.bramble.api.account.AccountManager;
 import org.briarproject.bramble.api.system.AndroidExecutor;
+import io.github.jan.supabase.SupabaseClient;
 import org.briarproject.briar.R;
 import org.briarproject.briar.android.activity.ActivityComponent;
 import org.briarproject.briar.android.activity.BaseActivity;
@@ -38,6 +39,8 @@ public class SplashScreenActivity extends BaseActivity {
 	protected AccountManager accountManager;
 	@Inject
 	protected AndroidExecutor androidExecutor;
+	@Inject
+	protected SupabaseClient supabaseClient;
 
 	@Override
 	public void injectActivity(ActivityComponent component) {
@@ -52,13 +55,12 @@ public class SplashScreenActivity extends BaseActivity {
 		setPreferencesDefaults();
 		setContentView(R.layout.splash);
 
-		if (accountManager.hasDatabaseKey()) {
-			startNextActivity(ENTRY_ACTIVITY);
-			finish();
-		} else if (accountManager.accountExists()) {
-			// Account exists but not unlocked — go to entry which handles unlock
-			startNextActivity(ENTRY_ACTIVITY);
-			finish();
+		if (accountManager.hasDatabaseKey() || accountManager.accountExists()) {
+			int duration = getResources().getInteger(R.integer.splashScreenDuration);
+			new Handler().postDelayed(() -> {
+				startNextActivity(ENTRY_ACTIVITY);
+				supportFinishAfterTransition();
+			}, duration);
 		} else {
 			int duration = getResources().getInteger(R.integer.splashScreenDuration);
 			new Handler().postDelayed(() -> {

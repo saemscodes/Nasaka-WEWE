@@ -12,7 +12,10 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import org.briarproject.briar.android.fragment.BaseFragment
+import org.briarproject.briar.android.fragment.BaseFragment.BaseFragmentListener
 import org.briarproject.briar.android.ui.screens.ContactListScreen
+import org.briarproject.briar.android.ui.screens.GroupListScreen
 import org.briarproject.bramble.api.plugin.BluetoothConstants
 import org.briarproject.bramble.api.plugin.LanTcpConstants
 import org.briarproject.bramble.api.plugin.Plugin.State
@@ -83,6 +86,9 @@ class NavDrawerActivity : BriarActivity() {
                             onAddContactRemote = { /* Handle add remote */ },
                             onShowPending = { /* Handle show pending */ }
                         )
+                        "groups" -> GroupListScreen(
+                            onBack = { currentScreen = "dashboard" }
+                        )
                     }
                 }
             }
@@ -97,7 +103,11 @@ class NavDrawerActivity : BriarActivity() {
         when (destination) {
             "contacts" -> currentScreen = "contacts"
             "settings" -> startActivity(Intent(this, org.briarproject.briar.android.settings.SettingsActivity::class.java))
-            // Add more navigation cases
+            "blogs" -> startActivity(Intent(this, org.briarproject.briar.android.blog.BlogActivity::class.java))
+            "groups" -> currentScreen = "groups"
+            "forums" -> startActivity(Intent(this, org.briarproject.briar.android.forum.ForumActivity::class.java))
+            "home" -> currentScreen = "dashboard"
+            "map" -> { /* Handle map navigation if implemented */ }
         }
     }
 

@@ -14,6 +14,8 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.filled.Visibility
+import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material.icons.filled.WifiOff
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -27,6 +29,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -42,6 +45,7 @@ import kotlinx.coroutines.launch
 fun CekaAuthScreen(
     supabaseClient: SupabaseClient,
     isOnline: Boolean,
+    isProcessingCallback: Boolean,
     onOfflineFallback: () -> Unit,
     onOfflineAccountCreated: (name: String, password: String) -> Unit
 ) {
@@ -57,6 +61,39 @@ fun CekaAuthScreen(
     var isLoading by remember { mutableStateOf(false) }
     var errorMessage by remember { mutableStateOf<String?>(null) }
     var isSignUpMode by remember { mutableStateOf(false) }
+
+    // Password visibility toggles
+    var passwordVisible by remember { mutableStateOf(false) }
+    var confirmPasswordVisible by remember { mutableStateOf(false) }
+
+    // Show processing overlay when returning from OAuth callback
+    if (isProcessingCallback) {
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(MaterialTheme.colorScheme.background),
+            contentAlignment = Alignment.Center
+        ) {
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Center
+            ) {
+                CircularProgressIndicator(
+                    color = MaterialTheme.colorScheme.primary,
+                    modifier = Modifier.size(48.dp),
+                    strokeWidth = 4.dp
+                )
+                Spacer(modifier = Modifier.height(16.dp))
+                Text(
+                    text = "Completing authentication…",
+                    fontSize = 16.sp,
+                    color = MaterialTheme.colorScheme.onBackground,
+                    fontWeight = FontWeight.Medium
+                )
+            }
+        }
+        return
+    }
 
     Box(
         modifier = Modifier
@@ -197,7 +234,15 @@ fun CekaAuthScreen(
                             label = { Text("Password") },
                             modifier = Modifier.fillMaxWidth(),
                             leadingIcon = { Icon(Icons.Default.Lock, contentDescription = null) },
-                            visualTransformation = PasswordVisualTransformation(),
+                            trailingIcon = {
+                                IconButton(onClick = { passwordVisible = !passwordVisible }) {
+                                    Icon(
+                                        imageVector = if (passwordVisible) Icons.Default.VisibilityOff else Icons.Default.Visibility,
+                                        contentDescription = if (passwordVisible) "Hide password" else "Show password"
+                                    )
+                                }
+                            },
+                            visualTransformation = if (passwordVisible) VisualTransformation.None else PasswordVisualTransformation(),
                             keyboardOptions = KeyboardOptions(
                                 imeAction = if (isSignUpMode) ImeAction.Next else ImeAction.Done,
                                 keyboardType = KeyboardType.Password
@@ -222,7 +267,15 @@ fun CekaAuthScreen(
                                 label = { Text("Confirm Password") },
                                 modifier = Modifier.fillMaxWidth(),
                                 leadingIcon = { Icon(Icons.Default.Lock, contentDescription = null) },
-                                visualTransformation = PasswordVisualTransformation(),
+                                trailingIcon = {
+                                    IconButton(onClick = { confirmPasswordVisible = !confirmPasswordVisible }) {
+                                        Icon(
+                                            imageVector = if (confirmPasswordVisible) Icons.Default.VisibilityOff else Icons.Default.Visibility,
+                                            contentDescription = if (confirmPasswordVisible) "Hide password" else "Show password"
+                                        )
+                                    }
+                                },
+                                visualTransformation = if (confirmPasswordVisible) VisualTransformation.None else PasswordVisualTransformation(),
                                 keyboardOptions = KeyboardOptions(
                                     imeAction = ImeAction.Done,
                                     keyboardType = KeyboardType.Password
@@ -271,6 +324,10 @@ fun CekaAuthScreen(
                                                 errorMessage = "Please enter your email"
                                                 return@launch
                                             }
+                                            if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                                                errorMessage = "Please enter a valid email address"
+                                                return@launch
+                                            }
                                             if (password.length < 6) {
                                                 errorMessage = "Password must be at least 6 characters"
                                                 return@launch
@@ -290,8 +347,12 @@ fun CekaAuthScreen(
                                             errorMessage = "Check your email for a confirmation link!"
                                         } else {
                                             // Sign in
-                                            if (email.isBlank() || password.isBlank()) {
-                                                errorMessage = "Please enter email and password"
+                                            if (email.isBlank()) {
+                                                errorMessage = "Please enter your email"
+                                                return@launch
+                                            }
+                                            if (password.isBlank()) {
+                                                errorMessage = "Please enter your password"
                                                 return@launch
                                             }
                                             supabaseClient.auth.signInWith(EmailProvider) {
@@ -300,7 +361,22 @@ fun CekaAuthScreen(
                                             }
                                         }
                                     } catch (e: Exception) {
-                                        errorMessage = e.message ?: "Authentication failed"
+                                        val msg = e.message ?: "Authentication failed"
+                                        errorMessage = when {
+                                            msg.contains("Invalid login credentials", ignoreCase = true) ->
+                                                "Invalid email or password. Please try again."
+                                            msg.contains("Email not confirmed", ignoreCase = true) ->
+                                                "Please verify your email before signing in."
+                                            msg.contains("User already registered", ignoreCase = true) ->
+                                                "An account with this email already exists. Try signing in."
+                                            msg.contains("network", ignoreCase = true) ||
+                                            msg.contains("timeout", ignoreCase = true) ||
+                                            msg.contains("connect", ignoreCase = true) ->
+                                                "Network error. Check your connection and try again."
+                                            msg.contains("rate limit", ignoreCase = true) ->
+                                                "Too many attempts. Please wait a moment and try again."
+                                            else -> msg
+                                        }
                                     } finally {
                                         isLoading = false
                                     }
@@ -345,13 +421,55 @@ fun CekaAuthScreen(
 
                         Spacer(modifier = Modifier.height(16.dp))
 
-                        OutlinedButton(
+                        // Continue with CEKA (primary OAuth provider)
+                        Button(
                             onClick = {
                                 scope.launch {
+                                    errorMessage = null
                                     try {
                                         supabaseClient.auth.signInWith(Google)
                                     } catch (e: Exception) {
-                                        errorMessage = e.message ?: "Google sign-in failed"
+                                        errorMessage = when {
+                                            e.message?.contains("network", ignoreCase = true) == true ||
+                                            e.message?.contains("timeout", ignoreCase = true) == true ->
+                                                "Network error. Check your connection and try again."
+                                            e.message?.contains("cancel", ignoreCase = true) == true ->
+                                                "Authentication was cancelled."
+                                            else -> e.message ?: "CEKA sign-in failed"
+                                        }
+                                    }
+                                }
+                            },
+                            modifier = Modifier.fillMaxWidth(),
+                            colors = ButtonDefaults.buttonColors(
+                                containerColor = MaterialTheme.colorScheme.primaryContainer
+                            ),
+                            shape = RoundedCornerShape(8.dp)
+                        ) {
+                            Text(
+                                text = "Continue with CEKA",
+                                color = MaterialTheme.colorScheme.onPrimaryContainer,
+                                fontWeight = FontWeight.SemiBold
+                            )
+                        }
+
+                        Spacer(modifier = Modifier.height(8.dp))
+
+                        OutlinedButton(
+                            onClick = {
+                                scope.launch {
+                                    errorMessage = null
+                                    try {
+                                        supabaseClient.auth.signInWith(Google)
+                                    } catch (e: Exception) {
+                                        errorMessage = when {
+                                            e.message?.contains("network", ignoreCase = true) == true ||
+                                            e.message?.contains("timeout", ignoreCase = true) == true ->
+                                                "Network error. Check your connection and try again."
+                                            e.message?.contains("cancel", ignoreCase = true) == true ->
+                                                "Authentication was cancelled."
+                                            else -> e.message ?: "Google sign-in failed"
+                                        }
                                     }
                                 }
                             },
@@ -366,10 +484,18 @@ fun CekaAuthScreen(
                         OutlinedButton(
                             onClick = {
                                 scope.launch {
+                                    errorMessage = null
                                     try {
                                         supabaseClient.auth.signInWith(Github)
                                     } catch (e: Exception) {
-                                        errorMessage = e.message ?: "GitHub sign-in failed"
+                                        errorMessage = when {
+                                            e.message?.contains("network", ignoreCase = true) == true ||
+                                            e.message?.contains("timeout", ignoreCase = true) == true ->
+                                                "Network error. Check your connection and try again."
+                                            e.message?.contains("cancel", ignoreCase = true) == true ->
+                                                "Authentication was cancelled."
+                                            else -> e.message ?: "GitHub sign-in failed"
+                                        }
                                     }
                                 }
                             },
@@ -420,7 +546,15 @@ fun CekaAuthScreen(
                             label = { Text("PIN / Password") },
                             modifier = Modifier.fillMaxWidth(),
                             leadingIcon = { Icon(Icons.Default.Lock, contentDescription = null) },
-                            visualTransformation = PasswordVisualTransformation(),
+                            trailingIcon = {
+                                IconButton(onClick = { passwordVisible = !passwordVisible }) {
+                                    Icon(
+                                        imageVector = if (passwordVisible) Icons.Default.VisibilityOff else Icons.Default.Visibility,
+                                        contentDescription = if (passwordVisible) "Hide password" else "Show password"
+                                    )
+                                }
+                            },
+                            visualTransformation = if (passwordVisible) VisualTransformation.None else PasswordVisualTransformation(),
                             keyboardOptions = KeyboardOptions(
                                 imeAction = ImeAction.Next,
                                 keyboardType = KeyboardType.Password
@@ -443,7 +577,15 @@ fun CekaAuthScreen(
                             label = { Text("Confirm PIN / Password") },
                             modifier = Modifier.fillMaxWidth(),
                             leadingIcon = { Icon(Icons.Default.Lock, contentDescription = null) },
-                            visualTransformation = PasswordVisualTransformation(),
+                            trailingIcon = {
+                                IconButton(onClick = { confirmPasswordVisible = !confirmPasswordVisible }) {
+                                    Icon(
+                                        imageVector = if (confirmPasswordVisible) Icons.Default.VisibilityOff else Icons.Default.Visibility,
+                                        contentDescription = if (confirmPasswordVisible) "Hide password" else "Show password"
+                                    )
+                                }
+                            },
+                            visualTransformation = if (confirmPasswordVisible) VisualTransformation.None else PasswordVisualTransformation(),
                             keyboardOptions = KeyboardOptions(
                                 imeAction = ImeAction.Done,
                                 keyboardType = KeyboardType.Password

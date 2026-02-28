@@ -83,7 +83,8 @@ class BriarReportCollector {
 		ReportData reportData = new ReportData()
 				.add(getBasicInfo(t))
 				.add(getDeviceInfo());
-		if (t != null) reportData.add(getStacktrace(t));
+		if (t != null)
+			reportData.add(getStacktrace(t));
 		return reportData
 				.add(getTimeInfo(appStartTime))
 				.add(getMemory(memoryStats))
@@ -125,8 +126,7 @@ class BriarReportCollector {
 				.add("Model", Build.MODEL)
 				.add("Brand", Build.BRAND);
 		if (SDK_INT >= 28) {
-			UsageStatsManager usageStatsManager = (UsageStatsManager)
-					ctx.getSystemService(USAGE_STATS_SERVICE);
+			UsageStatsManager usageStatsManager = (UsageStatsManager) ctx.getSystemService(USAGE_STATS_SERVICE);
 			deviceInfo.add("AppStandbyBucket",
 					usageStatsManager.getAppStandbyBucket());
 		}
@@ -137,10 +137,36 @@ class BriarReportCollector {
 	private ReportItem getStacktrace(Throwable t) {
 		final Writer sw = new StringWriter();
 		final PrintWriter printWriter = new PrintWriter(sw);
-		if (!isNullOrEmpty(t.getMessage())) {
-			printWriter.println(t.getMessage());
+		try {
+			if (!isNullOrEmpty(t.getMessage())) {
+				printWriter.println(t.getMessage());
+			}
+			t.printStackTrace(printWriter);
+		} catch (Throwable e) {
+			// Throwable.printEnclosedStackTrace() can throw NPE if a cause
+			// in the chain has a null toString() (e.g. after R8 obfuscation).
+			// This catch(Throwable) is ultra-safe to prevent recursive crashes.
+			try {
+				printWriter.println("Error extracting full stacktrace: " + e.getMessage());
+				printWriter.println(t.getClass().getName() + ": " +
+						(t.getMessage() != null ? t.getMessage() : "(no message)"));
+				for (StackTraceElement element : t.getStackTrace()) {
+					printWriter.println("\tat " + element);
+				}
+				Throwable cause = t.getCause();
+				if (cause != null) {
+					printWriter.println("Caused by: " +
+							cause.getClass().getName() + ": " +
+							(cause.getMessage() != null ? cause.getMessage()
+									: "(no message)"));
+					for (StackTraceElement element : cause.getStackTrace()) {
+						printWriter.println("\tat " + element);
+					}
+				}
+			} catch (Throwable ignored) {
+				// We tried our best
+			}
 		}
-		t.printStackTrace(printWriter);
 		SingleReportInfo stacktrace = new SingleReportInfo(sw.toString());
 		return new ReportItem("Stacktrace", R.string.dev_report_stacktrace,
 				stacktrace);
@@ -157,8 +183,7 @@ class BriarReportCollector {
 	}
 
 	private String formatTime(long time) {
-		SimpleDateFormat format =
-				new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS", US);
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS", US);
 		format.setTimeZone(getTimeZone("UTC"));
 		return format.format(new Date(time));
 	}
@@ -200,7 +225,7 @@ class BriarReportCollector {
 				storageInfo);
 	}
 
-	@SuppressLint({"HardwareIds", "MissingPermission"})
+	@SuppressLint({ "HardwareIds", "MissingPermission" })
 	private ReportItem getConnectivity() {
 		MultiReportInfo connectivityInfo = new MultiReportInfo();
 
@@ -221,10 +246,10 @@ class BriarReportCollector {
 				method.setAccessible(true);
 				mobileEnabled = (Boolean) requireNonNull(method.invoke(cm));
 			} catch (ClassNotFoundException
-			         | NoSuchMethodException
-			         | IllegalArgumentException
-			         | InvocationTargetException
-			         | IllegalAccessException e) {
+					| NoSuchMethodException
+					| IllegalArgumentException
+					| InvocationTargetException
+					| IllegalAccessException e) {
 				connectivityInfo
 						.add("MobileDataReflectionException", e.toString());
 			}
@@ -291,15 +316,13 @@ class BriarReportCollector {
 			connectivityInfo.add("BluetoothEnabled", btEnabled);
 
 			// Is Bluetooth connectable?
-			int scanMode = areBluetoothPermissionsGranted(ctx) ?
-					bt.getScanMode() : -1;
+			int scanMode = areBluetoothPermissionsGranted(ctx) ? bt.getScanMode() : -1;
 			boolean btConnectable = scanMode == SCAN_MODE_CONNECTABLE ||
 					scanMode == SCAN_MODE_CONNECTABLE_DISCOVERABLE;
 			connectivityInfo.add("BluetoothConnectable", btConnectable);
 
 			// Is Bluetooth discoverable?
-			boolean btDiscoverable =
-					scanMode == SCAN_MODE_CONNECTABLE_DISCOVERABLE;
+			boolean btDiscoverable = scanMode == SCAN_MODE_CONNECTABLE_DISCOVERABLE;
 			connectivityInfo.add("BluetoothDiscoverable", btDiscoverable);
 
 			// Is Bluetooth LE scanning and advertising supported?
@@ -362,4 +385,3 @@ class BriarReportCollector {
 	}
 
 }
-

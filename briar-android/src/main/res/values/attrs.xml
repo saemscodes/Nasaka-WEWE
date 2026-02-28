@@ -3,7 +3,7 @@
 
 	<integer name="animationSpeed">@android:integer/config_mediumAnimTime</integer>
 
-	<integer name="splashScreenDuration">500</integer>
+	<integer name="splashScreenDuration">3000</integer>
 
 	<declare-styleable name="NasakaWeweRecyclerView">
 		<attr name="scrollToEnd" format="boolean" />

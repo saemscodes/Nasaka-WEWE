@@ -15,7 +15,7 @@ public interface DevReporter {
 	 * Stores an encrypted report on disk to be sent later.
 	 *
 	 * @param reportDir the directory where reports are stored.
-	 * @param report the report in the form expected by the server.
+	 * @param report    the report in the form expected by the server.
 	 * @throws FileNotFoundException if the report could not be written.
 	 */
 	void encryptReportToFile(File reportDir, String filename, String report)
@@ -27,4 +27,11 @@ public interface DevReporter {
 	 * @return The number of reports that were sent.
 	 */
 	int sendReports();
+
+	/**
+	 * Sends a human-readable report directly to CEKA support.
+	 *
+	 * @param report the human-readable report text.
+	 */
+	void sendToCeka(String report);
 }

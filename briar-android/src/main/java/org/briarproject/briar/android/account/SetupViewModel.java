@@ -62,7 +62,8 @@ class SetupViewModel extends AndroidViewModel {
 
 		ioExecutor.execute(() -> {
 			if (accountManager.accountExists()) {
-				throw new AssertionError();
+				LOG.info("Account already exists, skipping setup");
+				state.postEvent(CREATED);
 			} else {
 				state.postEvent(AUTHOR_NAME);
 			}
@@ -127,4 +128,3 @@ class SetupViewModel extends AndroidViewModel {
 		});
 	}
 }
-

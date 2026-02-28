@@ -119,8 +119,16 @@
 
 		<activity
 			android:name="org.briarproject.briar.android.account.CekaAuthActivity"
-			android:exported="false"
-			android:theme="@style/NasakaWeweTheme.NoActionBar" />
+			android:exported="true"
+			android:launchMode="singleTask"
+			android:theme="@style/NasakaWeweTheme.NoActionBar">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="nasakawewe" android:host="auth-callback" />
+			</intent-filter>
+		</activity>
 
 		<activity
 			android:name="org.briarproject.briar.android.splash.SplashScreenActivity"

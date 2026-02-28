@@ -34,12 +34,29 @@ class ReportData {
 		JSONObject json = new JSONObject();
 		for (ReportItem item : items) {
 			// only include required items when report not added
-			if (!includeReport && item.isOptional) continue;
+			if (!includeReport && item.isOptional)
+				continue;
 			// only include what should be included
-			if (!item.isIncluded) continue;
+			if (!item.isIncluded)
+				continue;
 			json.put(item.name, item.info.toJson());
 		}
 		return json;
+	}
+
+	public String toHumanReadable(boolean includeReport) {
+		StringBuilder sb = new StringBuilder();
+		sb.append("=== NASAKA WEWE DIAGNOSTICS REPORT ===\n\n");
+		for (ReportItem item : items) {
+			if (!includeReport && item.isOptional)
+				continue;
+			if (!item.isIncluded)
+				continue;
+			sb.append("--- ").append(item.name).append(" ---\n");
+			sb.append(item.info.toString()).append("\n");
+		}
+		sb.append("======================================\n");
+		return sb.toString();
 	}
 
 	@NotNullByDefault
@@ -121,4 +138,3 @@ class ReportData {
 	}
 
 }
-
