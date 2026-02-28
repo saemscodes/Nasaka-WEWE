@@ -41,6 +41,7 @@ import dagger.Component;
 		TestSecureRandomModule.class,
 		TimeTravelModule.class,
 		TestSocksModule.class,
+		org.briarproject.bramble.test.TestResourceConstraintModule.class,
 })
 interface RemovableDriveIntegrationTestComponent
 		extends BrambleCoreEagerSingletons {

@@ -176,9 +176,8 @@ public class ReportFormFragment extends BaseFragment {
 
 	private void triggerPrivacyPolicy() {
 		Intent i = new Intent(Intent.ACTION_VIEW);
-		i.setData(Uri.parse("https://briarproject.org/privacy-policy/\\"));
+		i.setData(Uri.parse("https://civiceducationkenya.com/privacy-policy/"));
 		tryToStartActivity(requireActivity(), i);
 	}
 
 }
-

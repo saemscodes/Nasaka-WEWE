@@ -16,7 +16,8 @@ import dagger.Module;
 		TestFeatureFlagModule.class,
 		TestMailboxDirectoryModule.class,
 		TestSecureRandomModule.class,
-		TimeTravelModule.class
+		TimeTravelModule.class,
+		TestResourceConstraintModule.class
 })
 public class BrambleCoreIntegrationTestModule {
 

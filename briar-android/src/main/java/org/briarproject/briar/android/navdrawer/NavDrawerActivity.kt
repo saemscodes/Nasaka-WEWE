@@ -30,7 +30,7 @@ import org.briarproject.briar.android.ui.screens.DashboardScreen
 import org.briarproject.briar.android.ui.theme.NasakaWeweTheme
 import javax.inject.Inject
 
-class NavDrawerActivity : BriarActivity() {
+class NavDrawerActivity : BriarActivity(), BaseFragmentListener {
 
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
@@ -109,6 +109,22 @@ class NavDrawerActivity : BriarActivity() {
             "home" -> currentScreen = "dashboard"
             "map" -> { /* Handle map navigation if implemented */ }
         }
+    }
+
+    override fun runOnDbThread(runnable: Runnable) {
+        super.runOnDbThread(runnable)
+    }
+
+    override fun getActivityComponent(): ActivityComponent {
+        return activityComponent
+    }
+
+    override fun showNextFragment(f: BaseFragment) {
+        showInitialFragment(f)
+    }
+
+    override fun handleException(e: Exception) {
+        supportFinishAfterTransition()
     }
 
     override fun onBackPressed() {

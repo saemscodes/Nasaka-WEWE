@@ -125,8 +125,10 @@ class DevReporterImpl implements DevReporter, EventListener {
 				return reportsSent;
 			}
 		}
-		if (LOG.isLoggable(INFO)) LOG.info(reportsSent + " report(s) sent");
+		if (LOG.isLoggable(INFO))
+			LOG.info(reportsSent + " report(s) sent");
 		return reportsSent;
+	}
 
 	@Override
 	public void sendToCeka(String report) {

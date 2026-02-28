@@ -725,10 +725,10 @@
 	<string name="nasaka_wewe_version">Nasaka-WEWE version: %s</string>
 	<string name="tor_version">Tor version: %s</string>
 	<string name="links">Links</string>
-	<string name="nasaka_wewe_website">\u2022 <a href="">Website</a></string>
+	<string name="nasaka_wewe_website">\u2022 <a href="https://civiceducationkenya.com/">Website</a></string>
 	<string name="nasaka_wewe_source_code">\u2022 <a href="">Source code</a></string>
 	<string name="nasaka_wewe_changelog">\u2022 <a href="">Changelog</a></string>
-	<string name="nasaka_wewe_privacy_policy">\u2022 <a href="">Privacy Policy</a></string>
+	<string name="nasaka_wewe_privacy_policy">\u2022 <a href="https://civiceducationkenya.com/privacy-policy/">Privacy Policy</a></string>
 	<!-- Here translators can add their names or Transifex usernames(eg "Thanks to all the contributors at the Localization Lab, especially Tom, Matthew and Jerry") -->
 	<string name="translator_thanks">Thanks to all the contributors at the Localization Lab</string>
 
@@ -759,16 +759,16 @@
 	<string name="link_warning_open_link">Open Link</string>
 
 	<!-- Crash Reporter -->
-	<string name="crash_report_title">Nasaka-WEWE Crash Report</string>
+	<string name="crash_report_title">Nasaka-WEWE Support Report</string>
 	<string name="nasaka_wewe_crashed">Sorry, Nasaka-WEWE has crashed</string>
 	<string name="not_your_fault">This is not your fault.</string>
-	<string name="please_send_report">Please help us build a better Nasaka-WEWE by sending us a crash report.</string>
+	<string name="please_send_report">Please help us improve Nasaka-WEWE by sending a crash report to the CEKA support team.</string>
 	<string name="report_is_encrypted">We promise that the report is encrypted and sent securely.</string>
 	<string name="feedback_title">Feedback</string>
 	<string name="describe_crash">Describe what happened (optional)</string>
 	<string name="enter_feedback">Enter your feedback</string>
 	<string name="optional_contact_email">Your email address (optional)</string>
-	<string name="privacy_policy">By sending us data you agree to our <a href="">privacy policy</a></string>
+	<string name="privacy_policy">By sending us data you agree to our <a href="https://civiceducationkenya.com/privacy-policy/">privacy policy</a></string>
 	<string name="include_debug_report_crash">Include anonymous data about the crash</string>
 	<string name="include_debug_report_feedback">Include anonymous data about this device</string>
 	<string name="dev_report_user_info">User information</string>
@@ -783,7 +783,7 @@
 	<string name="dev_report_build_config">Build configuration</string>
 	<string name="dev_report_logcat">App log</string>
 	<string name="dev_report_device_features">Device Features</string>
-	<string name="send_report">Send report</string>
+	<string name="send_report">Send to CEKA Support</string>
 	<string name="close">Close</string>
 	<string name="dev_report_sending">Sending feedback…</string>
 	<string name="dev_report_sent">Feedback sent</string>

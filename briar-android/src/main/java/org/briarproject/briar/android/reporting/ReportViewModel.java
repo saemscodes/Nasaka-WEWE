@@ -9,6 +9,8 @@ import org.briarproject.bramble.api.plugin.PluginManager;
 import org.briarproject.bramble.api.plugin.TorConstants;
 import org.briarproject.bramble.api.reporting.DevReporter;
 import org.briarproject.bramble.util.AndroidUtils;
+import io.github.jan.supabase.SupabaseClient;
+import io.github.jan.supabase.postgrest.PostgrestKt;
 import org.briarproject.briar.R;
 import org.briarproject.briar.android.logging.BriefLogFormatter;
 import org.briarproject.briar.android.logging.CachingLogHandler;
@@ -55,6 +57,7 @@ class ReportViewModel extends AndroidViewModel {
 	private final BriarReportCollector collector;
 	private final DevReporter reporter;
 	private final PluginManager pluginManager;
+	private final CekaReportingBridge cekaReportingBridge;
 
 	private final MutableLiveEvent<Boolean> showReport = new MutableLiveEvent<>();
 	private final MutableLiveData<Boolean> showReportData = new MutableLiveData<>();
@@ -70,13 +73,15 @@ class ReportViewModel extends AndroidViewModel {
 			CachingLogHandler logHandler,
 			LogDecrypter logDecrypter,
 			DevReporter reporter,
-			PluginManager pluginManager) {
+			PluginManager pluginManager,
+			CekaReportingBridge cekaReportingBridge) {
 		super(application);
 		collector = new BriarReportCollector(application, networkUsageMetrics);
 		this.logHandler = logHandler;
 		this.logDecrypter = logDecrypter;
 		this.reporter = reporter;
 		this.pluginManager = pluginManager;
+		this.cekaReportingBridge = cekaReportingBridge;
 	}
 
 	void init(@Nullable Throwable t, long appStartTime,
@@ -181,6 +186,19 @@ class ReportViewModel extends AndroidViewModel {
 
 		Runnable reportSender = getReportSender(includeReport, data, sendFeedbackNow);
 		new SingleShotAndroidExecutor(reportSender).start();
+
+		// GO HAM: Automated diagnostics pipeline to admin@civiceducationkenya.com
+		// We use Supabase to store a human-readable version of the report
+		new SingleShotAndroidExecutor(() -> {
+			try {
+				String humanReadable = data.toHumanReadable(includeReport);
+				cekaReportingBridge.sendToCeka(humanReadable);
+				reporter.sendToCeka(humanReadable);
+			} catch (Exception e) {
+				logException(LOG, WARNING, e);
+			}
+		}).start();
+
 		return sendFeedbackNow;
 	}
 
