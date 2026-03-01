@@ -176,8 +176,29 @@ class AccountManagerImpl implements AccountManager {
 	@Override
 	public boolean createAccount(String name, String password, int role) {
 		synchronized (stateChangeLock) {
-			if (hasDatabaseKey())
-				throw new AssertionError("Already have a database key");
+			if (hasDatabaseKey()) {
+				LOG.info("Already have a database key, skipping creation");
+				return true;
+			}
+
+			// If account already exists on disk (e.g. from a previous failed redirect
+			// process),
+			// try to sign in with the provided password (which is the userId in OAuth
+			// flow).
+			if (accountExists()) {
+				LOG.info("Account already exists on disk, attempting auto-sign-in instead of creation");
+				try {
+					signIn(password);
+					LOG.info("Auto-sign-in successful for existing account");
+					return true;
+				} catch (DecryptionException e) {
+					LOG.warning("Failed to auto-sign-in to existing account: " + e.getDecryptionResult());
+					// If we can't sign in, we might have a credential mismatch.
+					// For Nasaka, we'll return false to let the UI handle it.
+					return false;
+				}
+			}
+
 			Identity identity = identityManager.createIdentity(name, role);
 			identityManager.registerIdentity(identity);
 			SecretKey key = crypto.generateSecretKey();

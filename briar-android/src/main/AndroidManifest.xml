@@ -153,7 +153,7 @@
 				<category android:name="android.intent.category.DEFAULT" />
 				<category android:name="android.intent.category.BROWSABLE" />
 
-				<data android:scheme="nasakawewe" />
+				<data android:scheme="nasakawewe" android:host="contact" />
 			</intent-filter>
 			<intent-filter android:label="@string/add_contact_remotely_title_case">
 				<action android:name="android.intent.action.SEND" />

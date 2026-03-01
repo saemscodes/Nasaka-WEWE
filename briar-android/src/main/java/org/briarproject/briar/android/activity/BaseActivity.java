@@ -63,8 +63,7 @@ public abstract class BaseActivity extends AppCompatActivity
 
 	protected ActivityComponent activityComponent;
 
-	private final List<ActivityLifecycleController> lifecycleControllers =
-			new ArrayList<>();
+	private final List<ActivityLifecycleController> lifecycleControllers = new ArrayList<>();
 	private boolean destroyed = false;
 
 	@Nullable
@@ -82,26 +81,43 @@ public abstract class BaseActivity extends AppCompatActivity
 		// create the ActivityComponent *before* calling super.onCreate()
 		// because it already attaches fragments which need access
 		// to the component for their own injection
-		AndroidComponent applicationComponent =
-				((BriarApplication) getApplication()).getApplicationComponent();
+		AndroidComponent applicationComponent = ((BriarApplication) getApplication()).getApplicationComponent();
 		activityComponent = DaggerActivityComponent.builder()
 				.androidComponent(applicationComponent)
 				.activityModule(getActivityModule())
 				.build();
-		injectActivity(activityComponent);
+		try {
+			injectActivity(activityComponent);
+		} catch (Throwable t) {
+			LOG.log(java.util.logging.Level.WARNING,
+					"NUCLEAR: Failed to inject activity: " + getClass().getSimpleName(), t);
+			// If we are already in the crash process, don't crash again!
+			if (getClass().getName().contains("CrashReportActivity")) {
+				// Continue without injection if it's the crash reporter
+				return;
+			}
+			// Re-throw if it wasn't handled, but at least we logged it
+			if (t instanceof RuntimeException)
+				throw (RuntimeException) t;
+			if (t instanceof Error)
+				throw (Error) t;
+			throw new RuntimeException(t);
+		}
 		super.onCreate(state);
 		if (LOG.isLoggable(INFO)) {
 			LOG.info("Creating " + getClass().getSimpleName());
 		}
 
 		// WARNING: When removing this or making it possible to turn it off,
-		//          we need a solution for the app lock feature.
-		//          When the app is locked by a timeout and FLAG_SECURE is not
-		//          set, the app content becomes visible briefly before the
-		//          unlock screen is shown.
-		if (PREVENT_SCREENSHOTS) getWindow().addFlags(FLAG_SECURE);
+		// we need a solution for the app lock feature.
+		// When the app is locked by a timeout and FLAG_SECURE is not
+		// set, the app content becomes visible briefly before the
+		// unlock screen is shown.
+		if (PREVENT_SCREENSHOTS)
+			getWindow().addFlags(FLAG_SECURE);
 
-		if (SDK_INT >= 31) getWindow().setHideOverlayWindows(true);
+		if (SDK_INT >= 31)
+			getWindow().setHideOverlayWindows(true);
 
 		for (ActivityLifecycleController alc : lifecycleControllers) {
 			alc.onActivityCreate(this);
@@ -135,7 +151,8 @@ public abstract class BaseActivity extends AppCompatActivity
 		}
 		protectToolbar();
 		ScreenFilterDialogFragment f = findDialogFragment();
-		if (f != null) f.setDismissListener(this::protectToolbar);
+		if (f != null)
+			f.setDismissListener(this::protectToolbar);
 	}
 
 	@Nullable
@@ -179,7 +196,8 @@ public abstract class BaseActivity extends AppCompatActivity
 	}
 
 	public void showNextFragment(BaseFragment f) {
-		if (!getLifecycle().getCurrentState().isAtLeast(STARTED)) return;
+		if (!getLifecycle().getCurrentState().isAtLeast(STARTED))
+			return;
 		showFragment(getSupportFragmentManager(), f, f.getUniqueTag());
 	}
 
@@ -189,13 +207,15 @@ public abstract class BaseActivity extends AppCompatActivity
 		}
 		// If the dialog is already visible, filter the tap
 		ScreenFilterDialogFragment f = findDialogFragment();
-		if (f != null && f.isVisible()) return false;
+		if (f != null && f.isVisible())
+			return false;
 		Collection<AppDetails> apps;
 		// querying all apps is only possible at API 29 and below
 		if (SDK_INT <= 29) {
 			apps = screenFilterMonitor.getApps();
 			// If all overlay apps have been allowed, allow the tap
-			if (apps.isEmpty()) return true;
+			if (apps.isEmpty())
+				return true;
 		} else {
 			apps = emptyList();
 		}
@@ -208,7 +228,8 @@ public abstract class BaseActivity extends AppCompatActivity
 			f.setDismissListener(this::protectToolbar);
 			// Hide soft keyboard when (re)showing dialog
 			View focus = getCurrentFocus();
-			if (focus != null) hideSoftKeyboard(focus);
+			if (focus != null)
+				hideSoftKeyboard(focus);
 			f.show(fm, ScreenFilterDialogFragment.TAG);
 		}
 		// Filter the tap
@@ -230,7 +251,8 @@ public abstract class BaseActivity extends AppCompatActivity
 	@Override
 	public void runOnUiThreadUnlessDestroyed(Runnable r) {
 		runOnUiThread(() -> {
-			if (!destroyed && !isFinishing()) r.run();
+			if (!destroyed && !isFinishing())
+				r.run();
 		});
 	}
 
@@ -271,7 +293,8 @@ public abstract class BaseActivity extends AppCompatActivity
 	}
 
 	private void findToolbar() {
-		if (searchedForToolbar) return;
+		if (searchedForToolbar)
+			return;
 		View decorView = getWindow().getDecorView();
 		if (decorView instanceof ViewGroup)
 			toolbar = findToolbar((ViewGroup) decorView);
@@ -281,13 +304,16 @@ public abstract class BaseActivity extends AppCompatActivity
 	@Nullable
 	private Toolbar findToolbar(ViewGroup vg) {
 		// Views inside tap-safe layouts are already protected
-		if (vg instanceof TapSafeFrameLayout) return null;
+		if (vg instanceof TapSafeFrameLayout)
+			return null;
 		for (int i = 0, len = vg.getChildCount(); i < len; i++) {
 			View child = vg.getChildAt(i);
-			if (child instanceof Toolbar) return (Toolbar) child;
+			if (child instanceof Toolbar)
+				return (Toolbar) child;
 			if (child instanceof ViewGroup) {
 				Toolbar toolbar = findToolbar((ViewGroup) child);
-				if (toolbar != null) return toolbar;
+				if (toolbar != null)
+					return toolbar;
 			}
 		}
 		return null;
@@ -318,4 +344,3 @@ public abstract class BaseActivity extends AppCompatActivity
 		return showScreenFilterWarning();
 	}
 }
-

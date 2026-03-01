@@ -39,152 +39,198 @@ class CekaAuthActivity : BaseActivity() {
         private const val TAG = "CekaAuthActivity"
     }
 
+    private val isProcessingCallback = mutableStateOf(false)
+    private var isCreatingAccountLocally = false
+
     override fun injectActivity(component: ActivityComponent) {
         Log.d(TAG, "injectActivity started")
-        component.inject(this)
-        viewModel = ViewModelProvider(this, viewModelFactory)[SetupViewModel::class.java]
-        Log.d(TAG, "injectActivity finished")
+        try {
+            component.inject(this)
+            viewModel = ViewModelProvider(this, viewModelFactory)[SetupViewModel::class.java]
+            Log.d(TAG, "injectActivity finished successfully")
+        } catch (t: Throwable) {
+            Log.e(TAG, "CRITICAL: Injection failed in CekaAuthActivity!", t)
+            // If injection fails, we might still be able to show a basic error
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        Log.d(TAG, "onCreate started")
+        Log.d(TAG, "onCreate entry: intent=$intent")
         super.onCreate(savedInstanceState)
-        Log.d(TAG, "super.onCreate finished")
+        Log.d(TAG, "super.onCreate done")
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
 
-        // Handle deep link if the activity was launched via nasakawewe://auth-callback
-        handleIncomingDeepLink(intent)
+        // Handle deep link if activity started via redirect
+        val data = intent.data
+        if (data != null && data.scheme == "nasakawewe" && data.host == "auth-callback") {
+            Log.i(TAG, "Activity started via deep link redirect: $data")
+            isProcessingCallback.value = true
+            handleIncomingDeepLink(intent)
+        }
 
         val isNetworkAvailable = checkNetworkAvailability()
 
         Log.d(TAG, "Setting content view, network available: $isNetworkAvailable")
-        setContent {
-            Log.d(TAG, "setContent block started")
-            NasakaWeweTheme {
-                Log.d(TAG, "NasakaWeweTheme block started")
-                var hasNetwork by remember { 
-                    Log.d(TAG, "remembering hasNetwork: $isNetworkAvailable")
-                    mutableStateOf(isNetworkAvailable) 
-                }
-                var isProcessingCallback by remember { 
-                    Log.d(TAG, "remembering isProcessingCallback: false")
-                    mutableStateOf(false) 
-                }
+        try {
+            setContent {
+                Log.d(TAG, "setContent composition start")
+                NasakaWeweTheme {
+                    var hasNetwork by remember { mutableStateOf(isNetworkAvailable) }
+                    val isProcessing by isProcessingCallback
 
-                Log.d(TAG, "Rendering CekaAuthScreen with hasNetwork: $hasNetwork")
+                    Log.d(TAG, "Rendering screen: processing=$isProcessing, network=$hasNetwork")
 
-                if (hasNetwork) {
-                    // Online mode: show Supabase auth with session observation
-                    val sessionStatus by supabaseClient.auth.sessionStatus.collectAsState()
-                    Log.d(TAG, "sessionStatus: $sessionStatus")
+                    if (hasNetwork) {
+                        val authPlugin = try {
+                            supabaseClient.auth
+                        } catch (t: Throwable) {
+                            Log.e(TAG, "Supabase Auth plugin unavailable during render!", t)
+                            null
+                        }
 
-                    LaunchedEffect(sessionStatus) {
-                        when (sessionStatus) {
-                            is SessionStatus.Authenticated -> {
-                                val user = (sessionStatus as SessionStatus.Authenticated).session.user
-                                val name = user?.userMetadata?.get("full_name")?.toString()
-                                    ?.replace("\"", "")
-                                    ?: user?.email
-                                    ?: "Nasaka User"
-                                val userId = user?.id ?: ""
+                        if (authPlugin != null) {
+                            val sessionStatus by authPlugin.sessionStatus.collectAsState()
+                            Log.d(TAG, "Live SessionStatus: $sessionStatus")
 
-                                // Bridge to Briar account creation
-                                // We use the Supabase User ID to derive a secure local password
-                                // to ensure the local DB is encrypted but the user experience is seamless.
-                                if (userId.isNotEmpty()) {
-                                    // Cache credentials locally for future offline access
-                                    val prefs = getSharedPreferences("ceka_auth", MODE_PRIVATE)
-                                    prefs.edit()
-                                        .putString("cached_name", name)
-                                        .putString("cached_user_id", userId)
-                                        .putString("cached_email", user?.email ?: "")
-                                        .putBoolean("is_ceka_member", true)
-                                        .putLong("last_auth_timestamp", System.currentTimeMillis())
-                                        .putBoolean("pending_sync", false)
-                                        .apply()
+                            LaunchedEffect(sessionStatus) {
+                                try {
+                                    Log.d(TAG, "LaunchedEffect(sessionStatus=$sessionStatus) triggered")
+                                    when (sessionStatus) {
+                                        is SessionStatus.Authenticated -> {
+                                            val user = (sessionStatus as SessionStatus.Authenticated).session.user
+                                            val name = user?.userMetadata?.get("full_name")?.toString()
+                                                ?.replace("\"", "")
+                                                ?: user?.email
+                                                ?: "Nasaka User"
+                                            val userId = user?.id ?: ""
 
-                                    Log.i(TAG, "Authenticated user: $name, creating Briar account")
-                                    viewModel.createAccount(name, userId, 1)
+                                            Log.i(TAG, "Authenticated user found: $name (id=$userId)")
+
+                                            // Transition to Briar account
+                                            if (userId.isNotEmpty() && !isCreatingAccountLocally) {
+                                                // Check if account already exists to avoid duplicate trigger
+                                                if (viewModel.state.lastValue == SetupViewModel.State.CREATED) {
+                                                    Log.i(TAG, "Account already exists according to VM, just showing app")
+                                                    showApp()
+                                                    return@LaunchedEffect
+                                                }
+
+                                                isCreatingAccountLocally = true
+                                                
+                                                Log.i(TAG, "Persisting credentials and calling VM.createAccount")
+                                                val prefs = getSharedPreferences("ceka_auth", MODE_PRIVATE)
+                                                prefs.edit()
+                                                    .putString("cached_name", name)
+                                                    .putString("cached_user_id", userId)
+                                                    .putString("cached_email", user?.email ?: "")
+                                                    .putBoolean("is_ceka_member", true)
+                                                    .putLong("last_auth_timestamp", System.currentTimeMillis())
+                                                    .apply()
+
+                                                viewModel.createAccount(name, userId, 1)
+                                            } else if (userId.isEmpty()) {
+                                                Log.e(TAG, "User ID is empty in authenticated session!")
+                                                isProcessingCallback.value = false
+                                            }
+                                        }
+                                        is SessionStatus.NotAuthenticated -> {
+                                            Log.d(TAG, "Status is NotAuthenticated")
+                                            if (isProcessingCallback.value) {
+                                                Log.w(TAG, "Auth appeared to fail or remain NotAuthenticated after redirect")
+                                                isProcessingCallback.value = false
+                                            }
+                                        }
+                                        is SessionStatus.NetworkError -> {
+                                            Log.e(TAG, "Network error in session status")
+                                            isProcessingCallback.value = false
+                                        }
+                                        else -> Log.d(TAG, "Session status is Loading or other: $sessionStatus")
+                                    }
+                                } catch (t: Throwable) {
+                                    Log.e(TAG, "CRITICAL: Throwable in Auth LaunchedEffect!", t)
+                                    isProcessingCallback.value = false
                                 }
-                                isProcessingCallback = false
                             }
-                            is SessionStatus.NotAuthenticated -> {
-                                isProcessingCallback = false
-                            }
-                            is SessionStatus.LoadingFromStorage -> {
-                                // Still loading, keep waiting
-                            }
-                            is SessionStatus.NetworkError -> {
-                                // Network error during session check, allow fallback
-                                isProcessingCallback = false
-                            }
+
+                            CekaAuthScreen(
+                                supabaseClient = supabaseClient,
+                                isOnline = true,
+                                isProcessingCallback = isProcessing,
+                                onOfflineFallback = { hasNetwork = false },
+                                onOfflineAccountCreated = { name, password ->
+                                    Log.i(TAG, "Creating offline account from online fallback: $name")
+                                    persistOfflineCredentials(name, password)
+                                    viewModel.createAccount(name, password, 0)
+                                }
+                            )
+                        } else {
+                            Log.w(TAG, "Auth plugin null, forcing offline")
+                            hasNetwork = false
                         }
+                    } else {
+                        Log.d(TAG, "Rendering Offline Auth Screen")
+                        CekaAuthScreen(
+                            supabaseClient = supabaseClient,
+                            isOnline = false,
+                            isProcessingCallback = false,
+                            onOfflineFallback = { },
+                            onOfflineAccountCreated = { name, password ->
+                                Log.i(TAG, "Creating offline account: $name")
+                                persistOfflineCredentials(name, password)
+                                viewModel.createAccount(name, password, 0)
+                            }
+                        )
                     }
-
-                    CekaAuthScreen(
-                        supabaseClient = supabaseClient,
-                        isOnline = true,
-                        isProcessingCallback = isProcessingCallback,
-                        onOfflineFallback = { hasNetwork = false },
-                        onOfflineAccountCreated = { name, password ->
-                            // Store offline credentials for later sync
-                            persistOfflineCredentials(name, password)
-                            viewModel.createAccount(name, password, 0)
-                        }
-                    )
-                } else {
-                    // Offline mode: local account creation only
-                    // Check if we have cached CEKA credentials from a previous session
-                    val cachedPrefs = getSharedPreferences("ceka_auth", MODE_PRIVATE)
-                    val hasCachedCredentials = cachedPrefs.getBoolean("is_ceka_member", false)
-                    val cachedName = cachedPrefs.getString("cached_name", null)
-
-                    CekaAuthScreen(
-                        supabaseClient = supabaseClient,
-                        isOnline = false,
-                        isProcessingCallback = false,
-                        onOfflineFallback = { },
-                        onOfflineAccountCreated = { name, password ->
-                            // Store offline credentials for sync when internet returns
-                            persistOfflineCredentials(name, password)
-                            viewModel.createAccount(name, password, 0)
-                        }
-                    )
                 }
             }
+        } catch (t: Throwable) {
+            Log.e(TAG, "FATAL: setContent implementation crashed!", t)
         }
 
-        Log.d(TAG, "Observing viewModel.state")
+        Log.d(TAG, "Registering VM state observer")
         viewModel.state.observeEvent(this) { state ->
-            Log.d(TAG, "viewModel state changed: $state")
-            if (state == SetupViewModel.State.CREATED) {
-                // Check if there are pending offline credentials to sync
-                scheduleOfflineCredentialSync()
-                showApp()
+            Log.d(TAG, "VM state changed: $state")
+            when (state) {
+                SetupViewModel.State.CREATED -> {
+                    Log.i(TAG, "SUCCESS! Account created, showing Home Screen")
+                    scheduleOfflineCredentialSync()
+                    isProcessingCallback.value = false
+                    showApp()
+                }
+                SetupViewModel.State.FAILED -> {
+                    Log.e(TAG, "FAILURE: Account creation failed in Briar")
+                    isProcessingCallback.value = false
+                    isCreatingAccountLocally = false
+                }
+                else -> Log.d(TAG, "VM on other state: $state")
             }
         }
     }
 
     override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
+        Log.d(TAG, "onNewIntent received: data=${intent.data}")
         setIntent(intent)
-        // Handle the OAuth callback deep link when returning from browser
-        handleIncomingDeepLink(intent)
+        
+        val data = intent.data
+        if (data != null && data.scheme == "nasakawewe" && data.host == "auth-callback") {
+            Log.i(TAG, "Redirect received in onNewIntent")
+            isProcessingCallback.value = true
+            handleIncomingDeepLink(intent)
+        }
     }
 
-    /**
-     * Process incoming deep links from OAuth callbacks.
-     * The Supabase SDK handles extracting access_token, refresh_token, etc.
-     * from the nasakawewe://auth-callback#access_token=...&refresh_token=... fragment.
-     */
     private fun handleIncomingDeepLink(intent: Intent) {
         val data = intent.data
         if (data != null && data.scheme == "nasakawewe" && data.host == "auth-callback") {
-            Log.i(TAG, "Received OAuth callback deep link: $data")
+            Log.i(TAG, "Processing OAuth deep link fragment")
             try {
+                // Extension function that might throw Throwable if Auth is missing
                 supabaseClient.handleDeeplinks(intent)
-            } catch (e: Exception) {
-                Log.e(TAG, "Error handling deep link", e)
+                Log.d(TAG, "Deep link handled by Supabase SDK")
+            } catch (t: Throwable) {
+                Log.e(TAG, "CRITICAL ERROR during handleDeeplinks!", t)
+                isProcessingCallback.value = false
             }
         }
     }

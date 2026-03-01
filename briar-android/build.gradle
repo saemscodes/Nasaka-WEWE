@@ -231,6 +231,9 @@ dependencies {
 	implementation "io.github.jan-tennert.supabase:compose-auth:2.5.0"
 	implementation "io.github.jan-tennert.supabase:compose-auth-ui:2.5.0"
 	implementation "io.ktor:ktor-client-okhttp:2.3.12"
+	implementation "io.ktor:ktor-client-content-negotiation:2.3.12"
+	implementation "io.ktor:ktor-serialization-kotlinx-json:2.3.12"
+	implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3"
 
 	androidTestScreenshotImplementation 'tools.fastlane:screengrab:2.1.1'
 	androidTestScreenshotImplementation 'com.jraska:falcon:2.2.0'

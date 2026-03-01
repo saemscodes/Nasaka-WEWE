@@ -1,6 +1,7 @@
 package org.briarproject.briar.android.account;
 
 import android.app.Application;
+import android.util.Log;
 
 import org.briarproject.android.dontkillmelib.DozeHelper;
 import org.briarproject.bramble.api.account.AccountManager;
@@ -117,13 +118,21 @@ class SetupViewModel extends AndroidViewModel {
 		this.password = password;
 		this.role = role;
 		isCreatingAccount.setValue(true);
+		Log.d("SetupViewModel", "createAccount initiated for: " + authorName + " (role=" + role + ")");
 		ioExecutor.execute(() -> {
-			if (accountManager.createAccount(authorName, password, role)) {
-				LOG.info("Created account with role: " + role);
-				state.postEvent(CREATED);
-			} else {
-				LOG.warning("Failed to create account");
+			try {
+				if (accountManager.createAccount(authorName, password, role)) {
+					LOG.info("Created or restored account with role: " + role);
+					state.postEvent(CREATED);
+				} else {
+					LOG.warning("Failed to create/restore account - returned false");
+					state.postEvent(FAILED);
+				}
+			} catch (Throwable t) {
+				LOG.log(java.util.logging.Level.SEVERE, "CRITICAL: Account creation crashed!", t);
 				state.postEvent(FAILED);
+			} finally {
+				isCreatingAccount.postValue(false);
 			}
 		});
 	}
